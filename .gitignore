@@ -1,0 +1,9 @@
+node_modules
+.next
+tsconfig.tsbuildinfo
+.env
+data/*.local.json
+data/session.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
