@@ -4,72 +4,117 @@
       "date": "2026-05-24",
       "papers": [
         {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "id": "1b73c847d98578c5",
+          "title": "Deep Reinforcement Learning for Flexible Job Shop Scheduling with Random Job Arrivals",
+          "abstract": "The Flexible Job Shop Scheduling Problem (FJSP) is the optimal allocation of a set of jobs to machines. Two primary challenges persist in FJSP: the unpredictable arrival of future jobs and the combinatorial complexity of the problem, rendering it intractable for conventional mixed-integer linear programming solvers. This paper proposes an event-based \\gls{DRL} approach to solve FJSP with random job arrivals. Specifically, we employ the Proximal Policy Optimization algorithm and use lightweight Multi-Layer Perceptrons to train the \\gls{DRL} agent for minimizing the total completion time of all jobs. We design the state representation to be directly accessible from the environment, and limit the learning agent to selecting from among a set of well-established dispatching rules. Simulations show that our \\gls{DRL} approach outperforms any of the individual dispatching rules on datasets with varying heterogeneity and job arrival rates. We benchmark our \\gls{DRL} against an arrival-triggered mixed-integer linear programming solution and show that our method achieves good performance especially when the datasets are heterogeneous.",
           "authors": [
-            "Seed Candidate"
+            "Yu Tang",
+            "Muhammad Zakwan",
+            "Efe Balta",
+            "John Lygeros",
+            "Alisa Rupenyan"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-24T09:38:51.031Z",
+          "url": "http://arxiv.org/abs/2605.22773v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.22773v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-21T17:33:09Z",
           "topics": [
-            "neurosim",
+            "rl"
+          ],
+          "score": 43.77019854828042,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "95bd8e7232e8d104",
+          "title": "ELSA: An ELastic SNN Inference Architecture for Efficient Neuromorphic Computing",
+          "abstract": "Spiking neural networks (SNNs) exploit event-driven and addition-only computation to substantially improve efficiency for intelligent computation. A key temporal property of SNNs, elastic inference, allows outputs to emerge progressively, enabling responses to salient inputs much earlier than full evaluation. However, existing SNN-specific accelerators cannot capitalize on this property. Layer-by-layer designs emit outputs only after all layers are complete, while time-step-by-time-step designs rely on coarse-grained, layer-wise pipelines that require synchronizing all spines/tokens within a layer. This barrier prevents results from being forwarded immediately, delaying the earliest possible response and forfeiting the benefits of elastic inference. To address these challenges, we propose ELSA, a near-SRAM dataflow architecture that realizes true elastic inference through a fine-grained spine/token-wise pipeline and hardware optimizations tailored to SNNs. ELSA forwards each spine/token immediately upon production, forming a continuous streaming pipeline that substantially reduces the latency to the first response. To enhance this lightweight execution, ELSA introduces a bundled address event representation protocol to lower communication traffic of network-on-chip (NoC), and leverages mini-batch spiking Gustavson-product to cut memory access and exploit inherent sparsity. Combined with mapping and scheduling optimizations, ELSA achieves efficient, event-driven computation without compromising accuracy. Experiments show that SNNs can outperform quantized artificial neural networks (QANNs) while maintaining on-par accuracy. For a 4-bit ResNet-50, ELSA achieves 3.4$\\times$ speedup and 13.6$\\times$ higher energy efficiency over the SOTA QANN accelerator (ANT), and 2.9$\\times$ speedup and 22.1$\\times$ energy efficiency gains over the SOTA SNN accelerator (PAICORE).",
+          "authors": [
+            "Kang You",
+            "Chen Nie",
+            "Lee Jun Yan",
+            "Ziling Wei",
+            "Cheng Zou",
+            "Zekai Xu",
+            "Yu Feng",
+            "Honglan Jiang",
+            "Zhezhi He"
+          ],
+          "url": "http://arxiv.org/abs/2605.20802v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.20802v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-20T06:47:57Z",
+          "topics": [
             "snn"
           ],
-          "score": 78,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+          "score": 43.66676600859788,
+          "reason": "Matches SNN / Neuromorphic."
         },
         {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "id": "518186de26373f9f",
+          "title": "Cross-Domain Human Action Recognition from Multiview Motion and Textual Descriptions",
+          "abstract": "Robustness to domain changes is a key capability for effective deployment of human action recognition systems in real-world scenarios, where action categories at inference can present important domain shifts or even unseen actions from training. In this context, improving the recognition capabilities of Zero-Shot Action Recognition models (ZSAR), without requiring strong annotation efforts, remains a central challenge. Most ZSAR approaches assume that actions are observed under geometric conditions similar to those seen during training. In practice, variations in human body orientation and camera viewpoint add a significant domain gap in ZSAR, substantially limiting generalization to novel action-motion combinations. In this context, this paper presents a novel orientation-aware action recognition approach with improved cross-domain capabilities. Our approach combines motion cues of multiple camera viewpoints and text descriptions of human actions in the training phase. We present a new orientation-aware motion encoding network to learn different motion features, and adapt a specific orientation-aware text prompt to match the corresponding features at inference. Extensive experiments demonstrate that the proposed method consistently improves ZSAR performance across different recognition benchmarks, outperforming recent state-of-the-art zero-shot approaches on NTU-RGB+D, BABEL, NW-UCLA, and on two surveillance datasets. In addition, the learned representations exhibit strong transfer learning capabilities, yielding competitive performance on both cross-domain and same-domain recognition of seen actions. Code and trained models are available at: https://icb-vision-ai.github.io/OrientationAware-HAR",
           "authors": [
-            "Seed Candidate"
+            "Yannick Porto",
+            "Renato Martins",
+            "Thomas Chalumeau",
+            "Cedric Demonceaux"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-24T09:38:51.031Z",
+          "url": "http://arxiv.org/abs/2605.22697v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.22697v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-21T16:39:58Z",
           "topics": [
-            "snn",
             "tta"
           ],
-          "score": 70,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
+          "score": 27.767560486937832,
+          "reason": "Matches Test-Time Adaptation."
         },
         {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
+          "id": "a454e9ea733f8c8d",
+          "title": "NasZip: Software and Hardware Co-Design to Accelerate Approximate Nearest Neighbor Search with DIMM-Based Near-Data Processing",
+          "abstract": "As large language models (LLMs) continue to advance, retrieval-augmented generation (RAG) has become the key mechanism for expanding model knowledge and reducing hallucinations. Central to RAG is approximate nearest neighbor search (ANNS), which retrieves database vectors most similar to a given query. However, distance calculation over high-dimensional vectors is inherently memory-bound, causing retrieval performance to be constrained by I/O bandwidth on mainstream platforms such as CPUs and GPUs. Although many prior early exiting (EE) techniques attempt to reduce memory accesses by only computing partial dimensions, the partial distance converges too slowly to the EE threshold, which ultimately limits their performance gains. To address these challenges, we propose NASZIP, a hardware-software co-designed framework that integrates near data processing (NDP) with a novel feature-level early exiting guided by statistics-based principal component analysis (PCA). Instead of relying solely on partial distances, NASZIP incorporates estimation and correction parameters to approximate full dimensional distances accurately, enabling earlier exiting without compromising accuracy. We further introduce a bit-level NDP-aware dynamic-float scheme that significantly reduces memory access for vector data. On the hardware side, we develop a data aware neighbor list mapping strategy that reduces neighbor retrieval latency and inter-channel communication overhead, complemented by a dedicated cache that exploits data locality and enhances prefetch efficiency. With these co-optimized techniques, NASZIP delivers speedups of up to $8.4\\times$ / $1.4\\times$ over CPU baseline and state-of-the-art GPU implementation at equal accuracy. Relative to the state-of-the-art NDP ANNS accelerator ANSMET, NASZIP achieves $1.69\\times$ performance improvement.",
           "authors": [
-            "Seed Candidate"
+            "Cheng Zou",
+            "Shuo Yang",
+            "Chen Nie",
+            "Yu Zou",
+            "Yu He",
+            "Chao Jiang",
+            "Limin Xiao",
+            "Weifeng Zhang",
+            "Zhezhi He"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-24T09:38:51.031Z",
+          "url": "http://arxiv.org/abs/2605.21952v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.21952v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-21T03:36:27Z",
           "topics": [
-            "early_exit",
-            "dvfs"
+            "early_exit"
           ],
-          "score": 70,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
+          "score": 27.728695572089947,
+          "reason": "Matches Network Early Exit."
         },
         {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
+          "id": "62c581cab98a1d87",
+          "title": "AutoMCU: Feasibility-First MCU Neural Network Customization via LLM-based Multi-Agent Systems",
+          "abstract": "Deploying neural networks on microcontroller units (MCUs) is critical for edge intelligence but remains challenging due to tight memory, storage, and computation constraints. Existing approaches, such as model compression and hardware-aware neural architecture search (HW-NAS), often depend on proxy metrics, incur high search cost, and do not fully bridge the gap between architecture design and verified deployment. This paper presents AutoMCU, a feasibility-first large language model (LLM)-based multi-agent system for automated neural network customization under MCU constraints. Given natural-language task requirements and hardware specifications, AutoMCU iteratively generates structured architecture candidates, filters infeasible designs through vendor toolchain feedback before training, evaluates feasible models under a controlled protocol, and verifies deployability through backend-grounded deployment analysis. AutoMCU includes two key mechanisms: 1) hardware-in-the-loop architecture generation for early elimination of undeployable candidates under RAM and Flash constraints, and 2) state-isolated multi-agent scheduling for stable coordination of proposal, training, evaluation, and deployment stages. Experiments on CIFAR-10 and CIFAR-100 under strict MCU constraints show that AutoMCU achieves competitive accuracy while reducing customization time to about 1--2 hours, compared with hundreds of GPU hours for representative MCU-oriented HW-NAS baselines. Comparisons with ColabNAS and the LLM-based NAS method GENIUS on NAS-Bench-201 further demonstrate the effectiveness and stability of AutoMCU. Real-device deployments on multiple STM32 microcontrollers validate its practical applicability to MCU-scale edge intelligence.",
           "authors": [
-            "Seed Candidate"
+            "Penglin Dai",
+            "Zijie Zhou",
+            "Xincao Xu",
+            "Junhua Wang",
+            "Xiao Wu",
+            "Lixin Duan"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-24T09:38:51.031Z",
+          "url": "http://arxiv.org/abs/2605.21560v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.21560v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-20T14:59:17Z",
           "topics": [
-            "rl",
-            "dvfs"
+            "neurosim"
           ],
-          "score": 54,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+          "score": 27.691137701719576,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
