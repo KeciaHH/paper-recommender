@@ -33,4 +33,8 @@ The included workflow runs `npm run daily` once per day and commits updated reco
 
 ## Deployment
 
-For a private personal app, use Vercel, Render, Fly.io, or a small VPS. GitHub Pages is not a good fit because this app needs real password protection and server-side writes for ratings.
+This MVP stores recommendations and ratings in `data/store.json`, so deploy it somewhere with a persistent filesystem, such as Render with a persistent disk, Fly.io with a volume, or a small VPS.
+
+Vercel can run the UI, but filesystem writes are not persistent in the default serverless runtime. Use Vercel only after replacing the JSON store with an external database such as Supabase, Neon, Turso, or hosted Postgres.
+
+GitHub Pages is not a good fit because this app needs real password protection and server-side writes for ratings.
