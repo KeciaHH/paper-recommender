@@ -12,12 +12,12 @@
           ],
           "url": "https://arxiv.org",
           "source": "Seed",
-          "publishedAt": "2026-05-24T08:27:34.055Z",
+          "publishedAt": "2026-05-24T09:38:51.031Z",
           "topics": [
             "neurosim",
             "snn"
           ],
-          "score": 77.99999999834657,
+          "score": 78,
           "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
         },
         {
@@ -29,12 +29,12 @@
           ],
           "url": "https://arxiv.org",
           "source": "Seed",
-          "publishedAt": "2026-05-24T08:27:34.055Z",
+          "publishedAt": "2026-05-24T09:38:51.031Z",
           "topics": [
             "snn",
             "tta"
           ],
-          "score": 69.99999999834657,
+          "score": 70,
           "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
         },
         {
@@ -46,12 +46,12 @@
           ],
           "url": "https://arxiv.org",
           "source": "Seed",
-          "publishedAt": "2026-05-24T08:27:34.055Z",
+          "publishedAt": "2026-05-24T09:38:51.031Z",
           "topics": [
             "early_exit",
             "dvfs"
           ],
-          "score": 69.99999999834657,
+          "score": 70,
           "reason": "Matches Network Early Exit, DVFS / Energy."
         },
         {
@@ -63,12 +63,12 @@
           ],
           "url": "https://arxiv.org",
           "source": "Seed",
-          "publishedAt": "2026-05-24T08:27:34.055Z",
+          "publishedAt": "2026-05-24T09:38:51.031Z",
           "topics": [
             "rl",
             "dvfs"
           ],
-          "score": 53.99999999834656,
+          "score": 54,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
         }
       ]
