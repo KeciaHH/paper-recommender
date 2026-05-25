@@ -1,6 +1,129 @@
 {
   "recommendations": [
     {
+      "date": "2026-05-25",
+      "papers": [
+        {
+          "id": "5ea75b2c6e602484",
+          "title": "Robotic Strawberry Harvesting with Robust Vision and Deep Reinforcement Learning based Sim-to-Real Control",
+          "abstract": "This study presents a closed-loop robotic strawberry harvesting system that combines a robust vision module, simulation-trained deep reinforcement learning (DRL) control, and ROS-based realrobot execution. For perception, we propose HRAttnEdge-YOLO26-seg, a modified YOLO26-seg architecture that incorporates a high-resolution P2 branch, segmentation-path attention, and edgesupervised prototype learning to improve instance segmentation in cluttered scenes. For control, we train a target-conditioned Proximal Policy Optimization (PPO) policy in Isaac Lab to produce smooth joint-position commands for a UR10e manipulator and deploy it on a UR10e robot for targetfruit reaching and harvesting. This simulation-based approach reduces hardware dependency, lowers development cost, and allows scalable policy training without exhaustive physical trials before real deployment. The proposed vision model demonstrated the highest overall performance among the evaluated methods. On both self-collected and public datasets, the model showed a 10 to 14% improvement in segmentation performance. In controlled in-house tests, the PPO controller produced stable and dynamically smoother motion than a inverse kinematics (IK)-based MoveIt baseline. In greenhouse trials, the proposed integrated system harvested 281 strawberries, achieving 96.6% reaching success, 91.3% grasp-and-pull success, and 84.3% overall harvesting success. These results illustrate that task-specific perception combined with simulation-trained PPO can serve as a practical and resource-efficient alternative to conventional planner-dependent reaching in manipulation, enabling reliable closed-loop robotic harvesting in complex agricultural environments.",
+          "authors": [
+            "Al Bashir",
+            "Shao-Yang Chang",
+            "Partho Ghose",
+            "Prem Raj",
+            "Chen-Kang Huang",
+            "Azlan Zahid"
+          ],
+          "url": "http://arxiv.org/abs/2605.23863v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.23863v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-22T17:21:06Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 43.7693649578373,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "27dcc49fa5aeac85",
+          "title": "UniSpike: Accelerating Spiking Neural Networks on Neuromorphic Systems via Eliminating Address Redundancy",
+          "abstract": "Many-core neuromorphic systems accelerate Spiking Neural Networks (SNNs), yet their packet-based spike communication can spend substantial traffic and energy repeatedly transmitting destination addresses. This overhead is amplified by the small payload of spike packets: in representative workloads, duplicate address transmissions account for up to 49% of the total traffic. This paper presents UniSpike, a hardware-software co-design that removes address redundancy by aggregating spikes destined for the same core into compact packets. UniSpike combines destination-centric spike scheduling, lightweight runtime packet assembly hardware, and destination-aware SNN partitioning. Across diverse SNN workloads, UniSpike reduces traffic by 1.93$\\times$ on average, delivering 1.77$\\times$ speedup and 1.50$\\times$ energy efficiency improvement over state-of-the-art designs.",
+          "authors": [
+            "Qinghui Xing",
+            "Zhuo Chen",
+            "Xin Du",
+            "Ouwen Jin",
+            "Ming Zhang",
+            "Pan Lv",
+            "Ying Li",
+            "Shuiguang Deng",
+            "Gang Pan"
+          ],
+          "url": "http://arxiv.org/abs/2605.23796v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.23796v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-22T15:57:55Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.7652388004299,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "d95f4050b8d1bfff",
+          "title": "MuellerPT: Decomposition Driven Pretraining for Dense Learning in Mueller Polarimetry",
+          "abstract": "Mueller matrix imaging provides rich, physically meaningful contrast for biomedical tissue analysis, but supervised learning is hindered by scarce dense annotations and strong domain shifts across specimens and acquisition settings. We introduce MuellerPT, a physics guided pre-training approach that learns transferable dense representations by predicting Lu-Chipman decomposition maps from per-pixel 4x4 Mueller matrices. To scale pre-training, we collected a new large Multispectral Animal Polarimetric Organ dataset (MAP-Org). The pre-trained encoder is adapted with a segmentation head for grey vs. white matter segmentation in lamb brain. A classification head is used for colorectal cancer vs. non-cancer classification. Both segmentation and classification are evaluated across few-shot learning scenarios. In segmentation, MuellerPT improves label efficiency and cross specimen transfer compared to models without pre-training, achieving an absolute DICE gain of over 20% compared to the baseline trained from scratch when using 5% of the training data. In classification, MuellerPT also enhances label efficiency, improving overall accuracy by 8% compared to the baseline when using 1% of the training data. We demonstrate MuellerPT's robustness to domain shift with a qualitative evaluation of its predicted Lu-Chipman maps on an ex vivo human oesophagus sample. These results suggest that predicting Lu-Chipman decomposition is an effective and practical pretext task for robust biomedical inference from Mueller polarimetry and can pave the way for future work on label efficient Mueller imaging.",
+          "authors": [
+            "Adam Tlemsani",
+            "Yingdian Li",
+            "Maxime Giot",
+            "Naim Slim",
+            "Christopher J. Peters",
+            "Abhijeet Ghosh",
+            "Daniel S. Elson"
+          ],
+          "url": "http://arxiv.org/abs/2605.23840v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.23840v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-22T16:48:57Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.767770215773808,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "6d24941328a58b0a",
+          "title": "General-Purpose Photonic Computing Primitive for Contemporary Artificial Intelligence",
+          "abstract": "Photonic computing offers a promising route to accelerating artificial intelligence (AI) by providing high analog bandwidth, low latency, and low energy consumption. However, existing optical neural networks (ONNs) struggle with substantial hardware overhead and limited support for the dynamic, arbitrary matrix operations essential for modern AI architectures. Here we present the dynamic universal encoding tensorcore (DUET), a general-purpose photonic computing paradigm based on vectorized operand differential interferometric cells (VODICs). By exploiting inherent structural symmetry, this design provides a full-range linear encoding interface that directly accommodates signed operands. This approach eliminates the sign-based path splitting, nonlinear remapping, and auxiliary preprocessing typically required in conventional ONNs, thereby reducing latency and minimizing hardware and memory overhead. We further implement a hardware-aware training (HAT) strategy to alleviate the impact of on-chip non-idealities and ensure stable inference. DUET is experimentally validated across diverse architectures and application domains, ranging from image classification and medical segmentation to Transformer-based content generation, demonstrating competitive performance. By extending optical computing to universal, full-range operators across diverse model architectures, DUET provides a viable pathway toward general-purpose optical acceleration for contemporary AI workloads.",
+          "authors": [
+            "Shupeng Ning",
+            "Chenghao Feng",
+            "Zhenxiang Xu",
+            "Hanqing Zhu",
+            "David Z. Pan",
+            "Jiaqi Gu",
+            "Ray T. Chen"
+          ],
+          "url": "http://arxiv.org/abs/2605.23051v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.23051v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-21T21:33:59Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.710480202546297,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "a454e9ea733f8c8d",
+          "title": "NasZip: Software and Hardware Co-Design to Accelerate Approximate Nearest Neighbor Search with DIMM-Based Near-Data Processing",
+          "abstract": "As large language models (LLMs) continue to advance, retrieval-augmented generation (RAG) has become the key mechanism for expanding model knowledge and reducing hallucinations. Central to RAG is approximate nearest neighbor search (ANNS), which retrieves database vectors most similar to a given query. However, distance calculation over high-dimensional vectors is inherently memory-bound, causing retrieval performance to be constrained by I/O bandwidth on mainstream platforms such as CPUs and GPUs. Although many prior early exiting (EE) techniques attempt to reduce memory accesses by only computing partial dimensions, the partial distance converges too slowly to the EE threshold, which ultimately limits their performance gains. To address these challenges, we propose NASZIP, a hardware-software co-designed framework that integrates near data processing (NDP) with a novel feature-level early exiting guided by statistics-based principal component analysis (PCA). Instead of relying solely on partial distances, NASZIP incorporates estimation and correction parameters to approximate full dimensional distances accurately, enabling earlier exiting without compromising accuracy. We further introduce a bit-level NDP-aware dynamic-float scheme that significantly reduces memory access for vector data. On the hardware side, we develop a data aware neighbor list mapping strategy that reduces neighbor retrieval latency and inter-channel communication overhead, complemented by a dedicated cache that exploits data locality and enhances prefetch efficiency. With these co-optimized techniques, NASZIP delivers speedups of up to $8.4\\times$ / $1.4\\times$ over CPU baseline and state-of-the-art GPU implementation at equal accuracy. Relative to the state-of-the-art NDP ANNS accelerator ANSMET, NASZIP achieves $1.69\\times$ performance improvement.",
+          "authors": [
+            "Cheng Zou",
+            "Shuo Yang",
+            "Chen Nie",
+            "Yu Zou",
+            "Yu He",
+            "Chao Jiang",
+            "Limin Xiao",
+            "Weifeng Zhang",
+            "Zhezhi He"
+          ],
+          "url": "http://arxiv.org/abs/2605.21952v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.21952v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-21T03:36:27Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.657031128472223,
+          "reason": "Matches Network Early Exit."
+        }
+      ]
+    },
+    {
       "date": "2026-05-24",
       "papers": [
         {
