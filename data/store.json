@@ -1,6 +1,78 @@
 {
   "recommendations": [
     {
+      "date": "2026-05-31",
+      "papers": [
+        {
+          "id": "bc617d55fda250c0",
+          "title": "Reconfigurable Multistate MRAM Synapses with Vortex STNO based Neurons for Scalable In-Memory Convolutional Neural Networks",
+          "abstract": "Magnetic tunnel junction (MTJ)-based magnetic random-access memory (MRAM) is a promising platform for neuromorphic and in-memory computing owing to its non-volatility, high endurance, fast switching dynamics and CMOS compatibility. However, conventional spin-transfer torque and spin-orbit torque MRAM implementations for neural networks often suffer from high critical switching currents, large latency, thermal instability and significant read-write overheads. Here, we demonstrate a unified multistate MRAM-spin-torque nano-oscillator (STNO) architecture that integrates synapses and neurons on a single chip for convolutional neural network (CNN) applications. The system employs 1x8 multistate MRAM arrays as programmable synapses coupled with a vortex-based STNO neuron, enabling both individual and collective programming through fieldline-driven write channels. Multiple configurable resistance states are achieved by tuning internal and external magnetic fields together with bias currents, allowing quantized positive and negative synaptic weights for configurable kernel and pooling operations. The proposed architecture is evaluated through simulation on MNIST, SVHN, CIFAR-10, Google Speech Commands (GSC) and RadioML datasets, achieving accuracy of 99.76%, 87.93%, 78.14%, 87.96% and 56.46% respectively. Based on fabricated device dimensions, the complete architecture occupies ~6171.2 μm2 with an average energy consumption of 200.08 pJ per training and inference cycle for MNIST, highlighting its potential for scalable low-power neuromorphic computing",
+          "authors": [
+            "Ravish Kumar Raj",
+            "Simon N. Richter",
+            "Saeed Baghaee Ivriq",
+            "Oliver Fridorf",
+            "Darío Fernández-Khatiboun",
+            "Yasser Rezaeiyan",
+            "Luana Benetti",
+            "Tim Boehnert",
+            "Ricardo Ferreira",
+            "Hooman Farkhani",
+            "Sonal Shreya",
+            "Farshad Moradi"
+          ],
+          "url": "http://arxiv.org/abs/2605.29942v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.29942v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-28T13:53:51Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.759257676091266,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "6d8775d9bd63af7d",
+          "title": "Reasoning with Sampling: Cutting at Decision Points",
+          "abstract": "Frontier reasoning models are produced by posttraining base language models with reinforcement learning. Recent work has challenged this by showing that sampling from a sharpened version of the base model's distribution, a so-called power distribution, elicits comparable reasoning without additional training, curated datasets, or verifiers. However, making this method practical requires efficiently sampling from the power distribution. A sampler needs to \"mix\" to the power distribution, which necessitates moving between modes of the target distribution; intuitively, e.g., trying different reasoning strategies. The samplers proposed in prior works repeatedly select a \"cut\" position in the current reasoning trace uniformly at random and resample the suffix from that position onward. However, reasoning traces typically contain a few consequential decisions (e.g., the choice of proof strategy or algorithm), and we observe that a uniformly chosen cut tends to rewrite local details rather than revisit decision points. We introduce an algorithm (Entropy-Cut Metropolis-Hastings) that uses the base model's next-token entropy as a proxy to identify key decision points and resample from those positions. We empirically verify that entropy jumps are a useful proxy for decision points and, in a stylized model of reasoning, prove that our method's mixing time scales with the number of decisions in a trace rather than with the number of tokens, which can be much larger. Across MATH500, HumanEval, GPQA Diamond, and AIME26, our method consistently improves over baselines and RL-trained models.",
+          "authors": [
+            "Felix Zhou",
+            "Anay Mehrotra",
+            "Quanquan C. Liu"
+          ],
+          "url": "http://arxiv.org/abs/2605.30327v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.30327v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-28T17:57:32Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.771345143022486,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "4e0ec75f59048e26",
+          "title": "Constant Depth Threshold Circuits For Exhaustive Epistasis Detection",
+          "abstract": "The development of large-scale neuromorphic hardware has made practical implementations of threshold gate-based circuits a near-term possibility. The complexity advantages regarding traditional computing classes, as evidenced in the literature, have prompted us to tackle Epistasis Detection, one of the most computationally complex combinatorial problems in bioinformatics. We propose specially designed circuits that calculate the relative frequencies of all dataset combinations in an efficient pipelined fashion, taking advantage of co-located memory and configurable parallelism, obtaining complexity gains. Overall, we obtain the runtime to be bounded by the number of combinations to calculate, without any additional complexity overhead, contrary to classical approaches, using log-linear space. To accomplish this, we propose a data encoding and combination generation strategy using Leaky Integrate and Fire (LIF) neurons, that feeds a constant depth threshold gate population count circuit. Accounting for typical hardware characteristics, such as limited fan-in and variable precisions, we obtain logarithmic depth and log-cubic linear connections, for the population count circuit by composing developed unbounded fan-in constant depth threshold gate circuits to perform population count and binary array sum.",
+          "authors": [
+            "André Ribeiro",
+            "Aleksandar Ilic",
+            "Leonel Sousa"
+          ],
+          "url": "http://arxiv.org/abs/2605.29719v1",
+          "pdfUrl": "http://arxiv.org/pdf/2605.29719v1",
+          "source": "arXiv",
+          "publishedAt": "2026-05-28T10:14:56Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.748398714451056,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-05-30",
       "papers": [
         {
