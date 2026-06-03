@@ -1,6 +1,77 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-03",
+      "papers": [
+        {
+          "id": "45a630af0c4f156a",
+          "title": "Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation",
+          "abstract": "Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.",
+          "authors": [
+            "Roohan Ahmed Khan",
+            "Yasheerah Yaqoot",
+            "Muhammad Ahsan Mustafa",
+            "Dzmitry Tsetserukou"
+          ],
+          "url": "http://arxiv.org/abs/2606.03963v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.03963v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-02T17:50:15Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 43.91192378306879,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "5448682c8dede637",
+          "title": "Quadratic integrate-and-fire neurons exhibit less fragmented loss landscapes and outperform leaky integrate-and-fire neurons in spike-based gradient descent",
+          "abstract": "The ability to train spiking neural networks is essential for modeling biological neural networks as well as for neuromorphic computing. However, for the extensively used leaky integrate-and-fire (LIF) neurons, arbitrarily small parameter changes can induce spike (dis)appearances that disrupt subsequent activity, leading to unstable neural representations and permanently silent neurons during exact spike-based gradient descent. Recent work shows that a class of neuron models, which includes the quadratic integrate-and-fire (QIF) neuron, avoids these discontinuities and enables continuous and even smooth spike-based gradient descent. However, it remains unclear whether these advantages translate into practice. Here, we demonstrate that they do so via a controlled comparison between networks of LIF and QIF neurons on the popular Spiking Heidelberg Digits dataset. Specifically, in a first step, we perform a thorough hyperparameter search to optimize both models, revealing a clear performance advantage of QIF neurons. In a second step, we visualize the loss and gradient landscapes. Consistent with their inferior performance, we find that the loss landscapes of LIF neurons, which are discontinuous, appear more fragmented and the related gradients more erratic. An analysis of the landscapes of single samples indicates that these features arise from changes in the temporal order of spikes, which often cause disruptive spike (dis)appearances. Overall, our results advocate replacing LIF neurons with neuron models exhibiting continuous spiking dynamics, such as QIF neurons, for gradient descent training.",
+          "authors": [
+            "Carlo Wenig",
+            "Raoul-Martin Memmesheimer",
+            "Christian Klos"
+          ],
+          "url": "http://arxiv.org/abs/2606.03935v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.03935v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-02T17:26:12Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.91073082671957,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "6bace4e1ad0b2501",
+          "title": "20 ps Non-Destructive Read and 1 ns Write Operations at <5 V in Ferroelectric HfO2/ZrO2 Non-Volatile Memories",
+          "abstract": "Achieving low-voltage, nanosecond multi-level programming and non-destructive read-out of ferroelectric non-volatile memories (NVM) is critical for analog in-memory computing architectures relying on ferroelectric capacitive devices (FeCap). We integrate HfO2/ZrO2 ferroelectric nanolayers concurrently in the BEOL of CMOS and on SiO2/Si, achieving nanosecond multilevel switching with programming voltages below 5 V. Partial ferroelectric switching enhances FeCap endurance above 1011 cycles, leading to MemCapacitance (MC) states with non-destructive read-out and 10-year retention. However, experiments reveal the collapse of the MC window for read frequencies above 1 MHz. To overcome this speed limit, we introduce a novel, non-destructive readout methodology. Using electrical pulses with widths down to 20 ps, below the RC time constant of the FeCaps, we enable measurement of the polarization-dependent leakage current, providing ultrafast and non-destructive read operations at only 14 fJ.",
+          "authors": [
+            "Alexandre Baigol",
+            "Ruben Hamming-Green",
+            "Paul Uriarte Vicandi",
+            "Jiajie Gao",
+            "Till Zellweger",
+            "Anwesha Panda",
+            "Alexandros Emboras",
+            "Miklós Csontos",
+            "Mathieu Luisier",
+            "Beatriz Noheda",
+            "Laura Bégon-Lours"
+          ],
+          "url": "http://arxiv.org/abs/2606.03677v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.03677v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-02T14:01:22Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.900570443121694,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-06-02",
       "papers": [
         {
