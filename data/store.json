@@ -1,6 +1,58 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-08",
+      "papers": [
+        {
+          "id": "06ea7a6a2242cc7d",
+          "title": "Teaching the Way, Not the Answer: Privileged Tutoring Distillation for Multimodal Policy Optimization",
+          "abstract": "Recent post-training methods, particularly Reinforcement Learning with Verifiable Rewards (RLVR), have significantly enhanced the reasoning ability of Large Vision-Language Models (LVLMs). However, the sparse nature of verifiable rewards provides little token-level supervision for failed rollouts, often leading to inefficient exploration in complex multimodal reasoning tasks. Although policy distillation can offer dense guidance, external teacher based methods introduce substantial computational overhead, while answer conditioned tuning methods may expose answer-level information and induce shortcut-like generation behavior. To address these limitations, we propose PTD-PO, a Privileged Tutoring Distillation Policy Optimization framework for RLVR that provides dense guidance without exposing the answer to the student policy. Specifically, PTD-PO constructs structured privileged hints from spatial attention guidance and intermediate textual reasoning steps, and uses them through in-context learning to produce step-wise token-distribution supervision. The student is still optimized under the original answer-free context, and its failed rollouts are aligned with the hint-augmented reference model at the token-distribution level. To further stabilize distillation under the distribution shift between guided and unguided contexts, we introduce a Top-K Jensen-Shannon divergence objective that focuses alignment on informative token probabilities while reducing memory overhead. Experiments on LVLMs ranging from 2B to 8B parameters show that PTD-PO consistently outperforms RLVR and distillation baselines, mitigates entropy collapse, and improves complex multimodal reasoning performance.",
+          "authors": [
+            "Shizhe Xiang",
+            "Ke An",
+            "Wenlong Yu",
+            "Yue Liu",
+            "Jian Luan",
+            "Pei Fu",
+            "Qilong Wang"
+          ],
+          "url": "http://arxiv.org/abs/2606.07000v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.07000v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-05T07:43:22Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.73990926339286,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "52a49dfa19796f99",
+          "title": "A 65 nm Multi-Modal Bayesian Inference Engine with 16.3 fJ/Sample Calibration-Free GRNG for Risk-Aware At-Home Skin Lesion Screening",
+          "abstract": "We present a 65-nm risk-aware multimodal Bayesian inference engine for privacy-preserving, fully on-device skin lesion screening under uncontrolled at-home conditions. The proposed compute-in-memory architecture performs in-word Mixture-of-Gaussian sampling, improving uncertainty modeling beyond conventional unimodal Bayesian neural networks. This added probabilistic expressiveness increases equal-risk operating coverage by 1.4x, improves robustness to user-data perturbations by >1.5x, enhances process-variation resilience by 5.5x, and improves balanced accuracy by 1.8% over state-of-the-art unimodal Bayesian neural networks. Hardware robustness is further supported by calibration-free Gaussian random-number generation using complementary process variation, achieving 16.3 fJ/sample and 168.6 GSa/s/mm^2 efficiency. These results demonstrate a practical, energy-efficient, and risk-aware edge-AI solution for privacy-conscious medical screening.",
+          "authors": [
+            "Steven Davis",
+            "Likai Pei",
+            "Jianbo Liu",
+            "Zephan M. Enciso",
+            "Boyang Cheng",
+            "Xueji Zhao",
+            "Danny Z. Chen",
+            "Ningyuan Cao"
+          ],
+          "url": "http://arxiv.org/abs/2606.07439v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.07439v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-05T16:38:02Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.766430427414022,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-06-07",
       "papers": [
         {
