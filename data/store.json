@@ -1,6 +1,88 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-10",
+      "papers": [
+        {
+          "id": "8d931a7d42c3003a",
+          "title": "TRACE: A Unified Rollout Budget Allocation Framework for Efficient Agentic Reinforcement Learning",
+          "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for enhancing reasoning and agentic behavior in large language models. However, rollout-intensive policy optimization is often limited by insufficient reward contrast, arising when overly simple or complex prompts generate low-variance feedback and when outcome-only rewards assign the same terminal assessment to every decision in a multi-turn rollout. Past efforts have focused on allocating available rollout resources to promising prompts, yet they only leverage sample informativeness at the prompt level and neglect variation in prefix-level informativeness across turns within the same rollout. This work targets multi-turn agentic RL by modeling each ReAct-style thought-action-observation turn as a semantically distinct node, allowing budget allocation to extend from prompt roots to turn-level prefixes with further continuations, which naturally forms tree-structured rollouts. We introduce Tree Rollout Allocation for Contrastive Exploration (TRACE), a unified rollout allocation framework that enhances reward contrast within a fixed sampling budget. Technically, TRACE allocates rollout budget to both prompt roots and intermediate prefixes that are most likely to yield mixed terminal rewards. A shared generalizable predictor estimates conditional success probability at these anchors from prefix histories to guide this allocation. The resulting adaptive tree structure enriches outcome-only feedback and amplifies the policy-update signal. Empirically, TRACE achieves competitive performance and efficiency gains on typical agentic benchmarks, e.g., improving Qwen3-14B Multi-Hop QA average accuracy by 2.8 points over competitive baselines at equal sampling cost.",
+          "authors": [
+            "Heming Zou",
+            "Qi Wang",
+            "Yun Qu",
+            "Yuhang Jiang",
+            "Lizhou Cai",
+            "Yixiu Mao",
+            "Ru Peng",
+            "Xin Xu",
+            "Weijie Liu",
+            "Kai Yang",
+            "Saiyong Yang",
+            "Xiangyang Ji"
+          ],
+          "url": "http://arxiv.org/abs/2606.11119v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.11119v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-09T17:16:03Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.9106094973545,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "79de2c6955c5ca02",
+          "title": "A 185 TOPS/W/mm2 Bayesian Inference Engine with 640 aJ Write-Free FeFET GRNG for Uncertainty-Aware Aerial Search and Rescue",
+          "abstract": "Aerial search and rescue missions require fast and reliable victim detection under uncertain and rapidly changing environments. Deterministic deep learning models can produce overconfident false positives, forcing unmanned aircraft systems to perform costly verification maneuvers that reduce search coverage and increase rescue delay. Bayesian neural networks provide uncertainty-aware detection, but their sampling overhead is challenging for battery-constrained edge platforms. This work presents a FeFET-based Bayesian inference engine with a write-free central limit theorem Gaussian random number generator embedded in a compute-in-memory macro. By summing currents from a randomly selected subset of minimum-sized, programmed-once FeFETs, the proposed architecture eliminates energy- and endurance-intensive write operations during inference while maintaining scalable Gaussian sampling. The CLT-GRNG consumes 640 aJ per sample, providing a 560x energy-efficiency improvement over prior BNN accelerators, while the CIM tile achieves 185 TOPS/W/mm2. Evaluated on aerial search and rescue detection, the Bayesian model improves uncertainty calibration and robustness under environmental corruption, reducing risk and enabling low-confidence detections to be filtered before costly verification. These results demonstrate an energy-efficient and uncertainty-aware edge AI engine for autonomous search and rescue systems.",
+          "authors": [
+            "Zephan M. Enciso",
+            "Xuezhong Niu",
+            "Xingtian Wang",
+            "Mohammad Mehdi Sharifi",
+            "Subhasish Mukherjee",
+            "Likai Pei",
+            "Halid Mulaosmanovic",
+            "Stefan Duenkel",
+            "Sven Beyer",
+            "Michael Niemier",
+            "Kai Ni",
+            "Ningyuan Cao"
+          ],
+          "url": "http://arxiv.org/abs/2606.10822v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.10822v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-09T13:04:02Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.898108670634922,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "62c9e9c98b285d33",
+          "title": "Unifying Data, Memory, and Compute Efficiency in LLM training: A Survey",
+          "abstract": "Resource constraints increasingly determine what can be trained, fine-tuned, and deployed in large language models (LLMs), yet efficiency is often studied through isolated techniques rather than as an interacting system of limits. This survey adopts a constraint-centric perspective and organizes recent progress around three coupled bottlenecks: data efficiency (what to train on), memory efficiency (how to fit training), and compute budget awareness (when and where to spend FLOPs). On the data axis, we review selection and pruning methods that maximize learning per token, ranging from scalable proxy signals based on learning dynamics to gradient- and influence-based scoring, as well as difficulty-aware and curriculum-style strategies. We highlight emerging evidence that different notions of good data dominate in different regimes, implying that optimal subsets depend on the task objective and resource budget rather than being universal. On the systems side, we show that GPU memory, not raw compute, is often the dominant bottleneck in fine-tuning, and that effective scaling requires jointly reducing weight storage, optimizer states, and activation memory rather than optimizing any single component in isolation. Beyond memory, we frame training and inference as compute-governed processes in which optimization, data selection, and decoding must explicitly account for finite FLOP budgets. We review evidence for compute-optimal allocation and stopping rules, where computation should be halted or reallocated once marginal performance gains fall below a budget-dependent threshold. Together, these results unify compute-aware data selection, scaling laws, and adaptive inference under a common principle of resource-conditioned decision-making.",
+          "authors": [
+            "Vanessa Schmidt",
+            "Huy Hoang Nguyen",
+            "Cédric Jung",
+            "Shirin Salehi",
+            "Anke Schmeink"
+          ],
+          "url": "http://arxiv.org/abs/2606.10706v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.10706v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-09T11:09:58Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 21.892450601851852,
+          "reason": "Matches Network Early Exit."
+        }
+      ]
+    },
+    {
       "date": "2026-06-09",
       "papers": [
         {
