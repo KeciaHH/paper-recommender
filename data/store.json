@@ -1,6 +1,70 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-16",
+      "papers": [
+        {
+          "id": "3fc028c07ccd7f34",
+          "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting",
+          "abstract": "Neural dynamical systems are expressive temporal predictors that capture continuous-time dynamics through fine-grained state updates. However, this sequential structure maps poorly onto digital hardware optimized for dense matrix operations, a mismatch that analog neuromorphic computing, with its native continuous-time dynamics, can resolve. We introduce FerroNDS, a neuromorphic system built from two analog primitives: an integrator for temporal accumulation and an oscillator for frequency-selective filtering. We map this system onto compute-in-memory hardware based on multi-bit ferrodiodes. A 128-neuron instance of FerroNDS computes short-time Fourier transform and forecasts a 500-ms horizon for periodic, quasi-periodic, and chaotic signals. The system achieves sub-watt real-time operation with per-neuron per-inference energy of 1.64 $μ$J (200 Hz) and 0.29 $μ$J (10 kHz), 25-40$\\times$ area reduction over SRAM-based digital systems, and per-layer latency of 3.18 ms (200 Hz) and 63.87 $μ$s (10 kHz). To our knowledge, this is the first end-to-end integration of a ferrodiode into a neuromorphic computational framework, establishing ferroelectric compute-in-memory as a practical substrate for analog neural dynamical systems.",
+          "authors": [
+            "Keshava Katti",
+            "Adithya Selvakumar",
+            "Pratik Chaudhari",
+            "Deep Jariwala"
+          ],
+          "url": "http://arxiv.org/abs/2606.16896v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.16896v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-15T16:07:05Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.907233058035715,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "d9b4062c1a42a916",
+          "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
+          "abstract": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
+          "authors": [
+            "Nick Jiang",
+            "Isaac Kauvar",
+            "Jack Lindsey"
+          ],
+          "url": "http://arxiv.org/abs/2606.17056v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.17056v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-15T17:59:58Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.912832429728837,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "128e2bec7cc57d63",
+          "title": "Data-Driven Personalization of Automated Insulin Delivery",
+          "abstract": "Automated insulin delivery (AID) systems are often tuned for the population and offer limited online adaptation to the inter- and intrapatient variability in insulin needs caused by meal patterns, physical activity, and fluctuations in insulin sensitivity. We present a real-time, data-driven personalization approach that adapts controller parameters using the subject's daily glycemic data. The adaptation is formulated as projected gradient descent on a daily risk metric, where the gradient estimation is designed to attenuate noise and metabolic variability. We use contraction theory to validate the optimization framework and convergence of the closed-loop system under adaptation. In silico experiments on the 100-adult cohort of the FDA-accepted UVA/Padova T1D simulator show that our method improves glycemic risk and increases time-in-range (TIR, 70-180\\,mg/dL) by 2%, 3%, and 4% after 4, 8, and 17 weeks, respectively, under variability in meal timing, meal size, and insulin sensitivity.",
+          "authors": [
+            "Ali Kashani",
+            "Ali Tavasoli",
+            "Heman Shakeri"
+          ],
+          "url": "http://arxiv.org/abs/2606.17004v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.17004v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-15T17:38:38Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.911774228670634,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-06-15",
       "papers": [
         {
