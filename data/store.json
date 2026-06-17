@@ -1,6 +1,79 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-17",
+      "papers": [
+        {
+          "id": "3fc028c07ccd7f34",
+          "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting",
+          "abstract": "Neural dynamical systems are expressive temporal predictors that capture continuous-time dynamics through fine-grained state updates. However, this sequential structure maps poorly onto digital hardware optimized for dense matrix operations, a mismatch that analog neuromorphic computing, with its native continuous-time dynamics, can resolve. We introduce FerroNDS, a neuromorphic system built from two analog primitives: an integrator for temporal accumulation and an oscillator for frequency-selective filtering. We map this system onto compute-in-memory hardware based on multi-bit ferrodiodes. A 128-neuron instance of FerroNDS computes short-time Fourier transform and forecasts a 500-ms horizon for periodic, quasi-periodic, and chaotic signals. The system achieves sub-watt real-time operation with per-neuron per-inference energy of 1.64 $μ$J (200 Hz) and 0.29 $μ$J (10 kHz), 25-40$\\times$ area reduction over SRAM-based digital systems, and per-layer latency of 3.18 ms (200 Hz) and 63.87 $μ$s (10 kHz). To our knowledge, this is the first end-to-end integration of a ferrodiode into a neuromorphic computational framework, establishing ferroelectric compute-in-memory as a practical substrate for analog neural dynamical systems.",
+          "authors": [
+            "Keshava Katti",
+            "Adithya Selvakumar",
+            "Pratik Chaudhari",
+            "Deep Jariwala"
+          ],
+          "url": "http://arxiv.org/abs/2606.16896v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.16896v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-15T16:07:05Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.83586592757936,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "b3ee0290843eb55e",
+          "title": "Zone of Proximal Policy Optimization: Teacher in Prompts, Not Gradients",
+          "abstract": "Knowledge distillation transfers a teacher's competence to a small student but is brittle in the small-student regime: forcing the student to imitate logits from a much larger teacher concentrates it on the teacher's sharpest modes, hurting generalization on benchmark families beyond the training corpus. Reinforcement learning (RL) avoids logit imitation by training on the student's own rollouts. However, on questions where every rollout fails-yielding zero advantage and being silently discarded-injecting a stronger teacher's response into the policy gradient breaks the on-policy assumption and induces drift. We introduce Zone of Proximal Policy Optimization (ZPPO), inspired by Vygotsky's zone of proximal development, which keeps the teacher inside the prompt rather than the policy gradient. On hard questions, ZPPO constructs two reformulated prompts: a Binary Candidate-included Question (BCQ) pairs one correct teacher response with one incorrect student response as anonymized candidates the student must discriminate, and a Negative Candidate-included Question (NCQ) aggregates the student's wrong rollouts into a single prompt to surface their shared failure modes. A prompt replay buffer recirculates each hard question until it either graduates-the student's mean rollout accuracy on it reaches half- or is FIFO-evicted under finite capacity, amplifying BCQ and NCQ inside the student's current zone of proximal development. On the Qwen3.5 family at four student scales (0.8B-9B) with a 27B teacher, post-trained as vision-language models and evaluated on a 31-benchmark suite (16 VLM, 10 LLM, 5 Video), ZPPO outperforms off/on-policy distillation and GRPO, with the largest gains at the smallest scale.",
+          "authors": [
+            "Byung-Kwan Lee",
+            "Ximing Lu",
+            "Shizhe Diao",
+            "Minki Kang",
+            "Saurav Muralidharan",
+            "Karan Sapra",
+            "Andrew Tao",
+            "Pavlo Molchanov",
+            "Yejin Choi",
+            "Yu-Chiang Frank Wang",
+            "Ryo Hachiuma"
+          ],
+          "url": "http://arxiv.org/abs/2606.18216v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.18216v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-16T17:46:02Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.912202733961635,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d517bc58e01c1cb8",
+          "title": "ReRAM-aware Model Finetuning addressing I-V Non-linearity and Retention Errors",
+          "abstract": "Traditional CPU, GPU, and NPU architectures are increasingly limited by the von Neumann bottleneck. While In-Memory Computing (IMC) using ReRAM crossbar arrays offers a high-density, energy-efficient alternative, its practical deployment is constrained through their non-idealities. Existing hardware-aware training frameworks often require training from scratch, which is computationally prohibitive for modern large-scale models. In this work, we propose a finetuning-based hardware-aware training algorithm that enables robust DNN deployment on ReRAM with minimal training overhead. Our approach mitigates I-V non-linearity by applying a range-shrunk sinh transformation and incorporates retention errors directly into a regularization loss during the finetuning process. We evaluate our framework across models and tasks such as image classification and question-answering (QA). Experimental results demonstrate that our method achieves similar accuracy on large-scale models like ResNet18 and DeiT-Tiny as the base model. In-case of ImageNet for MobileNetV3 families the technique has only less than 2% accuracy degradation. Further, applying the technique on the SQuAD v2 dataset results in only 1 point degradation of F-1 score.",
+          "authors": [
+            "Ching-Yi Lin",
+            "Shamik Kundu",
+            "Arnab Raha",
+            "Sahil Shah"
+          ],
+          "url": "http://arxiv.org/abs/2606.17471v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.17471v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-16T03:29:51Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 35.869733321759256,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-06-16",
       "papers": [
         {
