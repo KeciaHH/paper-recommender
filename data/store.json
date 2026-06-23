@@ -1,6 +1,53 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-23",
+      "papers": [
+        {
+          "id": "b19320c4d0667d19",
+          "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+          "abstract": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freedom (DoF) end effectors that behave like an open-close grasp primitive. We introduce CoorDex, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move. Starting from simulated whole-body and hand demonstrations, CoorDex trains privileged motion tracking teachers for the humanoid body and dexterous hand, distills them into proprioception-conditioned latent priors, and uses the frozen priors as the action space for downstream residual reinforcement learning. A coordinated latent residual policy composes these priors through shared task context and separate body-hand residual heads, preserving natural whole-body motion while improving finger-level contact reliability. CoorDex enables a Unitree G1 humanoid with a 20-DoF WUJI hand to execute dexterous manipulation while in motion, including non-stop bottle grasping and carrying, fridge door opening on the move, and cube pick-and-turn. Ablations on the walk-grasp-carry task show that joint-space PPO, joint-space hand control, and monolithic latent prediction all fail under the same reward budget, while the latent-prior interface and coordinated residual structure make high-dimensional contact-rich loco-manipulation trainable. Project Page: https://skevinci.github.io/coordex/",
+          "authors": [
+            "Sikai Li",
+            "Shuning Li",
+            "Zhenyu Wei",
+            "Yunchao Yao",
+            "Chenran Li",
+            "Mingyu Ding"
+          ],
+          "url": "http://arxiv.org/abs/2606.23680v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.23680v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-22T17:59:20Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.913732116402116,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "4376b4e5860f0cd1",
+          "title": "Efficient Network Inference via Hardware-Aware Architecture Search, Model Pruning & Quantization",
+          "abstract": "Embedded global navigation satellite system (GNSS) interference monitoring requires fast and memory-efficient inference to process large volumes of raw in-phase and quadrature (IQ) samples in real time. At the same time, increasingly expressive deep neural networks (DNNs) are needed for robust interference classification and characterization across diverse signal conditions. This creates a fundamental tension between predictive performance and deployability on resource-constrained hardware. In this paper, we investigate efficient network inference for GNSS interference characterization using iterative structured pruning, post-training static quantization, and hardware-aware zero-shot neural architecture search (NAS). Starting from MCUNet as a compact baseline, we analyze how model compression and automated architecture optimization affect model size, computational complexity, and memory usage while maintaining task performance. Experiments on a GNSS interference dataset, covering both classification and generalized characterization, show the benefits of combining compression and hardware-aware design for embedded deployment. Our results provide practical guidance for developing compact machine learning (ML) models for real-time GNSS interference monitoring on embedded platforms (iMXRT1062 MCU, Raspberry Pi Zero 2W, and Raspberry Pi 5).",
+          "authors": [
+            "Lucas Heublein",
+            "Mark Deutel",
+            "Axel Plinge",
+            "Felix Ott"
+          ],
+          "url": "http://arxiv.org/abs/2606.23210v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.23210v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-22T11:54:34Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.89563853174603,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-06-22",
       "papers": [
         {
