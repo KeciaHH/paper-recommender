@@ -1,6 +1,139 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-29",
+      "papers": [
+        {
+          "id": "d7dca5b4225937d3",
+          "title": "Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation",
+          "abstract": "Test-time adaptation (TTA) has emerged as a promising paradigm for mitigating distribution shifts in deep models. However, existing TTA approaches for anomaly segmentation remain limited by their reliance on pixel-level heuristics, such as confidence thresholding or entropy minimisation, which fail to preserve structural consistency under noise and texture variation. Moreover, they typically treat anomaly maps as flat intensity fields, ignoring the higher-order spatial relationships that characterise complex defect geometries. We introduce TopoTTA (Topological Test-Time Adaptation), a novel framework that integrates persistent homology, a tool from topological data analysis, into the TTA pipeline to enforce geometric and structural coherence during adaptation. By applying multi-level cubical complex filtration to anomaly score maps, TopoTTA derives robust topological pseudo-labels that guide a lightweight test-time classifier, enhancing segmentation quality without retraining the backbone model. The approach avoids reliance on method-specific raw-score thresholding for mask binarisation, preserves connectivity, and generalises across both 2D and 3D modalities. Extensive experiments across six standard benchmarks (MVTec AD, VisA, Real-IAD, MVTec 3D-AD, AnomalyShapeNet, and MVTec LOCO) demonstrate an average 15% F1 improvement over state-of-the-art unsupervised anomaly detection and segmentation methods, with the largest gains on anomalies exhibiting complex geometric or structural variations. These findings suggest that integrating topological reasoning into test-time adaptation provides a principled route to structure-aware generalisation, bridging the gap between geometric learning and robust adaptation.",
+          "authors": [
+            "Ali Zia",
+            "Usman Ali",
+            "Abdul Rehman",
+            "Umer Ramzan",
+            "Kang Han",
+            "Muhammad Faheem",
+            "Shahnawaz Qureshi",
+            "Wei Xiang"
+          ],
+          "url": "http://arxiv.org/abs/2606.28268v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.28268v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-26T17:04:42Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.76881571676587,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "eae7112528d45c56",
+          "title": "End-to-End Learning of Quantum Control on Latent Dynamical Manifold",
+          "abstract": "Traditional quantum control relies on an iterative \"simulate-then-optimize\" paradigm, where dynamics simulation and control design are decoupled, leading to substantial computational overhead and limited scalability, particularly in noisy environments. Here, we propose an end-to-end quantum control framework based on long short-term memory, in which system dynamics and control strategies are learned jointly in a low dimensional latent manifold. The model directly maps initial states and environmental parameters to both dynamical trajectories and optimized control pulse in a single forward pass. The framework is validated on adiabatic speedup in a two-level system and state transfer in a one-dimensional spin chain under noise, achieving accurate dynamical prediction and control optimization. It improves the fidelity for both tasks and significantly reduces the optimization cost by three orders of magnitude compared with conventional iterative methods, while exhibiting strong generalization to multi-parameter, time-varying noise, as well as to different initial states and driving fields. Our work introduces a data-driven control paradigm based on latent manifold learning, reducing the computational bottleneck of iterative optimization and enabling real-time adaptive control of complex open quantum systems.",
+          "authors": [
+            "Jun-Dong Zhong",
+            "Zong-Yuan Ge",
+            "Feng-Hua Ren",
+            "Zhao-Ming Wang"
+          ],
+          "url": "http://arxiv.org/abs/2606.27907v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.27907v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-26T09:57:12Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.747610359623017,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "e5291e37e7b226d8",
+          "title": "End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference",
+          "abstract": "Large Language Models (LLMs) inference is typically deployed under a static resource assumption, where models execute a fixed computational graph regardless of the runtime environment. However, real-world cloud infrastructure is inherently dynamic, characterized by fluctuating availability (e.g., spot instance preemption) and tiered Quality-of-Service requirements. In such volatile settings, static models are inflexible: they either crash under resource constraints or waste compute on redundant operations. To bridge this gap, we propose Learning to Allocate (L2A), an end-to-end framework for resource-adaptive inference. Unlike prior methods that condition only on input difficulty, we formulate inference as a constrained allocation problem conditioned on both the input and the runtime resource budget itself. We introduce lightweight, budget-conditioned and input-aware gating networks integrated into the LLM. These gates are trained via a unified objective that jointly optimizes task performance, logical consistency, and resource costs along three axes matching how real-world dynamics manifest: layer skipping for memory and depth pressure, head pruning for throughput contention, and reasoning-token reduction for latency tightening. This lets the model learn a budget-aware policy beyond input difficulty alone: it adaptively configures its computational footprint with respect to real-time resource dynamics, maximizing reasoning depth when resources permit while enforcing strict frugality when budgets tighten. A single L2A model traces the entire compute-accuracy Pareto frontier on Llama-3-8B and Qwen-3-4B: at up to 34% realized layer sparsity, it stays within 0.6% of the dense baseline on GSM8K, with the same gap holding zero-shot on out-of-distribution tasks, while every static or heuristic baseline requires a separately tuned model and still drops by 5-10% at comparable inference time.",
+          "authors": [
+            "Yuhang Chen",
+            "Jinhao Duan",
+            "Ruichen Zhang",
+            "Mingfu Liang",
+            "Xiaohan Wei",
+            "Yunchen Pu",
+            "Fei Tian",
+            "Chonglin Sun",
+            "Parish Aggarwal",
+            "Frank Shyu",
+            "Luke Simon",
+            "Sandeep Pandey",
+            "Tianlong Chen",
+            "Xi Liu"
+          ],
+          "url": "http://arxiv.org/abs/2606.27743v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.27743v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-26T05:48:21Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.735266609623014,
+          "reason": "Matches Network Early Exit."
+        },
+        {
+          "id": "366d79e2ed37f5c7",
+          "title": "3D Imaging of Complex Skyrmion and Hopf Topologies in an Extended Sample",
+          "abstract": "Spin textures are key for emergent magnetic phenomena such as topological protection and underpin novel spintronic device paradigms based on racetrack memory, logic gates, and neuromorphic computing. Using a coherent diffractive imaging technique called vector ptycho-tomography, in combination with algorithms that are robust to noise, we image the 3D magnetic texture of skyrmion and Hopf topologies with no prior assumptions about the sample. This directly reveals experimentally for the first time an extended 3D skyrmion lattice, including the domain wall shape, topological charge, helicity, and Hopf index. Our findings demonstrate experimentally that dipole stabilized skyrmions in Fe/Gd multilayers exhibit barrel-shaped skyrmion tubes with a twisted helicity, transitioning from N$é$el-type winding at the surfaces to both clockwise and counterclockwise Bloch-type winding in the bulk, that can also be described as fractional hopfions. We image a lattice of 24 skyrmions with topological charge 1, average depth-dependent domain wall width of 23 to 40 nm, depth-dependent twisted helicity from $\\pm$155$°$ to $\\pm$30$°$, and fractional Hopf index of $\\pm$0.3. Over 10 TB of data were analyzed to yield a fully-resolved 3D reconstruction over a >0.4 $μ$m$^3$ volume, with high fidelity down to the Nyquist limit of 8 nm. This method fills a key gap in the current landscape of magnetic imaging by enabling high-resolution, element-specific 3D reconstructions of full-field extended spin textures - offering a new route for exploring the topological complexity of magnetic materials in three dimensions.",
+          "authors": [
+            "I. Binnie",
+            "H. Fang",
+            "B. Shearer",
+            "A. Grafov",
+            "N. Jenkins",
+            "Y. Shao",
+            "C. O'Leary",
+            "Y. Liao",
+            "T. Feggeler",
+            "A. Oh",
+            "S. Yazdi",
+            "J. Zou",
+            "B. Wang",
+            "E-E. Cating",
+            "S. A. Montoya",
+            "D. Shapiro",
+            "J. Miao",
+            "H. C. Kapteyn",
+            "M. M. Murnane"
+          ],
+          "url": "http://arxiv.org/abs/2606.27365v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.27365v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-25T17:59:08Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.70008721064815,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "8becebc64cffe8ad",
+          "title": "An Instruction Set Architecture for IMPLY-based Memristive Processing-in-Array",
+          "abstract": "The push towards expanded ultra-low-power edge computing necessitates hardware capable of operating under extremely strict energy constraints. Traditional Complementary Metal-Oxide-Semiconductor (CMOS) microcontrollers are fundamentally limited in this domain by the von Neumann bottleneck and by the static power leakage inherent to volatile memory. Memristive In-Memory Computing (IMC) offers a promising solution to these inefficiencies by unifying data storage and computation into a single non-volatile component. However, the State of the Art (SoA) predominantly focuses on accelerators designed to be a co-processor for data-intensive computation. This leaves the prospect of standalone, general-purpose IMC microcontroller architectures underexplored. This thesis proposes such an architecture tailored for ultra-low-power edge devices, alongside an instruction set closely derived from the RV32I standard. Using the IMPLY stateful logic paradigm, a complete implementation of the proposed instruction set is provided, and the novel addressing schema required to support computation in the memristive crossbar array is described as well. Then, the energy use and other circuit-level metrics of the proposed architecture are evaluated through simulation and compared against those of traditional microcontrollers. Finally, the functional viability of the design is demonstrated through an application case study, describing how the proposed design could be used in an intelligent environmental sensor node.",
+          "authors": [
+            "Liam Splittgerber",
+            "Fabian Seiler",
+            "Nima TaheriNejad"
+          ],
+          "url": "http://arxiv.org/abs/2606.27319v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.27319v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-25T17:32:30Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.69876611276455,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-06-28",
       "papers": [
         {
