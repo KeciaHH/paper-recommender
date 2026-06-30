@@ -1,6 +1,137 @@
 {
   "recommendations": [
     {
+      "date": "2026-06-30",
+      "papers": [
+        {
+          "id": "29db1eab80ac258e",
+          "title": "Mega: A 22 nm Convolutional Spiking Neural Network Accelerator Achieving 0.375 pJ/SOP for Efficient Edge Vision",
+          "abstract": "Convolutional Spiking Neural Networks (SNN) offer the potential for highly energy-efficient vision processing by exploiting sparse, event-driven computation. However, existing SNN accelerators underutilize the inherent parallelism of convolutional layers and lack the flexibility to accommodate varying memory demands and input sparsity across layers. This paper presents Mega, a digital architecture for convolutional SNNs that addresses these limitations through three key contributions: (1) highly parallel acceleration of $3 \\times 3$ convolutions, (2) a unified data memory for spikes, neuron states, and weights, and (3) efficient spike map processing with low-overhead spike detection. Fabricated in GlobalFoundries 22 nm FDSOI technology, Mega achieves an energy efficiency of 0.375 pJ/SOP, improving the state of the art by $4\\times$.",
+          "authors": [
+            "Rick Luiken",
+            "Manil Dev Gomony",
+            "Sander Stuijk"
+          ],
+          "url": "http://arxiv.org/abs/2606.30039v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.30039v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-29T09:35:42Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.88856484126984,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "6036adc88be90d76",
+          "title": "PS-PPO: Prefix-Sampling PPO for Critic-Free RLHF",
+          "abstract": "Reinforcement Learning from Human Feedback (RLHF) for Large Language Models increasingly relies on critic-free methods as a practical alternative to actor--critic training. Despite their simplicity, existing critic-free approaches propagate a trajectory-level learning signal uniformly across all tokens in a trajectory. This requires full-trajectory policy updates for every rollout, leading to substantial optimization cost for long reasoning traces, even though intermediate prefixes often contain enough information to largely determine the final outcome. We propose Prefix-Sampling Proximal Policy Optimization (PS-PPO), a compute-efficient critic-free method for RLHF that exploits this temporal redundancy. PS-PPO introduces a prompt-conditioned cutoff distribution and samples a cutoff timestep for each trajectory. During the update pass, PS-PPO backpropagates only through the sampled prefix of each trajectory and applies an importance-weighting correction so that the resulting truncated gradient estimator remains unbiased with respect to the full-trajectory objective. Experiments on mathematical reasoning and RLHF benchmarks show that PS-PPO achieves large reductions in training compute and peak GPU memory, while maintaining accuracy comparable to strong critic-free baselines.",
+          "authors": [
+            "Doo Hwan Hwang",
+            "Kee-Eung Kim"
+          ],
+          "url": "http://arxiv.org/abs/2606.29758v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.29758v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-29T04:04:32Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.87213792328042,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "a4e32fc33b704ed6",
+          "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
+          "abstract": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to exploit imperfections in a learned reward model. We challenge this intuition empirically and mechanistically. We train a Qwen3-14B policy under Direct Preference Optimisation (DPO) with three levels of conservatism ($β\\in \\{β_{\\mathrm{lo}}, β_{\\mathrm{mid}}, β_{\\mathrm{hi}}\\}$ derived from empirical log-ratio percentiles), then adapt each checkpoint online against a learned reward ensemble (3\\,$\\times$\\,Qwen3-1.7B) while measuring true performance on GSM8K exact-answer accuracy. We find that \\emph{higher offline conservatism monotonically increases reward-hacking damage}, measured by the Goodhart gap and its area under the curve (AUGC), with Spearman $ρ= 1.0$ across all three conditions. Mechanistic analysis reveals a three-link causal chain: (i) high-$β$ DPO compresses policy entropy, (ii) Low-entropy policies generate responses with reduced diversity, concentrating in a narrow region of the reward model's training distribution (lower pairwise cosine distance), and (iii) despite this proximity, ensemble disagreement (epistemic uncertainty) increases with $β$ and is exploited faster during online optimisation. We further fit a power-law curve to the $(β, \\augc)$ data and identify a practical optimal conservatism level $β^{\\star}$ that balances alignment fidelity against hacking vulnerability. Our results suggest that the field needs \\emph{calibrated}, not \\emph{maximal}, conservatism.",
+          "authors": [
+            "Subramanyam Sahoo",
+            "Aman Chadha",
+            "Vinija Jain",
+            "Divya Chaudhary"
+          ],
+          "url": "http://arxiv.org/abs/2606.30627v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.30627v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-29T17:56:03Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.91338378968254,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "d05e9e9534146f84",
+          "title": "Untangling QLDPC Codes with Biased Noise Ancilla",
+          "abstract": "Remarkable technical progress has made high-rate, high-distance, quantum low-density parity-check codes (QLDPC) promising candidates for scalable quantum computing. However, it is hard to design low-depth syndrome extraction circuits that do not spread errors from ancilla qubits to multiple data qubits, also known as hook errors, for general QLDPC codes. Additionally, widely used decoders for these codes based on belief propagation are impaired due to short loops in the Tanner graph. Here, we investigate a hardware-aware approach to avoid these hooks and loops using biased noise ancillas. Using examples of bicycle bivariate codes and a cyclic hypergraph product code, which have been widely considered for practical application, we show that the effective fault-distance of the conventional syndrome extraction circuit can be significantly higher and the number of short loops can be significantly lower when the ancillas are subject to phase-flip errors only, compared to when they are also subject to bit-flip errors. This can result in almost an order of magnitude improvement in the logical error rate at circuit noise of $2\\times 10^{-3}$ and when bit-flip errors in the ancilla are 50 times less likely than phase-flip errors. Our work demonstrates a significant and practical quantum error correction advantage with biased noise qubits in which full-bias cannot be maintained.",
+          "authors": [
+            "Runjiang Bi",
+            "Kathleen Chang",
+            "Shruti Puri"
+          ],
+          "url": "http://arxiv.org/abs/2606.30592v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.30592v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-29T17:34:21Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.91230740079365,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "4ca8d446438d0c89",
+          "title": "Blueprint for a fault-tolerant compound photon-atom quantum architecture",
+          "abstract": "Fault-tolerant quantum computing requires architectures that simultaneously address scalability, connectivity, and error correction under realistic noise constraints. We present a compound photonic-atomic quantum computing platform that uses cavity QED to realize near-deterministic entangling operations between flying photonic qubits and stationary atomic qubits. Photons provide long-range connectivity and scalability via measurement-based quantum computing (MBQC), while atoms supply reusable, near-deterministic resources for photon generation and entanglement, overcoming the inefficiency of purely photonic platforms. The core primitive is a symmetrized Duan-Kimble photon-atom controlled-phase (CZ) gate, robust to experimental imperfections and high-fidelity. Using single $^{87}$Rb atoms coupled to optical cavities, we give protocols for state preparation, measurement, photon generation, and entangling gates on tens-of-nanosecond timescales, and show how large-scale cluster states with effectively unrestricted connectivity and reduced overhead can be generated through atomic reuse. We analyze fault tolerance on the Raussendorf-Harrington-Goyal (RHG) lattice with a hardware-aware noise model capturing asymmetric loss and correlated photonic-atomic errors. Logical memory simulations yield a photon-loss threshold near $2.6\\%$ per physical gate ($\\sim$15\\% total per trajectory). The full Clifford set -- Hadamard, phase, CNOT -- is implementable transversally or fold-transversally at thresholds matching the identity channel, and we propose two non-Clifford resource-state routes (code teleportation and magic state cultivation) within the foliated cluster-state architecture.",
+          "authors": [
+            "Geva Arwas",
+            "Doron Azoury",
+            "Daniel Azses",
+            "Orel Bechler",
+            "Dana Ben Porath",
+            "Barak Dayan",
+            "David Dentelski",
+            "Yaron Jarach",
+            "Nadav Kandel",
+            "Aviad Landau",
+            "Yair Margalit",
+            "Alexander Poddubny",
+            "Michael Slutsky",
+            "Konstantin Yavilberg"
+          ],
+          "url": "http://arxiv.org/abs/2606.30385v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.30385v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-29T14:40:27Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.903681408730158,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "4e8d136d7552936a",
+          "title": "Geometric Approach to Zero-Memory Quantum Dot Reservoir Computing",
+          "abstract": "Physical reservoir computing offers an energy-efficient alternative to conventional neural networks, where the intrinsic memory capacity in the physical system plays a central role. We demonstrate that memory capacity can be engineered extrinsically in memoryless systems by exploiting the computational space-time tradeoff, substituting temporal memory with spatial degrees of freedom. Our approach utilizes multidimensional input nodes to function as a spatial memory axis, thereby removing the dependency on intrinsic history-dependent dynamics in the reservoir. We validate this framework through numerical simulations of a generalized quantum dot, whose discrete energy levels provide strong nonlinearity crucial for reservoir computing as well. By coupling this inherent nonlinearity with our extrinsic memory, we show that memoryless quantum reservoir can achieve high performance on both chaotic Mackey-Glass future prediction and nonlinear transformation tasks. Furthermore, by analyzing the geometry of the quantum state trajectories, we identify the physical mechanism underlying this memory emergence: extrinsic memory constructs a hysteresis loop within the quantum Hilbert space, and this loop becomes topologically stable when the evolution of the system state synchronizes with the input signal's frequency. Our work decouples reservoir computing from material-specific memory properties, significantly expanding the range of candidate systems for quantum neuromorphic computing.",
+          "authors": [
+            "Bongsu Kim",
+            "Oscar Lee",
+            "Sangjun Jeon",
+            "Kun Woo Kim"
+          ],
+          "url": "http://arxiv.org/abs/2606.29320v1",
+          "pdfUrl": "http://arxiv.org/pdf/2606.29320v1",
+          "source": "arXiv",
+          "publishedAt": "2026-06-28T10:26:43Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.81966685846561,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-06-29",
       "papers": [
         {
