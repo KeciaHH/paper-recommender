@@ -1,6 +1,58 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-08",
+      "papers": [
+        {
+          "id": "03f0557a633a4122",
+          "title": "Embodied Human-Robot Interaction via Acoustics: A MARL Approach with AcoustoBots for Spatial Data Physicalization",
+          "abstract": "Traditional data physicalization is often static and disconnected from real environments, limiting its ability to convey embodied spatial dynamics and engage users. To address this limitation, we present AcoustoBots, a mobile acoustophoretic data-physicalization platform in which TurtleBot3 robots carry upward-facing 8 x 8 ultrasonic phased arrays. Each array levitates a particle whose height (1-10 cm) encodes a local urban scalar value, such as population density, noise, or traffic. A MARL (Multi-Agent Reinforcement Learning) policy based on the Multi-Agent Deep Deterministic Policy Gradient (MADDPG) algorithm, with centralized training and decentralized execution, selects collision-aware navigation actions, while a high-rate Gerchberg-Saxton-Phased Array of Transducers (GS-PAT) acoustic controller maintains trap stability and updates array phases to achieve the commanded height during motion. This creates a closed perception-display-action loop. We evaluate single-robot city-to-city traversal and dual-robot cooperative coverage on a 4 m x 3 m scaled UK map using PhaseSpace-based localization for repeatable multi-robot trials. Results show stable in-motion levitation and consistent, location-dependent height rendering, with task success rates of 90% and 80% for the single and dual-robot regimes, respectively, over 10 trials per regime, and low collision counts. These findings support acoustophoretic levitation as a simple, glanceable, robot-mediated communication cue for embodied human-robot interaction in spatial analytics.",
+          "authors": [
+            "Shiqi Liu",
+            "Narsimlu Kemsaram",
+            "Prateek Mittal",
+            "Pengyuan Wei",
+            "Sriram Subramanian"
+          ],
+          "url": "http://arxiv.org/abs/2607.06563v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.06563v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-07T17:59:44Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.91395406498016,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "4d84f789cd6f3d5d",
+          "title": "Unsupervised Domain Adaptation for Calcification Classification in Mammography Across Multi-Site Datasets",
+          "abstract": "Deep learning-based computer-aided diagnosis (CAD) systems have shown strong performance in breast cancer diagnosis, particularly for classification tasks in mammography. However, domain shifts across multi-site datasets remain a challenge, especially when models are applied to unseen domains. In this work, we proposed a calcification classification framework to improve malignant versus benign breast disease classification across multi-site mammography datasets. The framework consisted of two components: (1) an unsupervised domain adaptation module based on style transfer models (AdaIN and CycleGAN) to generate vendor-specific and technique-specific training samples without additional annotations, and (2) a supervised classification module using Swin Transformer V2 as the backbone. We evaluated the proposed method on three datasets: cross-validation on OPTIMAM (National Health Service, United Kingdom; n=2994), followed by external validation on EMBED (Emory University; n=125), and Duke Calcification Dataset v1 (n=788). These datasets cover multiple vendors and include both full-field digital mammography and synthetic 2D images derived from digital breast tomosynthesis. The proposed framework improved cross-site performance for both EMBED (AUC 0.68 to 0.72) and the Duke Calcification Dataset (AUC 0.68 to 0.73). These findings indicate that domain adaptation can reduce domain shifts and improve the generalization for calcification classification across multi-site datasets.",
+          "authors": [
+            "Xuan Liu",
+            "Derek L. Nguyen",
+            "Emily C. Barre",
+            "Jennifer Thomas",
+            "Thomas Lynch",
+            "Jeffrey R. Marks",
+            "E. Shelley Hwang",
+            "Marc D. Ryser",
+            "Joseph Y. Lo",
+            "Lars J. Grimm"
+          ],
+          "url": "http://arxiv.org/abs/2607.06549v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.06549v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-07T17:53:49Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.913660580357142,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-07-07",
       "papers": [
         {
