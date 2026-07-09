@@ -1,6 +1,48 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-09",
+      "papers": [
+        {
+          "id": "66dc72d334d4b266",
+          "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+          "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that substantially improve the feedback efficiency of diffusion RLHF while preserving generalization to unseen prompts. Our key observation is that reward information in diffusion trajectories is unevenly distributed: not all denoising timesteps or trajectories contribute equally to learning from a reward signal. By emphasizing informative timesteps and trajectories during optimization, we obtain more effective gradient updates. First, we introduce a per-timestep weighting scheme that reweights denoising steps during policy optimization. We theoretically connect this weighting to the optimal convergence properties of proximal policy optimization (PPO) and approximate the resulting weighting trend empirically. Second, we introduce a replay mechanism that prioritizes informative trajectories, enabling the model to reuse past samples instead of repeatedly querying new rewards. Together, these strategies significantly improve the feedback efficiency of diffusion RLHF. Under identical hyperparameter settings, our approach achieves up to a 6$\\times$ improvement in sample efficiency compared to widely used diffusion RLHF baselines.",
+          "authors": [
+            "Eric Zhu",
+            "Abhinav Shrivastava",
+            "Soumik Mukhopadhyay"
+          ],
+          "url": "http://arxiv.org/abs/2607.07693v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.07693v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-08T17:49:49Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.91312219494048,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "8649bec95622568d",
+          "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
+          "abstract": "Conditional computation can decouple language model quality from per-token inference cost, yet leading techniques act on a single axis in isolation: Mixture-of-Experts (MoE) sparsifies the FFN, Mixture-of-Depths (MoD) skips whole transformer blocks, and KV-cache quantization compresses attention memory. We argue these three decisions (attention resolution, expert selection, and cache bit-width) are strongly coupled and should be made jointly: a token rare enough to warrant full attention may also need high-precision caching regardless of which expert processes it. We introduce TriRoute, a single lightweight controller shared across all three axes that, for every token at every layer, emits a coordinated policy: (i) an attention mode (skip/local/full), (ii) a sparse set of FFN experts (with a null expert recovering MoD), and (iii) a KV-cache bit-width. The controller trains end-to-end via a heterogeneous relaxation (Gumbel-Softmax with straight-through estimation for categorical decisions and load-balanced top-k gating for experts) under a Lagrangian budget constraint that turns the average compute and memory cost into a controllable knob. We identify a cross-axis routing-collapse cascade in naive joint training, where collapse on one axis propagates to the others, and address it with per-axis normalization and a coupling-aware balancing loss. On decoder-only models from 160M to 1.3B parameters at compute-optimal token counts, TriRoute Pareto-dominates the best independent MoD+MoE+KV-quantization combination at matched inference FLOPs and memory, while better preserving tail-case robustness on rare entities, code, and arithmetic that pure perplexity optimization erodes. Post-hoc analysis reveals interpretable structure: the controller allocates full attention and high-precision cache to sentence-initial positions, rare subwords, and named entities, while cheaply routing function words.",
+          "authors": [
+            "Andrii Balashov",
+            "Olena Ponomarova"
+          ],
+          "url": "http://arxiv.org/abs/2607.06601v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.06601v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-07T00:12:46Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.789260587797617,
+          "reason": "Matches Network Early Exit."
+        }
+      ]
+    },
+    {
       "date": "2026-07-08",
       "papers": [
         {
