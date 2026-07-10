@@ -1,6 +1,84 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-10",
+      "papers": [
+        {
+          "id": "8bcf4e1ce717e1e8",
+          "title": "MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with Deep Graph Reinforcement Learning",
+          "abstract": "We address liquidity placement in the Bitcoin Lightning Network (LN): given a fixed budget, which channels should a node open to maximize its routing capacity? We cast this as a budget-constrained combinatorial optimization problem on graphs, selecting $k$ edge additions that maximize $s$--$t$ max-flow, a theory-grounded measure of routing capacity, and solve it with graph reinforcement learning. Our lightweight agent combines a message-passing policy network with proximal policy optimization (PPO) and action masking, and is trained under a hub-exclusion curriculum: the network's top hubs are removed from training subgraphs, forcing the policy to learn capacity-aware placement rather than hub attachment. In extensive experiments on real Lightning Network snapshots, our method consistently outperforms strong heuristic baselines on the max-flow objective across multiple seeds and unseen graphs. The agent has been deployed in production for peer recommendations, executing 4640 channel-open decisions that cumulatively allocate 267.3 BTC over $16 million across 30 managed nodes.",
+          "authors": [
+            "Harrison Rush",
+            "Vincent Davis",
+            "Simone Antonelli",
+            "Vikash Singh",
+            "Jesse Shrader",
+            "Emanuele Rossi"
+          ],
+          "url": "http://arxiv.org/abs/2607.08703v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.08703v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-09T17:09:20Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.91171473048942,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "94fefbadbb015e63",
+          "title": "ZipDepth: Bringing Lightweight Zero-Shot Monocular Depth Anywhere, on Any Device",
+          "abstract": "Monocular depth estimation has seen remarkable progress through foundation models achieving robust zero-shot generalization, yet their computational demands place them far beyond the reach of embedded and mobile platforms. Lightweight alternatives exist, but have been developed almost exclusively within single-domain, self-supervised paradigms, failing silently under domain shift. We present ZipDepth, a compact monocular depth network that bridges this gap by combining an efficient reparameterizable encoder-decoder with large-scale knowledge distillation from a foundation model over a large multi-domain training set. Comprising just 6.1M parameters, ZipDepth runs at real-time rates from server GPUs to power-constrained devices, achieving the best trade-off between zero-shot accuracy and deployment efficiency among lightweight models across five benchmarks, taking a significant step towards the accuracy of foundation models with 50x more parameters.",
+          "authors": [
+            "Fabio Tosi",
+            "Luca Bartolomei",
+            "Matteo Poggi",
+            "Stefano Mattoccia"
+          ],
+          "url": "http://arxiv.org/abs/2607.08771v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.08771v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-09T17:59:58Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.914226304563492,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "f1d89c0b27c44f63",
+          "title": "Plaquette: A hardware-aware design platform for fault-tolerant quantum computers",
+          "abstract": "Hardware teams building fault-tolerant quantum computers (FTQCs) must decide which imperfections to suppress, and that decision requires the logical performance of the architecture under the device's actual noise. Hardware noise often departs from the stochastic Pauli models used by scalable stabilizer simulators: superconducting transmons leak out of the computational subspace, neutral atoms scatter through intermediate states, trapped ions heat as their motional modes absorb phonons, and miscalibrated controls over-rotate coherently. We present Plaquette, a theoretical framework and software suite that computes the logical performance of fault-tolerant architectures directly from the physics of such imperfections. In Plaquette, a hardware error model is specified once, as Kraus operators, Hamiltonian-Lindblad dynamics, or an experimentally reconstructed quantum channel, and is compiled automatically into the exact or approximate representation required by each of four sampler classes: stabilizer sampling for Pauli noise, the new XPauli sampler for leakage and environment sectors, near-Clifford samplers for coherent errors, and full-state simulation for exact reference calculations. We validate the XPauli and near-Clifford samplers against full-state simulation, which they can match within statistical uncertainty while Pauli twirling can fall short depending on the error model. We demonstrate the framework on three error models: leakage in superconducting qubits, intermediate-state scattering in neutral atoms, and heating in trapped ions. The size of the discrepancy between Plaquette and Clifford-only simulations varies with platform and noise process, so reliable thresholds, error budgets, and overhead estimates require the most accurate simulation available. Plaquette provides a direct path from the open-system physics of a device to the logical performance of the FTQC built on it.",
+          "authors": [
+            "Raul Conchello Vendrell",
+            "Carlos Díaz López",
+            "Ish Dhand",
+            "Kshitij Kapoor",
+            "Davide Laureti",
+            "Marcello Massaro",
+            "Pranjal Nayak",
+            "Ivan Ogloblin",
+            "Martin B. Plenio",
+            "Shreya Prasanna Kumar",
+            "Matteo Santandrea",
+            "Varun Seshadri",
+            "Antal Száva",
+            "Trevor Vincent",
+            "Raphael Weber"
+          ],
+          "url": "http://arxiv.org/abs/2607.08767v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.08767v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-09T17:59:27Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.914200676256613,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-07-09",
       "papers": [
         {
