@@ -1,6 +1,64 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-13",
+      "papers": [
+        {
+          "id": "fbe9842e9d4b269b",
+          "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+          "abstract": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, we propose the Semantic Pareto-DQN, a multi-objective reinforcement learning framework. Our approach synthesizes heterogeneous transaction features into cohesive natural-language narratives, encoded by large language models, thereby producing a robust, scale-invariant state representation. The agent optimizes a vectorial reward that explicitly decouples financial efficacy, operational friction, and semantic discovery. By mapping the continuous Pareto frontier, the system dynamically navigates the asymmetric costs of missed anomalies versus false positives. Empirical evaluations across E-Commerce fraud and UCI Credit datasets show that semantic Pareto-DQN successfully shatters the zero-recall trap. It achieves superior minority-class recall compared to scalarized baselines, providing an alternative to trade bounded operational friction for financial anomaly discovery.",
+          "authors": [
+            "Cláudio Lúcio do Val Lopes",
+            "Lucca Machado da Silva"
+          ],
+          "url": "http://arxiv.org/abs/2607.09641v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.09641v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-10T17:39:00Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.770601746031748,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "c54b0a0d459cbb76",
+          "title": "Toward Real-Time Sentence-Level Sign Language Translation",
+          "abstract": "Most sign language understanding systems operate at the level of isolated signs, limiting their usefulness in natural communication. We study sentence-level sign language translation (SLT) with the primary goal of real-time deployment rather than proposing a new translation architecture. We fine-tune a SHuBERT-ByT5 translation stack on a uniformly sampled 9,872-example subset of How2Sign, selected because of compute and storage constraints, using QLoRA while keeping SHuBERT frozen. The model obtains a validation BLEU of 16.7 and, on the test split, BLEU 15.9 and BLEURT 44.7. The main contribution is a hardware-aware streaming system: a Raspberry Pi 4B reference client provides camera capture, local text display, and speech output, while compute-intensive perception and translation run on a CPU/GPU backend. The capture protocol remains client-agnostic, so the same backend can serve a browser, phone, or laptop. Chunked ingestion, bounded queues, parallelized perception, temporal reordering, and a sentence-boundary state machine reduce mean post-finalization response latency from 1.873 to 1.354 seconds (27.71%) and P95 latency from 2.919 to 2.130 seconds (27.03%) over the complete 9,872-example working subset.",
+          "authors": [
+            "Thanh-Hoang Nguyen Doan"
+          ],
+          "url": "http://arxiv.org/abs/2607.09611v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.09611v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-10T17:11:03Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.76921533812831,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "88efb28213781337",
+          "title": "TCLA: Training-Free Class-wise Logit Adaptation for Medical Vision-Language Models",
+          "abstract": "Medical Vision-Language Models (VLMs) exhibit strong zero-shot performance, yet their effectiveness still declines on out-of-distribution (OOD) data due to domain shifts and class bias inherited from large-scale pretraining. Existing few-shot adaptation methods typically introduce additional trainable components, which can be unstable in extremely low-data regimes (e.g., 1-shot), and lack robustness on different medical data. We present TCLA, a purely training-free few-shot adaptation method for Medical VLMs, which is fast and model-agnostic. TCLA corrects inference logits based on a small set of support samples, boosting pretrained VLMs performance by improving inter-class deconfusion and reducing domain shift. Extensive experiments on nine datasets across multiple medical imaging modalities including X-ray, Ultrasound, MRI, CT, Histopathology, demonstrate that TCLA consistently improves OOD performance of Medical VLMs and, in most of cases, outperforms existing training-based adaptation methods.",
+          "authors": [
+            "Tianyou Jiang",
+            "Ziyu Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2607.09562v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.09562v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-10T16:06:39Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 21.766020892857142,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-07-12",
       "papers": [
         {
