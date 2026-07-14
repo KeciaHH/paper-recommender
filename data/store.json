@@ -1,6 +1,52 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-14",
+      "papers": [
+        {
+          "id": "28eab12d93b1717e",
+          "title": "Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
+          "abstract": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning. Instead of asking the MLLM to judge a generated image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass. We use the average image-conditioned prompt log-likelihood as the reward, directly reusing the MLLM's pretrained image-text alignment ability without preference labels, reward-model fine-tuning. We further introduce Self-SpectraReward, a special case for unified multimodal models where the policy's own understanding branch serves as the reward model for its generation branch, forming a closed-loop self-improving framework without external reward models or external knowledge. Extensive experiments validate SpectraReward through a broad image-generation RL study covering two diffusion models, three RL algorithms, nine reward MLLM backbones from four MLLM families spanning 4B to 235B parameters, and five out-of-distribution text-to-image benchmarks. Results show that both SpectraReward and Self-SpectraReward significantly and consistently improve generation performance and outperform prior MLLM-derived reward training methods. Further analysis reveals that larger reward MLLMs are not always better, while Self-SpectraReward can match or surpass much larger external reward models, suggesting that reward-policy alignment is a key factor for effective image-generation RL. Project Page: https://huangrh99.github.io/SpectraReward/",
+          "authors": [
+            "Runhui Huang",
+            "Qihui Zhang",
+            "Zhe Liu",
+            "Yu Gao",
+            "Jie Wu",
+            "Hengshuang Zhao"
+          ],
+          "url": "http://arxiv.org/abs/2607.11886v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.11886v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-13T17:59:58Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.914428392030423,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "74670edfaf0fb893",
+          "title": "ARMOR-IMC: Adaptive Resource Mapping for Operational Robustness via Secure In-Memory Computing",
+          "abstract": "The massive data-movement overhead in traditional architectures has led to the adoption of In-Memory Computing (IMC) for energy-efficient Deep Neural Network (DNN) processing. By leveraging emerging devices like Spin-Orbit Torque Magnetic Tunnel Junctions (SOT-MTJs), IMC bypasses the \"memory wall\" and reduces leakage power inherent in traditional CMOS. However, this shift introduces dual hardware threats: manufacturing Process Variation (PV) degrades reliability and increases vulnerability to fault injection, while power Side-Channel Attacks (SCAs) compromise security. Existing defenses address these threats in isolation. This work presents a posttraining framework that simultaneously hardens analog IMC accelerators against both threats without retraining the model. Implemented in the IMAC-Sim simulator, our approach uses the proposed Variation Impact Score (VIS) to guide the mapping of Fault Observation Windows (FOWs) and introduces the Leakage Per Inference (LPI) metric to quantify input-dependent power variability under stochastic injection and the resulting reduction in effective signal-to-noise ratio. Experiments show that PV-induced faults can degrade accuracy by over 50%, while our method restores near-baseline accuracy and mitigates the threat of correlation-based power analysis attacks.",
+          "authors": [
+            "Muhtasim Alam Chowdhury",
+            "Ramtin Zand",
+            "Soheil Salehi"
+          ],
+          "url": "http://arxiv.org/abs/2607.10938v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.10938v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-12T21:59:41Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.85489052744709,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-07-13",
       "papers": [
         {
