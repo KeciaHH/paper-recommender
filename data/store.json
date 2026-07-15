@@ -1,6 +1,56 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-15",
+      "papers": [
+        {
+          "id": "5295fa8896c68fa8",
+          "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
+          "abstract": "Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.",
+          "authors": [
+            "Yu Fang",
+            "Wanxi Dong",
+            "Jiaqi Liu",
+            "Yue Yang",
+            "Mingxiao Huo",
+            "Yao Mu",
+            "Huaxiu Yao",
+            "Li Erran Li",
+            "Daniel Szafir",
+            "Mingyu Ding"
+          ],
+          "url": "http://arxiv.org/abs/2607.13033v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.13033v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-14T17:59:29Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.91431910300926,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "dc6eca2b6fb49cb8",
+          "title": "Domain-Incremental Remote Sensing Change Detection via Difference-Guided Adaptation and Frequency-Decoupled Distillation",
+          "abstract": "Remote sensing change detection (RSCD) models are prone to catastrophic forgetting when incrementally adapted to new domains. Existing domain-incremental learning (DIL) methods mainly preserve image-level representations but often overlook bitemporal discrepancy cues, which are critical for robust change detection under domain shifts. To address this limitation, we propose DG-FDD, a domain-incremental change detection framework that integrates Difference-Guided Adaptation and Frequency-Decoupled Distillation. Specifically, the Difference-Guided Dynamic Adapter (DGDA) models bitemporal feature discrepancies to promote change-aware feature adaptation and reduce domain-specific interference. Meanwhile, the Frequency-Decoupled Knowledge Distillation strategy with Cross-domain Synthesis (FDKD-CS) separates structural information from domain style in the frequency domain, enabling stable knowledge transfer without historical data. Extensive experiments on three public high-resolution RSCD datasets under two- and three-domain incremental protocols demonstrate that DG-FDD effectively mitigates catastrophic forgetting. Compared with independently trained single-task models, DG-FDD records mean relative changes in F1 and IoU of only -0.23% and -0.45%, respectively, across six two-domain sequences, and -0.69% and -1.31%, respectively, across the three evaluated three-domain sequences. These results indicate a favorable stability-plasticity balance between historical knowledge retention and new-domain adaptation in continual cross-domain change detection.",
+          "authors": [
+            "Daifeng Peng",
+            "Yaning Li",
+            "Haiyan Guan"
+          ],
+          "url": "http://arxiv.org/abs/2607.12934v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.12934v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-14T16:07:21Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.90875693369709,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-07-14",
       "papers": [
         {
