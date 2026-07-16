@@ -1,6 +1,75 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-16",
+      "papers": [
+        {
+          "id": "115b33ac6e81518b",
+          "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
+          "abstract": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, there remains unutilized potential in the form of recording metadata readily available within these community-driven data hubs. In this work, we explore the use of metadata -- such as location and time -- as auxiliary supervision signals, allowing the model to leverage species-metadata correlations in its learned representation. Auxiliary metadata losses provide additional information beyond vocalizations alone that can encourage a richer, more robust representation that generalizes better to species distribution and acoustic domain shifts -- important challenges for deployment in real-world passive acoustic monitoring (PAM) settings. We introduce MetaPerch, a new foundation model that achieves strong species identification performance across multiple challenging domains and present an extensive empirical study of the effects of 9 diverse metadata sources on 17 bioacoustic datasets.",
+          "authors": [
+            "Mustafa Chasmai",
+            "Vincent Dumoulin",
+            "Jenny Hamer"
+          ],
+          "url": "http://arxiv.org/abs/2607.14072v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.14072v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-15T17:42:41Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.91349833912037,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "d0d149ea16e32c9a",
+          "title": "Lighthouse RL: Sample-Efficient Circuit Optimization via Strategic Reset Points",
+          "abstract": "In this paper, we introduce Lighthouse RL, a sample-efficient reinforcement learning (RL) approach for analog circuit sizing. Traditional methods lack generalization across different performance targets, while standard RL approaches waste resources exploring unpromising regions. Our method addresses these inefficiencies through a strategic reset strategy that initializes episodes from high-performing configurations discovered during training, called \"lighthouses\". These states, which are closer to the target objectives, guide exploration toward promising regions. When compared to RL and Bayesian optimization methods from the literature, we demonstrate the effectiveness of our approach on a 2D benchmark problem and on two analog circuits, showing significant improvements in sample efficiency (up to 1.72x faster), optimization performance (100% vs. 0-87% success rate), generalization (75% vs. 0-50% extrapolation success), and objective maximization. This efficiency is particularly valuable for computationally expensive black-box optimization problems, and our reset strategy can be used as a plug-and-play enhancement for any RL-based optimization approach.",
+          "authors": [
+            "Mustafa Emre Gürsoy",
+            "Stefan Uhlich",
+            "Ryoga Matsuo",
+            "Yağız Gençer",
+            "Arun Venkitaraman",
+            "Chia-Yu Hsieh",
+            "Andrea Bonetti",
+            "Eisaku Ohbuchi",
+            "Lorenzo Servadei"
+          ],
+          "url": "http://arxiv.org/abs/2607.14008v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.14008v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-15T16:37:57Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.910287360284393,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "dc0bfe5d4b92cb1f",
+          "title": "CIMERA: Compute-in-Interconnect and Memory with Reconfigurable Precision for LLM Inference",
+          "abstract": "LLM impose significant computational and memory demands, creating challenges for energy-efficient inference across platforms ranging from data centers to power-constrained edge devices. Weight precision plays a critical role in balancing inference accuracy, throughput, and energy consumption, while modern LLM workloads exhibit pronounced heterogeneity and tolerance that favors adaptive precision execution. This paper presents CIMERA, a reconfigurable-precision LLM inference accelerator that integrates compute-in-interconnect and memory to mitigate the memory wall and enable precision-aware execution. Compared to Nvidia H100, CIMERA delivers up to $25\\times$ and $10\\times$ higher energy efficiency for 1B and 13B models, respectively.",
+          "authors": [
+            "Yue Jiet Chong",
+            "Yimin Wang",
+            "Wei Zhang",
+            "Xuanyao Fong"
+          ],
+          "url": "http://arxiv.org/abs/2607.13649v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.13649v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-15T09:49:48Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.890041824570105,
+          "reason": "Matches DVFS / Energy."
+        }
+      ]
+    },
+    {
       "date": "2026-07-15",
       "papers": [
         {
