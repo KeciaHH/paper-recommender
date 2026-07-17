@@ -1,6 +1,118 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-17",
+      "papers": [
+        {
+          "id": "55bb517f21606d08",
+          "title": "Scalable Training of Continuous-Time Spiking Neural Networks with Differentiable Spike-Time Discretization",
+          "abstract": "Continuous-time spiking neural networks (SNNs) provide an event-driven framework for temporal computation, computational neuroscience, and neuromorphic hardware. However, training deep continuous-time SNNs is severely constrained by the memory required for exact spike-time computation, which evaluates and retains candidate firing times over intervals determined by presynaptic spike ordering. Here we introduce a memory-efficient training framework based on differentiable spike-time discretization (DSTD) for leaky integrate-and-fire neurons with general membrane and synaptic time constants. DSTD maps irregular presynaptic spikes onto differentiable weighted events at fixed time points, replacing the input-dependent candidate dimension with $M$ fixed time intervals while accurately approximating continuous-time membrane-potential dynamics. This reduces candidate-related activation memory from $O(N_{\\mathrm{out}}N_{\\mathrm{in}})$ to $O(N_{\\mathrm{out}}M)$ in the case of time-to-first-spike (TTFS) coding, where $N_{\\mathrm{in}}$ and $N_{\\mathrm{out}}$ denote the numbers of presynaptic and postsynaptic neurons, respectively. We further introduce synfire-chain-inspired temporal regularization that organizes layer-wise firing windows, mitigates dead-neuron failures, and enables pipeline-like processing. In dense LIF layers, DSTD reduced peak memory consumption by up to approximately 100-fold and training time by up to approximately 20-fold compared with exact spike-time computation. Together, these methods allowed us to train 9-layer convolutional SNNs on CIFAR-10 and 20-layer convolutional SNNs on Fashion-MNIST on a single GPU.",
+          "authors": [
+            "Yusuke Sakemi",
+            "Tomoya Takeuchi",
+            "Takeo Hosomi",
+            "Kazuyuki Aihara"
+          ],
+          "url": "http://arxiv.org/abs/2607.14672v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.14672v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-16T07:38:24Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.883973259755294,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "73378c47d203bcb9",
+          "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+          "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).",
+          "authors": [
+            "Yushi Huang",
+            "Xiangxin Zhou",
+            "Jun Zhang",
+            "Liefeng Bo",
+            "Tianyu Pang"
+          ],
+          "url": "http://arxiv.org/abs/2607.15273v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.15273v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-16T17:59:02Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.914758643353174,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "11bf084828ab4f73",
+          "title": "Stochastic binary networks with asymmetric and time-delayed interactions",
+          "abstract": "Stochastic binary networks are widely used to describe collective dynamics in complex systems and to perform neuromorphic computation, yet realistic networks often contain both asymmetric interactions and finite signal propagation times that fall outside conventional theories. Here we study stochastic binary networks with asymmetric and time-delayed interactions motivated by experimental observations in coupled superparamagnetic tunnel junctions. We find that time delay fundamentally reshapes the dynamics induced by anti-symmetric couplings, producing strong oscillatory temporal correlations consistent with experiment. At the same time, sufficiently long delays drive the steady-state probabilities toward equal state occupations even in strongly coupled systems. These apparently featureless probability distributions coexist with pronounced temporal correlations, distinguishing them from equilibrium high-temperature behavior. We further show analytically that delay-induced uniform distributions emerge in a broad class of stochastic networks, while symmetry-breaking bias fields restore interaction-dependent steady states with qualitatively modified behavior. Simulations of networks with five coupled spins demonstrate that these effects persist beyond minimal systems with only two spins. Our results establish a unified framework for stochastic binary networks in the intermediate regime between symmetric instantaneous interactions and asymmetric or time-delayed interactions, and suggest that asymmetry and delay can be exploited as functional resources in neuromorphic hardware and complex network dynamics.",
+          "authors": [
+            "Hantao Zhang",
+            "Sidra Gibeault",
+            "Matthew W. Daniels",
+            "Philippe Talatchian",
+            "Ursula Ebels",
+            "Advait Madhavan",
+            "Mark D. Stiles"
+          ],
+          "url": "http://arxiv.org/abs/2607.15215v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.15215v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-16T17:18:18Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.91273814070767,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "aa375acbf67c35e4",
+          "title": "NIFA: Nonlinear IMC enhanced FPGA for efficient ML inference",
+          "abstract": "Recent FPGAs have improved deep learning (DL) inference efficiency through dedicated tensor blocks and in-BRAM computation. ReRAM-based analog in-memory computing (IMC) pushes efficiency further, offering an order-of-magnitude improvement in compute density and energy efficiency over conventional digital logic by performing vector-matrix multiplication (VMM) directly within the ReRAM crossbar; prior work has integrated such IMC blocks into FPGAs for DL inference. However, conventional IMC designs support only static-weight VMM, leaving nonlinear operations and dynamic matrix-matrix multiplication (DIMM) to the FPGA fabric. As a result, the benefits of IMC are largely confined to static-weight models, whereas Transformer-based models, which rely on frequent nonlinear and DIMM operations, gain only limited improvement. Moreover, the ADCs within each IMC block consume more than 70% of its area and power, further limiting system efficiency and scalability. To address these limitations, we propose a novel FPGA architecture that integrates an ADC-free IMC block, replacing the conventional ADC with analog content-addressable memories (ACAMs) that natively perform nonlinear operations inside the block. To fully exploit this block, we conduct an FPGA-aware design-space exploration that determines optimal crossbar dimensions while balancing FPGA area, flexibility, and DL performance, and we develop an efficient mapping that leverages ACAMs to carry out DIMM operations, extending the applicability of IMC to attention computation. On CNN and Transformer-based benchmarks, the proposed architecture achieves up to 40x and 1.9x higher energy efficiency and 4.1x and 2.5x higher area efficiency, respectively. Overall, it significantly improves FPGA DL inference efficiency and sustains robust gains on Transformer-based workloads across long input sequences, advancing domain-specialized FPGA design.",
+          "authors": [
+            "Jiajun Hu",
+            "Ruthwik Reddy Sunketa",
+            "Lei Zhao",
+            "Archit Gajjar",
+            "Luca Buonanno",
+            "Aman Arora"
+          ],
+          "url": "http://arxiv.org/abs/2607.15123v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.15123v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-16T15:32:44Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.90750169890873,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "466398f33f6c7023",
+          "title": "CRISP: Constrained Refinement via Iterative Squeezing Process for Robust Medical Image Segmentation under Domain Shift",
+          "abstract": "Distribution shift in medical imaging remains a central bottleneck for the clinical translation of medical AI. Failure to address it can lead to severe performance degradation in unseen environments and exacerbate health inequities. Existing methods for domain adaptation are inherently limited by exhausting predefined possibilities through simulated shifts or pseudo-supervision. Such strategies struggle in the open-ended and unpredictable real world, where distribution shifts are effectively infinite. To address this challenge, we adopt the \"Rank Stability of Positive Regions\" as a working assumption under distribution shift, and use it to derive robust spatial hints for source-only segmentation. Guided by this assumption, we propose CRISP, a model-agnostic framework that, unlike deployment-time adaptation, requires no test-time parameter updates and no target-domain data--a target-free, plug-in refinement framework that segments with frozen weights. Rather than using ranking to directly output masks, CRISP exploits the stability of probability rankings under distribution shift to derive robust spatial priors. Via latent feature perturbation, perturbation-invariant high-grade regions define a high-precision (HP) core, while voxels that remain potentially foreground under at least one perturbation define a high-recall (HR) support; these dual priors are then recursively refined under perturbation. We then design an iterative training framework that progressively squeezes HP and HR toward the final segmentation. Extensive evaluations on multi-center cardiac MRI and CT-based lung vessel segmentation demonstrate CRISP's superior robustness, significantly outperforming state-of-the-art methods with striking HD95 reductions of up to 0.14 (7.0% improvement), 1.90 (13.1% improvement), and 8.39 (38.9% improvement) pixels across multi-center, demographic, and modality shifts, respectively.",
+          "authors": [
+            "Yizhou Fang",
+            "Pujin Cheng",
+            "Yixiang Liu",
+            "Xiaoying Tang",
+            "Longxi Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2607.15231v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.15231v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-16T17:32:26Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 21.91343919890873,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-07-16",
       "papers": [
         {
