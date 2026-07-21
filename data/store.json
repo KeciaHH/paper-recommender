@@ -1,6 +1,114 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-21",
+      "papers": [
+        {
+          "id": "0b5dfd238d310ddc",
+          "title": "Automated Discovery Has No Universally Superior Harness",
+          "abstract": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery runs are expensive and inherently stochastic, existing harnesses are often compared using too few independent trials to distinguish key methodological improvements from run-to-run variance. We systematically decompose OpenEvolve-style evolutionary search and the TTT-Discover search harness into its constituent components and systematically evaluate 30 budget-matched harnesses across 12 model-problem pairs using more than 3.1 million LLM rollouts and repeated-trial statistical analysis. Our results show that discovery harnesses have a generalization problem: No fixed harness is reliably superior across the evaluated model-problem pairs, and variants of OpenEvolve generally underperform simpler alternatives. Thus, harness choice is better viewed as a hyperparameter rather than as a universal recipe, and should be tailored to the specific problem and underlying model. We also find that early discovery progress predicts final performance, and use this property to present a budget-matched adaptive-allocation experiment that starts multiple harnesses, prunes weak partial runs, and reallocates compute to stronger survivors, outperforming both commitment to a randomly sampled fixed harness and a non-adaptive harness ensemble. Together, these results motivate shifting from fixed harness selection to online adaptation guided by early performance. We release all run pools including baseline null distributions for every model-problem pair as reusable statistical infrastructure against for future harness proposals.",
+          "authors": [
+            "Akshat Gupta",
+            "Jermaine Lei",
+            "Alexander Lu",
+            "Gopala Anumanchipalli",
+            "Leshem Choshen"
+          ],
+          "url": "http://arxiv.org/abs/2607.18235v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.18235v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-20T17:59:37Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.91449627149471,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "6f53845c2a8c5226",
+          "title": "RRAM-DP: Device-Calibrated Differential Privacy for In-Memory Edge Learning",
+          "abstract": "Edge Artificial Intelligence of Things (AIoT) systems often collect sensitive data in situ, raising serious privacy concerns. Resistive-switching random-access memory (RRAM) is an attractive substrate for efficient AIoT thanks to its multi-bit storage and compute-in-memory (CiM) capabilities, while its inherently stochastic write behavior provides a natural source of randomness that can be leveraged for differential privacy (DP) protection. Yet how to transform this device-level randomness-typically viewed as detrimental to accuracy-into a principled randomized mechanism while preserving model utility remains underexplored. We propose RRAM-DP, a hardware-algorithm co-design that relaxes RRAM write-verify operations to inject calibrated noise for inherently (epsilon, delta)-DP with formal DP analysis; together with pretraining techniques, it renders a novel private, high-utility CiM training paradigm. On CIFAR-10/100, STS-B, and SST-2, RRAM-DP-SGD incurs at best only a 3.8% accuracy drop at (epsilon=2, delta=O(1/n))-DP relative to non-private SGD. At the same privacy level, RRAM-DP-SGD delivers up to 57x and 3.2x energy savings and 2.7x and 1.8x speedups over A100 and DiVa-GEMM, respectively. These results point toward efficient, privacy-preserving in-memory training on RRAM at the edge.",
+          "authors": [
+            "Kwunhang Wong",
+            "Jichang Yang",
+            "Karl M. H. Lai",
+            "Hegan Chen",
+            "Songqi Wang",
+            "Wei Xuan",
+            "Ning Lin",
+            "Han Wang",
+            "Xiaojuan Qi",
+            "Zhongrui Wang"
+          ],
+          "url": "http://arxiv.org/abs/2607.18169v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.18169v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-20T17:11:59Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.912133506944443,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "ac715435798da2b2",
+          "title": "OR Else: A Differentiable Trust Region for Policy Optimization",
+          "abstract": "PPO and the GRPO baseline studied here use clipped surrogate objectives whose favorable-direction saturation introduces an abrupt change in the scalar objective's derivative. We ask whether Output Reset (OR), a smooth one-sided saturation rule, offers a useful alternative for large language model post-training. PPO-OR and GRPO-OR replace the clipped policy term with an OR squared-margin loss in rollout-relative token log-ratio space; the advantage sign determines the update direction, and a token contributes zero direct OR residual after crossing the favorable margin. We compare PPO-clip with PPO-OR under generalized advantage estimation (GAE), and GRPO with GRPO-OR under group-relative advantages, using \\texttt{Llama-3.2-1B-Instruct} on Anthropic \\texttt{hh-rlhf} with one shared reward model and three seeds per method. Under GAE, PPO-OR has a mean final training-time reward-model score $0.305$ higher than PPO-clip, with a larger observed across-seed spread. Under group-relative advantages, GRPO-OR does not have a higher mean score, but shows a smaller observed spread, a near-zero terminal OR residual, and a declining overshoot fraction, while the matched GRPO clipped-objective trace remains variable. Both group-relative methods exhibit substantially larger rollout-to-current log-ratio displacement than the GAE methods, and OR does not consistently reduce it. Thus, OR changes optimization behavior in both matched comparisons, but the observed reward effect differs between them. At $G=2$, the GRPO-OR diagnostics do not translate into a reward-score gain. Whether larger groups change this outcome remains open. The reported scores are training-time reward-model measurements, not held-out human-preference performance.",
+          "authors": [
+            "Chinmay Rane",
+            "Kanishka Tyagi",
+            "Michael Manry"
+          ],
+          "url": "http://arxiv.org/abs/2607.18163v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.18163v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-20T17:07:40Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.911919385747353,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "7ae4df4429df502e",
+          "title": "Programmable photonics enabled by ferroionic two-dimensional materials",
+          "abstract": "Artificial intelligence (AI) models are scaling rapidly, exposing fundamental limitations in conventional computing architectures, where the physical separation of memory and computation imposes substantial energy and latency overheads. Optical neural networks offer a viable solution by enabling high-throughput, low-latency computation through the intrinsic parallelism of light. However, the scalability of photonic computing is constrained by the lack of materials that can provide low-loss, energy-efficient, and nonvolatile control of optical phase. Here, we discuss the emerging role of ferroionic two-dimensional materials as a platform for programmable photonics. Unlike conventional ferroelectrics, where polarization arises from bounded lattice distortions, ferroionic systems enable field-driven ionic redistribution, providing access to a continuum of stable and reconfigurable states. We outline how these material dynamics can be exploited to realize multi-level photonic states and nonvolatile phase control. Furthermore, we highlight a back-end integration strategy that introduces multifunctionality, including tunable optical nonlinearities into pre-fabricated photonic circuits without compromising optical performance. By bridging material-level dynamics with device- and system-level functionality, ferroionic materials provide a pathway toward reconfigurable, low-loss, and energy-efficient photonic computing architectures, opening new opportunities for neuromorphic and adaptive photonic systems.",
+          "authors": [
+            "Ghada Dushaq",
+            "Srinivasa R Tamalampudiand",
+            "Solomon Serunjogi",
+            "Mahmoud Rasras"
+          ],
+          "url": "http://arxiv.org/abs/2607.18061v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.18061v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-20T15:29:33Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.907052488425926,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "40f3fc0c30047a4e",
+          "title": "Photonic Memory as a Dynamical Phase for Neuromorphic Computing: A Unified Framework with Experimental Realization",
+          "abstract": "Photonic memory underpins optical information processing, neuromorphic photonics, and photonic computing. Existing studies typically treat dispersive, nonlinear, and driven-dissipative memory as distinct physical phenomena, despite all being governed by the evolution of the optical field. This work proposes a unified phase-based framework in which photonic memory is interpreted as a dynamical phase, with transitions between memory regimes governed by optical phase evolution, Kerr nonlinearity, and the balance between delayed feedback and dissipation. Within this framework, dispersive memory arises from frequency-dependent phase accumulation, nonlinear memory emerges through intensity-dependent phase evolution leading to bistability and hysteresis, and driven-dissipative memory is established through attractor convergence and memory stabilization. The proposed framework is validated through theoretical analysis and numerical simulations, demonstrating a continuous progression from linear dispersive memory to nonlinear and ultimately driven-dissipative memory. Experimental validation is performed using a silicon photonic waveguide incorporating chirped Bragg gratings. Group delay measurements reveal distinct linear and nonlinear memory responses, while the reconstructed memory distribution demonstrates the coexistence of dispersive, nonlinear, and driven-dissipative memory within a single integrated photonic device. To the best of the author's knowledge, this constitutes the first experimental demonstration supporting the coexistence of all three photonic memory regimes in a single photonic platform. These results establish optical phase as the unifying physical quantity underlying photonic memory and provide a common framework for designing future neuromorphic photonic systems, reservoir computers, and integrated photonic processors.",
+          "authors": [
+            "Isaac Yorke"
+          ],
+          "url": "http://arxiv.org/abs/2607.17817v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.17817v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-20T11:02:20Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.89379769262566,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-07-20",
       "papers": [
         {
