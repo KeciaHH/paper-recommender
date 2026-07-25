@@ -1,6 +1,79 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-25",
+      "papers": [
+        {
+          "id": "a91b11877c8bdb74",
+          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
+          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-07-25T22:42:50.950Z",
+          "topics": [
+            "neurosim",
+            "snn"
+          ],
+          "score": 77.99999999917328,
+          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+        },
+        {
+          "id": "585033af01ae5ba1",
+          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
+          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-07-25T22:42:50.950Z",
+          "topics": [
+            "snn",
+            "tta"
+          ],
+          "score": 69.99999999917328,
+          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
+        },
+        {
+          "id": "3e626f846991f87f",
+          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
+          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-07-25T22:42:50.950Z",
+          "topics": [
+            "early_exit",
+            "dvfs"
+          ],
+          "score": 69.99999999917328,
+          "reason": "Matches Network Early Exit, DVFS / Energy."
+        },
+        {
+          "id": "729df0c5b1b17049",
+          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
+          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-07-25T22:42:50.950Z",
+          "topics": [
+            "rl",
+            "dvfs"
+          ],
+          "score": 53.99999999917328,
+          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+        }
+      ]
+    },
+    {
       "date": "2026-07-24",
       "papers": [
         {
