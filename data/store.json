@@ -1,6 +1,131 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-26",
+      "papers": [
+        {
+          "id": "c07aaf3c7b87cad5",
+          "title": "Self-organizing Architecture of Receptron Units: a Hardware-Aware Framework for Edge Intelligence",
+          "abstract": "The growing demand for intelligent processing at the edge of IoT networks is constrained by the severe computational and memory limitations of microcontroller units, which render impractical conventional deep learning approaches. We propose a neuromorphicinspired classifier based on the Receptron model, a single-unit architecture capable of implementing non-linearly separable decision boundaries, without resorting to multi-layer networks. The model is designed for direct deployment on mid-range MCUs, while supporting continuous on-device adaptation. Experimental evaluation on basic dataset benchmarks yields cross-validated accuracies compatible with standard machine learning method baselines. These results position the Receptron as a viable and interpretable alternative for resource-constrained neuromorphic edge systems operating in dynamic, non-stationary environments.",
+          "authors": [
+            "Stefano Radice",
+            "Ludovico Casaccia",
+            "Riccaro Emanuele Beccalli",
+            "Bruno Paroli",
+            "Paolo Milani"
+          ],
+          "url": "http://arxiv.org/abs/2607.20162v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.20162v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-22T13:57:41Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.68796411954365,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "fe8903406edf01b7",
+          "title": "Group boarding for airplanes: benchmarking static policies and optimizing dynamic assignment with deep reinforcement learning",
+          "abstract": "Improving boarding efficiency reduces airplane turnaround time and improves passenger experience. Airlines typically assign passengers to a few sequential boarding groups using static seat-based rules. Yet arrivals, seat choices, and luggage are sequential and random, and a static rule ignores the seats earlier passengers have already taken. We propose the first dynamic formulation of boarding group assignment. As each passenger checks in, we observe earlier passengers' seats and groups, the current passenger's seat, and optional luggage information, then assign a group while keeping companions together. We formulate dynamic group assignment as a Markov decision process and solve it with reinforcement learning (RL). The policy uses a convolutional neural network to encode the checked-in seat-assignment state and is trained by proximal policy optimization. The reward balances total boarding time and average individual boarding time. We benchmark the proposed RL policy against three companion-compatible static policies (back-to-front, modified Steffen, and alternating block) in an in-house simulator covering six single- and double-aisle layouts. Back-to-front with optimized group sizes achieves the shortest total boarding time and average individual boarding time among the static benchmarks across all layouts. The dynamic RL policy further outperforms it on both metrics in every layout. On a representative case, the RL policy outperforms the optimal back-to-front by up to 9.8\\% in total boarding time and 22.8\\% in average individual time. Sweeping the reward weight yields an approximate Pareto frontier for operator choice. Trained policies remain robust under out-of-distribution operating conditions, including varying load factors, companion sizes, and luggage loads.",
+          "authors": [
+            "Minyu Shen",
+            "Weihua Gu",
+            "Junqi Ma",
+            "Boqian Song",
+            "Li Zhen",
+            "Gang Kou"
+          ],
+          "url": "http://arxiv.org/abs/2607.21512v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.21512v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-23T16:57:16Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 43.768300595238095,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "07685de2e9d1a08d",
+          "title": "X$^3$-OPD: Distilling Reasoning into Large Audio-Language Models via On-Policy Alignment",
+          "abstract": "While large audio-language models have achieved remarkable progress in auditory perception, they still lag behind text-based large language models in deep logical reasoning, primarily due to the scarcity of high-quality audio reasoning data. To bridge this gap, we propose X$^3$-OPD, a cross-modal on-policy distillation framework that transfers reasoning capabilities from a powerful text teacher to an audio-language student. During training, the student generates reasoning trajectories conditioned on its own acoustic perception, while the teacher provides token-level guidance using matched textual inputs and verified answers. We further construct a three-tier symmetric corpus covering textual reasoning rendered into speech, audio-event reasoning grounded in complex acoustic scenes, and spoken-dialogue reasoning involving paralinguistic cues. This design extends cross-modal distillation beyond textually recoverable content to reasoning grounded in non-linguistic events, prosody, and conversational context. Experiments on MMSU, MMAU, BIG Bench Audio, and MMAR demonstrate that X$^3$-OPD substantially improves audio-grounded reasoning and chain-of-thought quality while largely preserving the model's existing capabilities under domain shift.",
+          "authors": [
+            "Dongjie Fu",
+            "Di Cao",
+            "Xize Cheng",
+            "Zihan Zhang",
+            "Wenxu Jia",
+            "Yifu Chen",
+            "Shengpeng Ji",
+            "Yu Zhang",
+            "Tao Jin"
+          ],
+          "url": "http://arxiv.org/abs/2607.21550v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.21550v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-23T17:35:20Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.770188821924602,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "105cf0264e37e3ec",
+          "title": "Magnetically memorable inductance in superconducting multilayer resonators",
+          "abstract": "Superconductor-ferromagnet hybrid structures with tunable kinetic inductance are promising elements for neuromorphic and quantum computing circuits. We report the fabrication and microwave characterization of split-ring resonators based on Nb/Co/Nb/Co/Nb/Al spin-trigger multilayers and demonstrate a non-volatile spin-valve effect on their resonant properties. Reversal of the relative magnetization orientation of the cobalt layers produces a reproducible shift of the resonant frequency up to 4 MHz at zero applied magnetic field, corresponding to a change in the kinetic inductance of the structure. The incorporation of a proximitized aluminum overlayer is shown to enhance the inductance contrast between the parallel and antiparallel magnetic states by a factor of approximately three relative to structures without this layer. The experimental results are in quantitative agreement with a microscopic model based on the Usadel equations. The demonstrated magnetic memory of the resonant frequency at zero field establishes spin-trigger multilayers as viable field-programmable inductive elements for superconducting digital and neuromorphic circuits.",
+          "authors": [
+            "R. Tyumenev",
+            "D. S. Kalashnikov",
+            "B. V. Fradkin",
+            "A. A. Neilo",
+            "A. G. Shishkin",
+            "N. V. Klenov",
+            "I. I. Soloviev",
+            "A. A. Golubov",
+            "M. Yu. Kupriyanov",
+            "I. A. Golovchanskiy",
+            "V. S. Stolyarov",
+            "A. S. Sidorenko",
+            "S. V. Bakurskiy"
+          ],
+          "url": "http://arxiv.org/abs/2607.21147v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.21147v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-23T10:28:35Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.7490206671627,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "518fb5e4548ecd92",
+          "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
+          "abstract": "Efficient multimodal inference is increasingly constrained not only by model quality or FLOP count, but also by the cost of preserving, moving, routing, caching, and quantizing multimodal representations under latency, memory, and energy constraints. This paper reviews recent advances in efficient vision-language and multimodal large language models, covering visual token compression, video token management, KV-cache optimization, Mixture-of-Experts (MoE) routing, low-bit quantization, edge deployment, and hardware-aware benchmarking. We argue that these techniques cannot be treated as independent optimizations. Visual token compression alters downstream feature distributions and MoE routing decisions, routing behavior affects expert utilization and quantization sensitivity, quantized router logits influence expert assignment, KV-cache policies determine retained multimodal evidence, and hardware constraints often transform computational savings into memory and communication bottlenecks. We organize the literature around these interactions and identify key design trade-offs, including accuracy versus token budget, static versus adaptive compression, sparse routing efficiency versus expert collapse, and low-bit inference versus modality-specific degradation. Finally, we introduce Temporal Routing Consistency as a diagnostic for video MoE models and highlight open research directions in routing-aware compression, cross-modal cache management, hardware-aware co-design, and unified benchmarking for multimodal edge intelligence.",
+          "authors": [
+            "Jay Gor",
+            "Karm Dave",
+            "Akshita Abrol",
+            "Rajesh Gupta",
+            "Sudeep Tanwar",
+            "Zhengkui Wang"
+          ],
+          "url": "http://arxiv.org/abs/2607.20981v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.20981v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-23T07:03:33Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.738850362929895,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-07-25",
       "papers": [
         {
