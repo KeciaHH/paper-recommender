@@ -1,6 +1,142 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-27",
+      "papers": [
+        {
+          "id": "fd1a38ce250fb01c",
+          "title": "HEMERA: A Heterogeneous Memory-Centric Accelerator with Recursive Dataflow for Edge-Constrained State-Space-Duality Models Inference",
+          "abstract": "Structured State Space Models (SSMs), such as Mamba, enable efficient long-sequence modeling with linear time complexity. Recent implementations realize this capability through Structured State Space Duality (SSD), which transforms recursive state evolution into matrix-form computations. However, SSD introduces substantial system-level overheads, including quadratic intermediate materialization, irregular data movement, and prefix-dependent execution, leading to excessive memory traffic and bandwidth demand on conventional architectures. Although prior accelerators mitigate these overheads through optimized dataflows or compute-in-memory techniques, they largely retain matrix-oriented SSD execution and cannot simultaneously avoid quadratic intermediate storage and efficiently map dependency-bound state propagation. This paper presents HEMERA, a heterogeneous memory-centric accelerator for efficient Mamba-2 inference. Rather than directly executing the matrix-form SSD computation, HEMERA reformulates it into an algebraically equivalent streaming-recursive dataflow that avoids quadratic intermediate storage while preserving the original computation. The resulting heterogeneous execution paradigm maps dense linear operations onto in-memory computing units and recursive state updates onto a dedicated streaming engine. Across Mamba-2 models ranging from 130M to 2.8B, HEMERA achieves average latency speedups of 1.4x-3.6x and energy-efficiency improvements of 12.2x-27.0x over the official optimized fused Mamba-2 kernel on NVIDIA A100. It further reduces the average SSD-related execution-time ratio across model scales to 14.12% during long-sequence inference, demonstrating its potential for efficient deployment under edge constraints.",
+          "authors": [
+            "Hao Ding",
+            "Ling Liang",
+            "Ruitong Qiao",
+            "Dongxue Zhao",
+            "Xiantong Qiu",
+            "Jinshan Li",
+            "Meng Li",
+            "Lei Jin",
+            "Zhiliang Xia",
+            "Zongliang Huo",
+            "Zongwei Wang",
+            "Yimao Cai"
+          ],
+          "url": "http://arxiv.org/abs/2607.22022v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.22022v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-24T06:40:36Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 35.73765668320106,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "37c054c75851abe6",
+          "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+          "abstract": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned on dynamically sampled skills; the solver explores candidate solutions to push its capability boundaries; and the skill controller collects execution feedback to update and expand the skill library. This interactive co-evolution effectively bridges the gap between structured verification and open-ended exploration. Empirical evaluations on tool-use and reasoning benchmarks demonstrate that Skill-SP, serving as a robust evolution engine, consistently pushes the performance ceiling of competent backbones while catalyzing striking turnarounds for initially misaligned models. Our code is available at https://github.com/Qwen-Applications/skill-self-play.",
+          "authors": [
+            "Siyuan Huang",
+            "Pengyu Cheng",
+            "Haotian Liu",
+            "Tao Chen",
+            "Yihao Liu",
+            "Jingwei Ni",
+            "Shijie Zhou",
+            "Ziyi Yang",
+            "Gangwei Jiang",
+            "Mengyu Zhou",
+            "Yu Cheng",
+            "Xiaoxi Jiang",
+            "Guanjun Jiang"
+          ],
+          "url": "http://arxiv.org/abs/2607.22529v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.22529v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-24T17:59:22Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.77132566468254,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "fbb1644849f31b7e",
+          "title": "Optimal Transport Image Representation and Deep Covariance Alignment (CORAL) for Control Valve Stiction Detection",
+          "abstract": "Control valve stiction is a common cause of unwanted oscillations and poor control-loop performance in industrial processes. Data-driven methods can automatically detect stiction, but models trained purely on simulated data often struggle to generalize to real industrial control loops due to domain shift. To bridge this gap, this work propose a novel stiction detection methodology that combines optimal transport (OT) imaging technique with deep correlation alignment (Deep CORAL) algorithm. Closed loop signals: controller output and process variable are converted into two-dimensional OT images. These images capture the dynamic behaviour of control loops. The proposed methodology includes a convolutional neural network (CNN) encoder (or feature extractor) trained to learn domain-invariant representations by optimizing a combined objective: a cross-entropy loss on labeled simulation data and a Deep CORAL (covariance-alignment) loss between simulation data and unlabeled target-domain industrial data. Downstream classifiers trained on the domain-invariant target features were evaluated on an independent test set of 20 benchmark loops from industrial stiction data benchmark. The proposed methodology successfully diagnosed 18 out of the 20 loops and achieved100% recall across all 13 stiction cases, an accuracy of 90.00% and an F1-score of 92.86%. Compared to standard baseline approach (hand-crafted features-based method), the proposed methodology significantly mitigates domain shift, providing robust, highly reliable stiction detection for real-world industrial control loops.",
+          "authors": [
+            "Seshu K. Damarla"
+          ],
+          "url": "http://arxiv.org/abs/2607.22486v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.22486v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-24T16:56:33Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.768209758597884,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "03db089ae2057520",
+          "title": "NUMA balancing hampering performance of spiking network simulations",
+          "abstract": "Computing centers today mostly operate conventional CPU- and GPU-based systems, where the direct way of decreasing energy consumption is a reduction in the applications' runtime. Neuromorphic computing promises an alternative architecture with improved energy efficiency for artificial intelligence. In this endeavor, code for the simulation of large-scale spiking networks on conventional supercomputers is the reference. We show that turning off automatic NUMA balancing may reduce energy consumption by 30%. This dwarfs other attempts of increasing the energy efficiency of a computing center with respect to cost effectiveness. The memory access pattern of spiking network simulation code dynamically interacts with automatic NUMA balancing. This does not affect the correctness of simulation results and thus goes unnoticed in day-to-day neuroscience research. In performance analysis, however, time measurements fluctuate obstructing attempts to optimize simulation technology. A new time- and compute-node resolved performance display exposes the fine-grained temporal variability of distributed spiking network simulations. The analysis uncovers that automatic NUMA balancing is of disadvantage and affects the jemalloc library for thread-aware memory allocation in a transient manner. The method also allows developers to detect perturbations of the HPC system and target specific improvements to simulation technology. As a consequence, we have equipped our supercomputers with an option to turn on or off automatic NUMA balancing on a per-job basis on the user level. This gives researchers the opportunity to find the best setting for the application at hand. There are indications in the literature that the effect has been observed before, yet it does not seem common knowledge in scientific computing. It remains to be investigated how widespread the phenomenon is among scientific codes.",
+          "authors": [
+            "Melissa Lober",
+            "Alp Inangu",
+            "Gorka Peraza Coppola",
+            "Dennis Terhorst",
+            "Sebastian Gillessen",
+            "Jan Vogelsang",
+            "Hans Ekkehard Plesser",
+            "Brian Wylie",
+            "Benedikt Steinbusch",
+            "Guido Trensch",
+            "Susanne Kunkel",
+            "Markus Diesmann"
+          ],
+          "url": "http://arxiv.org/abs/2607.22275v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.22275v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-24T13:12:15Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.757083766534393,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "105cf0264e37e3ec",
+          "title": "Magnetically memorable inductance in superconducting multilayer resonators",
+          "abstract": "Superconductor-ferromagnet hybrid structures with tunable kinetic inductance are promising elements for neuromorphic and quantum computing circuits. We report the fabrication and microwave characterization of split-ring resonators based on Nb/Co/Nb/Co/Nb/Al spin-trigger multilayers and demonstrate a non-volatile spin-valve effect on their resonant properties. Reversal of the relative magnetization orientation of the cobalt layers produces a reproducible shift of the resonant frequency up to 4 MHz at zero applied magnetic field, corresponding to a change in the kinetic inductance of the structure. The incorporation of a proximitized aluminum overlayer is shown to enhance the inductance contrast between the parallel and antiparallel magnetic states by a factor of approximately three relative to structures without this layer. The experimental results are in quantitative agreement with a microscopic model based on the Usadel equations. The demonstrated magnetic memory of the resonant frequency at zero field establishes spin-trigger multilayers as viable field-programmable inductive elements for superconducting digital and neuromorphic circuits.",
+          "authors": [
+            "R. Tyumenev",
+            "D. S. Kalashnikov",
+            "B. V. Fradkin",
+            "A. A. Neilo",
+            "A. G. Shishkin",
+            "N. V. Klenov",
+            "I. I. Soloviev",
+            "A. A. Golubov",
+            "M. Yu. Kupriyanov",
+            "I. A. Golovchanskiy",
+            "V. S. Stolyarov",
+            "A. S. Sidorenko",
+            "S. V. Bakurskiy"
+          ],
+          "url": "http://arxiv.org/abs/2607.21147v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.21147v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-23T10:28:35Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.677536808862435,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-07-26",
       "papers": [
         {
