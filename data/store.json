@@ -1,6 +1,139 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-28",
+      "papers": [
+        {
+          "id": "3de77f2da5998cdc",
+          "title": "The SpiNNaker2 chip: a many-core platform for flexible and scalable brain-inspired computing",
+          "abstract": "In deep learning, efficiency gets more and more important to compensate for the ongoing growth in model sizes and applications. Neuromorphic hardware has long been advocated as an upcoming alternative to deep networks, taking inspiration from the brain for achieving unprecedented energy efficiency. However, demonstrations of these gains only recently began to grow in complexity and real-world applicability. With SpiNNaker2, we present a chip that bridges the gap between deep networks and neuromorphic computing and allows for flexible exploration of computing approaches that combine both worlds. It features 152 processing elements equipped with an ARM M4F processor and dedicated accelerators, an extended SpiNNaker routing fabric for scalable event-based communication and a range of external interfaces for system integration, including Gbit Ethernet and an LPDDR4 memory interface. We demonstrate performance and efficiency of the SpiNNaker2 chip for neuromorphic and deep network workloads, as well as novel event-based computing approaches. For deep network workloads, the chip achieves up to 4.5 TOPS in high performance mode and up to 2.7 TOPS/W efficiency in high efficiency mode for INT8 workloads. The chip supports spiking neural networks with >150000 neurons and >1.8 billion synaptic events/s when simulated with a 1 ms time step. Its low baseline power of less than 250 mW allows for efficiency even under varying workload conditions, allowing to explore sparse and event-based modes of computation. All this demonstrates the chip's capabilities as a universal hardware platform for scalable brain-inspired computing and its combinations with mainstream deep network approaches.",
+          "authors": [
+            "Stefan Scholze",
+            "Johannes Partzsch",
+            "Sebastian Höppner",
+            "Florian Kelber",
+            "Andreas Dixius",
+            "Marco Stolba",
+            "Sirine Arfa",
+            "Marc Berthel",
+            "Georg Ellguth",
+            "Jim Garside",
+            "Hector A. Gonzalez",
+            "Stephan Hartmann",
+            "Thomas Kiel-Hocker",
+            "Dongwei Hu",
+            "Matthias Jobst",
+            "Khaleelulla Khan Nazeer",
+            "Tim Langer",
+            "Chen Liu",
+            "Gengting Liu",
+            "Matthias Lohrmann",
+            "Mantas Mikaitis",
+            "Felix Neumärker",
+            "Amirhossein Rostami",
+            "Stefan Schiefer",
+            "Tilo Schubert",
+            "Delong Shang",
+            "Bernhard Vogginger",
+            "Yexin Yan",
+            "Steve Furber",
+            "Christian Mayr"
+          ],
+          "url": "http://arxiv.org/abs/2607.24396v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.24396v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T13:13:02Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.899942516534395,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "c9a54b4e4103b160",
+          "title": "Explainable Reinforcement Learning via Physics-Aware Policy Distillation",
+          "abstract": "In safety-critical sectors such as robotics and automotive engineering, the deployment of Deep Reinforcement Learning (DRL) is often hindered by the black-box nature of deep neural networks. This lack of transparency poses significant challenges for regulatory compliance and human-agent trust. This paper presents an experimental study aimed at making high-performance continuous control DRL systems interpretable. A policy distillation framework is implemented using the classic Inverted Pendulum benchmark. A high-performance Twin Delayed DDPG (TD3) agent serves as an opaque, continuous teacher model, whose policy is distilled into an interpretable student surrogate based on a shallow Decision Tree. By leveraging a custom physics-aware feature and \"Noisy Oracle Rollouts\" for dataset generation, the distillation process achieves performance equivalent to the expert teacher. Furthermore, comparative control theory analysis reveals a fundamental trade-off: transitioning from continuous to discrete rule-based control induces high-frequency Bang-Bang actuation and a stable bimodal limit cycle. Simulation results indicate that Bounded-Input Bounded-Output (BIBO) stability is maintained while providing both global and local interpretability for safe autonomous systems.",
+          "authors": [
+            "Shaker Al-Tamari",
+            "Waled Kadour"
+          ],
+          "url": "http://arxiv.org/abs/2607.24672v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.24672v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T17:14:42Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.911929950396825,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d7965485a989c347",
+          "title": "Autonomous Physical Computation: A Categorical Closure Criterion for Physical and Neuromorphic Reservoirs",
+          "abstract": "Physical reservoirs, neuromorphic devices, and wave-mediated systems often possess memory, feedback, and rich state-dependent dynamics, but these properties do not by themselves establish autonomous computation. Here we develop a closure criterion for autonomous physical computation, motivated by the wave--particle walker. We formulate the walker as a stroboscopic reservoir with state, where the wave field stores an exponentially decaying trace of previous droplet impacts and guides future motion through local slope coupling. This model separates physical writing, storage, reading, feedback, and externally triggered erasure. We then define computation as robust coarse-grained transition preservation: a physical map implements an abstract transition only when a coarse-graining satisfies compositionality, with abstract states realized by separated physical basins and transitions stable under noise. Autonomous physical computation requires a further closure condition: an internal physical readout state must select the next physical operation. This criterion classifies the wave--particle walker as a wave-memory machine with genuine Turing-like primitives, but not as a closed autonomous physical computer, because the erasing phase shift is externally imposed. The framework turns this distinction into a design principle: memory becomes autonomous computation when physical readout basins are coupled back to operation selection.",
+          "authors": [
+            "Nima Dehghani"
+          ],
+          "url": "http://arxiv.org/abs/2607.23902v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.23902v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T00:22:32Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.861723270502644,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "56b3c95638fbadf6",
+          "title": "Impute On-Demand: Adaptive Correlated Time Series Imputation for Changing Environments",
+          "abstract": "Internet of Things (IoT) applications generate vast amounts of Correlated Time Series (CTS) data that often contain missing values and require imputation. Existing methods emphasize accuracy but often lack adaptability to changing IoT environments: they are vulnerable to sensor failures, cannot selectively impute only incomplete sensors, and use static architectures that do not adapt to resource availability. To address these limitations, we propose AdaCTSi, an adaptive CTS imputer for changing environments. AdaCTSi combines a One-shot Temporal Convolutional Network with a Learned Time-Sensor Index Table to extract and decouple complex spatio-temporal features into sensor-wise embeddings, enabling adaptation to varying sensor subsets. Sparse Spatial Attention efficiently extracts dynamic spatial correlations, while Correlation-Weighted Sensor Selection selects informative sensors to provide sufficient spatial context. Experiments with twelve baseline methods, three adaptability scenarios, and five benchmark datasets covering traffic, air quality, and trajectory data show that AdaCTSi reduces MAE by an average of 33.1% relative to the strongest baseline on each dataset. A single trained model supports sensor-subset and resource-adaptive inference, and its modest memory footprint enables deployment on commodity computing devices, including MCUs.",
+          "authors": [
+            "Zhichen Lai",
+            "Huan Li",
+            "Dalin Zhang",
+            "Dong Gong",
+            "Lina Yao",
+            "Christian S. Jensen"
+          ],
+          "url": "http://arxiv.org/abs/2607.23503v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.23503v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-26T07:08:00Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.810407132936508,
+          "reason": "Matches Network Early Exit."
+        },
+        {
+          "id": "ef7c03db911a2d1d",
+          "title": "Multi-primitive in-memory computing for Monte Carlo tree search",
+          "abstract": "Monte Carlo tree search (MCTS) enables artificial intelligence (AI) decision-making, but requires 55-300 W on conventional processors, limiting edge deployment. In-memory computing (IMC) is energy-efficient on regular workloads but has been considered incompatible with irregular multi-phase algorithms. We introduce phase-to-primitive decomposition, which reformulates each algorithmic phase as a hardware-native IMC primitive. Applied to MCTS, selection, expansion, rollout and backpropagation map to content-addressable memory, combinational logic, a resistive random-access memory (RRAM) crossbar and static random-access memory, keeping search on chip. At 22 nm with fabricated RRAM-array parameters, IMC-MCTS consumes ~60 mW for 9x9 Go, achieving 96x energy efficiency over a central processing unit (CPU) and 65x-2,059x over an H100 graphics processing unit (GPU). It reaches a European Go Federation rating within sample-size uncertainty of open-source Go engines (Pachi-UCT and Michi-C). The same substrate runs eight applications across four AI domains.",
+          "authors": [
+            "Tergel Molom-Ochir",
+            "Benjamin F. Morris",
+            "Yintao He",
+            "Archit Gajjar",
+            "Giacomo Pedretti",
+            "Hai Helen Li",
+            "Yiran Chen",
+            "Jim Ignowski",
+            "Aishwarya Natarajan"
+          ],
+          "url": "http://arxiv.org/abs/2607.22869v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.22869v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-24T19:17:37Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.703741292989417,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-07-27",
       "papers": [
         {
