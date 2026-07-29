@@ -1,6 +1,113 @@
 {
   "recommendations": [
     {
+      "date": "2026-07-29",
+      "papers": [
+        {
+          "id": "3de77f2da5998cdc",
+          "title": "The SpiNNaker2 chip: a many-core platform for flexible and scalable brain-inspired computing",
+          "abstract": "In deep learning, efficiency gets more and more important to compensate for the ongoing growth in model sizes and applications. Neuromorphic hardware has long been advocated as an upcoming alternative to deep networks, taking inspiration from the brain for achieving unprecedented energy efficiency. However, demonstrations of these gains only recently began to grow in complexity and real-world applicability. With SpiNNaker2, we present a chip that bridges the gap between deep networks and neuromorphic computing and allows for flexible exploration of computing approaches that combine both worlds. It features 152 processing elements equipped with an ARM M4F processor and dedicated accelerators, an extended SpiNNaker routing fabric for scalable event-based communication and a range of external interfaces for system integration, including Gbit Ethernet and an LPDDR4 memory interface. We demonstrate performance and efficiency of the SpiNNaker2 chip for neuromorphic and deep network workloads, as well as novel event-based computing approaches. For deep network workloads, the chip achieves up to 4.5 TOPS in high performance mode and up to 2.7 TOPS/W efficiency in high efficiency mode for INT8 workloads. The chip supports spiking neural networks with >150000 neurons and >1.8 billion synaptic events/s when simulated with a 1 ms time step. Its low baseline power of less than 250 mW allows for efficiency even under varying workload conditions, allowing to explore sparse and event-based modes of computation. All this demonstrates the chip's capabilities as a universal hardware platform for scalable brain-inspired computing and its combinations with mainstream deep network approaches.",
+          "authors": [
+            "Stefan Scholze",
+            "Johannes Partzsch",
+            "Sebastian Höppner",
+            "Florian Kelber",
+            "Andreas Dixius",
+            "Marco Stolba",
+            "Sirine Arfa",
+            "Marc Berthel",
+            "Georg Ellguth",
+            "Jim Garside",
+            "Hector A. Gonzalez",
+            "Stephan Hartmann",
+            "Thomas Kiel-Hocker",
+            "Dongwei Hu",
+            "Matthias Jobst",
+            "Khaleelulla Khan Nazeer",
+            "Tim Langer",
+            "Chen Liu",
+            "Gengting Liu",
+            "Matthias Lohrmann",
+            "Mantas Mikaitis",
+            "Felix Neumärker",
+            "Amirhossein Rostami",
+            "Stefan Schiefer",
+            "Tilo Schubert",
+            "Delong Shang",
+            "Bernhard Vogginger",
+            "Yexin Yan",
+            "Steve Furber",
+            "Christian Mayr"
+          ],
+          "url": "http://arxiv.org/abs/2607.24396v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.24396v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T13:13:02Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.82866415343915,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "e28b5631bbd658fc",
+          "title": "Cooperative Multi-UAV Navigation in Complex Environments via Systematic Multi-Agent Deep Reinforcement Learning",
+          "abstract": "Cooperative navigation of multi-agent UAVs in complex environments faces key challenges including local optima traps, sparse rewards, learning imbalance among agents, and insufficient cross-scenario generalisation. This paper proposes a multi-agent deep reinforcement learning framework that addresses these issues through coordinated exploration, demonstration exploitation, safe curriculum scheduling, and structure-aware generalisation. First, a perception mechanism combining memory of visited states, directional novelty estimates, and penalty backpropagation enables agents to proactively detect and escape local optima. Second, a hierarchical collaborative demonstration buffer with tiered behaviour cloning manages trajectories by degree of team collaboration and applies differential supervision to the actor network, improving demonstration utilisation under sparse collaborative signals. Third, a safety-aware dual-condition curriculum scheduling mechanism reviews mastered scenarios through back-testing and experience pre-filling during training, suppressing catastrophic forgetting while ensuring both task performance and flight safety. For generalisation, local geometric features computed from sensor readings are abstracted into a domain parameter, through which a structure-aware gating network and mixture-of-experts mechanism condition the policy on local structural patterns rather than scenario-specific coordinates, enabling cross-scenario transfer without exposure to the target environment. The framework is further validated under mixed static-dynamic obstacle settings, showing robust adaptability to dynamic disturbances. Simulation results confirm strong performance in collaboration success rate, navigation robustness, zero-shot cross-scenario generalisation, and dynamic environment adaptability.",
+          "authors": [
+            "Yu Su",
+            "Nabil Aouf"
+          ],
+          "url": "http://arxiv.org/abs/2607.25754v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.25754v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-28T14:16:11Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.90322516534391,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "0b7a1f1f54cb5247",
+          "title": "Mitigating the Impact of Retention Loss on Inference Accuracy in 65 nm Single-Poly Floating-Gate Analog In-Memory Computing",
+          "abstract": "We show with experiments and system-level simulations that it is possible to successfully mitigate the impact of retention loss on inference accuracy degradation by using both circuit-level compensation techniques and batch normalization recalibration at the algorithmic level. Experiments are performed on a single-poly floating-gate (FG) analog non-volatile memory array for analog in-memory computing fabricated in a standard 65 nm CMOS. We use a model of retention-loss statistics calibrated with experiments to evaluate the system-level impact on neural network models such as VGG-10/CIFAR-10 and WideResNet-28-10/CIFAR-100. We show that, after 60 days since programming, combined mitigation techniques enable to recover the baseline inference accuracy within 2-4%",
+          "authors": [
+            "Mirko Brazzini",
+            "Giulio Filippeschi",
+            "Alessandro Catania",
+            "Sebastiano Strangio",
+            "Giuseppe Iannaccone"
+          ],
+          "url": "http://arxiv.org/abs/2607.25058v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.25058v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T20:41:46Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.850922751322752,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "d7965485a989c347",
+          "title": "Autonomous Physical Computation: A Categorical Closure Criterion for Physical and Neuromorphic Reservoirs",
+          "abstract": "Physical reservoirs, neuromorphic devices, and wave-mediated systems often possess memory, feedback, and rich state-dependent dynamics, but these properties do not by themselves establish autonomous computation. Here we develop a closure criterion for autonomous physical computation, motivated by the wave--particle walker. We formulate the walker as a stroboscopic reservoir with state, where the wave field stores an exponentially decaying trace of previous droplet impacts and guides future motion through local slope coupling. This model separates physical writing, storage, reading, feedback, and externally triggered erasure. We then define computation as robust coarse-grained transition preservation: a physical map implements an abstract transition only when a coarse-graining satisfies compositionality, with abstract states realized by separated physical basins and transitions stable under noise. Autonomous physical computation requires a further closure condition: an internal physical readout state must select the next physical operation. This criterion classifies the wave--particle walker as a wave-memory machine with genuine Turing-like primitives, but not as a closed autonomous physical computer, because the erasing phase shift is externally imposed. The framework turns this distinction into a design principle: memory becomes autonomous computation when physical readout basins are coupled back to operation selection.",
+          "authors": [
+            "Nima Dehghani"
+          ],
+          "url": "http://arxiv.org/abs/2607.23902v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.23902v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-27T00:22:32Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.79044490740741,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-07-28",
       "papers": [
         {
