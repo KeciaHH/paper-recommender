@@ -1,6 +1,80 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-03",
+      "papers": [
+        {
+          "id": "bfb0fad008c8aa75",
+          "title": "Memristor-Based Pulse Width Modulation Circuit for Power Converters with Programmable Frequencies",
+          "abstract": "Memristors can achieve up to a 1000-times reduction in energy consumption in neuromorphic and in-memory computing, but their integration into power converter control remains incomplete. Existing implementations either convert memristor outputs into digital signals for DSP-based pulse-width modulation (PWM), reintroducing computational overhead, or use analog PWM circuits with limited programmability. Since PWM generation is the final essential stage of power converter control, a programmable memristor-based PWM circuit is needed to fully realize the energy-efficiency benefits of memristive computing. This paper presents a programmable memristor-based PWM circuit operating at approximately two hundred kilohertz for switching power converters. The design combines digital-controller programmability with the low power consumption of analog PWM generators. Experimental validation using commercially available memristors achieves a programmable switching frequency from 144.7 kHz to 204.2 kHz. Compared with a commonly used DSP implementation in power converter control, the proposed design achieves a 92% reduction in power consumption.",
+          "authors": [
+            "Fanfu Wu",
+            "Xiaoyi Lei",
+            "Yunting Liu"
+          ],
+          "url": "http://arxiv.org/abs/2607.29399v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.29399v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-31T13:18:15Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.75732572089947,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "81dedb024c75ff0f",
+          "title": "CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding",
+          "abstract": "Rendering source code as images offers a promising way to reduce the input costs of Multimodal Large Language Models (MLLMs). Adjusting image resolution can trade visual token cost against content fidelity. However, resolution scaling alone overlooks two sources of inefficiency: blank regions created by line breaks and indentation, and code regions irrelevant to the current instruction. Moreover, the best compression setting varies across inputs, tasks, and models, limiting fixed-ratio strategies. We propose CodeShrink, an adaptive visual compression framework with three components. Blank-Free Rendering replaces whitespace-dependent layouts with compact layouts and explicit structural markers, removing layout-induced tokens. Adaptive Compression Configuration uses a lightweight agent trained with reinforcement learning to predict a per-input setting that balances token efficiency and readability. Dominant Token Selection jointly analyzes the instruction and code image to prune task-irrelevant visual tokens during inference. We evaluate CodeShrink on code question answering, clone detection, and code completion. CodeShrink reduces visual token use by up to 71.2\\% while matching or exceeding uncompressed text-only inputs, and consistently outperforms text-based and visual compression baselines across all three tasks. These results show that combining layout compaction, adaptive configuration, and instruction-aware pruning can make multimodal code understanding more efficient. Our code is available at https://github.com/vinsontang1/CodeShrink.",
+          "authors": [
+            "Wenxin Tang",
+            "Jingyu Xiao",
+            "Zhenyu Liu",
+            "Zipeng Xie",
+            "Junliang Liu",
+            "Wang Luo",
+            "Yuan Jiang",
+            "Yintong Huo",
+            "Michael Lyu"
+          ],
+          "url": "http://arxiv.org/abs/2607.29637v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.29637v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-31T17:15:51Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.769111435185184,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "74fd676c2fbf7dfa",
+          "title": "Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems",
+          "abstract": "Analog compute-in-memory (CIM) arrays have emerged as a promising substrate for energy-efficient LLM inference, particularly for weight-stationary computations in linear layers. However, extending analog CIM to attention mechanisms introduces a fundamental challenge: KV cache operations demand repeated in-situ weight updates, and the resulting mismatch with the weight-stationary paradigm exposes dynamic computations to significant hardware noise, a critical problem that remains largely unexplored. In this paper, we present the first systematic study of dynamic attention computation on analog CIM arrays, revealing that initial and recent tokens exhibit disproportionate vulnerability to hardware noise. Motivated by this token-level insight, we propose a hierarchical token protection strategy that keeps sink tokens and a sliding recent-token window on a higher-precision digital path while processing the bulk KV cache on analog CIM. A co-designed scheduler combines analog programming, ownership transition, and bulk-MVM tile formation to bound digital overhead. Evaluations on nine LLMs show that our approach lowers average perplexity under analog noise from 33.91 to 11.95, close to the clean baseline of 11.06, while improving dynamic-KV programming-row utilization from 23.1\\% to 91.2\\%.",
+          "authors": [
+            "Yuannuo Feng",
+            "Wenyong Zhou",
+            "Yuang Ma",
+            "Yizhe Chen",
+            "Wenshuai Yao",
+            "Yuxin Xie",
+            "Ngai Wong",
+            "Wang Kang"
+          ],
+          "url": "http://arxiv.org/abs/2607.29076v1",
+          "pdfUrl": "http://arxiv.org/pdf/2607.29076v1",
+          "source": "arXiv",
+          "publishedAt": "2026-07-31T06:56:20Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.738381441798943,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-08-02",
       "papers": [
         {
