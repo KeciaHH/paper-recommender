@@ -1,6 +1,95 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-05",
+      "papers": [
+        {
+          "id": "92cca7f55693cafa",
+          "title": "Test Time Adaptation Methods for Point Cloud Registration in Laparoscopic Surgery",
+          "abstract": "3D point cloud registration in laparoscopic surgery estimates the transformation between an intraoperative organ reconstructed from video and its preoperative mesh. Because ground-truth transformations are unavailable for real data, supervised networks are trained on synthetic organ pairs. At test time, real reconstructions differ from synthetic data and are noisy, sparse, and occluded, which degrades correspondence estimation. Test-time adaptation (TTA) can reduce this domain shift, but existing methods mainly rely on logits, entropy, class prototypes, or cache memories unavailable in registration. Registration also involves paired inputs with an asymmetric shift that primarily affects the intraoperative cloud. We analyse and modify state-of-the-art TTA methods from three families to 3D registration: model, normalization, and input adaptation. We analyze four representative approaches based on auxiliary-task model updates, backpropagation-free token purging, feature alignment, and layer-normalization calibration. We modify them to handle asymmetric shifts between preoperative and intraoperative point clouds and replace classification-based entropy objectives. Using a correspondence-based model trained on clean synthetic source data, we evaluate adaptation to corrupted synthetic and real target data on P2P and P2ILReg. For synthetic targets, we apply eight corruptions, including uniform noise and global density reduction, at five severity levels. All methods improve registration on P2P, whereas normalization adaptation degrades performance on P2ILReg. Considering the computational overhead of backpropagation-based adaptation, input adaptation is the most promising option for laparoscopic surgery, providing low inference latency and consistent error reductions across datasets. Code: https://github.com/ninaa-git/survey_pc_registration_tta",
+          "authors": [
+            "Nina Bodelot",
+            "Soufiane Belharbi",
+            "Eric Granger"
+          ],
+          "url": "http://arxiv.org/abs/2608.02883v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.02883v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-03T21:11:13Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 37.85235193287037,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "2d51622114173ecd",
+          "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
+          "abstract": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
+          "authors": [
+            "Changle Qu",
+            "Sunhao Dai",
+            "Hengyi Cai",
+            "Yuqi Zhou",
+            "Xinran Chen",
+            "Simon",
+            "Jun Xu"
+          ],
+          "url": "http://arxiv.org/abs/2608.04007v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.04007v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-04T17:59:21Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.914263309358464,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "fd0172ead6398450",
+          "title": "Design-Time Optimization of Deep Neural Networks for Intermittent Learning on Microcontrollers",
+          "abstract": "We present a method for designing deep neural networks (DNNs) for intermittent, energy-autonomous, on-device learning on microcontroller units (MCUs). In mobile applications where the energy can run out, e.g., when solar-powered, executing artificial intelligence (AI) faces a technical issue as learning can be interrupted at any time. Our approach combines a hardware-aware energy prediction model with multi-objective optimization (MOO), enabling offline DNN optimization at the design stage without repeated deployment and online testing on the target MCU. Our proposed energy predictor estimates per-layer energy consumption for both DNN inference and training, including the intermittent checkpointing overhead, based on implementation-specific compute and memory features extracted from the DNN model. We validate our approach using autoencoders for anomaly detection on a Cortex-M4 MCU, where our predictor achieves a weighted absolute percentage error of 16.6%, which is sufficient for reliable architecture selection under intermittency constraints. As a result, this work bridges the gap between MOO, automated DNN design, deployment on energy-harvesting systems, and intermittent learning, truly enabling autonomous AI at the edge.",
+          "authors": [
+            "Jakob Schubert",
+            "Maximilian Kasper",
+            "Maximilian Linke",
+            "Benedict Herzog",
+            "Mark Deutel",
+            "Axel Plinge",
+            "Dominik Seuss",
+            "Christopher Mutschler"
+          ],
+          "url": "http://arxiv.org/abs/2608.03589v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.03589v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-04T12:43:19Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.89858705274471,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "fe92269cb12c9747",
+          "title": "Beyond Peak TOPS/W: A System-Level Perspective on Hybrid Digital, Analogue and Neuromorphic Computing",
+          "abstract": "The digital revolution, which progressively replaced analogue methods with digital circuits, has entered a new phase as AI expands across cloud infrastructure, mobile networks, wearables and physical systems, including drones and robots. Digital computing remains the general-purpose foundation of this expansion: it supports heterogeneous, on-device and decentralised AI through programmable control, mature software and decades of accumulated engineering infrastructure. Yet as energy and data-movement constraints become more significant, that same foundation is increasingly being extended rather than replaced by selected analogue and physical principles that it can host, configure and verify. Photonic, in-memory and neuromorphic architectures offer routes to reducing data movement and accelerating matrix-intensive and event-driven processing, not as alternatives to digital infrastructure but as specialised engines operating within it. This paper argues that hybrid digital--analogue computing represents a credible pathway towards more energy-efficient AI systems: one in which physical substrates earn an expanding role only where they deliver a measurable system-level advantage, under digital orchestration that manages integration, uncertainty and fallback. It examines the architectural principles, workload suitability, energy accounting, software requirements, limitations and open challenges associated with this transition, and argues that future progress should be evaluated through deployed-system metrics rather than isolated peak tera operations per second per watt (TOPS/W) claims.",
+          "authors": [
+            "Eiman Kanjo",
+            "Varuna De Silva"
+          ],
+          "url": "http://arxiv.org/abs/2608.03514v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.03514v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-04T11:57:50Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.89633093501984,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-08-04",
       "papers": [
         {
