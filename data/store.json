@@ -27,7 +27,7 @@
             "snn",
             "rl"
           ],
-          "score": 45.866750279431216,
+          "score": 45.80443161210317,
           "reason": "Matches SNN / Neuromorphic, Reinforcement Learning."
         },
         {
@@ -46,7 +46,7 @@
           "topics": [
             "early_exit"
           ],
-          "score": 27.97178252149471,
+          "score": 27.909463854166667,
           "reason": "Matches Network Early Exit."
         },
         {
@@ -66,7 +66,7 @@
           "topics": [
             "snn"
           ],
-          "score": 27.892433976521165,
+          "score": 27.830115309193122,
           "reason": "Matches SNN / Neuromorphic."
         }
       ]
