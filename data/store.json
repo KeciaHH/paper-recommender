@@ -1,6 +1,58 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-17",
+      "papers": [
+        {
+          "id": "a837a0bd77c2a5b3",
+          "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+          "abstract": "Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor training in strict serial phases. While effective for text-only RL, this phase-granular execution is wasteful for VLMs, where processing dense video inputs and prompt prefixes occupies a large fraction of each phase. Because prefix processing is independent of the generated response, it can be run alongside rollout decoding, which leaves GPU compute capacity underutilized, without breaking synchronous on-policy semantics. We present Rollplex, a runtime that decomposes the reference and training phase and moves the prefix computation into the rollout decode window. Realizing this schedule requires more than concurrent kernel launches: naive colocation of Qwen2.5-VL-32\\,B requires roughly 165\\,GiB per GPU, while rollout and training prefer different tensor-parallel (TP) degrees and weight layouts. Rollplex addresses these constraints with two mechanisms. Phase-aware memory management controls HBM residency according to producer--consumer lifetimes. Parallelism-aware weight sharing uses the same physical storage for layout-compatible tensors across distinct TP degrees and reconstructs only incompatible tensors, avoiding a complete second actor copy. On 32 H800 GPUs, Rollplex achieves $1.23\\times$--$1.30\\times$ speedup over serial colocation and $1.57\\times$--$2.24\\times$ over disaggregation under the same GPU budget, while preserving the synchronous RL update.",
+          "authors": [
+            "Hanfeng Lu",
+            "Tianyu Feng",
+            "Suyi Li",
+            "Yuheng Zhao",
+            "Wei Gao",
+            "Shaopan Xiong",
+            "Ju Huang",
+            "Siran Yang",
+            "Jiamang Wang",
+            "Lin Qu",
+            "Wei Wang"
+          ],
+          "url": "http://arxiv.org/abs/2608.14498v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.14498v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-14T17:13:34Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.770875866402115,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d029eb9f68b0875b",
+          "title": "Joint Optimization of Memory and Computing Frequency for Energy-Efficient DNN Inference",
+          "abstract": "Deep neural network (DNN) inference on mobile devices often incurs high latency and energy consumption due to limited computing and memory resources. To enable energy-efficient DNN inference, most existing studies focus on dynamic voltage and frequency scaling (DVFS) for adjusting the computing frequency, while the impact of memory frequency on the inference performance has been greatly overlooked. In this paper, we consider the impact of memory frequency and computing frequency on DNN inference time, and jointly optimize these two frequencies together with communication resources for energy-efficient DNN inference. Based on a realistic inference time model, we formulate an optimization problem to minimize the energy consumption of all mobile devices under the deadline constraint. For local inference, we derive a near-optimal closed-form solution via convex optimization, while an optimal closed-form solution for transmission power is obtained for edge inference with the given bandwidth. Furthermore, we propose a low-complexity heuristic algorithm to effectively solve the overall problem with polynomial time complexity. Simulation results based on measured data show that the proposed near-optimal solution for local inference can achieve optimal performance under strict deadline constraints, with a performance gap of up to 2.5% compared with the optimal solution. Meanwhile, our proposed algorithm significantly reduces the energy consumption of devices by up to 10.4% compared to other methods.",
+          "authors": [
+            "Yunchu Han",
+            "Zhaojun Nan",
+            "Sheng Zhou",
+            "Zhisheng Niu"
+          ],
+          "url": "http://arxiv.org/abs/2608.13863v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.13863v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-14T01:25:00Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.723823948412697,
+          "reason": "Matches DVFS / Energy."
+        }
+      ]
+    },
+    {
       "date": "2026-08-16",
       "papers": [
         {
