@@ -1,6 +1,94 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-18",
+      "papers": [
+        {
+          "id": "7cd49e9ff7857a24",
+          "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+          "abstract": "Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental challenges. In this work, we present a unified black-box RL framework for stable and scalable optimization of general agents through complex harnesses. Concretely, we first build a sandbox-based execution infrastructure that isolates task environments and harnesses within temporary sandboxes for large-scale concurrent rollouts. We then decouple policy optimization from opaque harness execution and place a serving proxy at the model boundary to capture model calls. To reconstruct multi-turn trajectories and improve training efficiency, we organize the captured calls into prefix trees and further adapt both critic-based PPO and critic-free GRPO to optimize over the recovered tree structure. Meanwhile, we maintain training-inference consistency throughout the optimization process. Finally, we introduce mix-harness training, allowing a single model to be jointly optimized by heterogeneous harnesses. With Qwen3-30A3B, black-box RL improves Pass@1 on ClawGym-Bench by 9.98 and 14.81 points through OpenClaw and Claude Code, respectively, while remaining stable over 200-400 optimization steps. Moreover, the framework yields consistent gains on more challenging tasks such as JobBench and OfficeQA. Overall, our framework enables effective, stable, and scalable optimization of general agents through black-box harnesses, supporting unified training across heterogeneous execution systems.",
+          "authors": [
+            "Huatong Song",
+            "Fei Bai",
+            "Ming Yang",
+            "Renyuan Li",
+            "Jia Deng",
+            "Jujie He",
+            "Zhange Zhang",
+            "Daixuan Cheng",
+            "Yan Xing",
+            "Qi Yun",
+            "Xuxing Chen",
+            "Danyang Li",
+            "Feng Chang",
+            "Chuan Hao",
+            "Ran Tao",
+            "Jian Yang",
+            "Bryan Dai",
+            "Wayne Xin Zhao",
+            "Mingjie Tang",
+            "Ji-Rong Wen"
+          ],
+          "url": "http://arxiv.org/abs/2608.16798v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.16798v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-17T16:53:03Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.912797066798944,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "526d4bf03caac3b7",
+          "title": "Parallel Spatial Photonic Programming of Optoelectronic IGZO RRAM with a compact $μ$LED Array",
+          "abstract": "Optoelectronic resistive random-access memory elements (ORRAM) are critical emerging devices that leverage photonic technologies to bring the advantages of optical programming to traditionally electronic memristive platforms for neuromorphic computing and artificial intelligence. In this work, a free-space optic micro-LED ($μ$LED) array is combined with a 2-terminal oxide semiconductor ORRAM (based on IGZO\\textsubscript{Rich}/IGZO active layers), to realise parallel spatial programming of form-free memristive arrays. We report the optical and electrical programming of resistive states with potentiation/depression analysis of various stimuli parameters (pulse frequency, pulse width, pulse amplitude). Further, we demonstrate the simultaneous photonic-electronic programming of the ORRAM with optical SET (blue 450\\,nm) and electrical RESET functionality. Persistent photocurrent is also observed and exploited as a pathway to fading memory or synaptic plasticity for temporal bit encoding. Finally, parallel optical $μ$LED to ORRAM channels are demonstrated to achieve the simultaneous photonic programming of multiple devices and the writing of spatial patterns across a chip of memristive IGZO devices. This work highlights the light-enabled scalability of the optoelectronic platform and the feasibility of ORRAM to interface with spatially-multiplexed optical sources to bring neuromorphic technologies directly into applications that process and sense in the optical domain.",
+          "authors": [
+            "Andrew Adair",
+            "Joshua Robertson",
+            "Andreas Tsiamis",
+            "Mohamed Awadein",
+            "Spyros Stathopoulos",
+            "Johannes Herrnsdorf",
+            "Martin D. Dawson",
+            "Themis Prodromakis",
+            "Antonio Hurtado"
+          ],
+          "url": "http://arxiv.org/abs/2608.16807v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.16807v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-17T17:02:08Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.913247628968254,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "0bf6094848cd3058",
+          "title": "AdaSprite: Resource-efficient Online Co-Adaptation for V2I Systems Under Large-scale Data Drifts",
+          "abstract": "The rise of vehicle-infrastructure (V2I) collaboration enables safer and broader perception. To process large-scale V2I video streams, vision-language models (VLMs) are promising as they unify multi-view vision into end-to-end task grounding, reducing handcrafted design. We use Vision Mixture-of-Experts (V-MoE) as the distributed visual backbone of VLMs, leveraging sparse expert routing to enable conditional computation across diverse viewpoints under resource constraints. Yet, V-MoEs face a critical challenge: large-scale data shifts over minutes to hours in V2I systems, amplified by agnostic participants and biased features propagating through experts. To maintain accuracy efficiently, we find it beneficial to co-adapt multiple V-MoEs on edge servers, avoiding the latency and privacy risks of cloud offloading and the accuracy sacrifices of on-device methods. However, the resource-constrained edge poses challenges for efficient co-adaptation: i) DRAM fragmentation and imbalance limit expert parallelism, ii) memory-I/O bottlenecks restrict computation reuse, and iii) asynchronous adaptation increases task-switch overhead. Also, prior work rarely explores the upper bound of concurrent tasks under limited edge resources, a critical factor for practical V2I deployment. To address these, we present AdaSprite. By combining cooperative elastic scaling with multi-level multiplexing, AdaSprite optimizes expert lifespans to reduce DRAM fragmentation, exploits predictable activation patterns for efficient I/O reuse, and employs twin-buffer scheduling to leverage sparsity. On a weak edge, AdaSprite supports up to 17 concurrent V2I tasks (vs. up to 6 for baselines), improving SLO attainment by 1.6x and throughput by 2.1x. Also, it allows users to trade accuracy and concurrency for second-level adaptation.",
+          "authors": [
+            "Lehao Wang",
+            "Zhiwen Yu",
+            "Sicong Liu",
+            "Kefan Chen",
+            "Fengmin Wu",
+            "Bin Guo"
+          ],
+          "url": "http://arxiv.org/abs/2608.16188v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.16188v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-17T07:09:47Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.883865188492063,
+          "reason": "Matches Network Early Exit."
+        }
+      ]
+    },
+    {
       "date": "2026-08-17",
       "papers": [
         {
