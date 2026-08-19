@@ -1,6 +1,91 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-19",
+      "papers": [
+        {
+          "id": "812afd53262b96e7",
+          "title": "CLOPS: Benchmarking System Speed at Utility Scale",
+          "abstract": "As quantum processors scale to hundreds of qubits, execution speed is a critical performance dimension alongside scale and quality. While substantial progress has been made in benchmarking circuit fidelity, existing speed metrics often fail to reflect the sustained, end-to-end throughput experienced by users running utility-scale workloads. This shortfall is especially pronounced for layered, parameterized circuits executed repeatedly within classical-quantum workflows, such as variational algorithms and error-mitigated simulations. In this work, we formalize CLOPS_h (Circuit Layer Operations Per Second) as a holistic speed benchmark defined over layered, hardware-aware circuits. CLOPS_h measures the sustained rate at which the system executes physical layers, parallel slices of qubit-disjoint two-qubit gates separated by synchronization barriers. Because each such layer is one time slice of an N-qubit circuit, this rate maps directly to the execution rate of layered $N$-qubit circuits, connecting CLOPS_h to published device capability claims, and to the device-level throughput ceiling we formalize as Max Circuits Per Second (MCPS). CLOPS_h is obtained under layer-fidelity operating conditions, binding the speed measurement to an independently verified quality envelope, and it shares its layer decomposition with scalable layer-fidelity (LF) quality benchmarks, enabling coherent interpretation of speed and quality without conflating the two.",
+          "authors": [
+            "Andrew Wack"
+          ],
+          "url": "http://arxiv.org/abs/2608.18044v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.18044v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-18T17:39:10Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.914985611772487,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "d0e4a9dfc1d6c3df",
+          "title": "Energy-efficient, Reconfigurable Optoelectronic Artificial Synapses Based on MoWS$_2$ Alloy for Pattern Recognition and Color Image Filtering Applications",
+          "abstract": "Two-dimensional transition-metal dichalcogenide alloys are potential candidates for advanced optoelectronic and neuromorphic applications due to their strong light-matter interactions and controllable defect properties. However, large-area growth of such alloys remains challenging, while the correlation between their physical and neuromorphic properties remains largely unclear. In this work, we present an innovative microcavity chemical vapor deposition (CVD) reactor pathway to grow uniform, and large-area MoWS$_2$ mono- and few-layer alloy films for demonstrating optoelectronic synaptic functionalities. Driven by growth-induced intrinsic sulfur vacancies, as confirmed by XPS, KPFM, and STEM measurements, our optoelectronic synaptic device (OSD) successfully emulates essential biological synaptic features, such as excitatory postsynaptic currents (EPSC), paired-pulse facilitation (PPF~170%), and stimulus-dependent short- and long-term plasticities (STP & LTP). With picojoule-order energy consumption per synaptic event and nanoampere-order dark current, the device enables low-power neuromorphic learning, including emulation of Pavlovian associative learning. Furthermore, the experimentally measured conductance weight-update characteristics enabled an artificial neural network (ANN) simulation to achieve 92.43% recognition accuracy on the MNIST handwritten digit dataset. Finally, we demonstrate advanced neuromorphic visual processing by executing color image filtering based on the device's wavelength-selective photoresponse characteristics. This simple, yet multifunctional device architecture provides a promising path toward energy-efficient, spectral-selective neuromorphic vision applications.",
+          "authors": [
+            "Deepak Kumar Sahu",
+            "Santu Kumar Ghosh",
+            "Sagarneel Ghoshal",
+            "Saranya Das",
+            "Samit K. Ray"
+          ],
+          "url": "http://arxiv.org/abs/2608.18013v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.18013v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-18T17:02:10Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.91315029431217,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "280e864202ffb9f4",
+          "title": "Policy-Invariant Reward Shaping from LLM Feedback: A Framework for Hybrid RL Agents",
+          "abstract": "Combining large language models with reinforcement learning is increasingly explored, yet the theoretical status of LLM-derived reward signals is often left implicit. We formalize the hybrid LLM-planner and RL-controller architecture as a Goal-Augmented Markov Decision Process and show that when the LLM per-state progress score is used as a bounded potential function, the resulting shaping term preserves the optimal policy set even when the LLM scores are inaccurate. This guarantee is stronger than what general LLM-as-reward approaches provide. We verify the result numerically on a small MDP under four potential configurations, including an adversarial one scaled to twenty times the base reward magnitude.",
+          "authors": [
+            "Christophe D. Hounwanou",
+            "John Emeka Eze",
+            "Yaé U. Gaba"
+          ],
+          "url": "http://arxiv.org/abs/2608.18008v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.18008v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-18T16:55:46Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.91283283399471,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "844d3ae3305edcca",
+          "title": "Dual Co-Train: Cross-Dataset Ultrasound Tongue Segmentation Under Extreme Data Scarcity",
+          "abstract": "Ultrasound tongue contour segmentation remains challenging under cross-dataset domain shift, where limited annotations, probe variability, and acquisition noise often degrade model generalization. We present a source-free domain adaptation framework for robust ultrasound tongue segmentation built on a lightweight UltraUNet backbone. Starting from a checkpoint pretrained on only five labeled source images, simulating an underfitted constrained source model, the proposed method adapts to a fully-unlabeled target domain by iteratively refining pseudo-labels, filtering unreliable masks with a contour-based quality-control module, and generating target-style synthetic image-mask pairs through a segmentation-guided conditional GAN. The student model is then trained on a mixture of clean pseudo-labeled target images, noisy pseudo-labels with consistency regularization, and synthetic samples, enabling closed-loop adaptation without access to source data. We evaluate the method on 12 source-target transfer pairs across eight ultrasound tongue imaging datasets, and conduct source-size scaling experiments and ablation studies. Across all comparisons, the proposed framework improves segmentation overlap and contour accuracy over the baselines, including supervised ones. These results suggest that task-specific pseudo-label refinement and synthetic target-style augmentation can substantially improve source-free adaptation for ultrasound tongue imaging.",
+          "authors": [
+            "Alisher Myrgyyassov",
+            "Zhen Song",
+            "Bruce Xiao Wang",
+            "Yu Sun",
+            "Min Ney Wong",
+            "Yihao Zhou",
+            "Yongping Zheng"
+          ],
+          "url": "http://arxiv.org/abs/2608.17983v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.17983v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-18T16:31:08Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.911610942460317,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-08-18",
       "papers": [
         {
