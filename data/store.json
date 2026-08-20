@@ -1,6 +1,80 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-20",
+      "papers": [
+        {
+          "id": "8156f694dab8b1f8",
+          "title": "Quantum circuit optimization using deep reinforcement learning: Applications across multiple gate sets",
+          "abstract": "The practical implementation of quantum algorithms on noisy intermediate-scale quantum devices encounters operational limitations due to decoherence and other sources of noise inherent in real hardware. To mitigate these errors while preserving the original functionality of the algorithm, shorter quantum circuits are therefore preferred. This motivates the development of effective quantum circuit optimization algorithms. Learning-based approaches have emerged as a leading candidate, yet existing autonomous agents remain inefficient, spending most of their training capacity rediscovering elementary reductions that deterministic rule-based methods already handle reliably. To address this challenge, we propose a reinforcement learning framework that embeds a deterministic Commutation-and-Reduction (CR) algorithm directly into the training environment. After every agent action, the CR algorithm automatically resolves elementary commutations and cancellations, enabling the agent to focus its learning capacity on the non-trivial optimizations where reinforcement learning adds real value. Empirical evaluation across two gate sets, the universal Clifford+T basis and the CNOT+Pauli basis, shows that RL+CR produces shorter circuits than a standard RL agent at all tested scales. We demonstrate that RL trained on smaller quantum circuits can be applied to larger quantum circuits. On 20-qubit Clifford+T circuits, five times larger than the training circuits, RL+CR removes twice as many gates as standard RL. This work provides a robust approach that could accelerate the compilation and optimization processes for future fault-tolerant and utility-scale quantum systems.",
+          "authors": [
+            "Khoa Dang Tao",
+            "Sumin Jin",
+            "Muhammad Raza",
+            "Changhyoup Lee"
+          ],
+          "url": "http://arxiv.org/abs/2608.19103v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.19103v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-19T16:54:17Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.91266149140212,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d9c99ba516d9be25",
+          "title": "APEX: A Dual-Sparsity Accelerator for Precise and Efficient SNN Inference",
+          "abstract": "Spiking Neural Networks (SNNs) have emerged as an energy-efficient alternative to Artificial Neural Networks (ANNs), leveraging sparse accumulate operations in the place of power-hungry multiply-and-accumulate operations. ANN-SNN conversion is a widely adopted approach to realize deep SNNs with accuracy comparable to that of ANNs. The Quantization-Clip-Floor-Shift (QCFS) activation minimizes conversion error, yet requires a large number of inference timesteps to match the source ANN accuracy on real-world vision datasets. PASCAL addresses this by proposing the Precise ANN-SNN Conversion Integrate-and-Fire (PASC-IF) neuron, which guarantees mathematical equivalence between the converted SNN and the source ANN, thereby achieving ANN-equivalent accuracy at significantly reduced timesteps. Despite this algorithmic advancement, the hardware implications of deploying the PASC-IF neuron remain unexplored. In this work, we present APEX, a dual-sparsity SNN inference accelerator that integrates the PASC-IF neuron into the LoAS hardware framework. The three-stage PASC-IF datapath is realized as a fully combinational circuit with no additional latency cost. APEX exploits dual sparsity in both input spikes and weights through a fully temporal-parallel dataflow, enabling efficient sparse computation and reduced memory traffic. Across all evaluated models, the PASC-IF neuron on average achieves up to 3% higher accuracy than the standard IF neuron, with a power overhead of only 1.3%-5.4%, an area overhead of 2.1%-2.7%, and 40% energy reduction for best accuracy configurations.",
+          "authors": [
+            "Devgokul Bawa Venkatesh",
+            "Sreeram Radhakrishnan",
+            "Rajshekhar Rakshit",
+            "Gopalakrishnan Srinivasan"
+          ],
+          "url": "http://arxiv.org/abs/2608.19046v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.19046v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-19T15:38:16Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.908890822585974,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "34e60548346cf0d2",
+          "title": "Room-temperature ferroelectrically switchable quantum geometry in few-layer WTe2 for complementary in-memory computing",
+          "abstract": "Quantum geometry, describing the inherent geometric structure of electron wavefunctions in momentum space, transcends the traditional charge degree of freedom and provides a novel physical basis for information encoding and processing. The key to such new computing paradigms is the non-volatile electrical programming of quantum geometric states at room temperature, which, however, has not been established. Here, we demonstrate ferroelectrically switchable quantum geometry in few-layer WTe2, which uniquely enables complementary convolutional processing. By employing the intrinsic coupling between ferroelectric polarization and quantum geometry in few-layer WTe2, we show that the second- and third-order nonlinear anomalous Hall effects (NLAHE) can be deterministically and electrically switched in a nonvolatile and correlated manner. The switching is robust at room temperature for ~104 cycles and retention of ~105 s. Furthermore, leveraging the opposite switching behaviors of second- and third-order NLAHE at room temperature, we demonstrate complementary in-memory computing and implement a hardware-level complementary convolution kernel. This kernel overcomes the inherent directional specificity of conventional convolutional networks and achieves a texture recognition accuracy of 98%, thereby illustrating a viable pathway towards physics-native computing through exploiting exotic physics in quantum materials.",
+          "authors": [
+            "Ruihan Wang",
+            "Pengfei Wang",
+            "Haoyun Chen",
+            "Yunze Peng",
+            "Bingyan Liu",
+            "Junlin Xiong",
+            "Xueyuan Zhang",
+            "Chen Pan",
+            "Xin Chen",
+            "Shengyuan A. Yang",
+            "Shi-Jun Liang",
+            "Feng Miao",
+            "Peng Song"
+          ],
+          "url": "http://arxiv.org/abs/2608.18467v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.18467v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-19T02:40:58Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.870334274966932,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-08-19",
       "papers": [
         {
