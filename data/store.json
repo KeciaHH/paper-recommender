@@ -1,6 +1,148 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-21",
+      "papers": [
+        {
+          "id": "915426420811348e",
+          "title": "Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation",
+          "abstract": "Reasoning language models trained with reinforcement learning typically operate under a fixed token budget rather than an explicitly adaptive one, which can lead to over-computation on easy problems and insufficient computation on difficult ones. We study whether a model can learn to allocate its own reasoning effort by choosing, as the first token of its response, one of three modes: \\textsc{NoThink} (answer as quickly as possible), \\textsc{Short} (brief reasoning), or \\textsc{Long} (extended reasoning). The choice is learned inside Group Relative Policy Optimization (GRPO) with no separate router, through a shaped reward that makes each mode worthwhile at a different response length, together with hard per-mode token caps that keep the modes distinct. On a 1.5B distilled model trained on MATH, the three modes emerge without collapsing to a single choice, and the brief modes end up more accurate than \\textsc{Long}, which shows that the router sorts problems by difficulty rather than at random. Averaged over three seeds, the resulting policy stays close to the base model's accuracy on the held-out MATH500 ($0.782$ vs.\\ $0.796$) while cutting the mean response length from $4{,}796$ to $2{,}811$ tokens (a $41\\%$ reduction). Interestingly, it also transfers to other benchmarks without retraining, with the largest savings where problems are easier, with for instance 76\\% token reduction on GSM8K and at higher accuracy than the baselines at similar response length. In short, we build a reasoning model that adaptively chooses how much to reason for each problem.",
+          "authors": [
+            "Gijs Kassenaar",
+            "Zhao Yang",
+            "Vincent François-Lavet"
+          ],
+          "url": "http://arxiv.org/abs/2608.20256v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20256v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T16:54:08Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.91281999503968,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d9c99ba516d9be25",
+          "title": "APEX: A Dual-Sparsity Accelerator for Precise and Efficient SNN Inference",
+          "abstract": "Spiking Neural Networks (SNNs) have emerged as an energy-efficient alternative to Artificial Neural Networks (ANNs), leveraging sparse accumulate operations in the place of power-hungry multiply-and-accumulate operations. ANN-SNN conversion is a widely adopted approach to realize deep SNNs with accuracy comparable to that of ANNs. The Quantization-Clip-Floor-Shift (QCFS) activation minimizes conversion error, yet requires a large number of inference timesteps to match the source ANN accuracy on real-world vision datasets. PASCAL addresses this by proposing the Precise ANN-SNN Conversion Integrate-and-Fire (PASC-IF) neuron, which guarantees mathematical equivalence between the converted SNN and the source ANN, thereby achieving ANN-equivalent accuracy at significantly reduced timesteps. Despite this algorithmic advancement, the hardware implications of deploying the PASC-IF neuron remain unexplored. In this work, we present APEX, a dual-sparsity SNN inference accelerator that integrates the PASC-IF neuron into the LoAS hardware framework. The three-stage PASC-IF datapath is realized as a fully combinational circuit with no additional latency cost. APEX exploits dual sparsity in both input spikes and weights through a fully temporal-parallel dataflow, enabling efficient sparse computation and reduced memory traffic. Across all evaluated models, the PASC-IF neuron on average achieves up to 3% higher accuracy than the standard IF neuron, with a power overhead of only 1.3%-5.4%, an area overhead of 2.1%-2.7%, and 40% energy reduction for best accuracy configurations.",
+          "authors": [
+            "Devgokul Bawa Venkatesh",
+            "Sreeram Radhakrishnan",
+            "Rajshekhar Rakshit",
+            "Gopalakrishnan Srinivasan"
+          ],
+          "url": "http://arxiv.org/abs/2608.19046v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.19046v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-19T15:38:16Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.83762819609788,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "30f346f7ae1b00de",
+          "title": "$TCP_α$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
+          "abstract": "Deep neural networks are often overconfident, assigning high confidence even to incorrect predictions. Consequently, users lack a reliable signal for deciding when a prediction can be trusted. Post-hoc confidence estimation addresses this by training a lightweight auxiliary head over a frozen classifier. Existing targets, however, suffer from inherent ambiguity: they assign overlapping confidence values to correct and incorrect predictions, while errors near the decision boundary receive confidence scores indistinguishable from correct predictions. In this work, we propose $TCP_α$, a novel confidence target that resolves these limitations by introducing a margin-controlled penalty for misclassified samples. We prove that $TCP_α$ guarantees complete separation between the target values of correct and incorrect predictions, with a separation margin that is independent of the number of classes and increases monotonically with the penalty parameter. Since accurate classifiers naturally produce very few errors, learning these targets results in a severely imbalanced regression problem. We therefore present a systematic study of training strategies for learning under this imbalance and identify an effective training configuration through extensive ablation studies. We evaluate the proposed approach on rāga identification, investigate its robustness under domain shift, and further validate it on frame-wise ornamentation detection without modifying the selected configuration. Across all settings, $TCP_α$ consistently outperforms existing confidence targets for failure prediction. Rejecting only the least-confident 8\\% of predictions improves the base model's macro-F1 from 0.89 to 0.98, while fine-tuning the confidence head with only 5\\% labeled samples from a new corpus effectively restores performance under domain shift.",
+          "authors": [
+            "Parampreet Singh",
+            "Anushka Singh",
+            "Sumit Kumar",
+            "Vipul Arora"
+          ],
+          "url": "http://arxiv.org/abs/2608.20326v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20326v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T17:58:50Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.916029321263228,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "ccf0c598ef87d394",
+          "title": "Coulomb blockade-like transport and enhanced memory in organic transistors embedded with sub-nm Pt nanoparticles for neuromorphic computing",
+          "abstract": "Organic transistors are playing an increasingly important role for neuromorphic applications. However, devices that rely solely on ferroelectric switching or on interface traps for their multi-conductance states exhibit limited memory windows. Here, we introduce an ultrathin oxide layer with a uniform distribution of sub-nm platinum nanoparticles (PtNPs) at the interface of a polymer semiconducting and a ferroelectric dielectric in a thin film transistor architecture. The interfacial stack, Al$_2$O$_3$/PtNP/Al$_2$O$_3$, provides a viable route for localized charge trapping and de-trapping in a region where it can most effectively influence the channel conductance. The organic transistors display a large memory window (> 20 V) in their current-voltage characteristics. The sub-nm PtNPs give rise to features that are consistent with room temperature Coulomb blockade-like transport, supporting discrete and well-separated levels within the memory window. The devices support multimodal programming using electrical and optical stimuli with both long-term plasticity and enhanced short-term plasticity (STP) phenomena. These results open new directions for implementing STP in the development of neuromorphic computing.",
+          "authors": [
+            "Arash Ghobadi",
+            "Thomas B. Kallaos",
+            "Abhi Abhijeet",
+            "Stephen C. Klue",
+            "Joseph C. Mathai",
+            "Carsten A. Ullrich",
+            "Shubhra Gangopadhyay",
+            "Suchismita Guha"
+          ],
+          "url": "http://arxiv.org/abs/2608.20245v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20245v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T16:41:23Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.91218755456349,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "4b7f90542087a710",
+          "title": "Amorphous and Nanocrystalline Topological Semimetal YPtBi/W/CoFeB Heterostructures for BEOL-Compatible Spin-Orbit Torque Devices",
+          "abstract": "Spin-orbit torque (SOT) devices require spin-source materials that combine efficient charge-to-spin conversion with back-end-of-line (BEOL) thermal compatibility. Here, we show that YPtBi/W/CoFeB heterostructures deposited directly on Si/SiOx remain predominantly amorphous or weakly nanocrystalline from room temperature to 400 °C while preserving a large effective damping-like SOT response. Anomalous Hall and harmonic Hall measurements, together with X-ray diffraction, cross-sectional transmission electron microscopy, X-ray reflectivity, and electron energy-loss spectroscopy, show that the response does not correlate with bulk crystallization of YPtBi. Instead, the interfacial analysis indicates that the strongest trend of the spin Hall angle is associated with the chemistry of the upper YPtBi/W boundary: the effective SOT response tracks the integrated W concentration at that YPtBi surface. Meanwhile, a two-spin source analysis shows that the Pt-W-rich interlayer provides only a small positive correction, insufficient to explain the large negative effective spin Hall angle by itself. The dominant control variable is therefore inferred to be the incorporation of W into the upper YPtBi interface, which plausibly modifies the local electronic structure of YPtBi and amplifies the stack-level response. These results provide a more physically constrained interpretation of the stack behavior and identify a BEOL-compatible route to disordered topological spin-source layers for scaled SOT memory and compute-in-memory hardware.",
+          "authors": [
+            "Quang Le",
+            "Brian R. York",
+            "Cherngye Hwang",
+            "Xiaoyong Liu",
+            "Tsann Lin",
+            "Xiaoyu Xu",
+            "Yudi Wang",
+            "Jia Li",
+            "Mazin Osman",
+            "Katherine Le",
+            "Maher Osman",
+            "Son Le",
+            "Lei Xu",
+            "Maki Maeda",
+            "Tuo Fan",
+            "Yu Tao",
+            "Hisashi Takano",
+            "Sho Kagami",
+            "Ohiro Fujie",
+            "Pham Nam Hai"
+          ],
+          "url": "http://arxiv.org/abs/2608.20021v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20021v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T13:31:50Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.90278527281746,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "1f237507c8e04c74",
+          "title": "When Guidance Goes Off-Scale: Recalibrating Diffusion Transformers under Analog Compute-in-Memory Nonidealities",
+          "abstract": "Diffusion Transformers (DiTs) incur high memory traffic and energy costs because sampling repeatedly evaluates large denoisers dominated by linear operations. Analog compute-in-memory (CIM) can alleviate these costs by executing linear operations within weight-storing memory arrays. However, CIM nonidealities perturb effective weights, with errors accumulating along the state-dependent denoising trajectory; their interaction with classifier-free guidance (CFG) remains underexplored. In this paper, we characterize the impact of analog CIM nonidealities on DiT sampling. Although conditional and unconditional predictions can each remain close to their clean counterparts, their difference (the CFG residual) is disproportionately attenuated and rotated. Identifying this residual as a controllable failure channel, we propose a retraining-free, sampler-side recalibration that adjusts only the CFG scale for a given CIM condition. Trajectory-level analysis shows that moderate recalibration strengthens the target-oriented component preserved in the distorted residual, enabling earlier commitment to a prompt-consistent semantic region. In contrast, excessive guidance amplifies the full noisy residual and degrades quality, resulting in a finite, noise-dependent optimum. Extensive experiments on PixArt-Sigma, PixArt-alpha, and DiT-XL/2 show that the optimal guidance scale increases with CIM noise. Using 30,000 samples per condition, guidance recalibration consistently restores generation quality across simulated CIM mappings, closing at least 87% of the CIM-induced FID gap at a CIM noise level of 0.20. It reduces FID from 59.22 to 20.49 on PixArt-Sigma, 72.37 to 21.12 on PixArt-alpha, and 20.89 to 6.62 on DiT-XL/2.",
+          "authors": [
+            "Wenshuai Yao",
+            "Wenyong Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2608.19644v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.19644v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T05:21:48Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.87847806382275,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-08-20",
       "papers": [
         {
