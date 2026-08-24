@@ -1,6 +1,140 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-24",
+      "papers": [
+        {
+          "id": "03d7c61d57b4a0ba",
+          "title": "Event-triggered Implicit Perturbation for Zeroth-Order Fine-Tuning of Spiking Transformers",
+          "abstract": "Zeroth-order (ZO) optimization estimates gradients using only forward-pass evaluations, making it suitable for fine-tuning non-differentiable, event-driven spiking neural networks (SNNs). However, its deployment on in-memory computing (IMC) accelerators is constrained by the repeated read-modify-write (RMW) operations arising from explicit weight perturbation and the prohibitive hardware footprint of random number generators (RNGs) for statistically independent per-weight perturbations. To address these challenges, we propose an implicit-perturbation ZO (IPZO) architecture in which perturbation sums computed by an event-triggered perturbation generation unit (PGU) are combined with the weighted sums produced by the IMC array, eliminating perturbation-induced RMW operations while preserving weight-stationary execution of IMC. By exploiting spike sparsity, the PGU generates and accumulates perturbation contributions only for spike-activated weight rows, reducing the required row dimension of the RNG array. An address-driven XOR recombination scheme (PGU-XOR) is further introduced to mitigate the spatial correlations caused by direct RNG reuse (PGU-Reuse). The results show that (1) PGU-XOR matches software RNGs in accuracy on Spikingformer/CIFAR-10 (76.41% vs. 76.53%) and perplexity (PPL) on SpikeGPT/WikiText-2 (54.20 vs. 53.23), whereas PGU-Reuse degrades accuracy by 9.56 percentage points and increases PPL by 11.8; (2) implemented in a TSMC 16-nm CMOS technology, PGU-XOR incurs 40.3%-46.0% area and 15.2%-48.9% energy overhead per matrix-vector multiplication relative to PGU-Reuse, yet its faster convergence reduces the total perturbation energy to 0.51x that of PGU-Reuse at iso-accuracy; (3) IPZO reduces the perturbation energy to 0.46x-0.83x that of conventional explicit weight perturbation for a batch size of B=64 and T=4 time steps, with the advantage growing as BT decreases.",
+          "authors": [
+            "Tengteng Lei",
+            "Prabodh Katti",
+            "Rashi Dutt",
+            "Houssem Sifaou",
+            "Tan Peng",
+            "Osvaldo Simeone",
+            "Kai Xu",
+            "Bipin Rajendran"
+          ],
+          "url": "http://arxiv.org/abs/2608.21223v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.21223v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-21T15:32:56Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 53.76581661375661,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "c43272cfe4ce8379",
+          "title": "AUSO: Action-Level Unified Skill Optimization from Internalization to Utilization",
+          "abstract": "Skills play different roles as an agent's policy evolves: they should first provide learnable knowledge, then support capability formation, and finally be invoked only when they improve individual decisions. Existing methods rarely model this lifecycle. They either keep skills outside the model, fully internalize them, or select among internalization and utilization objectives through noisy task-level success rates. Such designs fragment training and assign uniform importance to actions within the same trajectory, even though skill guidance may help some decisions while distracting others. To solve these problems, we introduce AUSO (Action-level Unified Skill Optimization), which unifies skill learning and skill use through a progressive, action-aware optimization process. At the beginning of training, AUSO jointly learns from teacher guidance and environmental outcomes, enabling the policy to acquire foundational skills without losing task-oriented feedback. It subsequently emphasizes outcome-based policy optimization to consolidate autonomous problem-solving ability. As the policy matures, AUSO evaluates each sampled action under both skill-conditioned and skill-free contexts. The resulting action-level information signal is coupled with the trajectory outcome advantage, allowing beneficial skill-sensitive actions to receive stronger updates and harmful ones to be suppressed. Therefore, skills gradually transition from an external source of supervision into decision knowledge whose utilization is adapted to its action-level benefit, while reinforcement learning remains the shared backbone across all stages. Experiments on ALFWorld, WebShop, and SearchQA show that AUSO consistently improves agent performance and out-of-distribution generalization over competitive baselines.",
+          "authors": [
+            "Huizu Lin",
+            "Chengkai Huang",
+            "Tianqi Gao",
+            "Tao Huang",
+            "Daijiao Liu",
+            "Tongxin Li",
+            "Xiaoyan Sun",
+            "Lina Yao"
+          ],
+          "url": "http://arxiv.org/abs/2608.21292v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.21292v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-21T16:53:27Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.769810496031745,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "dd60be3f80bdac57",
+          "title": "Semantically Compatible Knowledge Distillation for Cross-Domain Object Detection with Vision Foundation Models",
+          "abstract": "Vision foundation models (VFMs) offer strong generalization capabilities for domain-adaptive object detection (DAOD). However, existing VFM-based methods overlook the spatial-scale discrepancy between teacher and student feature maps, resulting in semantic incompatibility that weakens both feature alignment and pseudo-label learning. Moreover, domain shift can cause source-trained VFM teachers to miss target-domain objects, limiting the quality of their pseudo-labels. To address these issues, we propose the Semantic Localization-Enhanced Teacher (SLE-T), a semantically compatible knowledge-distillation framework built around a lightweight SLE Adapter for DINOv2. SLE Adapter injects pretrained local-texture priors into DINOv2 to improve cross-domain recognition and reformulates its features into dense representations that are spatially and semantically compatible with the student detector. SLE-T transfers the resulting teacher knowledge through either pseudo-label learning or feature alignment. We instantiate SLE-T with DINOv2-B and DINOv2-L (the ViT-B and ViT-L variants) and compare them with the larger DINOv2-G teacher. Extensive experiments on three DAOD benchmarks demonstrate that our method achieves state-of-the-art performance, and ablation studies confirm the importance of teacher-student semantic compatibility. Notably, SLE-T with DINOv2-B produces competitive or superior pseudo-labels using approximately one-quarter of the training time of DINOv2-G and substantially less GPU memory, demonstrating efficient VFM knowledge transfer under limited computational resources.",
+          "authors": [
+            "Qifeng Zhang",
+            "Ting Xiang",
+            "Zeyuan Bai",
+            "Changjian Chen"
+          ],
+          "url": "http://arxiv.org/abs/2608.20916v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20916v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-21T09:36:02Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.74811324074074,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "ccf0c598ef87d394",
+          "title": "Coulomb blockade-like transport and enhanced memory in organic transistors embedded with sub-nm Pt nanoparticles for neuromorphic computing",
+          "abstract": "Organic transistors are playing an increasingly important role for neuromorphic applications. However, devices that rely solely on ferroelectric switching or on interface traps for their multi-conductance states exhibit limited memory windows. Here, we introduce an ultrathin oxide layer with a uniform distribution of sub-nm platinum nanoparticles (PtNPs) at the interface of a polymer semiconducting and a ferroelectric dielectric in a thin film transistor architecture. The interfacial stack, Al$_2$O$_3$/PtNP/Al$_2$O$_3$, provides a viable route for localized charge trapping and de-trapping in a region where it can most effectively influence the channel conductance. The organic transistors display a large memory window (> 20 V) in their current-voltage characteristics. The sub-nm PtNPs give rise to features that are consistent with room temperature Coulomb blockade-like transport, supporting discrete and well-separated levels within the memory window. The devices support multimodal programming using electrical and optical stimuli with both long-term plasticity and enhanced short-term plasticity (STP) phenomena. These results open new directions for implementing STP in the development of neuromorphic computing.",
+          "authors": [
+            "Arash Ghobadi",
+            "Thomas B. Kallaos",
+            "Abhi Abhijeet",
+            "Stephen C. Klue",
+            "Joseph C. Mathai",
+            "Carsten A. Ullrich",
+            "Shubhra Gangopadhyay",
+            "Suchismita Guha"
+          ],
+          "url": "http://arxiv.org/abs/2608.20245v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20245v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T16:41:23Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.69778337962963,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "4b7f90542087a710",
+          "title": "Amorphous and Nanocrystalline Topological Semimetal YPtBi/W/CoFeB Heterostructures for BEOL-Compatible Spin-Orbit Torque Devices",
+          "abstract": "Spin-orbit torque (SOT) devices require spin-source materials that combine efficient charge-to-spin conversion with back-end-of-line (BEOL) thermal compatibility. Here, we show that YPtBi/W/CoFeB heterostructures deposited directly on Si/SiOx remain predominantly amorphous or weakly nanocrystalline from room temperature to 400 °C while preserving a large effective damping-like SOT response. Anomalous Hall and harmonic Hall measurements, together with X-ray diffraction, cross-sectional transmission electron microscopy, X-ray reflectivity, and electron energy-loss spectroscopy, show that the response does not correlate with bulk crystallization of YPtBi. Instead, the interfacial analysis indicates that the strongest trend of the spin Hall angle is associated with the chemistry of the upper YPtBi/W boundary: the effective SOT response tracks the integrated W concentration at that YPtBi surface. Meanwhile, a two-spin source analysis shows that the Pt-W-rich interlayer provides only a small positive correction, insufficient to explain the large negative effective spin Hall angle by itself. The dominant control variable is therefore inferred to be the incorporation of W into the upper YPtBi interface, which plausibly modifies the local electronic structure of YPtBi and amplifies the stack-level response. These results provide a more physically constrained interpretation of the stack behavior and identify a BEOL-compatible route to disordered topological spin-source layers for scaled SOT memory and compute-in-memory hardware.",
+          "authors": [
+            "Quang Le",
+            "Brian R. York",
+            "Cherngye Hwang",
+            "Xiaoyong Liu",
+            "Tsann Lin",
+            "Xiaoyu Xu",
+            "Yudi Wang",
+            "Jia Li",
+            "Mazin Osman",
+            "Katherine Le",
+            "Maher Osman",
+            "Son Le",
+            "Lei Xu",
+            "Maki Maeda",
+            "Tuo Fan",
+            "Yu Tao",
+            "Hisashi Takano",
+            "Sho Kagami",
+            "Ohiro Fujie",
+            "Pham Nam Hai"
+          ],
+          "url": "http://arxiv.org/abs/2608.20021v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.20021v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-20T13:31:50Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.6883810978836,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-08-23",
       "papers": [
         {
@@ -7364,129 +7498,6 @@
           ],
           "score": 53.99999999917328,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
-        }
-      ]
-    },
-    {
-      "date": "2026-05-25",
-      "papers": [
-        {
-          "id": "5ea75b2c6e602484",
-          "title": "Robotic Strawberry Harvesting with Robust Vision and Deep Reinforcement Learning based Sim-to-Real Control",
-          "abstract": "This study presents a closed-loop robotic strawberry harvesting system that combines a robust vision module, simulation-trained deep reinforcement learning (DRL) control, and ROS-based realrobot execution. For perception, we propose HRAttnEdge-YOLO26-seg, a modified YOLO26-seg architecture that incorporates a high-resolution P2 branch, segmentation-path attention, and edgesupervised prototype learning to improve instance segmentation in cluttered scenes. For control, we train a target-conditioned Proximal Policy Optimization (PPO) policy in Isaac Lab to produce smooth joint-position commands for a UR10e manipulator and deploy it on a UR10e robot for targetfruit reaching and harvesting. This simulation-based approach reduces hardware dependency, lowers development cost, and allows scalable policy training without exhaustive physical trials before real deployment. The proposed vision model demonstrated the highest overall performance among the evaluated methods. On both self-collected and public datasets, the model showed a 10 to 14% improvement in segmentation performance. In controlled in-house tests, the PPO controller produced stable and dynamically smoother motion than a inverse kinematics (IK)-based MoveIt baseline. In greenhouse trials, the proposed integrated system harvested 281 strawberries, achieving 96.6% reaching success, 91.3% grasp-and-pull success, and 84.3% overall harvesting success. These results illustrate that task-specific perception combined with simulation-trained PPO can serve as a practical and resource-efficient alternative to conventional planner-dependent reaching in manipulation, enabling reliable closed-loop robotic harvesting in complex agricultural environments.",
-          "authors": [
-            "Al Bashir",
-            "Shao-Yang Chang",
-            "Partho Ghose",
-            "Prem Raj",
-            "Chen-Kang Huang",
-            "Azlan Zahid"
-          ],
-          "url": "http://arxiv.org/abs/2605.23863v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.23863v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-22T17:21:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 43.7693649578373,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "27dcc49fa5aeac85",
-          "title": "UniSpike: Accelerating Spiking Neural Networks on Neuromorphic Systems via Eliminating Address Redundancy",
-          "abstract": "Many-core neuromorphic systems accelerate Spiking Neural Networks (SNNs), yet their packet-based spike communication can spend substantial traffic and energy repeatedly transmitting destination addresses. This overhead is amplified by the small payload of spike packets: in representative workloads, duplicate address transmissions account for up to 49% of the total traffic. This paper presents UniSpike, a hardware-software co-design that removes address redundancy by aggregating spikes destined for the same core into compact packets. UniSpike combines destination-centric spike scheduling, lightweight runtime packet assembly hardware, and destination-aware SNN partitioning. Across diverse SNN workloads, UniSpike reduces traffic by 1.93$\\times$ on average, delivering 1.77$\\times$ speedup and 1.50$\\times$ energy efficiency improvement over state-of-the-art designs.",
-          "authors": [
-            "Qinghui Xing",
-            "Zhuo Chen",
-            "Xin Du",
-            "Ouwen Jin",
-            "Ming Zhang",
-            "Pan Lv",
-            "Ying Li",
-            "Shuiguang Deng",
-            "Gang Pan"
-          ],
-          "url": "http://arxiv.org/abs/2605.23796v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.23796v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-22T15:57:55Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 43.7652388004299,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "d95f4050b8d1bfff",
-          "title": "MuellerPT: Decomposition Driven Pretraining for Dense Learning in Mueller Polarimetry",
-          "abstract": "Mueller matrix imaging provides rich, physically meaningful contrast for biomedical tissue analysis, but supervised learning is hindered by scarce dense annotations and strong domain shifts across specimens and acquisition settings. We introduce MuellerPT, a physics guided pre-training approach that learns transferable dense representations by predicting Lu-Chipman decomposition maps from per-pixel 4x4 Mueller matrices. To scale pre-training, we collected a new large Multispectral Animal Polarimetric Organ dataset (MAP-Org). The pre-trained encoder is adapted with a segmentation head for grey vs. white matter segmentation in lamb brain. A classification head is used for colorectal cancer vs. non-cancer classification. Both segmentation and classification are evaluated across few-shot learning scenarios. In segmentation, MuellerPT improves label efficiency and cross specimen transfer compared to models without pre-training, achieving an absolute DICE gain of over 20% compared to the baseline trained from scratch when using 5% of the training data. In classification, MuellerPT also enhances label efficiency, improving overall accuracy by 8% compared to the baseline when using 1% of the training data. We demonstrate MuellerPT's robustness to domain shift with a qualitative evaluation of its predicted Lu-Chipman maps on an ex vivo human oesophagus sample. These results suggest that predicting Lu-Chipman decomposition is an effective and practical pretext task for robust biomedical inference from Mueller polarimetry and can pave the way for future work on label efficient Mueller imaging.",
-          "authors": [
-            "Adam Tlemsani",
-            "Yingdian Li",
-            "Maxime Giot",
-            "Naim Slim",
-            "Christopher J. Peters",
-            "Abhijeet Ghosh",
-            "Daniel S. Elson"
-          ],
-          "url": "http://arxiv.org/abs/2605.23840v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.23840v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-22T16:48:57Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.767770215773808,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "6d24941328a58b0a",
-          "title": "General-Purpose Photonic Computing Primitive for Contemporary Artificial Intelligence",
-          "abstract": "Photonic computing offers a promising route to accelerating artificial intelligence (AI) by providing high analog bandwidth, low latency, and low energy consumption. However, existing optical neural networks (ONNs) struggle with substantial hardware overhead and limited support for the dynamic, arbitrary matrix operations essential for modern AI architectures. Here we present the dynamic universal encoding tensorcore (DUET), a general-purpose photonic computing paradigm based on vectorized operand differential interferometric cells (VODICs). By exploiting inherent structural symmetry, this design provides a full-range linear encoding interface that directly accommodates signed operands. This approach eliminates the sign-based path splitting, nonlinear remapping, and auxiliary preprocessing typically required in conventional ONNs, thereby reducing latency and minimizing hardware and memory overhead. We further implement a hardware-aware training (HAT) strategy to alleviate the impact of on-chip non-idealities and ensure stable inference. DUET is experimentally validated across diverse architectures and application domains, ranging from image classification and medical segmentation to Transformer-based content generation, demonstrating competitive performance. By extending optical computing to universal, full-range operators across diverse model architectures, DUET provides a viable pathway toward general-purpose optical acceleration for contemporary AI workloads.",
-          "authors": [
-            "Shupeng Ning",
-            "Chenghao Feng",
-            "Zhenxiang Xu",
-            "Hanqing Zhu",
-            "David Z. Pan",
-            "Jiaqi Gu",
-            "Ray T. Chen"
-          ],
-          "url": "http://arxiv.org/abs/2605.23051v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.23051v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-21T21:33:59Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.710480202546297,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "a454e9ea733f8c8d",
-          "title": "NasZip: Software and Hardware Co-Design to Accelerate Approximate Nearest Neighbor Search with DIMM-Based Near-Data Processing",
-          "abstract": "As large language models (LLMs) continue to advance, retrieval-augmented generation (RAG) has become the key mechanism for expanding model knowledge and reducing hallucinations. Central to RAG is approximate nearest neighbor search (ANNS), which retrieves database vectors most similar to a given query. However, distance calculation over high-dimensional vectors is inherently memory-bound, causing retrieval performance to be constrained by I/O bandwidth on mainstream platforms such as CPUs and GPUs. Although many prior early exiting (EE) techniques attempt to reduce memory accesses by only computing partial dimensions, the partial distance converges too slowly to the EE threshold, which ultimately limits their performance gains. To address these challenges, we propose NASZIP, a hardware-software co-designed framework that integrates near data processing (NDP) with a novel feature-level early exiting guided by statistics-based principal component analysis (PCA). Instead of relying solely on partial distances, NASZIP incorporates estimation and correction parameters to approximate full dimensional distances accurately, enabling earlier exiting without compromising accuracy. We further introduce a bit-level NDP-aware dynamic-float scheme that significantly reduces memory access for vector data. On the hardware side, we develop a data aware neighbor list mapping strategy that reduces neighbor retrieval latency and inter-channel communication overhead, complemented by a dedicated cache that exploits data locality and enhances prefetch efficiency. With these co-optimized techniques, NASZIP delivers speedups of up to $8.4\\times$ / $1.4\\times$ over CPU baseline and state-of-the-art GPU implementation at equal accuracy. Relative to the state-of-the-art NDP ANNS accelerator ANSMET, NASZIP achieves $1.69\\times$ performance improvement.",
-          "authors": [
-            "Cheng Zou",
-            "Shuo Yang",
-            "Chen Nie",
-            "Yu Zou",
-            "Yu He",
-            "Chao Jiang",
-            "Limin Xiao",
-            "Weifeng Zhang",
-            "Zhezhi He"
-          ],
-          "url": "http://arxiv.org/abs/2605.21952v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.21952v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-21T03:36:27Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.657031128472223,
-          "reason": "Matches Network Early Exit."
         }
       ]
     }
