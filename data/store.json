@@ -1,6 +1,97 @@
 {
   "recommendations": [
     {
+      "date": "2026-08-29",
+      "papers": [
+        {
+          "id": "037a5c6fffa35a0c",
+          "title": "TTPO: Test-Time Policy Optimization",
+          "abstract": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
+          "authors": [
+            "Aozhe Wang",
+            "Zhengxi Lu",
+            "Jianze Wang",
+            "Shangke Lv",
+            "Ying Liu",
+            "Weiming Lu",
+            "Jun Xiao",
+            "Yueting Zhuang",
+            "Hua Yang",
+            "Qianglong Chen",
+            "Yongliang Shen"
+          ],
+          "url": "http://arxiv.org/abs/2608.27448v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.27448v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-27T17:58:10Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.90045056299603,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "1006e82dd7ba177f",
+          "title": "Update Disturbance-Resilient Analog ReRAM Crossbar Arrays for In-Memory Deep Learning Accelerators",
+          "abstract": "Resistive memory (ReRAM) technologies with crossbar array architectures hold significant potential for analog AI accelerator hardware, enabling both in-memory inference and training. Recent developments have successfully demonstrated inference acceleration by offloading compute-heavy training workloads to off-chip digital processors. However, in-memory acceleration of training algorithms is crucial for more sustainable and power-efficient AI, but still in an early stage of research. This study addresses in-memory training acceleration using analog ReRAM arrays, focusing on a key challenge during fully parallel weight updates: disturbances of the weight values in cross-point devices. A ReRAM device solution is presented on 350 nm silicon technology, utilizing a resistive switching conductive metal oxide (CMO) formed on a nanoscale conductive filament within a HfOx layer. The devices not only exhibit 60 ns fast, non-volatile analog switching, but also demonstrates outstanding resilience to update disturbances, enduring over 100k pulses. The disturbance tolerance of the ReRAM is analyzed using COMSOL Multiphysics simulations, modeling the filament-induced thermoelectric energy concentration that results in a highly nonlinear device responses to input voltage amplitudes. Disturbance-free parallel weight mapping is also demonstrated on the back-end-of-line integrated ReRAM array chip. Finally, comprehensive hardware-aware neural network simulations validate the potential of our ReRAM for in-memory deep learning accelerators capable of fully parallel weight updates.",
+          "authors": [
+            "Wooseok Choi",
+            "Tommaso Stecconi",
+            "Donato Francesco Falcone",
+            "Matteo Galetta",
+            "Victoria Clerico",
+            "Elisa Zaccaria",
+            "Mamidala Saketh Ram",
+            "Antonio La Porta",
+            "Folkert Horst",
+            "Daniel Jubin",
+            "Matias Senger",
+            "Marilyne Sousa",
+            "Steffen Reidt",
+            "Ralph Heller",
+            "Bernabe Linares-Barranco",
+            "Valeria Bragaglia",
+            "Bert Jan Offrein"
+          ],
+          "url": "http://arxiv.org/abs/2608.25781v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.25781v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-26T13:27:34Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.81559937251984,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "c75f9676c4a4b93c",
+          "title": "Study of Resistive Switching Dynamics and Memory States Equilibria in Analog Filamentary Conductive-Metal-Oxide/HfOx ReRAM via Compact Modeling",
+          "abstract": "Resistive Random Access Memory (ReRAM) devices offer a promising solution for next-generation non-volatile memory and neuromorphic computing systems. Yet, existing compact models fail to capture analog resistive switching behavior of ReRAM devices. This work presents an advanced physics-based compact model for analog filamentary Conductive-Metal-Oxide (CMO)/HfOx ReRAM, capable of reproducing switching characteristics over a broad range of operating conditions. Compared to the state-of-the-art, the model extends the dynamic interplay between ion migration and electron hopping, while also accounting for parasitic resistive elements. Simulations of various voltage inputs are tested to reproduce quasi-static I-V curves, SET switching kinetics under single-pulse programming conditions, and analog accumulative conductance modulation upon bipolar identical pulse streams. Additional simulations reveal the physical criterion underlying the stabilization of the CMO/HfOx-based ReRAM memory state around the equilibrium point, namely symmetry point, under pulsing conditions when a fading memory mechanism emerges. Building upon the evidence of such equilibrium stabilization under pulsing and quasi-static conditions, a procedure is established to visualize and map equilibrium memory states across different input domains. The physical model supports design optimization of switching behavior for analog neuromorphic systems and non-volatile memory architectures. It also enables accurate integrated circuit simulations with CMO/HfOx-based ReRAM technology.",
+          "authors": [
+            "Matteo Galetta",
+            "Donato Francesco Falcone",
+            "Victoria Clerico",
+            "Wooseok Choi",
+            "Stephan Menzel",
+            "Antonio La Porta",
+            "Tommaso Stecconi",
+            "Folkert Horst",
+            "Bert Jan Offrein",
+            "Valeria Bragaglia"
+          ],
+          "url": "http://arxiv.org/abs/2608.25767v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.25767v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-26T13:11:53Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.814821429398148,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-08-28",
       "papers": [
         {
@@ -7453,79 +7544,6 @@
             "dvfs"
           ],
           "score": 53.99999999917328,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
-        }
-      ]
-    },
-    {
-      "date": "2026-05-29",
-      "papers": [
-        {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-29T23:03:07.773Z",
-          "topics": [
-            "neurosim",
-            "snn"
-          ],
-          "score": 77.99999999834657,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
-        },
-        {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-29T23:03:07.773Z",
-          "topics": [
-            "snn",
-            "tta"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-29T23:03:07.773Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999834657,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-05-29T23:03:07.773Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999834656,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
         }
       ]
