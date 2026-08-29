@@ -27,7 +27,7 @@
           "topics": [
             "rl"
           ],
-          "score": 35.90045056299603,
+          "score": 35.8401625462963,
           "reason": "Matches Reinforcement Learning."
         },
         {
@@ -60,7 +60,7 @@
           "topics": [
             "neurosim"
           ],
-          "score": 27.81559937251984,
+          "score": 27.755311355820105,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         },
         {
@@ -86,7 +86,7 @@
           "topics": [
             "snn"
           ],
-          "score": 27.814821429398148,
+          "score": 27.754533412698414,
           "reason": "Matches SNN / Neuromorphic."
         }
       ]
