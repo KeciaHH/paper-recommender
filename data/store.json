@@ -4,83 +4,97 @@
       "date": "2026-09-01",
       "papers": [
         {
-          "id": "7c41f57af8b6426f",
-          "title": "Low-Power End-to-End Cochlear Implant Speech Denoising with Spiking Neural Networks",
-          "abstract": "Cochlear implants (CI) restore hearing for individuals with severe to profound hearing loss. However, CI users often struggle to understand speech in noisy environments. Deep neural networks (DNN) have shown promise in enhancing speech for CI users, yet their high energy demands make them non-ideal for low-power CI processors. Spiking neural networks (SNN), on the other hand, offer comparable performance with significantly lower energy consumption. Hence, we propose a novel SNN inspired by the Deep ACE architecture that simultaneously performs speech enhancement and CI coding. Our model achieves competitive vocoded short-time objective intelligibility (VSTOI) and signal-to-noise ratio improvement (SNRi) scores compared to Deep ACE, while achieving more than a sixfold reduction in energy consumption.",
+          "id": "c54589de6d508644",
+          "title": "PaperGym: Rubric-Centered Evolution for Research-Plan Generation",
+          "abstract": "Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipelines, however, draw the question and the criteria from the same content, so the reward can be earned by paraphrase. The rubric is further compressed into a single scalar per rollout. We introduce PaperGym, a unified framework that turns each research paper into a complete training environment. PaperGym exploits the structure of a paper: the question is synthesized from the research goal and background, while the criteria are derived from the method and experiments. The criteria span methodological innovation and experimental design, and criterion leakage falls to 3.7%, versus 11.90% to 34.10% in existing datasets. Training uses the rubric twice: first as privileged context for OPSD's self-teacher, then as the reward for GRPO. Across Qwen3-1.7B/4B/8B, this schedule outperforms supervised fine-tuning, either stage alone, and the reverse ordering, improving five-benchmark averages by +5.6, +5.0, and +4.8 points. With the recipe held fixed, models trained on PaperGym-20k win 58.1% of three-way comparisons, against 28.2% for RubricHub Science. The trained Qwen3-8B reaches 73.48 on ResearchQA, above the far larger Kimi K2.6. We release the pipeline, the 20,000-instance corpus PaperGym-20k, and the benchmarks PaperGym-Innov and PaperGym-Design.",
           "authors": [
-            "Ludovic Boulanger",
-            "Sean U. N. Wood"
+            "Yuhan Wang",
+            "Zhengxi Lu",
+            "Yuchen Yan",
+            "Kaitao Song",
+            "Wenqi Zhang",
+            "Weiming Lu",
+            "Jun Xiao",
+            "Yueting Zhuang",
+            "Yongliang Shen"
           ],
-          "url": "http://arxiv.org/abs/2608.28493v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.28493v1",
+          "url": "http://arxiv.org/abs/2608.31119v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.31119v1",
           "source": "arXiv",
-          "publishedAt": "2026-08-28T16:21:22Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 35.76035826306217,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "b00d5877f6e8be4d",
-          "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
-          "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
-          "authors": [
-            "Nan Wang",
-            "Mohit Yadav",
-            "Jonathan Wulff",
-            "Aidan Rosenbaum",
-            "Kezhou Chen",
-            "Yuvan Sharma",
-            "Xu Dong",
-            "Yiwei Tao"
-          ],
-          "url": "http://arxiv.org/abs/2608.28578v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.28578v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-28T17:53:48Z",
+          "publishedAt": "2026-08-31T17:31:18Z",
           "topics": [
             "rl"
           ],
-          "score": 27.764943249834655,
+          "score": 27.91033001736111,
           "reason": "Matches Reinforcement Learning."
         },
         {
-          "id": "b65798e2f099084b",
-          "title": "Hardware-Efficient Error Mitigation and Shot-Efficient Sampling on IBM Quantum Hardware",
-          "abstract": "We experimentally study error mitigation and finite-shot sampling on superconducting quantum hardware under a constrained execution budget. The study combines calibration-aware qubit selection, circuit-depth scaling, zero-noise extrapolation, dynamical decoupling, readout-error mitigation, and repeated-shot estimation on an IBM Quantum processor. Experiments are organized across ideal simulation, noise-model simulation, and physical-device execution to separate sampling uncertainty from device-induced error. We investigate how mitigation performance changes with circuit depth, effective noise scale, qubit connectivity, and measurement budget, and quantify accuracy using expectation-value error, mean-squared error, statistical uncertainty, and mitigation gain. A fixed hardware-execution budget is used to evaluate shot allocation strategies and repeated measurements without relying on unlimited sampling. The resulting analysis provides a hardware-aware characterization of when mitigation improves expectation-value estimation and when finite-shot fluctuations offset the benefit of additional mitigation overhead. The implementation uses contemporary Qiskit and IBM Quantum Runtime workflows and is designed to provide reproducible experimental evidence for error-mitigation studies on current quantum processors.",
+          "id": "5ddc072eee7616c5",
+          "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+          "abstract": "Large language model (LLM) inference exhibits substantial variability across adaptation modes, context lengths, and request concurrency, creating challenges for maintaining high utilization, memory efficiency, and scalable performance on compute-in-memory (CIM) accelerators. This paper presents CHIPSMORE, a multi-mode and multi-request LLM inference accelerator that integrates compute-in-interconnect and CIM to support both base-mode and low-rank adaptation (LoRA) inference under diverse workloads. CHIPSMORE employs heterogeneous processing elements consisting of resistive RAM analog compute-in-memory (RRAM-ACIM) and static RAM digital compute-in-memory (SRAM-DCIM) interconnected through a programmable Inter-PE computational network (IPCN). A composable hierarchical key-value (KV) memory scheme dynamically allocates router scratchpad, SRAM-DCIM, and embedded DRAM (eDRAM) resources according to workload requirements, enabling scalable support for long-context and batched inference. Furthermore, a non-replicated multi-request execution pipeline exploits request-level parallelism without duplicating pretrained weights, while a state-aware resource reconfiguration mechanism selectively retains runtime states and power-gates inactive resources to improve energy efficiency. Evaluation using cycle-accurate hardware-software co-simulation demonstrates that CHIPSMORE effectively sustains high throughput across varying model sizes, context lengths, and batch sizes while maintaining favorable power scaling. Compared with Nvidia H100, CHIPSMORE achieves up to $2.38\\times$ higher throughput and $27\\times$ higher energy efficiency on Mistral-7B inference while eliminating weight replication for multi-request serving.",
           "authors": [
-            "Sumit Chongder"
+            "Yue Jiet Chong",
+            "Yimin Wang",
+            "Zhen Wu",
+            "Zixuan Wang",
+            "Wei Zhang",
+            "Xuanyao Fong"
           ],
-          "url": "http://arxiv.org/abs/2608.28535v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.28535v1",
+          "url": "http://arxiv.org/abs/2608.30509v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.30509v1",
           "source": "arXiv",
-          "publishedAt": "2026-08-28T17:10:09Z",
+          "publishedAt": "2026-08-31T09:43:07Z",
           "topics": [
             "neurosim"
           ],
-          "score": 27.762778071263227,
+          "score": 27.88710663773148,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         },
         {
-          "id": "10fa1d9c34db4cb5",
-          "title": "Memristive-Friendly Hadamard Reservoir Computing: Structured, Multiplier-Free Recurrences at Scale",
-          "abstract": "Reservoir Computing (RC) designs Recurrent Neural Networks around a fixed, i.e., untrained, recurrent layer, and is a natural candidate for neuromorphic hardware. Memristive-friendly reservoirs derive the neuron dynamics from memristive-device kinetics, but still rely on dense recurrent matrices, which are expensive to realize physically. In this paper, we replace the dense matrix with a structured orthogonal operator, built from sign diagonals, a permutation, and a fast Walsh-Hadamard transform. The operator is multiplier-free, requires $O(N)$ parameters and $O(N\\log N)$ operations per step, and is never materialized as a matrix. We instantiate it in a standard and in a memristive-friendly Echo State Network, with one binary input connection per unit. Our mathematical analysis shows that exact orthogonality yields an echo state condition that is tight in the recurrent scaling, and a noise response that is predictable at design time. Moreover, the operator mixes the whole state in a single application. Experiments on twenty classification and seven regression benchmarks, at reservoir sizes up to $N = 8192$, show that the structured models match dense orthogonal reservoirs, and achieve better mean performance than the cycle reservoir by a margin that widens with size. Furthermore, we time the recurrent step on three hardware platforms, where it is up to $50\\times$ faster than a dense product and $10^4\\times$ smaller in memory. Finally, we ablate the operator and measure the response to noise, quantization, device mismatch and discrete faults.",
+          "id": "93595035b9df6fae",
+          "title": "Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware",
+          "abstract": "Inference with transformer-based large language models (LLMs) is often limited by the memory-bound KV cache and quadratic attention cost. State-space models (SSMs) mitigate this through linear attention and fixed-size recurrent states, but their large dense linear projections remain computationally expensive even after quantization. We introduce a method that induces sparse neural activity in heavily quantized linear-attention models with minimal performance loss. Activations below a per-projection trainable threshold ($\\pm Δ$) are nullified while preserving crucial outliers, achieving comparable performance to dense models with up to 4$\\times$ fewer effective arithmetic operations. Targeting a multi-core, multi-chip neuromorphic platform, where event-driven execution converts unstructured sparsity into throughput at both the compute and communication levels, a capability GPU architectures fundamentally lack, we project up to 37$\\times$ higher throughput and 16$\\times$ lower power versus edge GPU inference of a comparable transformer-based model, and up to 5.4$\\times$ improvements over the non-sparsified baseline. These results position sparse, quantized linear-attention models as a natural fit for deploying LLMs on event-driven multi-core platforms.",
           "authors": [
-            "Andrea Ceni",
-            "Gianluca Milano",
-            "Carlo Ricciardi",
-            "Claudio Gallicchio"
+            "Simon Richter",
+            "Ruhai Lin",
+            "Jason Yik",
+            "Taylor Kergan",
+            "Rui-Jie Zhu",
+            "Farshad Moradi",
+            "Jason Eshraghian"
           ],
-          "url": "http://arxiv.org/abs/2608.28295v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.28295v1",
+          "url": "http://arxiv.org/abs/2608.30439v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.30439v1",
           "source": "arXiv",
-          "publishedAt": "2026-08-28T12:58:42Z",
+          "publishedAt": "2026-08-31T08:28:01Z",
           "topics": [
             "snn"
           ],
-          "score": 27.75030535300926,
+          "score": 27.883381439318782,
           "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "38c554448a4abde1",
+          "title": "Analogue Phase Change Computational Memory with High Precision Reads and Energy Efficient Writes",
+          "abstract": "Resistive memory technologies offer a compelling advantage for in-memory computing. However, realizing a device architecture that simultaneously achieves high computational precision, efficiency, and density has remained elusive due to inherent trade-offs among these performance metrics. Here, we introduce a com- pact phase-change memory device architecture that combines an ultra-confined active switching volume for enhanced electro-thermal efficiency with a non-insulating thin film that suppresses temporal conductance fluctuations. We analytically model and back-end integrate these devices into crossbar arrays. Even with conventional, undoped phase-change materials, the device architecture enables a computational precision approaching 6 bits, low conductance values below 50 μS with an adequate conductance window, and a viable pathway toward sub-100 μA programming currents under nominal operating voltages.",
+          "authors": [
+            "Ghazi Sarwat Syed",
+            "Loris Coccia",
+            "Vara Prasad Jonnalagadda",
+            "Antonio Massimiliano Mio",
+            "Asit Ray",
+            "Matthew BrightSky",
+            "Abu Sebastian"
+          ],
+          "url": "http://arxiv.org/abs/2608.29338v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.29338v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-29T15:40:14Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.76196361524471,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     },
