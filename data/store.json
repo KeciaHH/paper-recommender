@@ -1,6 +1,90 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-01",
+      "papers": [
+        {
+          "id": "7c41f57af8b6426f",
+          "title": "Low-Power End-to-End Cochlear Implant Speech Denoising with Spiking Neural Networks",
+          "abstract": "Cochlear implants (CI) restore hearing for individuals with severe to profound hearing loss. However, CI users often struggle to understand speech in noisy environments. Deep neural networks (DNN) have shown promise in enhancing speech for CI users, yet their high energy demands make them non-ideal for low-power CI processors. Spiking neural networks (SNN), on the other hand, offer comparable performance with significantly lower energy consumption. Hence, we propose a novel SNN inspired by the Deep ACE architecture that simultaneously performs speech enhancement and CI coding. Our model achieves competitive vocoded short-time objective intelligibility (VSTOI) and signal-to-noise ratio improvement (SNRi) scores compared to Deep ACE, while achieving more than a sixfold reduction in energy consumption.",
+          "authors": [
+            "Ludovic Boulanger",
+            "Sean U. N. Wood"
+          ],
+          "url": "http://arxiv.org/abs/2608.28493v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.28493v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-28T16:21:22Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.76035826306217,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "b00d5877f6e8be4d",
+          "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+          "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
+          "authors": [
+            "Nan Wang",
+            "Mohit Yadav",
+            "Jonathan Wulff",
+            "Aidan Rosenbaum",
+            "Kezhou Chen",
+            "Yuvan Sharma",
+            "Xu Dong",
+            "Yiwei Tao"
+          ],
+          "url": "http://arxiv.org/abs/2608.28578v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.28578v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-28T17:53:48Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.764943249834655,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "b65798e2f099084b",
+          "title": "Hardware-Efficient Error Mitigation and Shot-Efficient Sampling on IBM Quantum Hardware",
+          "abstract": "We experimentally study error mitigation and finite-shot sampling on superconducting quantum hardware under a constrained execution budget. The study combines calibration-aware qubit selection, circuit-depth scaling, zero-noise extrapolation, dynamical decoupling, readout-error mitigation, and repeated-shot estimation on an IBM Quantum processor. Experiments are organized across ideal simulation, noise-model simulation, and physical-device execution to separate sampling uncertainty from device-induced error. We investigate how mitigation performance changes with circuit depth, effective noise scale, qubit connectivity, and measurement budget, and quantify accuracy using expectation-value error, mean-squared error, statistical uncertainty, and mitigation gain. A fixed hardware-execution budget is used to evaluate shot allocation strategies and repeated measurements without relying on unlimited sampling. The resulting analysis provides a hardware-aware characterization of when mitigation improves expectation-value estimation and when finite-shot fluctuations offset the benefit of additional mitigation overhead. The implementation uses contemporary Qiskit and IBM Quantum Runtime workflows and is designed to provide reproducible experimental evidence for error-mitigation studies on current quantum processors.",
+          "authors": [
+            "Sumit Chongder"
+          ],
+          "url": "http://arxiv.org/abs/2608.28535v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.28535v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-28T17:10:09Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.762778071263227,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "10fa1d9c34db4cb5",
+          "title": "Memristive-Friendly Hadamard Reservoir Computing: Structured, Multiplier-Free Recurrences at Scale",
+          "abstract": "Reservoir Computing (RC) designs Recurrent Neural Networks around a fixed, i.e., untrained, recurrent layer, and is a natural candidate for neuromorphic hardware. Memristive-friendly reservoirs derive the neuron dynamics from memristive-device kinetics, but still rely on dense recurrent matrices, which are expensive to realize physically. In this paper, we replace the dense matrix with a structured orthogonal operator, built from sign diagonals, a permutation, and a fast Walsh-Hadamard transform. The operator is multiplier-free, requires $O(N)$ parameters and $O(N\\log N)$ operations per step, and is never materialized as a matrix. We instantiate it in a standard and in a memristive-friendly Echo State Network, with one binary input connection per unit. Our mathematical analysis shows that exact orthogonality yields an echo state condition that is tight in the recurrent scaling, and a noise response that is predictable at design time. Moreover, the operator mixes the whole state in a single application. Experiments on twenty classification and seven regression benchmarks, at reservoir sizes up to $N = 8192$, show that the structured models match dense orthogonal reservoirs, and achieve better mean performance than the cycle reservoir by a margin that widens with size. Furthermore, we time the recurrent step on three hardware platforms, where it is up to $50\\times$ faster than a dense product and $10^4\\times$ smaller in memory. Finally, we ablate the operator and measure the response to noise, quantization, device mismatch and discrete faults.",
+          "authors": [
+            "Andrea Ceni",
+            "Gianluca Milano",
+            "Carlo Ricciardi",
+            "Claudio Gallicchio"
+          ],
+          "url": "http://arxiv.org/abs/2608.28295v1",
+          "pdfUrl": "http://arxiv.org/pdf/2608.28295v1",
+          "source": "arXiv",
+          "publishedAt": "2026-08-28T12:58:42Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.75030535300926,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-08-31",
       "papers": [
         {
@@ -7473,78 +7557,6 @@
           ],
           "score": 53.99999999917328,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
-        }
-      ]
-    },
-    {
-      "date": "2026-05-31",
-      "papers": [
-        {
-          "id": "bc617d55fda250c0",
-          "title": "Reconfigurable Multistate MRAM Synapses with Vortex STNO based Neurons for Scalable In-Memory Convolutional Neural Networks",
-          "abstract": "Magnetic tunnel junction (MTJ)-based magnetic random-access memory (MRAM) is a promising platform for neuromorphic and in-memory computing owing to its non-volatility, high endurance, fast switching dynamics and CMOS compatibility. However, conventional spin-transfer torque and spin-orbit torque MRAM implementations for neural networks often suffer from high critical switching currents, large latency, thermal instability and significant read-write overheads. Here, we demonstrate a unified multistate MRAM-spin-torque nano-oscillator (STNO) architecture that integrates synapses and neurons on a single chip for convolutional neural network (CNN) applications. The system employs 1x8 multistate MRAM arrays as programmable synapses coupled with a vortex-based STNO neuron, enabling both individual and collective programming through fieldline-driven write channels. Multiple configurable resistance states are achieved by tuning internal and external magnetic fields together with bias currents, allowing quantized positive and negative synaptic weights for configurable kernel and pooling operations. The proposed architecture is evaluated through simulation on MNIST, SVHN, CIFAR-10, Google Speech Commands (GSC) and RadioML datasets, achieving accuracy of 99.76%, 87.93%, 78.14%, 87.96% and 56.46% respectively. Based on fabricated device dimensions, the complete architecture occupies ~6171.2 μm2 with an average energy consumption of 200.08 pJ per training and inference cycle for MNIST, highlighting its potential for scalable low-power neuromorphic computing",
-          "authors": [
-            "Ravish Kumar Raj",
-            "Simon N. Richter",
-            "Saeed Baghaee Ivriq",
-            "Oliver Fridorf",
-            "Darío Fernández-Khatiboun",
-            "Yasser Rezaeiyan",
-            "Luana Benetti",
-            "Tim Boehnert",
-            "Ricardo Ferreira",
-            "Hooman Farkhani",
-            "Sonal Shreya",
-            "Farshad Moradi"
-          ],
-          "url": "http://arxiv.org/abs/2605.29942v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.29942v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-28T13:53:51Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 45.759257676091266,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "6d8775d9bd63af7d",
-          "title": "Reasoning with Sampling: Cutting at Decision Points",
-          "abstract": "Frontier reasoning models are produced by posttraining base language models with reinforcement learning. Recent work has challenged this by showing that sampling from a sharpened version of the base model's distribution, a so-called power distribution, elicits comparable reasoning without additional training, curated datasets, or verifiers. However, making this method practical requires efficiently sampling from the power distribution. A sampler needs to \"mix\" to the power distribution, which necessitates moving between modes of the target distribution; intuitively, e.g., trying different reasoning strategies. The samplers proposed in prior works repeatedly select a \"cut\" position in the current reasoning trace uniformly at random and resample the suffix from that position onward. However, reasoning traces typically contain a few consequential decisions (e.g., the choice of proof strategy or algorithm), and we observe that a uniformly chosen cut tends to rewrite local details rather than revisit decision points. We introduce an algorithm (Entropy-Cut Metropolis-Hastings) that uses the base model's next-token entropy as a proxy to identify key decision points and resample from those positions. We empirically verify that entropy jumps are a useful proxy for decision points and, in a stylized model of reasoning, prove that our method's mixing time scales with the number of decisions in a trace rather than with the number of tokens, which can be much larger. Across MATH500, HumanEval, GPQA Diamond, and AIME26, our method consistently improves over baselines and RL-trained models.",
-          "authors": [
-            "Felix Zhou",
-            "Anay Mehrotra",
-            "Quanquan C. Liu"
-          ],
-          "url": "http://arxiv.org/abs/2605.30327v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.30327v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-28T17:57:32Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.771345143022486,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "4e0ec75f59048e26",
-          "title": "Constant Depth Threshold Circuits For Exhaustive Epistasis Detection",
-          "abstract": "The development of large-scale neuromorphic hardware has made practical implementations of threshold gate-based circuits a near-term possibility. The complexity advantages regarding traditional computing classes, as evidenced in the literature, have prompted us to tackle Epistasis Detection, one of the most computationally complex combinatorial problems in bioinformatics. We propose specially designed circuits that calculate the relative frequencies of all dataset combinations in an efficient pipelined fashion, taking advantage of co-located memory and configurable parallelism, obtaining complexity gains. Overall, we obtain the runtime to be bounded by the number of combinations to calculate, without any additional complexity overhead, contrary to classical approaches, using log-linear space. To accomplish this, we propose a data encoding and combination generation strategy using Leaky Integrate and Fire (LIF) neurons, that feeds a constant depth threshold gate population count circuit. Accounting for typical hardware characteristics, such as limited fan-in and variable precisions, we obtain logarithmic depth and log-cubic linear connections, for the population count circuit by composing developed unbounded fan-in constant depth threshold gate circuits to perform population count and binary array sum.",
-          "authors": [
-            "André Ribeiro",
-            "Aleksandar Ilic",
-            "Leonel Sousa"
-          ],
-          "url": "http://arxiv.org/abs/2605.29719v1",
-          "pdfUrl": "http://arxiv.org/pdf/2605.29719v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-28T10:14:56Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.748398714451056,
-          "reason": "Matches SNN / Neuromorphic."
         }
       ]
     }
