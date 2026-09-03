@@ -1,6 +1,53 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-03",
+      "papers": [
+        {
+          "id": "aa91e7c4ecb04316",
+          "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+          "abstract": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, supervised fine-tuning (SFT), and reinforcement learning (RL). Using 22,000 curated problems, we train Nemotron-3-Nano-CC (30B-A3B) with SFT and RL and Nemotron-3-Ultra-CC (550B-A55B) with SFT alone. We further introduce GenCorrect, a feedback-driven test-time compute strategy that iteratively generates, evaluates, and refines diverse solutions. On IOI 2025, Nano-CC improves from 130 points to 291 after post-training and to 468 with GenCorrect, exceeding the gold threshold of 438.3 while Ultra-CC reaches 502. Guided by these results, we develop a competition-specific Ultra-CC system and evaluate it prospectively during IOI 2026. Under the same time, internet-access, and submission constraints as human contestants, it scores 535.4 out of 600, exceeding both the gold threshold of 361.12 and the top human score of 498.27. To our knowledge, this is the first AI system to outscore the highest-scoring human contestant on an IOI problem set.",
+          "authors": [
+            "Aleksander Ficek",
+            "Sean Narenthiran",
+            "Mehrzad Samadi",
+            "Somshubra Majumdar",
+            "Boris Ginsburg"
+          ],
+          "url": "http://arxiv.org/abs/2609.02849v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.02849v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-02T17:33:37Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.9104271875,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "1155e958faebdc1b",
+          "title": "Toward Robust LiDAR Semantic Segmentation for Real-World Deployment: Evaluation under Coarse Labels, Adverse Conditions, and Domain Shifts",
+          "abstract": "LiDAR-based semantic segmentation is a core perception module for autonomous vehicles and mobile robots. Despite the strong performance of recent state-of-the-art methods on standard benchmarks, existing evaluation protocols remain focused on clean, single-domain settings and fine-grained label taxonomies, leaving deployment readiness largely unassessed. Real-world systems must handle safety-critical label semantics, degraded sensing conditions, and cross-domain variability, yet no unified protocol currently addresses all three aspects together. In this paper, we propose a structured evaluation protocol that assesses the deployment readiness of LiDAR semantic segmentation models along three complementary dimensions: (i) coarse-label evaluation aligned with autonomous driving safety priorities, revealing how label granularity affects different methods; (ii) robustness under eight types of LiDAR corruptions designed to emulate real-world atmospheric, geometric, and sensor degradations; and (iii) domain generalization across datasets without adaptation. The evaluation includes inference speed measured on an embedded Jetson AGX Orin platform, directly reflecting deployment constraints. Our results show that fine-grained benchmark rankings do not always reflect safety-relevant performance, that all methods experience substantial degradation under corruptions with architecture-dependent robustness characteristics, and that current domain generalization remains insufficient for reliable deployment. These findings expose concrete gaps between benchmark performance and deployment readiness, and provide a reference protocol for more practically grounded evaluation of LiDAR semantic segmentation.",
+          "authors": [
+            "Samir Abou Haidar",
+            "Alexandre Chariot",
+            "Mehdi Darouich",
+            "Cyril Joly",
+            "Jean-Emmanuel Deschaud"
+          ],
+          "url": "http://arxiv.org/abs/2609.02830v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.02830v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-02T17:15:07Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.909509528769842,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-09-02",
       "papers": [
         {
@@ -7517,79 +7564,6 @@
           ],
           "score": 27.900570443121694,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-02",
-      "papers": [
-        {
-          "id": "4a75f4d104295a44",
-          "title": "A 32-Channel 3.53-μW Per Channel Brain-Machine Interface SoC Featuring Dual-Threshold Delta-modulation, In-Memory Spike Detection and Bi-SNN Based Motor Decoding",
-          "abstract": "With the scaling of sensor channel counts, systems confront challenges in frontend data sensing and on-implant data processing. This work presents a 32-channel fully event-based iBMI SoC in 65nm CMOS for an efficient neuromorphic signal processing pipeline. The SoC integrates a 32-channel dual-threshold delta modulation (DTDM) frontend array that provides up to 26x data compression at the frontend, an in-memory computing (IMC) spike detector (SPD) for efficient in-pixel spike detection, and a bipolar LIF-based spiking neural network (Bi-SNN) decoder for on-chip motor intention decoding (MID). Consuming only 3.53 μW per channel and achieving ~0.62 decoding R2 with a compact 0.034 mm2 per-channel area, the chip enables high-efficiency signal recording, processing, and decoding for implantable devices.",
-          "authors": [
-            "Ye Ke",
-            "Zhengnan Fu",
-            "Pao-Sheng Vincent Sun",
-            "An Guo",
-            "Shuai Dong",
-            "Junyi Yang",
-            "Yahan Yang",
-            "Abdelrahman B. M. Eldaly",
-            "Xin Si",
-            "Leanne Chan",
-            "Arindam Basu"
-          ],
-          "url": "http://arxiv.org/abs/2606.01776v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.01776v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-01T06:58:57Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 53.87959371114418,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "7174826ccf1bc4ac",
-          "title": "Emerging Non-Volatile Opto-electronic Resistive Memories for Next-Generation Photonic Integrated Circuits",
-          "abstract": "Photonic integrated circuits have emerged as a powerful platform for high speed communication, sensing, and information processing due to their large bandwidth, low latency, and inherent parallelism. However, the absence of efficient, scalable, and non-volatile memory elements remains a fundamental limitation for realizing fully programmable and adaptive photonic systems. Conventional electronic memories introduce significant energy overhead, latency, and architectural inefficiencies due to repeated optical electrical conversions. Non volatile opto electronic resistive memories or OERMs have recently emerged as a promising solution to address these challenges by integrating memory functionality directly within the photonic domain. These devices combine resistive switching mechanisms with optical readout, enabling persistent state retention, multilevel programmability, and energy efficient operation. In this review, we provide a comprehensive overview of OERMs, spanning from fundamental physical mechanisms to system level applications. We first discuss the underlying resistive switching phenomena, including filamentary conduction, interface type switching, phase change transitions, and ionic migration, with particular emphasis on their interaction with confined optical modes. We then examine key material platforms such as metal oxides, transparent conducting oxides, phase change materials, and emerging two-dimensional systems, highlighting their performance trade-offs. Furthermore, we analyse device architectures and benchmark their performance in terms of switching energy, speed, endurance, and optical modulation efficiency. The integration of OERMs into programmable photonic circuits, neuromorphic systems, and in-memory optical computing architectures is critically discussed. Finally, we outline the major challenges and future research directions toward scalable, reliable",
-          "authors": [
-            "Santosh Kumar",
-            "Mukesh Kumar",
-            "Eunso Shin",
-            "Bassem Tossoun",
-            "Stanley Cheung"
-          ],
-          "url": "http://arxiv.org/abs/2606.01463v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.01463v1",
-          "source": "arXiv",
-          "publishedAt": "2026-05-31T21:48:19Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.85228054976852,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "77e30e4fb55a3efb",
-          "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
-          "abstract": "Inverse materials design is shifting materials discovery from forward prediction to targeted proposal of candidates that satisfy objectives under physical constraints. Here, we review recent advances in generative crystal structure modeling, multimodal learning, and closed-loop design pipelines for crystalline solids. We survey how modern generators learn chemical-structural priors from large databases to enable controllable sampling of periodic structures, and compare leading model classes including variational autoencoders, normalizing flows, autoregressive formulations, and diffusion models. Particular attention is given to how feasibility constraints and physical priors are enforced across the workflow, through representation choices, training objectives, sampling-time guidance, and post-generation screening and relaxation. We also discuss how multimodal learning fuses diverse materials modalities, including crystal structures, thermodynamic, electronic information, microscopy, spectroscopy, processing context, and scientific text, to construct a more universal, transferable representation of chemical space. In addition, diverse inverse-design strategies are examined, particularly those that integrate conditional generation with latent optimization, Bayesian optimization, reinforcement learning, and active learning. Finally, we highlight recurring failure modes, such as surrogate exploitation, diversity collapse, distribution shift, and the stability-synthesizability gap, and outline discovery-grade evaluation practices based on staged reporting of validity, novelty, uniqueness, stability, and cost.",
-          "authors": [
-            "Anand Babu",
-            "Rogério Almeida Gouvêa",
-            "Gian-Marco Rignanese"
-          ],
-          "url": "http://arxiv.org/abs/2606.02507v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.02507v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-01T17:20:55Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 21.910445232308202,
-          "reason": "Matches Reinforcement Learning."
         }
       ]
     }
