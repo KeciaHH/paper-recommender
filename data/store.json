@@ -1,6 +1,134 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-04",
+      "papers": [
+        {
+          "id": "7226e2b166f02fc3",
+          "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
+          "abstract": "Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC architecture that decouples topological reasoning from semantic reasoning: a heterogeneous graph attention encoder summarizes the live authentication subgraph into a fixed-dimensional state, a Proximal Policy Optimization (PPO) policy maps this state to a constrained set of investigative actions, and an LLM agent loop is restricted to consuming the policy's recommendations and producing analyst-readable narratives gated by a critic. We instantiate the system on the LANL Comprehensive, Multi-Source Cyber-Security Events dataset and the Indiana University Quartz HPC cluster, reporting four results: (i) a two-phase CREATE ingestion pattern loads a 24M-edge authentication subgraph into Neo4j in 14.2 minutes on a single 32-core node, roughly 24x faster than the canonical MERGE-based pipeline; (ii) a sliding-window alert engine reliably trips a 25-event/10-second threshold in <=2.5 s across 50 trials; (iii) PPO training over 200 iterations converges to a mean episodic return of 8.74+/-0.31, with held-out precision of 0.91 and recall of 0.87 on labeled red-team events; and (iv) the integrated containment loop completes a full detect-investigate-recommend-human-approve cycle in a median of 6.3 s. We contribute a reusable engineering pattern (the hot-node deadlock workaround), a portable HPC deployment pattern (anchor-node co-location), and an enterprise-readiness analysis covering false-positive economics, reversibility guarantees, audit compliance, and the human-approval boundary.",
+          "authors": [
+            "Uday Vallabhaneni",
+            "Cassie L. Cagwin",
+            "David J. Wild"
+          ],
+          "url": "http://arxiv.org/abs/2609.04159v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04159v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:49:12Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.911601254133597,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "6e14a57751fcb696",
+          "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
+          "abstract": "AI agents are trained on population-scale data to encode broad capabilities spanning those of many practitioners. Yet the artifacts they produce rarely meet the personal bar professionals need to stake their reputation on. On realistic, open-ended tasks where success criteria are heterogeneous and insufficiently documented, individual expertise lives precisely in the elevation and departure from the average. In practice, iterative human-agent interaction surfaces criteria that users cannot fully specify up front, yet apply repeatedly across tasks. We argue this cross-session interaction data is a rich, underused signal for closing the gap to individual expertise. In this work, we propose test-time adaptation through human-agent interaction (TAHI), which integrates these signals into agent context and weights, and crystallizes each user's training and evaluation criteria via an evolving rubric module. We adapt agents to 30 individuals in two high-utility domains, writing and visual creation, on a total of 600 tasks. Our agents improve solo task success by 4.5-20.9% within only tens of tasks. Meanwhile, our evolving rubric module serves as a scalable annotation tool, creating evaluation rubrics that catch 16.0-22.3% more failures than those from LMs or humans alone. While agents are adapted towards individuals, we show these personalized agents also produce improvements in success of up to 8.8% that generalize across users.",
+          "authors": [
+            "Zora Zhiruo Wang",
+            "Apurva Gandhi",
+            "Rulin Shao",
+            "Aspen Chen",
+            "Jonas Mueller",
+            "Zhiqi Liang",
+            "Jett Chen",
+            "Michael Ryan",
+            "Qianou Ma",
+            "Luxi He",
+            "Zhoujun Cheng",
+            "Andre He",
+            "Seungone Kim",
+            "Jiayi Geng",
+            "Mingqian Zheng",
+            "Weiwei Sun",
+            "Zheyuan Zhang",
+            "Xinran Zhao",
+            "Yike Wang",
+            "Abe Hou",
+            "Liwei Jiang",
+            "Pang Wei Koh",
+            "Diyi Yang",
+            "Graham Neubig",
+            "Daniel Fried"
+          ],
+          "url": "http://arxiv.org/abs/2609.04141v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04141v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:33:18Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.91081256365741,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "a0fd337ec76460c1",
+          "title": "Hardware-Aware FP4 FlashAttention-4",
+          "abstract": "Blackwell's 4-bit floating-point (FP4) tensor cores do not automatically make attention faster because softmax conversion and on-chip dependencies dominate once its matrix products shrink. We address this with \\emph{Direct-P} for noncausal inference and a causal path that passes the forward quantization directly into backward. Direct-P maps scores directly to FP4 probabilities and reaches up to 2.13$\\times$ the bfloat16 (BF16) forward throughput on an NVIDIA GB200. The causal path reconstructs probabilities from saved quantized queries and keys and uses 8-bit floating-point (FP8) gradient operands, accelerating a complete single-GPU 8-billion-parameter update by up to 1.14$\\times$. Matched distributed training retains FP8 probabilities and values; every tested MXFP4 probability/value training trajectory diverges.",
+          "authors": [
+            "Robert Hu"
+          ],
+          "url": "http://arxiv.org/abs/2609.04105v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04105v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:12:35Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.909784951223546,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "0f4fcf06ef42c39d",
+          "title": "High-Throughput Computational Discovery of Inverted Resistive Switching in Two-Dimensional Materials",
+          "abstract": "Atomristors, non-volatile resistive switching devices based on two-dimensional (2D) monolayers, are promising building blocks for energy-efficient memory and neuromorphic computing. However, their design remains restricted to a few materials such as MoS2 and h-BN, limiting functional diversity and design flexibility. Here, a high-throughput computational framework combining density functional theory, machine-learning molecular dynamics, and quantum transport simulations screens about 2,900 exfoliable monolayers for vacancy-mediated resistive switching, identifying 17 thermally stable candidates in two mechanistically distinct classes. In Class 1 monolayers, such as GaS, Au adsorption at the native vacancy introduces conducting states, switching the insulating monolayer from a high- to a low-resistance state (HRS-to-LRS). Class 2 monolayers, comprising ionically bonded metal oxyhalides and nitrohalides such as BiOCl, exhibit previously unreported inverted switching. Vacancy-released electrons delocalize and push the Fermi level into the conduction band, placing the device natively in the LRS; Au adsorption re-localizes these carriers and returns the Fermi level to the gap, driving LRS-to-HRS switching. Quantum transport simulations confirm both mechanisms, while migration-barrier calculations identify the electrode-2D separation as a key parameter governing Au migration and the resistance window. These findings expand the atomristor landscape and establish complementary switching as a design paradigm for multifunctional memory and neuromorphic hardware.",
+          "authors": [
+            "Sanchali Mitra",
+            "Arnab Kabiraj",
+            "Benjamin W. J. Chen",
+            "Han Zhang",
+            "Haiyu Meng",
+            "Shi-Jun Liang",
+            "C. S. Lau",
+            "Lei Shen",
+            "Lain-Jong Li",
+            "Kah-Wee Ang",
+            "Yee Sin Ang"
+          ],
+          "url": "http://arxiv.org/abs/2609.03578v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.03578v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T09:27:20Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.886707074239418,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "6b7aa3c57f00dcb1",
+          "title": "Lngram v2: Latent N-Gram Memory with Interpretable Discrete Representations",
+          "abstract": "Transformers lack a native lookup mechanism, requiring repeated dense computation to recognize and reuse local static patterns. Lngram v1 introduces tokenizer-independent conditional memory through discrete latent n-gram addressing, but its memory capacity is coupled with the backbone width, limiting scalability due to high parameter and activation costs. We propose Lngram v2, which decouples the number of routes, memory dimension, and backbone width, and introduces a context-aware grouped-query attention readout to scale memory capacity independently. A zero-value Sink and counterfactual surrogate gradients further improve readout selectivity and routing trainability while preserving hard discrete addressing. Experiments across vision--language models (VLMs) of different scales show consistent improvements, including successful scaling to a 30B-parameter model. Compared with Lngram v1, Lngram v2 substantially reduces both total and activated memory parameters while maintaining or improving language modeling performance. Further analysis shows that its discrete IDs preserve substantial semantic structure of continuous hidden states, enabling semantic recovery from IDs alone and stable ID--semantic associations across datasets. These results establish Lngram v2 as an efficient and scalable latent conditional memory mechanism whose discrete addresses also provide a structured interface for analyzing internal model representations.",
+          "authors": [
+            "Yunao Zheng",
+            "Bin Wen",
+            "Xiaojie Wang"
+          ],
+          "url": "http://arxiv.org/abs/2609.03426v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.03426v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T06:33:23Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.878078602017197,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-09-03",
       "papers": [
         {
@@ -7493,77 +7621,6 @@
           ],
           "score": 53.99999999917328,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-03",
-      "papers": [
-        {
-          "id": "45a630af0c4f156a",
-          "title": "Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation",
-          "abstract": "Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.",
-          "authors": [
-            "Roohan Ahmed Khan",
-            "Yasheerah Yaqoot",
-            "Muhammad Ahsan Mustafa",
-            "Dzmitry Tsetserukou"
-          ],
-          "url": "http://arxiv.org/abs/2606.03963v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.03963v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-02T17:50:15Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 43.91192378306879,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "5448682c8dede637",
-          "title": "Quadratic integrate-and-fire neurons exhibit less fragmented loss landscapes and outperform leaky integrate-and-fire neurons in spike-based gradient descent",
-          "abstract": "The ability to train spiking neural networks is essential for modeling biological neural networks as well as for neuromorphic computing. However, for the extensively used leaky integrate-and-fire (LIF) neurons, arbitrarily small parameter changes can induce spike (dis)appearances that disrupt subsequent activity, leading to unstable neural representations and permanently silent neurons during exact spike-based gradient descent. Recent work shows that a class of neuron models, which includes the quadratic integrate-and-fire (QIF) neuron, avoids these discontinuities and enables continuous and even smooth spike-based gradient descent. However, it remains unclear whether these advantages translate into practice. Here, we demonstrate that they do so via a controlled comparison between networks of LIF and QIF neurons on the popular Spiking Heidelberg Digits dataset. Specifically, in a first step, we perform a thorough hyperparameter search to optimize both models, revealing a clear performance advantage of QIF neurons. In a second step, we visualize the loss and gradient landscapes. Consistent with their inferior performance, we find that the loss landscapes of LIF neurons, which are discontinuous, appear more fragmented and the related gradients more erratic. An analysis of the landscapes of single samples indicates that these features arise from changes in the temporal order of spikes, which often cause disruptive spike (dis)appearances. Overall, our results advocate replacing LIF neurons with neuron models exhibiting continuous spiking dynamics, such as QIF neurons, for gradient descent training.",
-          "authors": [
-            "Carlo Wenig",
-            "Raoul-Martin Memmesheimer",
-            "Christian Klos"
-          ],
-          "url": "http://arxiv.org/abs/2606.03935v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.03935v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-02T17:26:12Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 43.91073082671957,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "6bace4e1ad0b2501",
-          "title": "20 ps Non-Destructive Read and 1 ns Write Operations at <5 V in Ferroelectric HfO2/ZrO2 Non-Volatile Memories",
-          "abstract": "Achieving low-voltage, nanosecond multi-level programming and non-destructive read-out of ferroelectric non-volatile memories (NVM) is critical for analog in-memory computing architectures relying on ferroelectric capacitive devices (FeCap). We integrate HfO2/ZrO2 ferroelectric nanolayers concurrently in the BEOL of CMOS and on SiO2/Si, achieving nanosecond multilevel switching with programming voltages below 5 V. Partial ferroelectric switching enhances FeCap endurance above 1011 cycles, leading to MemCapacitance (MC) states with non-destructive read-out and 10-year retention. However, experiments reveal the collapse of the MC window for read frequencies above 1 MHz. To overcome this speed limit, we introduce a novel, non-destructive readout methodology. Using electrical pulses with widths down to 20 ps, below the RC time constant of the FeCaps, we enable measurement of the polarization-dependent leakage current, providing ultrafast and non-destructive read operations at only 14 fJ.",
-          "authors": [
-            "Alexandre Baigol",
-            "Ruben Hamming-Green",
-            "Paul Uriarte Vicandi",
-            "Jiajie Gao",
-            "Till Zellweger",
-            "Anwesha Panda",
-            "Alexandros Emboras",
-            "Miklós Csontos",
-            "Mathieu Luisier",
-            "Beatriz Noheda",
-            "Laura Bégon-Lours"
-          ],
-          "url": "http://arxiv.org/abs/2606.03677v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.03677v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-02T14:01:22Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.900570443121694,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
