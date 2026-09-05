@@ -1,6 +1,134 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-05",
+      "papers": [
+        {
+          "id": "7226e2b166f02fc3",
+          "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
+          "abstract": "Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC architecture that decouples topological reasoning from semantic reasoning: a heterogeneous graph attention encoder summarizes the live authentication subgraph into a fixed-dimensional state, a Proximal Policy Optimization (PPO) policy maps this state to a constrained set of investigative actions, and an LLM agent loop is restricted to consuming the policy's recommendations and producing analyst-readable narratives gated by a critic. We instantiate the system on the LANL Comprehensive, Multi-Source Cyber-Security Events dataset and the Indiana University Quartz HPC cluster, reporting four results: (i) a two-phase CREATE ingestion pattern loads a 24M-edge authentication subgraph into Neo4j in 14.2 minutes on a single 32-core node, roughly 24x faster than the canonical MERGE-based pipeline; (ii) a sliding-window alert engine reliably trips a 25-event/10-second threshold in <=2.5 s across 50 trials; (iii) PPO training over 200 iterations converges to a mean episodic return of 8.74+/-0.31, with held-out precision of 0.91 and recall of 0.87 on labeled red-team events; and (iv) the integrated containment loop completes a full detect-investigate-recommend-human-approve cycle in a median of 6.3 s. We contribute a reusable engineering pattern (the hot-node deadlock workaround), a portable HPC deployment pattern (anchor-node co-location), and an enterprise-readiness analysis covering false-positive economics, reversibility guarantees, audit compliance, and the human-approval boundary.",
+          "authors": [
+            "Uday Vallabhaneni",
+            "Cassie L. Cagwin",
+            "David J. Wild"
+          ],
+          "url": "http://arxiv.org/abs/2609.04159v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04159v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:49:12Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.840426517030423,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "6e14a57751fcb696",
+          "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
+          "abstract": "AI agents are trained on population-scale data to encode broad capabilities spanning those of many practitioners. Yet the artifacts they produce rarely meet the personal bar professionals need to stake their reputation on. On realistic, open-ended tasks where success criteria are heterogeneous and insufficiently documented, individual expertise lives precisely in the elevation and departure from the average. In practice, iterative human-agent interaction surfaces criteria that users cannot fully specify up front, yet apply repeatedly across tasks. We argue this cross-session interaction data is a rich, underused signal for closing the gap to individual expertise. In this work, we propose test-time adaptation through human-agent interaction (TAHI), which integrates these signals into agent context and weights, and crystallizes each user's training and evaluation criteria via an evolving rubric module. We adapt agents to 30 individuals in two high-utility domains, writing and visual creation, on a total of 600 tasks. Our agents improve solo task success by 4.5-20.9% within only tens of tasks. Meanwhile, our evolving rubric module serves as a scalable annotation tool, creating evaluation rubrics that catch 16.0-22.3% more failures than those from LMs or humans alone. While agents are adapted towards individuals, we show these personalized agents also produce improvements in success of up to 8.8% that generalize across users.",
+          "authors": [
+            "Zora Zhiruo Wang",
+            "Apurva Gandhi",
+            "Rulin Shao",
+            "Aspen Chen",
+            "Jonas Mueller",
+            "Zhiqi Liang",
+            "Jett Chen",
+            "Michael Ryan",
+            "Qianou Ma",
+            "Luxi He",
+            "Zhoujun Cheng",
+            "Andre He",
+            "Seungone Kim",
+            "Jiayi Geng",
+            "Mingqian Zheng",
+            "Weiwei Sun",
+            "Zheyuan Zhang",
+            "Xinran Zhao",
+            "Yike Wang",
+            "Abe Hou",
+            "Liwei Jiang",
+            "Pang Wei Koh",
+            "Diyi Yang",
+            "Graham Neubig",
+            "Daniel Fried"
+          ],
+          "url": "http://arxiv.org/abs/2609.04141v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04141v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:33:18Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.83963782655423,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "a0fd337ec76460c1",
+          "title": "Hardware-Aware FP4 FlashAttention-4",
+          "abstract": "Blackwell's 4-bit floating-point (FP4) tensor cores do not automatically make attention faster because softmax conversion and on-chip dependencies dominate once its matrix products shrink. We address this with \\emph{Direct-P} for noncausal inference and a causal path that passes the forward quantization directly into backward. Direct-P maps scores directly to FP4 probabilities and reaches up to 2.13$\\times$ the bfloat16 (BF16) forward throughput on an NVIDIA GB200. The causal path reconstructs probabilities from saved quantized queries and keys and uses 8-bit floating-point (FP8) gradient operands, accelerating a complete single-GPU 8-billion-parameter update by up to 1.14$\\times$. Matched distributed training retains FP8 probabilities and values; every tested MXFP4 probability/value training trajectory diverges.",
+          "authors": [
+            "Robert Hu"
+          ],
+          "url": "http://arxiv.org/abs/2609.04105v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04105v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T17:12:35Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.83861021412037,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "0f4fcf06ef42c39d",
+          "title": "High-Throughput Computational Discovery of Inverted Resistive Switching in Two-Dimensional Materials",
+          "abstract": "Atomristors, non-volatile resistive switching devices based on two-dimensional (2D) monolayers, are promising building blocks for energy-efficient memory and neuromorphic computing. However, their design remains restricted to a few materials such as MoS2 and h-BN, limiting functional diversity and design flexibility. Here, a high-throughput computational framework combining density functional theory, machine-learning molecular dynamics, and quantum transport simulations screens about 2,900 exfoliable monolayers for vacancy-mediated resistive switching, identifying 17 thermally stable candidates in two mechanistically distinct classes. In Class 1 monolayers, such as GaS, Au adsorption at the native vacancy introduces conducting states, switching the insulating monolayer from a high- to a low-resistance state (HRS-to-LRS). Class 2 monolayers, comprising ionically bonded metal oxyhalides and nitrohalides such as BiOCl, exhibit previously unreported inverted switching. Vacancy-released electrons delocalize and push the Fermi level into the conduction band, placing the device natively in the LRS; Au adsorption re-localizes these carriers and returns the Fermi level to the gap, driving LRS-to-HRS switching. Quantum transport simulations confirm both mechanisms, while migration-barrier calculations identify the electrode-2D separation as a key parameter governing Au migration and the resistance window. These findings expand the atomristor landscape and establish complementary switching as a design paradigm for multifunctional memory and neuromorphic hardware.",
+          "authors": [
+            "Sanchali Mitra",
+            "Arnab Kabiraj",
+            "Benjamin W. J. Chen",
+            "Han Zhang",
+            "Haiyu Meng",
+            "Shi-Jun Liang",
+            "C. S. Lau",
+            "Lei Shen",
+            "Lain-Jong Li",
+            "Kah-Wee Ang",
+            "Yee Sin Ang"
+          ],
+          "url": "http://arxiv.org/abs/2609.03578v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.03578v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T09:27:20Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.815532337136244,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "6b7aa3c57f00dcb1",
+          "title": "Lngram v2: Latent N-Gram Memory with Interpretable Discrete Representations",
+          "abstract": "Transformers lack a native lookup mechanism, requiring repeated dense computation to recognize and reuse local static patterns. Lngram v1 introduces tokenizer-independent conditional memory through discrete latent n-gram addressing, but its memory capacity is coupled with the backbone width, limiting scalability due to high parameter and activation costs. We propose Lngram v2, which decouples the number of routes, memory dimension, and backbone width, and introduces a context-aware grouped-query attention readout to scale memory capacity independently. A zero-value Sink and counterfactual surrogate gradients further improve readout selectivity and routing trainability while preserving hard discrete addressing. Experiments across vision--language models (VLMs) of different scales show consistent improvements, including successful scaling to a 30B-parameter model. Compared with Lngram v1, Lngram v2 substantially reduces both total and activated memory parameters while maintaining or improving language modeling performance. Further analysis shows that its discrete IDs preserve substantial semantic structure of continuous hidden states, enabling semantic recovery from IDs alone and stable ID--semantic associations across datasets. These results establish Lngram v2 as an efficient and scalable latent conditional memory mechanism whose discrete addresses also provide a structured interface for analyzing internal model representations.",
+          "authors": [
+            "Yunao Zheng",
+            "Bin Wen",
+            "Xiaojie Wang"
+          ],
+          "url": "http://arxiv.org/abs/2609.03426v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.03426v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-03T06:33:23Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.80690386491402,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-09-04",
       "papers": [
         {
@@ -7548,79 +7676,6 @@
           ],
           "score": 27.862417681878306,
           "reason": "Matches Network Early Exit."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-04",
-      "papers": [
-        {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-04T23:00:55.280Z",
-          "topics": [
-            "neurosim",
-            "snn"
-          ],
-          "score": 77.99999999917328,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
-        },
-        {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-04T23:00:55.280Z",
-          "topics": [
-            "snn",
-            "tta"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-04T23:00:55.280Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-04T23:00:55.280Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999917328,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
         }
       ]
     }
