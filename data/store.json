@@ -1,6 +1,67 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-07",
+      "papers": [
+        {
+          "id": "7c116d097bf31f48",
+          "title": "Fast Gauss Sums via Flash Attention",
+          "abstract": "Gaussian kernel sums are the computational core of maximum mean discrepancies (MMDs), kernel gradient flows, Stein variational gradient descent (SVGD), and many other kernel methods. At the same time, softmax attention has received an extraordinary amount of hardware-aware code engineering, culminating in flash attention. We show that Gauss kernel sums with arbitrary, signed weights can be evaluated via flash attention: two small input augmentations turn the normalized softmax reduction into the unnormalized Gauss sum, without writing a single line of custom GPU code. For feature dimension D>8 in fp16, this approach beats compiled PyTorch code as well as PyKeOps kernels (often significantly) in speed, memory-overhead and accuracy. Indeed, its memory scaling remains linear.",
+          "authors": [
+            "Nicolaj Rux",
+            "Sebastian Neumayer"
+          ],
+          "url": "http://arxiv.org/abs/2609.04910v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04910v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T09:11:45Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.742118864087303,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "74a498d3a0f84323",
+          "title": "Sustainable Edge Vision via Empirically Calibrated DVFS: Eliminating Thermal Throttling on Passively Cooled Hardware",
+          "abstract": "Passive cooling eliminates the energy overhead and mechanical failure modes of fans, making it attractive for edge deployment, yet sustained Deep Neural Network (DNN) inference on passively cooled edge Systems-on-Chip (SoCs) is bottlenecked by thermal throttling. To address this, we propose an empirically calibrated, state-aware Dynamic Voltage and Frequency Scaling (DVFS) scheduler. Unlike heuristic-driven controllers, our methodology utilizes time-domain guards and absolute temperature bounds, with derivative triggers acting as safeguards against sharp thermal spikes. Evaluated on a passively cooled Raspberry Pi 5 running YOLOv8n, our scheduler eliminates all observed thermal throttling events during sustained 30-minute workloads. It outperforms a temperature-only reactive baseline by achieving a 6.8% higher frame rate (Cohen's d = 8.73) while consuming 1.9% less energy per frame. Furthermore, our optimized passive scheduling surpasses an actively cooled reference system in energy efficiency (Joules/frame), though active cooling remains superior for raw throughput. Through isolated ablations, we show that the dwell guard is necessary for run-to-run reproducibility. Finally, exploratory boundary probes indicate that the passive operating envelope closes at ambient temperatures ($\\ge 27^\\circ$C) where nonlinear leakage defeats DVFS-based control. These results indicate that, within the mapped envelope, correct scheduling can make mechanical cooling unnecessary for sustained edge inference on this platform.",
+          "authors": [
+            "Aayush Marasini",
+            "Zhaoxian Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2609.04705v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04705v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T04:24:05Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.72784968419312,
+          "reason": "Matches DVFS / Energy."
+        },
+        {
+          "id": "a5413be5d6b35753",
+          "title": "Demonstration of room-temperature, magnetic-field-free, and ultralow-power spin-orbit torque logic device based on composition-uniform van der Waals magnet Fe3GaTe2",
+          "abstract": "Van der Waals magnets have received blooming interest in material science and spintronics for the advantages of low magnetization, flexible stacking, strong tunability, and dangling-bond-free interfaces. However, there has been no report of room-temperature magnetic-field-free spin logic device based on a van der Waals magnet. Here, we demonstrate a room-temperature, field-free, low-power, scalable spin-orbit torque in-memory computing logic device utilizing a van der Waals magnet Fe3GaTe2 bit with strong perpendicular magnetic anisotropy and a Pt channel with strong spin Hall effect, high electrical conductivity, and electric asymmetries. Current pulse width-dependent switching measurement reveals a low intrinsic critical magnetic-field-free switching current of 1.8e7 A cm-2, a high thermal stability factor of 50, and the potential of an ultralow write power of 1.5 fJ per bit at 1 ns pulse width for a typical industrial-level device dimensions (40 times lower than the industrially optimized W/FeCoB device). These results suggest a great potential of van der Waals magnets in dense, ultralow-power, scalable in-memory computing technologies.",
+          "authors": [
+            "Zhengxiao Li",
+            "Qianbiao Liu",
+            "Wenliang Zhu",
+            "Lijun Zhu"
+          ],
+          "url": "http://arxiv.org/abs/2609.04600v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04600v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T01:00:36Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.717756264880954,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-06",
       "papers": [
         {
@@ -7615,79 +7676,6 @@
           ],
           "score": 27.71973677992725,
           "reason": "Matches Network Early Exit."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-06",
-      "papers": [
-        {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-06T22:54:57.491Z",
-          "topics": [
-            "neurosim",
-            "snn"
-          ],
-          "score": 77.99999999834657,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
-        },
-        {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-06T22:54:57.491Z",
-          "topics": [
-            "snn",
-            "tta"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-06T22:54:57.491Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999834657,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-06-06T22:54:57.491Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999834656,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
         }
       ]
     }
