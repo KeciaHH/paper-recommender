@@ -1,6 +1,67 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-08",
+      "papers": [
+        {
+          "id": "7c116d097bf31f48",
+          "title": "Fast Gauss Sums via Flash Attention",
+          "abstract": "Gaussian kernel sums are the computational core of maximum mean discrepancies (MMDs), kernel gradient flows, Stein variational gradient descent (SVGD), and many other kernel methods. At the same time, softmax attention has received an extraordinary amount of hardware-aware code engineering, culminating in flash attention. We show that Gauss kernel sums with arbitrary, signed weights can be evaluated via flash attention: two small input augmentations turn the normalized softmax reduction into the unnormalized Gauss sum, without writing a single line of custom GPU code. For feature dimension D>8 in fp16, this approach beats compiled PyTorch code as well as PyKeOps kernels (often significantly) in speed, memory-overhead and accuracy. Indeed, its memory scaling remains linear.",
+          "authors": [
+            "Nicolaj Rux",
+            "Sebastian Neumayer"
+          ],
+          "url": "http://arxiv.org/abs/2609.04910v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04910v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T09:11:45Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.67099960648148,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "74a498d3a0f84323",
+          "title": "Sustainable Edge Vision via Empirically Calibrated DVFS: Eliminating Thermal Throttling on Passively Cooled Hardware",
+          "abstract": "Passive cooling eliminates the energy overhead and mechanical failure modes of fans, making it attractive for edge deployment, yet sustained Deep Neural Network (DNN) inference on passively cooled edge Systems-on-Chip (SoCs) is bottlenecked by thermal throttling. To address this, we propose an empirically calibrated, state-aware Dynamic Voltage and Frequency Scaling (DVFS) scheduler. Unlike heuristic-driven controllers, our methodology utilizes time-domain guards and absolute temperature bounds, with derivative triggers acting as safeguards against sharp thermal spikes. Evaluated on a passively cooled Raspberry Pi 5 running YOLOv8n, our scheduler eliminates all observed thermal throttling events during sustained 30-minute workloads. It outperforms a temperature-only reactive baseline by achieving a 6.8% higher frame rate (Cohen's d = 8.73) while consuming 1.9% less energy per frame. Furthermore, our optimized passive scheduling surpasses an actively cooled reference system in energy efficiency (Joules/frame), though active cooling remains superior for raw throughput. Through isolated ablations, we show that the dwell guard is necessary for run-to-run reproducibility. Finally, exploratory boundary probes indicate that the passive operating envelope closes at ambient temperatures ($\\ge 27^\\circ$C) where nonlinear leakage defeats DVFS-based control. These results indicate that, within the mapped envelope, correct scheduling can make mechanical cooling unnecessary for sustained edge inference on this platform.",
+          "authors": [
+            "Aayush Marasini",
+            "Zhaoxian Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2609.04705v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04705v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T04:24:05Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.656730426587302,
+          "reason": "Matches DVFS / Energy."
+        },
+        {
+          "id": "a5413be5d6b35753",
+          "title": "Demonstration of room-temperature, magnetic-field-free, and ultralow-power spin-orbit torque logic device based on composition-uniform van der Waals magnet Fe3GaTe2",
+          "abstract": "Van der Waals magnets have received blooming interest in material science and spintronics for the advantages of low magnetization, flexible stacking, strong tunability, and dangling-bond-free interfaces. However, there has been no report of room-temperature magnetic-field-free spin logic device based on a van der Waals magnet. Here, we demonstrate a room-temperature, field-free, low-power, scalable spin-orbit torque in-memory computing logic device utilizing a van der Waals magnet Fe3GaTe2 bit with strong perpendicular magnetic anisotropy and a Pt channel with strong spin Hall effect, high electrical conductivity, and electric asymmetries. Current pulse width-dependent switching measurement reveals a low intrinsic critical magnetic-field-free switching current of 1.8e7 A cm-2, a high thermal stability factor of 50, and the potential of an ultralow write power of 1.5 fJ per bit at 1 ns pulse width for a typical industrial-level device dimensions (40 times lower than the industrially optimized W/FeCoB device). These results suggest a great potential of van der Waals magnets in dense, ultralow-power, scalable in-memory computing technologies.",
+          "authors": [
+            "Zhengxiao Li",
+            "Qianbiao Liu",
+            "Wenliang Zhu",
+            "Lijun Zhu"
+          ],
+          "url": "http://arxiv.org/abs/2609.04600v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.04600v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-04T01:00:36Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.64663700727513,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-07",
       "papers": [
         {
@@ -7560,122 +7621,6 @@
           ],
           "score": 27.766430427414022,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-07",
-      "papers": [
-        {
-          "id": "37a10dfc471af3c9",
-          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
-          "abstract": "Recent advancements in reasoning language models have been driven by Reinforcement Learning (RL) fine-tuning. Most often, these rely on the Group Relative Policy Optimization (GRPO) algorithm or modifications thereof to steer the models to produce Chain-of-Thought (CoT) traces. The final answer can only be verified, and the reward assigned, after the CoT trace is complete, making it a delayed reward problem. GRPO and its modifications correspond to Monte Carlo methods in standard RL, which are known to suffer from high variance. A possible solution to this problem is the redistribution of rewards through credit assignment, where segments of the CoT trace that are important for arriving at the desirable solution are emphasized by assigning a higher reward. While Monte Carlo sampling can be used to provide an unbiased estimate of intermediate state values, its computational overhead makes it unsuitable for train-time credit assignment in long contexts at high granularity. We introduce RREDCoT (Reward REDistribution for Chain of Thoughts), which utilizes the model itself to approximate the optimal reward redistribution without additional generation. We investigate the advantages of our method compared to MC sampling and several attribution methods. We further analyze several aspects relevant to the construction of the redistribution such as segmentation of CoT traces and state value estimation.",
-          "authors": [
-            "Mykyta Ielanskyi",
-            "Kajetan Schweighofer",
-            "Lukas Aichberger",
-            "Sepp Hochreiter"
-          ],
-          "url": "http://arxiv.org/abs/2606.06475v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.06475v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-04T17:56:31Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.77098595403439,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "19f7fe30a481a014",
-          "title": "Electrolyte Bonding Engineering for Highly Uniform GeTe-based CBRAM and Parallel Hebbian Learning in Selector-free Hopfield Networks",
-          "abstract": "Hopfield networks offer a hardware-friendly framework for energy-efficient associative memory, yet their practical realization in memristor crossbar arrays is critically hindered by device-to-device (D2D) variability, which prevents reliable parallel programming. Here, we address this bottleneck through systematic composition engineering of the Ge-Te solid electrolyte in conductive bridge random access memory (CBRAM) devices. By varying the Ge:Te ratio, we identify Ge3.5Te1 as an optimal electrolyte composition that suppresses stochastic resistance variation by approximately three orders of magnitude compared to GeSe-based devices. Raman spectroscopy reveals that this dramatic improvement originates from a bonding network dominated by asymmetric-stretching GeTe4 tetrahedral units, which form interconnected free-volume channels that confine and stabilize Cu+ ion migration pathways. Leveraging this enhanced uniformity, we fabricate a selector-less 16x16 Cu/Ge3.5Te1 CBRAM crossbar array and demonstrate a 4x4 Hopfield associative network capable of learning and recalling binary pattern pairs via fully parallel programming using a half-selection scheme. Successful pattern recall is achieved for up to two stored associations despite the absence of selector elements, establishing a proof-of-concept for selector-free hardware implementations of associative memory. These results highlight the critical role of electrolyte bonding structure in determining memristor uniformity and provide a materials-driven pathway toward scalable, parallel neuromorphic computing systems.",
-          "authors": [
-            "Jiin Bang",
-            "Jingyeong Hwang",
-            "Unhyeon Kang",
-            "Seungmin Oh",
-            "Kyungmin Lee",
-            "Jaehyun Park",
-            "Younghyun Lee",
-            "Hyun Jae Jang",
-            "Seongsik Park",
-            "YeonJoo Jeong",
-            "Inho Kim",
-            "Jong Keuk Park",
-            "Suyoun Lee"
-          ],
-          "url": "http://arxiv.org/abs/2606.05768v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.05768v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-04T06:50:43Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.737960159556877,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "20e5609b81f7a784",
-          "title": "Space-CIM: Enabling Compute-In-Memory Accelerators for Thermally-Constrained Space Platforms",
-          "abstract": "The rapid growth in compute demand from artificial intelligence (AI) has driven a massive surge in data center construction, precipitating an energy and sustainability crisis. Motivated by the abundant solar energy in outer space and the recent sharp reduction in space launch costs, orbital data centers are emerging as a potential pathway for the future scaling of AI compute infrastructure. While the cold background in vacuum seems appealing for cooling, computing systems operating in space without convection ultimately rely on radiative cooling, requiring large-area radiators. Such limitations in thermal management pose a significant challenge for deploying the standard liquid/air-cooled computers in space. In this work, we investigate the impact of the thermal constraints in space on both graphics processing units (GPUs) with high-bandwidth memory (HBM) and the emerging compute-in-memory (CIM) accelerators. We develop a radiator-in-the-loop co-design methodology that directly links the permitted system TOPS (terra-operations per second) with the practical radiator cooling capacity in space. Our thermal simulations reveal that the separately located GPU die and HBMs create severe thermal hotspots under limited radiator capacity, necessitating GPU thermal throttling. In contrast, CIM accelerators exhibit a much more uniform heat distribution and consistently outperform GPUs in TOPS/W across a wide range of radiator budgets. We systematically evaluated the performance of CIM and GPU across various AI workloads and demonstrated that CIM has a magnified advantage for deployment in space under realistic thermal constraints.",
-          "authors": [
-            "Sohan Salahuddin Mugdho",
-            "Md. Shahedul Hasan",
-            "Cheng Wang"
-          ],
-          "url": "http://arxiv.org/abs/2606.05741v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.05741v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-04T06:08:03Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.735843757440477,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "95b885f7e512cb75",
-          "title": "AdaMEM: Test-Time Adaptive Memory for Language Agents",
-          "abstract": "A central challenge for language agents is utilizing past experience to adapt to dynamic test-time conditions. While recent work demonstrates the promise of agentic memory mechanisms, most systems restrict retrieval to episode initiation. Consequently, agents are forced to rely on static guidance that becomes increasingly misaligned as long-horizon tasks unfold. To address this rigidity, we propose the Adaptive Memory Agent (AdaMEM), a novel framework for agent test-time adaptation. Without updating model parameters online, AdaMEM adapts agent behavior via a hybrid memory architecture: it maintains a long-term trajectory memory of raw experiences collected offline while generating dynamic short-term strategy memory on-the-fly to guide decision-making. This mechanism enables the trade-off between token efficiency and adaptability across varying inference-time compute levels. Empirically, AdaMEM significantly outperforms static memory baselines, achieving relative gains of up to 13% on ALFWorld and 11% on WebShop, with consistent leading performance extending to agentic search on HotpotQA. To further enhance this adaptation, we develop STEP-MFT, a Step-wise Memory Fine-Tuning technique that trains the policy to synthesize high-quality strategies from retrieved experiences, yielding additional performance gains. Our work establishes a new scaling dimension for agentic memory, supporting continuous reasoning and self-evolution post-deployment in real-world environments. Our code is available at https://github.com/yunx-z/AdaMEM.",
-          "authors": [
-            "Yunxiang Zhang",
-            "Yiheng Li",
-            "Ali Payani",
-            "Lu Wang"
-          ],
-          "url": "http://arxiv.org/abs/2606.05684v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.05684v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-04T04:06:08Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.729796303736773,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "621e4c58fc9c5aae",
-          "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models",
-          "abstract": "Mixture-of-Experts (MoE) models achieve strong performance through conditional computation, but their large parameter footprint poses deployment challenges. Prior MoE compression approaches catastrophically fail when evaluated on general-purpose benchmarks beyond commonsense reasoning. We trace this failure to the granularity of compression: important capabilities are distributed across experts but concentrated in FFN sparse intermediate dimensions. To identify these dimensions, we use Fisher importance which outperforms activation-, router-score-, and magnitude-based alternatives, and identifies tiny sets of task-critical dimensions: in Qwen1.5-MoE, removing as few as 12 of 1.35M routed-FFN intermediate dimensions collapses GSM8K accuracy while largely preserving factual-knowledge performance. Building on this, we propose Fisher-MoE, which operates within FFN to remove intermediate dimensions ranked by Fisher importance. At the same 50% MoE compression ratio, Fisher-MoE preserves model capability, while reducing weight memory by ~45% and improving inference throughput by 21%. These findings suggest intermediate dimension granularity is an effective unit for both compression and ranking where capability concentrates in MoE models.",
-          "authors": [
-            "Haoze He",
-            "Xinkai Zou",
-            "Xuan Jiang",
-            "Xingyuan Ding",
-            "Ao Qu",
-            "Juncheng Billy Li",
-            "Heather Miller"
-          ],
-          "url": "http://arxiv.org/abs/2606.05538v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.05538v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-04T00:43:20Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.71973677992725,
-          "reason": "Matches Network Early Exit."
         }
       ]
     }
