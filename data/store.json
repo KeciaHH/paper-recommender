@@ -1,6 +1,115 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-09",
+      "papers": [
+        {
+          "id": "c791b684c389d4c2",
+          "title": "FlexSpIM: An Event-Based Digital Compute-In-Memory Accelerator with Flexible Operand Resolution and Layer-Wise Hybrid Stationarity",
+          "abstract": "Compute-in-memory (CIM) accelerators for spiking neural networks (SNNs) offer a promising solution for achieving $μ$s-level inference latency and ultra-low energy in edge vision applications. However, their limited flexibility at both circuit and system levels restricts their deployment across diverse workloads. This work introduces FlexSpIM, a digital CIM architecture supporting arbitrary operand resolution and shape within a unified storage for weights and neuron states (i.e., membrane potentials). These circuit-level capabilities enable a layer-level hybrid weight- and output-stationary dataflow, maximizing operand reuse and reducing costly on- and off-chip data movement during SNN execution. Measurement results from a fabricated FlexSpIM prototype in 40-nm CMOS demonstrate competitive 1-bit-normalized energy efficiency and higher throughput compared with prior fixed-precision digital CIM-based SNN accelerators, while providing bitwise resolution reconfiguration. Evaluated on the IBM DVS gesture dataset, FlexSpIM achieves 95.8% accuracy while enabling up to 45% energy and 52% latency reductions in large-scale systems compared with fixed stationarity approaches.",
+          "authors": [
+            "Nicolas Chauvaux",
+            "Adrian Kneip",
+            "Charlotte Frenkel"
+          ],
+          "url": "http://arxiv.org/abs/2609.08446v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.08446v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-08T08:50:31Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 53.88453189318783,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "5d3df9496edfdac0",
+          "title": "Entropy-Regularized Rank-Masked Policy Optimization for Test-Time Reinforcement Learning in Code Generation",
+          "abstract": "Existing methods for test-time reinforcement learning (TTRL) derive rewards from answer-level self-voting on unlabeled test-time tasks with canonical answers, but this breaks down for code generation because programs cannot be compared by surface form and therefore do not directly provide a usable training signal. To make TTRL applicable to code generation, we propose probe-driven TTRL, which constructs output-free probe inputs from the problem statement, executes candidate programs on these probes, and defines a Probe Consensus Reward (PCR) from the resulting behavioral agreement. PCR provides a behavioral training signal for open-vocabulary programs, but it is not a fully reliable verifier and remains susceptible to reward hacking through spurious consensus. We therefore introduce Entropy-Regularized Rank-Masked Policy Optimization (ERPO), which converts low PCR into conservative negative updates through rank masking and controls policy drift with an entropy ceiling. On coding benchmarks, ERPO substantially improves pass@1 and pass@k in both in-domain adaptation and zero-shot transfer.",
+          "authors": [
+            "Jiacheng Xu",
+            "Feng Chen",
+            "Xiuneng Xu",
+            "Bo An"
+          ],
+          "url": "http://arxiv.org/abs/2609.09135v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.09135v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-08T17:54:13Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.9115011400463,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "9aae7af9d4e1d17f",
+          "title": "OTTER - Two Transistor - One RRAM Architecture for Reliable In-Memory-Computing in 28 nm CMOS Technology",
+          "abstract": "This work presents OTTER, a 28 nm CMOS platform co-integrated with TaOx-based valence-change mechanism (VCM) RRAM, demonstrating a two-transistor-one-memristive-device (2T1R) architecture for reliable in-memory computing. The 2T1R cell combines a low-drive-current (LD) transistor and a high-drive-current (HD) transistor in parallel, providing dedicated bias paths for SET programming and RESET operation, respectively. Through systematic experimental and simulated comparison of various transistor-pairing configurations using the physical compact model JART VCM Rth, design guidelines for transistor sizing are derived, establishing the minimum RESET transistor W/L required for complete RESET as a function of the SET current compliance. The 2T1R cell is further characterized under pulse-based programming, demonstrating multilevel analog conductance tuning with narrow, well separated conductance states across six programmable levels. An analog content-addressable memory (aCAM) design based on the same 2T1R cell is additionally analyzed at the circuit level, evaluating trade-offs between top- and bottom-connected RRAM comparator configurations. A hardware implementation of compute-in-memory (CIM) multiply-and-accumulate (MAC) operations is further demonstrated on a 15 x 15 2T1R crossbar array.",
+          "authors": [
+            "Yang Chen",
+            "Daniele Storelli",
+            "Xinyi Zhao",
+            "Ankit Bende",
+            "Paul-Philipp Manea",
+            "Oliver Artner",
+            "Arun Ashok",
+            "Kay Winterberg",
+            "Godwin Paul",
+            "Siyuan Jia",
+            "Christian Roth",
+            "Sabitha Kusuma",
+            "Michael Schiek",
+            "Vikas Rana",
+            "Dirk Wouters",
+            "Stephan Menzel",
+            "Andre Zambanini",
+            "Christian Grewing",
+            "Stefan Wiefels",
+            "Susanne Hoffmann-Eifert",
+            "John Paul Strachan",
+            "Stefan van Waasen",
+            "Regina Dittmann"
+          ],
+          "url": "http://arxiv.org/abs/2609.08898v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.08898v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-08T15:37:22Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 35.90471294477513,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "5af46cbdd017a35e",
+          "title": "A Gradient-based yet Spike-Timing-Dependent Solution to the Feedback Learning Problem in Neural Microcircuits",
+          "abstract": "The brain uses discrete spikes for dynamic computation, yet, how neural microcircuits (NMCs) solve temporal credit assignment using local spike timing remains a fundamental open question. Dominant spiking neural network (SNN) approaches circumvent this by approximating backpropagation through surrogate gradients, decoupling learning from biological spike timing. Here, we reformulate temporal credit assignment as a state separation problem: extracting task-required components induced by historical perturbations directly from the current neural state. This enables an online feedback learning framework for NMCs through a gradient tunneling (GT) algorithm and the lead-lag expansion technique that derives credit assignment from local synaptic spike timing, while remaining compatible with ANN-SNN hybrid architectures. Experimentally, GT-trained NMCs excel at long-timescale evidence integration and noise-robust memory retention, and perform comparably to leading SNN online learning methods on real-world benchmarks with far fewer parameters. The proposed framework addresses the two-decade-old NMC feedback learning problem and suggests a computationally plausible explanation for the brain's learning mechanisms.",
+          "authors": [
+            "Xiangnan Zhang",
+            "Jingxin Liu",
+            "Ranqi Lu",
+            "Jingyu Liu",
+            "Qunxi Dong",
+            "Fuze Tian",
+            "Lixian Zhu",
+            "Bin Hu",
+            "Björn W. Schuller"
+          ],
+          "url": "http://arxiv.org/abs/2609.08070v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.08070v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-08T00:27:18Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.859570749007936,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-09-08",
       "papers": [
         {
@@ -7568,58 +7677,6 @@
             "neurosim"
           ],
           "score": 27.797765923445766,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-08",
-      "papers": [
-        {
-          "id": "06ea7a6a2242cc7d",
-          "title": "Teaching the Way, Not the Answer: Privileged Tutoring Distillation for Multimodal Policy Optimization",
-          "abstract": "Recent post-training methods, particularly Reinforcement Learning with Verifiable Rewards (RLVR), have significantly enhanced the reasoning ability of Large Vision-Language Models (LVLMs). However, the sparse nature of verifiable rewards provides little token-level supervision for failed rollouts, often leading to inefficient exploration in complex multimodal reasoning tasks. Although policy distillation can offer dense guidance, external teacher based methods introduce substantial computational overhead, while answer conditioned tuning methods may expose answer-level information and induce shortcut-like generation behavior. To address these limitations, we propose PTD-PO, a Privileged Tutoring Distillation Policy Optimization framework for RLVR that provides dense guidance without exposing the answer to the student policy. Specifically, PTD-PO constructs structured privileged hints from spatial attention guidance and intermediate textual reasoning steps, and uses them through in-context learning to produce step-wise token-distribution supervision. The student is still optimized under the original answer-free context, and its failed rollouts are aligned with the hint-augmented reference model at the token-distribution level. To further stabilize distillation under the distribution shift between guided and unguided contexts, we introduce a Top-K Jensen-Shannon divergence objective that focuses alignment on informative token probabilities while reducing memory overhead. Experiments on LVLMs ranging from 2B to 8B parameters show that PTD-PO consistently outperforms RLVR and distillation baselines, mitigates entropy collapse, and improves complex multimodal reasoning performance.",
-          "authors": [
-            "Shizhe Xiang",
-            "Ke An",
-            "Wenlong Yu",
-            "Yue Liu",
-            "Jian Luan",
-            "Pei Fu",
-            "Qilong Wang"
-          ],
-          "url": "http://arxiv.org/abs/2606.07000v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.07000v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-05T07:43:22Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.73990926339286,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "52a49dfa19796f99",
-          "title": "A 65 nm Multi-Modal Bayesian Inference Engine with 16.3 fJ/Sample Calibration-Free GRNG for Risk-Aware At-Home Skin Lesion Screening",
-          "abstract": "We present a 65-nm risk-aware multimodal Bayesian inference engine for privacy-preserving, fully on-device skin lesion screening under uncontrolled at-home conditions. The proposed compute-in-memory architecture performs in-word Mixture-of-Gaussian sampling, improving uncertainty modeling beyond conventional unimodal Bayesian neural networks. This added probabilistic expressiveness increases equal-risk operating coverage by 1.4x, improves robustness to user-data perturbations by >1.5x, enhances process-variation resilience by 5.5x, and improves balanced accuracy by 1.8% over state-of-the-art unimodal Bayesian neural networks. Hardware robustness is further supported by calibration-free Gaussian random-number generation using complementary process variation, achieving 16.3 fJ/sample and 168.6 GSa/s/mm^2 efficiency. These results demonstrate a practical, energy-efficient, and risk-aware edge-AI solution for privacy-conscious medical screening.",
-          "authors": [
-            "Steven Davis",
-            "Likai Pei",
-            "Jianbo Liu",
-            "Zephan M. Enciso",
-            "Boyang Cheng",
-            "Xueji Zhao",
-            "Danny Z. Chen",
-            "Ningyuan Cao"
-          ],
-          "url": "http://arxiv.org/abs/2606.07439v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.07439v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-05T16:38:02Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.766430427414022,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
