@@ -1,6 +1,87 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-10",
+      "papers": [
+        {
+          "id": "fa91c867f2c20425",
+          "title": "Multi-Agent Reinforcement Learning for Autonomous UAV Exploration in Wildfire Response",
+          "abstract": "This study develops a deep reinforcement learning framework for training Unmanned Aerial Vehicle (UAV) agents to navigate and monitor simulated wildfire environments. Results show that agents learn increasingly stable and effective behaviors over time, as demonstrated by converging loss trends, improved reward signals, and more consistent navigation patterns such as fire-boundary tracking. Overall, these findings highlight the potential of deep reinforcement learning (DRL) based UAV systems for autonomous wildfire monitoring and suggest that environmental structure and reward design influence policy effectiveness.",
+          "authors": [
+            "Caden Chandra",
+            "Jerry Ng"
+          ],
+          "url": "http://arxiv.org/abs/2609.10433v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.10433v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-09T16:45:19Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.90842522073413,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "9aae7af9d4e1d17f",
+          "title": "OTTER - Two Transistor - One RRAM Architecture for Reliable In-Memory-Computing in 28 nm CMOS Technology",
+          "abstract": "This work presents OTTER, a 28 nm CMOS platform co-integrated with TaOx-based valence-change mechanism (VCM) RRAM, demonstrating a two-transistor-one-memristive-device (2T1R) architecture for reliable in-memory computing. The 2T1R cell combines a low-drive-current (LD) transistor and a high-drive-current (HD) transistor in parallel, providing dedicated bias paths for SET programming and RESET operation, respectively. Through systematic experimental and simulated comparison of various transistor-pairing configurations using the physical compact model JART VCM Rth, design guidelines for transistor sizing are derived, establishing the minimum RESET transistor W/L required for complete RESET as a function of the SET current compliance. The 2T1R cell is further characterized under pulse-based programming, demonstrating multilevel analog conductance tuning with narrow, well separated conductance states across six programmable levels. An analog content-addressable memory (aCAM) design based on the same 2T1R cell is additionally analyzed at the circuit level, evaluating trade-offs between top- and bottom-connected RRAM comparator configurations. A hardware implementation of compute-in-memory (CIM) multiply-and-accumulate (MAC) operations is further demonstrated on a 15 x 15 2T1R crossbar array.",
+          "authors": [
+            "Yang Chen",
+            "Daniele Storelli",
+            "Xinyi Zhao",
+            "Ankit Bende",
+            "Paul-Philipp Manea",
+            "Oliver Artner",
+            "Arun Ashok",
+            "Kay Winterberg",
+            "Godwin Paul",
+            "Siyuan Jia",
+            "Christian Roth",
+            "Sabitha Kusuma",
+            "Michael Schiek",
+            "Vikas Rana",
+            "Dirk Wouters",
+            "Stephan Menzel",
+            "Andre Zambanini",
+            "Christian Grewing",
+            "Stefan Wiefels",
+            "Susanne Hoffmann-Eifert",
+            "John Paul Strachan",
+            "Stefan van Waasen",
+            "Regina Dittmann"
+          ],
+          "url": "http://arxiv.org/abs/2609.08898v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.08898v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-08T15:37:22Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 35.833626113591265,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "9e933965630ff27a",
+          "title": "Deep Learning-Based Detection of Electrical Faults and Power Quality Disturbances in Aerospace Power Systems",
+          "abstract": "More Electric Aircraft require fast and reliable monitoring of high-frequency electrical networks, yet most power quality disturbance and fault diagnosis methods are developed for conventional 50 or 60 Hz grids. This work presents a hardware-aware deep learning framework for multiclass detection of electrical faults and power quality disturbances in a 400 Hz aerospace power system. A high-fidelity simulation model inspired by the Boeing 787 electrical architecture generates voltage and current waveforms for 21 normal, disturbance, switching, open-circuit, and short-circuit conditions. Two datasets, each containing 73,500 samples, are formed from one-dimensional time-series signals and short-time Fourier transform time-frequency representations. Signal-processing augmentation, domain randomization, and class-specific generative adversarial networks increase waveform diversity, and the time-series dataset is released through IEEE DataPort. We compare 1D and 2D convolutional neural networks, long short-term memory networks, CNN-LSTM hybrids, ResNet, MobileNet, and VGG models under common training conditions. A compact ResNet provides the best accuracy-complexity tradeoff, achieving 96.94 percent software test accuracy with 175,685 parameters. After 8-bit quantization and deployment on a Xilinx Zynq UltraScale Plus MPSoC ZCU102, the model achieves 95.87 percent accuracy and a measured mean neural-network accelerator latency of 6.90 ms per input record. The results establish simulation-based, accelerator-level feasibility for embedded edge AI in aircraft electrical health monitoring and motivate future end-to-end data acquisition and experimental validation.",
+          "authors": [
+            "Ian C. Guzmán",
+            "Radu Babiceanu",
+            "Berker Peköz"
+          ],
+          "url": "http://arxiv.org/abs/2609.10479v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.10479v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-09T17:19:14Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.910107595899472,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-09",
       "papers": [
         {
@@ -7578,106 +7659,6 @@
           ],
           "score": 21.892450601851852,
           "reason": "Matches Network Early Exit."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-09",
-      "papers": [
-        {
-          "id": "1f230b06f9fd7a0f",
-          "title": "NeuDW-CIM: a 65-nm 0.8-pJ/Sop Reconfigurable Neuromorphic Compute-in-Memory Macro with Nonlinear Dendrites and K-Winners",
-          "abstract": "This work presents NeuDW-CIM, a highly efficient neuromorphic Compute-in-Memory (CIM) macro for Spiking Neural Networks (SNNs) implemented in 65 nm CMOS. The design introduces a custom twin 9T bit-cell for ternary in-puts/weights and a reconfigurable non-linear In-Memory ADC (IMA). The macro supports two specialized modes: 1) Nonlinear Dendrite (NLD) mode, which utilizes reconfigurable IMA to emulate biological dendritic functions, achieving measured accuracies of 97.2% on N-MNIST and 95.5% on DVS Gesture; and 2) Top-K Winner (KWN) mode, featuring an early-stopping mechanism that reduces IMA conversion latency by 30% and digital LIF latency by 10x. Benefiting from the sparse update in KWN mode, NeuDW-CIM achieves a measured energy efficiency (EE) of 0.8 pJ/SOP (1.6x improvement).",
-          "authors": [
-            "Junyi Yang",
-            "Yahan Yang",
-            "Shuai Dong",
-            "Biyan Zhou",
-            "Ye Ke",
-            "Zhengnan Fu",
-            "Xin Si",
-            "An Guo",
-            "Peng Zhou",
-            "Arindam Basu"
-          ],
-          "url": "http://arxiv.org/abs/2606.08947v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.08947v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-08T02:50:04Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 61.86809578455688,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "5f37f7beba3667ba",
-          "title": "Rethinking the Divergence Regularization in LLM RL",
-          "abstract": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses this mismatch by replacing ratio-based clipping with a divergence-based mask, yielding a trust region defined by the sampled token's absolute probability shift. However, DPPO still relies on a hard mask: once a token crosses the trust-region boundary in a harmful direction, its gradient is discarded rather than corrected. To address this, we propose Divergence Regularized Policy Optimization (DRPO), which replaces the hard mask with a smooth advantage-weighted quadratic regularizer on policy shift. DRPO preserves the same trust-region geometry as DPPO while inducing bounded, continuous gradient weights that attenuate diverging updates and provide corrective signals beyond the boundary. Experiments across model scales, architectures, and precision settings show that DRPO improves the stability and efficiency of LLM RL training.",
-          "authors": [
-            "Jiarui Yao",
-            "Xiangxin Zhou",
-            "Penghui Qi",
-            "Wee Sun Lee",
-            "Liefeng Bo",
-            "Tianyu Pang"
-          ],
-          "url": "http://arxiv.org/abs/2606.09821v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.09821v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-08T17:58:23Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.913151174768515,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "111dfd29480a4bde",
-          "title": "Coupling Complementary Simulations for Combined Performance and Energy Optimization",
-          "abstract": "Polymer simulations are among the most computationally demanding workloads in soft-matter research, often requiring days of execution and high energy consumption to achieve physically meaningful results. In this work, we address these challenges through the coupling and optimization of two complementary simulation frameworks: the Uneyama-Doi Model (UDM) and the SOft coarse-grained Monte Carlo Acceleration (SOMA). UDM efficiently propagates concentration fields at the continuum level, while SOMA resolves chain-scale thermal fluctuations via particle-based Monte Carlo dynamics. Each model was individually optimized for GPU execution using kernel fusion, memory coalescing, asynchronous random-number generation yielding up to 70% (UDM) and 80% (SOMA) performance improvement. The coupling is performed through our proposed coordinator library that orchestrates data exchange and synchronizes time-stepping across multiple GPUs. Further management of coupling workload distribution enabled a 13x overall speedup and 24.5x reduction in total energy usage compared to the SOMA baseline, i. e., 96% energy saving. The proposed hybrid approach maintains the same scientific fidelity while drastically reducing the computational and energy footprint, showcasing the potential of energy-aware, cross-application co-design for sustainable high-performance simulations",
-          "authors": [
-            "Adel Dabah",
-            "Gregor Häfner",
-            "Sonja Happ",
-            "Simon Pickartz",
-            "Marcus Müller",
-            "Andreas Herten"
-          ],
-          "url": "http://arxiv.org/abs/2606.09356v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.09356v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-08T11:31:20Z",
-          "topics": [
-            "dvfs"
-          ],
-          "score": 27.893952266038358,
-          "reason": "Matches DVFS / Energy."
-        },
-        {
-          "id": "8c2e6dc5df87bd81",
-          "title": "Accuracy-Configurable Floating-Point Multiplier Design for SRAM-Based Compute-in-Memory",
-          "abstract": "Digital Compute-in-Memory (DCiM) reduces data movement and has become a promising solution for energy-efficient edge AI. However, most existing DCiM frameworks still primarily target integer or fixed-point arithmetic, and provide limited support for compiler-integrated and accuracy-configurable floating-point computation. Directly integrating conventional IEEE 754 floating-point units into dense SRAM-based DCiM arrays, however, incurs high area and power overhead. To address this challenge, this work presents an accuracy-configurable floating-point multiplier integrated into the OpenACM framework for SRAM-based DCiM. An exact IEEE~754-compliant multiplier is first implemented as a baseline, and a mantissa-segmentation-based approximate multiplier is then proposed to reduce hardware cost while preserving numerical fidelity. Post-layout results show up to 69% logic area reduction and 72% power savings over exact floating-point designs without delay overhead. Evaluations on image processing tasks and ResNet-18 inference further demonstrate negligible accuracy degradation. These results indicate that compiler-integrated approximate floating-point multiplication is a practical approach for enabling efficient and configurable floating-point support in SRAM-based DCiM systems. The Floating-Point Multiplier is available on https://github.com/ShenShan123/OpenACM",
-          "authors": [
-            "Yiqi Zhou",
-            "Junhao Lu",
-            "Jiale Yu",
-            "Zhuo Xu",
-            "Yang He",
-            "Yue Yuan",
-            "Shan Shen",
-            "Daying Sun"
-          ],
-          "url": "http://arxiv.org/abs/2606.08430v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.08430v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-07T03:12:13Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.797765923445766,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
