@@ -1,6 +1,79 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-12",
+      "papers": [
+        {
+          "id": "a91b11877c8bdb74",
+          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
+          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-09-12T23:31:56.001Z",
+          "topics": [
+            "neurosim",
+            "snn"
+          ],
+          "score": 77.99999999917328,
+          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+        },
+        {
+          "id": "585033af01ae5ba1",
+          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
+          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-09-12T23:31:56.001Z",
+          "topics": [
+            "snn",
+            "tta"
+          ],
+          "score": 69.99999999917328,
+          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
+        },
+        {
+          "id": "3e626f846991f87f",
+          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
+          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-09-12T23:31:56.001Z",
+          "topics": [
+            "early_exit",
+            "dvfs"
+          ],
+          "score": 69.99999999917328,
+          "reason": "Matches Network Early Exit, DVFS / Energy."
+        },
+        {
+          "id": "729df0c5b1b17049",
+          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
+          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
+          "authors": [
+            "Seed Candidate"
+          ],
+          "url": "https://arxiv.org",
+          "source": "Seed",
+          "publishedAt": "2026-09-12T23:31:56.001Z",
+          "topics": [
+            "rl",
+            "dvfs"
+          ],
+          "score": 53.99999999917328,
+          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+        }
+      ]
+    },
+    {
       "date": "2026-09-11",
       "papers": [
         {
@@ -7602,54 +7675,6 @@
           ],
           "score": 21.891863782242062,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-11",
-      "papers": [
-        {
-          "id": "7a543a93ad9fb995",
-          "title": "APPO: Agentic Procedural Policy Optimization",
-          "abstract": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: \\textit{where to branch and how to assign credit after branching}. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose \\textbf{Agentic Procedural Policy Optimization (APPO)}, which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.",
-          "authors": [
-            "Xucong Wang",
-            "Ziyu Ma",
-            "Yong Wang",
-            "Yuxiang Ji",
-            "Shidong Yang",
-            "Guanhua Chen",
-            "Pengkun Wang",
-            "Xiangxiang Chu"
-          ],
-          "url": "http://arxiv.org/abs/2606.12384v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.12384v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-10T17:47:07Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.91239251157407,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "e9216f629628739a",
-          "title": "Echoes of the Prior: A Computational Phenomenology of Forgetting",
-          "abstract": "Memory is not merely the storage of data; it is the scaffolding of reality. When biological memory fades, the world does not simply turn black; it regresses into an unrecognizable chaos. Echoes of the Prior is an interactive installation that attempts to visualize this subjective phenomenology of forgetting. By inducing controlled synaptic decay within a Feed-Forward 3D Reconstruction model, we create an artistic analogy for the erosion of the brain's predictive priors. We position the Neural Network not as a tool for engineering, but as a cognitive proxy - a silicon brain whose structural degeneration evokes the disorienting, poetic, and terrifying experience of losing one's grip on the world. Ultimately, we offer this framework as a catalyst, inviting the wider community to explore the uncharted potential of neuromorphic aesthetics in visualizing the fragility of intelligence. Interactive demo see https://decart-4d.github.io/.",
-          "authors": [
-            "Gege Gao",
-            "Bernhard Schölkopf",
-            "Andreas Geiger"
-          ],
-          "url": "http://arxiv.org/abs/2606.12340v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.12340v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-10T17:10:04Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.910554714781746,
-          "reason": "Matches SNN / Neuromorphic."
         }
       ]
     }
