@@ -4,72 +4,48 @@
       "date": "2026-09-15",
       "papers": [
         {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "id": "952bf9ae6f9e2f1b",
+          "title": "Bellman Policy Optimization",
+          "abstract": "Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models (LLMs). We introduce Bellman Policy Optimization (BPO), a critic-free method derived from Policy Mirror Descent (PMD). For autoregressive generation with terminal rewards, BPO uses the Bellman equations to reformulate PMD as a trajectory-level objective. The reformulation avoids estimating state values at intermediate states. We prove that it has the same unique optimal solution as the original PMD objective. We derive the practical BPO loss by approximating this objective. Its mismatch-correction weight is a smoothed ratio of complementary token probabilities. Experiments on mathematical reasoning benchmarks demonstrate the effectiveness of BPO.",
           "authors": [
-            "Seed Candidate"
+            "Zhuoqing Song",
+            "Haotian Xu",
+            "Xikun Zhang",
+            "Lidong Bing"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-09-15T00:03:57.442Z",
+          "url": "http://arxiv.org/abs/2609.15987v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.15987v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-14T17:59:47Z",
           "topics": [
-            "neurosim",
-            "snn"
+            "rl"
           ],
-          "score": 77.99999999917328,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+          "score": 35.91126851025132,
+          "reason": "Matches Reinforcement Learning."
         },
         {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "id": "2638f9297a93b0aa",
+          "title": "A self-compliant selector-free memory with functional bismuth ferrite",
+          "abstract": "In-memory computing requires selector-free operation, low variability, and stable multilevel switching, all of which remain challenging to achieve in a single system. Here, we demonstrate a robust selector-free memory based on a multiferroic BiFeO3 that combines self-compliance with stable bipolar switching, high yield, long endurance, and extended retention. We observe that BiFeO3 memristive crossbar arrays become self-compliant through a naturally formed TiOx interfacial layer, enabling forming-free bipolar switching without external selector devices, addressing major bottlenecks that have limited the practical deployment of resistive memories. The array delivers stable bipolar switching with a 97% device yield, endurance beyond 105 cycles, and data retention exceeding 105 s with low cycle-to-cycle and device-to-device variability. In addition, the devices exhibit 16 well-separated conductance states, enabling 4-bit multilevel operation via precise pulse-controlled programming for digit visualization in edge applications. Noise measurements reveal predominantly 1/f-type behavior with minimal random telegraph noise, indicating robust conductance stability across the programmable window. These results establish BiFeO3 as a practical materials platform for multibit, selector-free crossbar memories offering high reliability, making it well-suited for scalable computing architectures based on functional materials.",
           "authors": [
-            "Seed Candidate"
+            "Suman Roy",
+            "Subhabrata Das",
+            "Priyanka Sahu",
+            "Majid Ahmadi",
+            "Sameer Kumar Mallik",
+            "Kaushik Ghosh",
+            "Saroj Prasad Dash",
+            "Satyaprakash Sahoo"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-09-15T00:03:57.442Z",
+          "url": "http://arxiv.org/abs/2609.15732v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.15732v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-14T15:26:46Z",
           "topics": [
-            "snn",
-            "tta"
+            "neurosim"
           ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-09-15T00:03:57.442Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-09-15T00:03:57.442Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999917328,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+          "score": 27.903678397817462,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     },
