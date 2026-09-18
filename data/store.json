@@ -1,6 +1,84 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-18",
+      "papers": [
+        {
+          "id": "43263036e56bc8fe",
+          "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+          "abstract": "Reinforcement learning (RL) of large language models is notoriously sensitive to small differences between training and inference engines, often referred to as the training-inference mismatch (TIM). However, completely eliminating TIM is impractical, as it would come at a major cost to rollout efficiency. In this paper, we show that the instability of RL under TIM is primarily caused by drift: a persistent bias between training and inference engines that accumulates with every training step. We derive an additive \"score centering\" correction term that stabilizes RL under TIM by canceling drift. When training models from 0.6B to 30B parameters, score centering alone matches or outperforms methods based on importance sampling under quantization, with the gap growing as the mismatch becomes more severe. Because the correction is additive, score centering also composes with importance sampling -- their composition outperforms pure importance-sampling baselines in our staleness experiments.",
+          "authors": [
+            "Martin Marek",
+            "Max Ryabinin"
+          ],
+          "url": "http://arxiv.org/abs/2609.20807v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.20807v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-17T17:58:17Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.911436145006615,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "06fb770e2f938e32",
+          "title": "Should This Case Be Adapted? Prediction Fragmentation Controls Test-Time Adaptation",
+          "abstract": "Episodic test-time adaptation resets a frozen segmenter to source weights $M_0$ on each case and adapts for a fixed step count. A fixed horizon conflates a cohort-level question, how far to adapt, with an irreducibly per-case one, whether this case should be adapted at all. Cohort means hide that decision: on cross-vendor cardiac MRI the mean $Δ$Dice from adaptation is statistically indistinguishable from zero while 58.7% of cases are individually made worse. We quantify this harm as harmful accepted area (HA), the harmful fraction of the edited area a controller deploys. Held-out tuning gives a stronger baseline than a fixed horizon, but the budget it selects transfers on neither of the two main medical benchmarks, and no global budget can condition on the case. We show that prediction fragmentation---the disagreement geometry between $M_0$ and the adapted mask $M_k$---predicts HA with no labels or extra backward passes at decision time, comparably on three benchmarks (Spearman $ρ$ 0.50--0.60), at a quarter of gradient-norm's latency. A case-level router built on it cuts HA from 0.228 to 0.139 on a benchmark that took no part in its design, with the design frozen and only cut-points recalibrated there. On the cardiac benchmark the design was selected on, the router cuts HA from 0.129 to 0.013 at matched Dice and 1.10 deployed updates, against the retrospective-best budget found post hoc on evaluation labels, and reduces that 58.7% to 20.0%, an upper bound we quantify. Where the retained cases are not net-helped (as on prostate), the router still cuts HA but concedes accuracy, a boundary we report. Thresholds are fit once on a labeled split disjoint from evaluation; decisions use no labels or gradients. The template ports across architecture and domain (nnU-Net$\\to$SegFormer, Cityscapes$\\to$ACDC) with coordinate, thresholds and per-bucket actions instantiated per domain.",
+          "authors": [
+            "Lili Wang",
+            "Jing Li",
+            "Xiaowen Sun",
+            "Xiangyu Hu",
+            "Zhuangzhuang Gu",
+            "Jian Liu",
+            "Srihari Nelakuditi",
+            "Yan Tong"
+          ],
+          "url": "http://arxiv.org/abs/2609.20700v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.20700v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-17T17:02:53Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.908688129133598,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "4c76b3d86d2b24e5",
+          "title": "From Models to Systems: A Comprehensive Survey of Efficient Multimodal Learning",
+          "abstract": "The rapid expansion of multimodal models has surfaced formidable bottlenecks in computation, memory, and deployment, catalyzing the rise of Efficient Multimodal Learning (EML) as a pivotal research frontier. Despite intensive progress, a cohesive understanding of what, how, and where efficiency is manifested across the learning stack remains fragmented. This survey systematizes the EML landscape by introducing the first structured, model-to-system taxonomy. We distill insights from over 300 seminal works into three hierarchical levels--model, algorithm, and system--addressing architectural parsimony, execution refinement, and hardware-aware orchestration, respectively. Moving beyond a purely categorical review, we offer a methodological synthesis of the vertical synergies between these layers, elucidating how cross-layer co-design contributes to the fundamental \"Efficiency-Utility-Privacy\" trade-off. Through an integrative case study of Multimodal Large Language Models (MLLMs), we trace the field's evolutionary trajectory from initial structural adjustments to modern full-stack resource orchestration. Furthermore, we provide a holistic discussion and application-specific optimization blueprints for diverse domains and posit a paradigm shift toward self-regulating intelligence, where efficiency is an intrinsic, emergent property of the model's fundamental design rather than a post-hoc constraint. Finally, we present open challenges and future directions that will define the trajectory of EML research. This survey establishes a structured framework for multimodal systems that are not only high-performing and generalizable but natively efficient and ready for ubiquitous deployment. A continuously updated version is available at https://github.com/pwang322/Efficient-Multimodal-Learning-Survey.",
+          "authors": [
+            "Pan Wang",
+            "Siwei Song",
+            "Hui Ji",
+            "Siqi Cao",
+            "Heng Yu",
+            "Zhijian Liu",
+            "Huanrui Yang",
+            "Yingyan Celine Lin",
+            "Beidi Chen",
+            "Mohit Bansal",
+            "Xiaoming Liu",
+            "Pengfei Zhou",
+            "Ming-Hsuan Yang",
+            "Tianlong Chen",
+            "Jingtong Hu"
+          ],
+          "url": "http://arxiv.org/abs/2609.19445v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.19445v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-16T21:27:22Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 21.85037876984127,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-17",
       "papers": [
         {
@@ -7530,70 +7608,6 @@
           ],
           "score": 35.869733321759256,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-16",
-      "papers": [
-        {
-          "id": "3fc028c07ccd7f34",
-          "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting",
-          "abstract": "Neural dynamical systems are expressive temporal predictors that capture continuous-time dynamics through fine-grained state updates. However, this sequential structure maps poorly onto digital hardware optimized for dense matrix operations, a mismatch that analog neuromorphic computing, with its native continuous-time dynamics, can resolve. We introduce FerroNDS, a neuromorphic system built from two analog primitives: an integrator for temporal accumulation and an oscillator for frequency-selective filtering. We map this system onto compute-in-memory hardware based on multi-bit ferrodiodes. A 128-neuron instance of FerroNDS computes short-time Fourier transform and forecasts a 500-ms horizon for periodic, quasi-periodic, and chaotic signals. The system achieves sub-watt real-time operation with per-neuron per-inference energy of 1.64 $μ$J (200 Hz) and 0.29 $μ$J (10 kHz), 25-40$\\times$ area reduction over SRAM-based digital systems, and per-layer latency of 3.18 ms (200 Hz) and 63.87 $μ$s (10 kHz). To our knowledge, this is the first end-to-end integration of a ferrodiode into a neuromorphic computational framework, establishing ferroelectric compute-in-memory as a practical substrate for analog neural dynamical systems.",
-          "authors": [
-            "Keshava Katti",
-            "Adithya Selvakumar",
-            "Pratik Chaudhari",
-            "Deep Jariwala"
-          ],
-          "url": "http://arxiv.org/abs/2606.16896v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.16896v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-15T16:07:05Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 45.907233058035715,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "d9b4062c1a42a916",
-          "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
-          "abstract": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
-          "authors": [
-            "Nick Jiang",
-            "Isaac Kauvar",
-            "Jack Lindsey"
-          ],
-          "url": "http://arxiv.org/abs/2606.17056v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.17056v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-15T17:59:58Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.912832429728837,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "128e2bec7cc57d63",
-          "title": "Data-Driven Personalization of Automated Insulin Delivery",
-          "abstract": "Automated insulin delivery (AID) systems are often tuned for the population and offer limited online adaptation to the inter- and intrapatient variability in insulin needs caused by meal patterns, physical activity, and fluctuations in insulin sensitivity. We present a real-time, data-driven personalization approach that adapts controller parameters using the subject's daily glycemic data. The adaptation is formulated as projected gradient descent on a daily risk metric, where the gradient estimation is designed to attenuate noise and metabolic variability. We use contraction theory to validate the optimization framework and convergence of the closed-loop system under adaptation. In silico experiments on the 100-adult cohort of the FDA-accepted UVA/Padova T1D simulator show that our method improves glycemic risk and increases time-in-range (TIR, 70-180\\,mg/dL) by 2%, 3%, and 4% after 4, 8, and 17 weeks, respectively, under variability in meal timing, meal size, and insulin sensitivity.",
-          "authors": [
-            "Ali Kashani",
-            "Ali Tavasoli",
-            "Heman Shakeri"
-          ],
-          "url": "http://arxiv.org/abs/2606.17004v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.17004v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-15T17:38:38Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.911774228670634,
-          "reason": "Matches Test-Time Adaptation."
         }
       ]
     }
