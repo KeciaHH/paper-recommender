@@ -1,6 +1,84 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-20",
+      "papers": [
+        {
+          "id": "43263036e56bc8fe",
+          "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+          "abstract": "Reinforcement learning (RL) of large language models is notoriously sensitive to small differences between training and inference engines, often referred to as the training-inference mismatch (TIM). However, completely eliminating TIM is impractical, as it would come at a major cost to rollout efficiency. In this paper, we show that the instability of RL under TIM is primarily caused by drift: a persistent bias between training and inference engines that accumulates with every training step. We derive an additive \"score centering\" correction term that stabilizes RL under TIM by canceling drift. When training models from 0.6B to 30B parameters, score centering alone matches or outperforms methods based on importance sampling under quantization, with the gap growing as the mismatch becomes more severe. Because the correction is additive, score centering also composes with importance sampling -- their composition outperforms pure importance-sampling baselines in our staleness experiments.",
+          "authors": [
+            "Martin Marek",
+            "Max Ryabinin"
+          ],
+          "url": "http://arxiv.org/abs/2609.20807v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.20807v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-17T17:58:17Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.76873859044312,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "06fb770e2f938e32",
+          "title": "Should This Case Be Adapted? Prediction Fragmentation Controls Test-Time Adaptation",
+          "abstract": "Episodic test-time adaptation resets a frozen segmenter to source weights $M_0$ on each case and adapts for a fixed step count. A fixed horizon conflates a cohort-level question, how far to adapt, with an irreducibly per-case one, whether this case should be adapted at all. Cohort means hide that decision: on cross-vendor cardiac MRI the mean $Δ$Dice from adaptation is statistically indistinguishable from zero while 58.7% of cases are individually made worse. We quantify this harm as harmful accepted area (HA), the harmful fraction of the edited area a controller deploys. Held-out tuning gives a stronger baseline than a fixed horizon, but the budget it selects transfers on neither of the two main medical benchmarks, and no global budget can condition on the case. We show that prediction fragmentation---the disagreement geometry between $M_0$ and the adapted mask $M_k$---predicts HA with no labels or extra backward passes at decision time, comparably on three benchmarks (Spearman $ρ$ 0.50--0.60), at a quarter of gradient-norm's latency. A case-level router built on it cuts HA from 0.228 to 0.139 on a benchmark that took no part in its design, with the design frozen and only cut-points recalibrated there. On the cardiac benchmark the design was selected on, the router cuts HA from 0.129 to 0.013 at matched Dice and 1.10 deployed updates, against the retrospective-best budget found post hoc on evaluation labels, and reduces that 58.7% to 20.0%, an upper bound we quantify. Where the retained cases are not net-helped (as on prostate), the router still cuts HA but concedes accuracy, a boundary we report. Thresholds are fit once on a labeled split disjoint from evaluation; decisions use no labels or gradients. The template ports across architecture and domain (nnU-Net$\\to$SegFormer, Cityscapes$\\to$ACDC) with coordinate, thresholds and per-bucket actions instantiated per domain.",
+          "authors": [
+            "Lili Wang",
+            "Jing Li",
+            "Xiaowen Sun",
+            "Xiangyu Hu",
+            "Zhuangzhuang Gu",
+            "Jian Liu",
+            "Srihari Nelakuditi",
+            "Yan Tong"
+          ],
+          "url": "http://arxiv.org/abs/2609.20700v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.20700v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-17T17:02:53Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.765990574570107,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "4c76b3d86d2b24e5",
+          "title": "From Models to Systems: A Comprehensive Survey of Efficient Multimodal Learning",
+          "abstract": "The rapid expansion of multimodal models has surfaced formidable bottlenecks in computation, memory, and deployment, catalyzing the rise of Efficient Multimodal Learning (EML) as a pivotal research frontier. Despite intensive progress, a cohesive understanding of what, how, and where efficiency is manifested across the learning stack remains fragmented. This survey systematizes the EML landscape by introducing the first structured, model-to-system taxonomy. We distill insights from over 300 seminal works into three hierarchical levels--model, algorithm, and system--addressing architectural parsimony, execution refinement, and hardware-aware orchestration, respectively. Moving beyond a purely categorical review, we offer a methodological synthesis of the vertical synergies between these layers, elucidating how cross-layer co-design contributes to the fundamental \"Efficiency-Utility-Privacy\" trade-off. Through an integrative case study of Multimodal Large Language Models (MLLMs), we trace the field's evolutionary trajectory from initial structural adjustments to modern full-stack resource orchestration. Furthermore, we provide a holistic discussion and application-specific optimization blueprints for diverse domains and posit a paradigm shift toward self-regulating intelligence, where efficiency is an intrinsic, emergent property of the model's fundamental design rather than a post-hoc constraint. Finally, we present open challenges and future directions that will define the trajectory of EML research. This survey establishes a structured framework for multimodal systems that are not only high-performing and generalizable but natively efficient and ready for ubiquitous deployment. A continuously updated version is available at https://github.com/pwang322/Efficient-Multimodal-Learning-Survey.",
+          "authors": [
+            "Pan Wang",
+            "Siwei Song",
+            "Hui Ji",
+            "Siqi Cao",
+            "Heng Yu",
+            "Zhijian Liu",
+            "Huanrui Yang",
+            "Yingyan Celine Lin",
+            "Beidi Chen",
+            "Mohit Bansal",
+            "Xiaoming Liu",
+            "Pengfei Zhou",
+            "Ming-Hsuan Yang",
+            "Tianlong Chen",
+            "Jingtong Hu"
+          ],
+          "url": "http://arxiv.org/abs/2609.19445v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.19445v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-16T21:27:22Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 21.707681216104497,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-19",
       "papers": [
         {
@@ -7581,38 +7659,6 @@
           ],
           "score": 27.911974441964286,
           "reason": "Matches Reinforcement Learning."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-18",
-      "papers": [
-        {
-          "id": "818c40aff69660b5",
-          "title": "EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts",
-          "abstract": "Reinforcement learning (RL) has become a representative post-training paradigm for LLMs, enabling strong reasoning and agentic capabilities. However, rollout generation remains a dominant latency bottleneck because autoregressive sampling decodes responses sequentially and a small number of long-tailed generations often determine completion time. Speculative decoding (SD) offers a natural way to address this bottleneck, as it is a well-established technique for serving fixed LLMs that reduces latency by rapidly drafting tokens and accepting them through parallel verification while preserving the target-model distribution. However, its practical speedups do not directly carry over to RL rollouts: (i) the evolving target policy makes any fixed drafter increasingly mismatched with the policy's output distribution; and (ii) active batch sizes shrink throughout rollout decoding, shifting decoding from compute-bound to memory-bound regimes where parallel verification can exploit underutilized compute. Therefore, accelerating RL rollouts requires both a drafter that remains effective under long, high-temperature generations from an evolving policy and system-aware use of SD that avoids compute-bound regimes. We present EfficientRollout, a system-aware self-SD framework designed to address this gap for RL rollouts. EfficientRollout induces a quantized drafter from the target model (i.e. self-speculative decoding), keeping it coupled to the evolving policy without separate drafter pretraining or online adaptation. It further coordinates a system-aware SD toggle policy with acceptance-aware draft-length adaptation, enabling speculation only in beneficial regimes while matching the drafting budget to evolving drafter quality. EfficientRollout reduces rollout and end-to-end latency by up to 19.6% and 12.7%, respectively, over an accelerated AR rollout baseline, while preserving final model quality.",
-          "authors": [
-            "Minseo Kim",
-            "Minjae Lee",
-            "Seunghyuk Oh",
-            "Kevin Galim",
-            "Donghoon Kim",
-            "Coleman Hooper",
-            "Harman Singh",
-            "Amir Gholami",
-            "Hyung Il Koo",
-            "Wonjun Kang"
-          ],
-          "url": "http://arxiv.org/abs/2606.18967v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.18967v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-17T11:51:06Z",
-          "topics": [
-            "tta",
-            "rl"
-          ],
-          "score": 45.89399967344576,
-          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
         }
       ]
     }
