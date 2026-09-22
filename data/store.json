@@ -4,74 +4,31 @@
       "date": "2026-09-22",
       "papers": [
         {
-          "id": "e113f8c4fb85bdd3",
-          "title": "Design Space Exploration of In-Memory Computing Implementations for Discrete Fourier Transform",
-          "abstract": "Although memristor-based in-memory computing (IMC) has been widely investigated for brain-inspired neuromorphic workloads, systematic evaluations of its energy, latency, and signal-to-noise ratio (SNR) trade-offs across diverse system parameters remain scarce for classical digital signal processing (DSP). To address this gap, this paper introduces a comprehensive hardware-aware design framework for systematically mapping algorithmic workloads onto IMC architectures, using the discrete Fourier transform (DFT) as a case study. Tailored to the stringent performance requirements of a DFT accelerator for 5G orthogonal frequency-division multiplexing (OFDM) systems, we propose a novel mapping scheme that reduces energy consumption per computation by 53% compared with conventional mapping techniques. Additionally, we present a comparative study of resistive random-access memory (RRAM) and ferroelectric tunnel junction (FTJ) technologies with identical numbers of programmable states but distinct conductance ranges, demonstrating the importance of device-informed architectural co-design. By bridging the gap between emerging IMC architectures and rigid DSP constraints, this work provides a pathway toward energy-efficient edge accelerators for future wireless communication systems.",
+          "id": "13336d8cca4ee0b6",
+          "title": "VideoGen-Agent: Reinforcing Video Generation Agents",
+          "abstract": "Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its base text-to-video generator by 19.1 points, from 56.5 to 75.6. Upgrading the generation tools further raises the score to 86.1 without additional agent training. Human raters prefer the upgraded configuration over the strongest standalone baseline in 84.3% of comparisons. These results support learning tool use across video-generation tasks and show that the trained agent can benefit from subsequent advances in generation tools.",
           "authors": [
-            "Sofia Tatidis",
-            "Philip Nielsen",
-            "Liang Liu",
-            "Mojtaba Mahdavi"
+            "Binxu Li",
+            "Haoyi Duan",
+            "Yuhui Zhang",
+            "Yaohui Zhang",
+            "Zihao Lin",
+            "Kaituo Feng",
+            "Suozhi Huang",
+            "Xiangyi Li",
+            "Yu Li",
+            "Chunyuan Li",
+            "Shilong Liu",
+            "Mengdi Wang"
           ],
-          "url": "http://arxiv.org/abs/2609.21537v1",
-          "pdfUrl": "http://arxiv.org/pdf/2609.21537v1",
+          "url": "http://arxiv.org/abs/2609.24997v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.24997v1",
           "source": "arXiv",
-          "publishedAt": "2026-09-18T09:29:11Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 53.74147215856482,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "0c6356c9f359c7df",
-          "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
-          "abstract": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external procedural memory of natural-language skills accumulates and refines reusable design procedures from experience. The memory widens by acquiring procedures for recurring uncovered subtasks and deepens by revising existing procedures against their own successful and failed executions, while a matched replay gate admits only changes that repair failures without regressing observed successes. Five rounds over 1,406 real user briefs and 1,869 automatically graded trajectories, with no weight updates and no human labels, grow the bank from 76 documentation-derived skills to 139 and raise GenEval2 execution success on Claude-Sonnet-4 from 72.7% to 99.3% (+11.99 points in generation quality), with 61.8% and 67.6% win rates against the no-skill agent across four specialized design benchmarks on Claude-Sonnet-4 and Claude-Opus-4.6. We further show the two mechanisms are effective in combination: on 200 held-out briefs from user-traffic benchmark, widening or deepening alone reaches a 49.4% / 48.6% win rate over the no-skill agent, while their combination reaches 58.5% (p = 0.025). Procedural memory offers a practical route to continual adaptation of agents under noisy, unverifiable feedback.",
-          "authors": [
-            "Hongyang Du",
-            "Lan Yan",
-            "Christian Flores",
-            "Asim Kadav"
-          ],
-          "url": "http://arxiv.org/abs/2609.22086v1",
-          "pdfUrl": "http://arxiv.org/pdf/2609.22086v1",
-          "source": "arXiv",
-          "publishedAt": "2026-09-18T17:59:56Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.766806980820107,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "d311a24ee5557c80",
-          "title": "MintAct: A Unified Visual Agent for Digital Environments",
-          "abstract": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
-          "authors": [
-            "Mingfei Gao",
-            "Rui Tian",
-            "Haiming Gang",
-            "Bohan Zhai",
-            "Le Zhang",
-            "Yuanzheng Gong",
-            "Di Feng",
-            "Ege Özsoy",
-            "Kaixin Ma",
-            "Vishwesh Kirthivasan",
-            "Oğuzhan Fatih Kar",
-            "Roman Bachmann",
-            "Anders Boesen Lindbo Larsen",
-            "Afshin Dehghan"
-          ],
-          "url": "http://arxiv.org/abs/2609.22083v1",
-          "pdfUrl": "http://arxiv.org/pdf/2609.22083v1",
-          "source": "arXiv",
-          "publishedAt": "2026-09-18T17:59:34Z",
+          "publishedAt": "2026-09-21T17:58:56Z",
           "topics": [
             "rl"
           ],
-          "score": 27.7667887921627,
+          "score": 27.910937909226192,
           "reason": "Matches Reinforcement Learning."
         }
       ]
