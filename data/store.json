@@ -1,6 +1,49 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-24",
+      "papers": [
+        {
+          "id": "4b297461dc13588f",
+          "title": "TM-APR: Thermal Temporal-Memory Localization via Analytic Online Adaptation",
+          "abstract": "Thermal Visual Place Recognition (Thermal VPR) maps camera observations to metric poses within a mapped environment, serving as a prerequisite for autonomous navigation. However, thermal VPR suffers from severe environmental dependence, heavy online retraining overheads, and an inability to model dynamic non-linear shifts, causing existing frameworks to fail during online deployment. To achieve robust domain-invariant place recognition, we bridge Analytic Class-Incremental Learning (ACIL) with domain-invariant VPR for the first time, revealing that its gradient-free matrix updates construct a surprisingly strong baseline that outperforms conventional fine-tuning. Nevertheless, standard ACIL exhibits a critical vulnerability to extreme non-linear thermal fluctuations due to its structural linear assumptions. To overcome this limitation, we exploit a novel algebraic equivalence between ACIL and modern control theory, proposing a framework which embeds Unscented propagation (U-ACIL), Gaussian Mixture partitioning (GMM-ACIL), and minimax $H_\\infty$ optimization ($H_\\infty$-ACIL) directly into the update loop. Our formulation guarantees exact closed-form matrix updates within $\\mathcal{O}(1)$ computational complexity, bypassing backpropagation to ensure that the online update latency ($Δt_{\\mathrm{learn}}$) remains strictly bounded below the sensor acquisition interval ($Δt_{\\mathrm{acquire}}$), thereby eliminating trajectory jumps in real-time SLAM pipelines.",
+          "authors": [
+            "Yanshuo Bai",
+            "Kanji Tanaka"
+          ],
+          "url": "http://arxiv.org/abs/2609.26766v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.26766v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-22T17:46:31Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.909751319444446,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "92eab865562f27ba",
+          "title": "Optimal Sequential Annotations for Off-Policy Evaluation",
+          "abstract": "Offline reinforcement learning and off-policy evaluation evaluates dynamic treatment rules based on retrospectively collected data prior to deployment. In recent AI applications, state and reward information is recorded as complex text or image, which recent AI advancements such as LLM-as-a-judge can label with unknown bias. Expert annotation may be available but at a higher cost. For example, safety classification via cheap but imperfect classifiers vs. expensive expert review. We show how a limited budget for ground-truth data-annotation can be used via doubly-robust OPE with missing rewards, and we optimize variance-optimal annotation probabilities for sequential off-policy evaluation, where the target policy value is estimated from annotated data. We characterize the optimal annotation probabilities for sequential forward-monotone annotation protocols, and provide a feasible batch-adaptive implementation. Our work is motivated by a collaboration with a homelessness services nonprofit that writes casenotes for individuals over time. Our method can be used to unlock trustworthy inference from casenote data and answer new inferential questions such as: how does expanding outreach effort over time affect progress towards a housing application and improvement in housing placement? In simulations and on two real datasets - casenotes from the nonprofit and human-preference votes from LMArena - we see reductions in RMSE of 34-65% for housing placement and 17-68% for progress towards a housing application at budgets of 40% of full annotation and above, and by 55-62% at every budget on LMArena.",
+          "authors": [
+            "Woojin Chae",
+            "Ezinne Nwankwo",
+            "Haitong Qin",
+            "Angela Zhou"
+          ],
+          "url": "http://arxiv.org/abs/2609.26707v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.26707v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-22T17:00:22Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.90746213293651,
+          "reason": "Matches Reinforcement Learning."
+        }
+      ]
+    },
+    {
       "date": "2026-09-22",
       "papers": [
         {
@@ -7643,30 +7686,6 @@
             "rl"
           ],
           "score": 27.768300329861113,
-          "reason": "Matches Reinforcement Learning."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-20",
-      "papers": [
-        {
-          "id": "b41ed36804957d17",
-          "title": "Fast Human Attention Prediction for Fixation-guided Active Perception in Autonomous Navigation",
-          "abstract": "Human visual attention relies on structured scanpaths to efficiently process scenes, yet instilling this behavior into robot autonomy is in its infancy and hindered by the high,computational costs of existing predictive models. To address this, we introduce GazeLNN, a computationally lightweight,scanpath prediction model that leverages Liquid Neural Networks as its recurrent engine and employs MobileNetV3 for feature extraction. Operating auto-regressively, the architecture predicts sequential fixation heatmaps conditioned on the current visual stimulus and fixation history. Despite requiring only 0.61 GFLOPs, GazeLNN achieves state-of-the-art performance on the MIT Low Resolution dataset achieving 0.47 ScanMatch score. It outperforms existing recurrent baselines across diverse evaluation metrics, while reducing computational costs by 99.40% and accelerating inference by up to six times. To investigate the role of human attention modeling in robot autonomy and demonstrate the practical utility of this highly efficient architecture, we integrate GazeLNN into an active camera-robot control policy trained via Reinforcement Learning. This integration enables human-fixation-guided perception during autonomous navigation, validated through successful real-world deployments on an aerial robot.",
-          "authors": [
-            "Fatma Youssef Mohammed",
-            "Grzegorz Malczyk",
-            "Kostas Alexis"
-          ],
-          "url": "http://arxiv.org/abs/2606.20491v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.20491v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-18T17:08:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.839805667989417,
           "reason": "Matches Reinforcement Learning."
         }
       ]
