@@ -1,6 +1,89 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-26",
+      "papers": [
+        {
+          "id": "b09854e22c2c0d5b",
+          "title": "T-Backdoor: Exploiting Temporal Redundancy in Neuromorphic Data for Spike-preserving Backdoor Attacks on SNNs",
+          "abstract": "Backdoor attacks are a serious security threat to deep neural networks (DNNs) and remain largely underexplored for spiking neural networks (SNNs). Existing attacks primarily introduce spatiotemporal triggers that induce deviations in the spike distribution of poisoned samples relative to their clean counterparts. To address this limitation, this work proposes a novel backdoor attack on SNNs, termed \\textbf{T-Backdoor}, which operates using purely temporal triggers such as \\textit{Rate}, \\textit{Latency}, and \\textit{Jitter} without introducing any spatial perturbation, making the shift in spike distributions significantly harder to detect. Through extensive experiments on three benchmark neuromorphic datasets: N-MNIST, CIFAR10-DVS, and N-Caltech101, and evaluation against seven baseline backdoor defense methods, we demonstrate that T-Backdoor achieves a near-perfect 100\\% attack success rate (ASR) in both single target and multi target settings with only minor degradation in clean accuracy, while remaining robust against existing backdoor detection and mitigation techniques. The codes are available at https://github.com/SiSL-URI/T-Backdoor .",
+          "authors": [
+            "Abdullah Arafat Miah",
+            "Kevin Vu",
+            "Yu Bi"
+          ],
+          "url": "http://arxiv.org/abs/2609.30119v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.30119v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-24T16:56:40Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.90687739996693,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "9a613a36a118a940",
+          "title": "Graph-Based Inference and Topology-Aware Multi-Agent Reinforcement Learning for Large-Scale Railway Network Management",
+          "abstract": "Modern infrastructure asset management constitutes a complex sequential decision-making problem, characterized by long planning horizons and system-level interactions, such as spatial deterioration correlations and economies of scale. While deep reinforcement learning has shown promise in optimizing maintenance policies, scaling to real-world networks remains challenging. Centralized approaches become computationally intractable in large-scale systems, whereas decentralized approaches often fail to capture essential coordination mechanisms. To address these challenges, we propose a graph-based framework that integrates accurate environment modeling with scalable decision support. First, we employ a hierarchical Bayesian model leveraging a Gaussian Process on Graph kernel to infer a realistic, spatially correlated networked environment of railway maintenance planning from real-world data provided by the Swiss Federal Railways. Second, we introduce a topology-aware Multi-Agent Reinforcement Learning (MARL) framework by integrating graph neural networks and graph Transformers to optimize network-level policies. A central contribution of this work is the demonstration of scalability through zero-shot transfer learning: graph-based agents, trained only on small network portions, are successfully deployed in a zero-shot manner on large-scale unseen networks without any retraining. Numerical results indicate that the proposed method significantly outperforms optimized heuristics and standard MARL baselines, reducing computational training time while maintaining superior performance on large-scale networks.",
+          "authors": [
+            "Giacomo Arcieri",
+            "Gregory Duthé",
+            "Christophe Muller",
+            "Konstantinos G. Papakonstantinou",
+            "Daniel Straub",
+            "Eleni Chatzi"
+          ],
+          "url": "http://arxiv.org/abs/2609.30150v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.30150v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-24T17:12:39Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.90767022486773,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "4642733fe701ef38",
+          "title": "Online Task Adaptation via Self-Organisation",
+          "abstract": "Neural networks are typically adapted by computing gradients and updating model parameters. We investigate whether task-specific adaptation can instead emerge from a meta-learned self-organising process that requires no gradients at adaptation time. We instantiate this idea with a Neural Cellular Automaton in which locally interacting recurrent cells maintain both a recurrent state and a fast associative memory. During meta-training, backpropagation is used to learn the recurrent dynamics together with how the memory is read and written. Once training is complete, the slow model parameters remain fixed, and online adaptation occurs only through cellwise memory updates driven by local prediction errors and a delta rule. We evaluate whether the learned mechanism can adapt to semantically distinct held-out classification tasks. A single pass over the support data produces substantial improvements in held-out performance without gradient computation or parameter updates during adaptation, and the mechanism remains effective across large changes in the number of examples processed jointly. These results show that task-specific adaptation can be achieved through explicit fast-memory updates while keeping the slow model parameters fixed.",
+          "authors": [
+            "Krsto Proroković"
+          ],
+          "url": "http://arxiv.org/abs/2609.29281v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.29281v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-24T09:17:10Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.884084741236773,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "dcae90df046f7b08",
+          "title": "A Rapid Pipeline for Training and Deploying ML Models on WeBe Band",
+          "abstract": "Developing optimized machine-learning algorithms for edge devices with limited computational and memory resources is challenging, time-consuming, and highly dependent on device-specific constraints. In this work, we streamline an edge ML workflow to enable rapid development, optimization, and deployment of machine-learning (ML) models directly on the WeBe Band, a wrist-worn wearable device designed for multimodal physiological data monitoring. The proposed system automatically generates hardware-efficient ML models that can be easily integrated into the WeBe core firmware, supporting AutoML, hardware-aware quantization, and performance profiling to build models that meet desired latency targets while remaining compatible with device memory and power limitations. The proposed framework tightly integrates the open-source Piccolo AI ecosystem with an automated pipeline that generates deployable firmware artifacts, performs hardware-aware model compilation, and supports over-the-air (OTA) deployment. The system supports multiple lightweight model classes, including classical machine-learning algorithms and neural networks, and provides built-in on-device profiling tools to evaluate inference latency and memory footprint under realistic execution conditions. Experimental results demonstrate clear trade-offs between model complexity and deployability on a microcontroller, showing that classical models offer strong real-time performance while lightweight neural networks require careful resource management. Rather than proposing new learning architectures, the current work mainly focuses on system-level automation, deployability, and enabling researchers and developers to rapidly iterate on models and evaluate them directly on target hardware. Although demonstrated on the WeBe Band platform, the workflow is designed to be extensible to other ML-powered edge devices.",
+          "authors": [
+            "Ehsan Kourkchi",
+            "Asmita Asmita",
+            "Houman Homayoun",
+            "Mahdi Eslamimehr"
+          ],
+          "url": "http://arxiv.org/abs/2609.29084v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.29084v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-24T06:10:59Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.874849456845237,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-25",
       "papers": [
         {
@@ -7664,30 +7747,6 @@
           ],
           "score": 27.89563853174603,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-22",
-      "papers": [
-        {
-          "id": "b41ed36804957d17",
-          "title": "Fast Human Attention Prediction for Fixation-guided Active Perception in Autonomous Navigation",
-          "abstract": "Human visual attention relies on structured scanpaths to efficiently process scenes, yet instilling this behavior into robot autonomy is in its infancy and hindered by the high,computational costs of existing predictive models. To address this, we introduce GazeLNN, a computationally lightweight,scanpath prediction model that leverages Liquid Neural Networks as its recurrent engine and employs MobileNetV3 for feature extraction. Operating auto-regressively, the architecture predicts sequential fixation heatmaps conditioned on the current visual stimulus and fixation history. Despite requiring only 0.61 GFLOPs, GazeLNN achieves state-of-the-art performance on the MIT Low Resolution dataset achieving 0.47 ScanMatch score. It outperforms existing recurrent baselines across diverse evaluation metrics, while reducing computational costs by 99.40% and accelerating inference by up to six times. To investigate the role of human attention modeling in robot autonomy and demonstrate the practical utility of this highly efficient architecture, we integrate GazeLNN into an active camera-robot control policy trained via Reinforcement Learning. This integration enables human-fixation-guided perception during autonomous navigation, validated through successful real-world deployments on an aerial robot.",
-          "authors": [
-            "Fatma Youssef Mohammed",
-            "Grzegorz Malczyk",
-            "Kostas Alexis"
-          ],
-          "url": "http://arxiv.org/abs/2606.20491v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.20491v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-18T17:08:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.696285419973545,
-          "reason": "Matches Reinforcement Learning."
         }
       ]
     }
