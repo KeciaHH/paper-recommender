@@ -1,6 +1,115 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-29",
+      "papers": [
+        {
+          "id": "bfa0348a350e3d86",
+          "title": "Extremely Fast and Compact Binary Graph Representations via Randomized Operator Sketching",
+          "abstract": "Graph neural networks typically rely on dense, floating-point node representations, which can impose substantial memory and computational costs. Binary graph hashing offers an alternative by encoding node information as compact bit strings. However, existing approaches either sacrifice global topological information for computational efficiency or incur substantial generation costs. We introduce an ultra-fast, entirely algebraic hashing method that constructs binary node representations directly from graph structure, without requiring node features or gradient-based training. Our method approximates a high-order structural transition matrix using randomized column sampling inspired by the Nyström method and combines it with an efficient label-safe semantic propagation mechanism. The resulting continuous representations are discretized through column-wise thresholding to obtain compact binary codes. Experiments on ten node classification datasets show that the proposed method consistently improves classification accuracy over existing feature-free binary baselines while requiring sub-second code generation on many datasets. The resulting binary representations are also naturally suited to event-driven computation, making them compatible with neuromorphic spiking neural networks and gradient-free learning rules. These results demonstrate that simple algebraic approximations can provide an efficient alternative to learned pipelines for discrete graph representation learning.",
+          "authors": [
+            "Srajan Agarwal",
+            "Megha P",
+            "Bikas C Das",
+            "Zakaria Laskar",
+            "Saptarshi Bej"
+          ],
+          "url": "http://arxiv.org/abs/2609.32641v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.32641v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-26T14:03:24Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.823556669146825,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "ca6add0fd4201fc2",
+          "title": "Retimed Bellman Flows: Escaping the Impossible Triangle of Velocity Bootstrapping",
+          "abstract": "Flow critics learn return distributions by transporting Gaussian noise to Bellman endpoints via continuous velocity fields. While velocity bootstrapping stabilizes training by querying a successor teacher, existing methods face a structural dilemma: on straight paths, no residual-free same-time affine mapping can preserve Gaussian initial noise while maintaining an unbiased target. To overcome this limitation, we introduce Retimed Bellman Flows (ReBF). ReBF queries the teacher critic at a dynamically shifted earlier flow time, aligning intermediate student and teacher trajectories. By combining this retimed clock with fresh, decoupled noise generation, ReBF constructs a provably conditionally unbiased velocity target that preserves the Bellman fixed point and contracts under Wasserstein distances. Empirically, ReBF reduces $W_1$ distance to ground-truth return distributions by up to $7.7\\times$ on synthetic MRPs and outperforms existing flow critics across 38 challenging OGBench and D4RL offline reinforcement learning tasks.",
+          "authors": [
+            "Boyang Xu",
+            "Shengzhe Chen",
+            "Hao Yan"
+          ],
+          "url": "http://arxiv.org/abs/2609.32828v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.32828v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-26T17:58:35Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.835222509093914,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "a3fdb748886fa7a4",
+          "title": "Nutri-ATLAS: Embodied Agent for Tabulated Lookup and Assistance for Smarter nutrition",
+          "abstract": "Generative and Agentic IoT systems offer a promising foundation for digital healthcare applications that combine sensing, personalized reasoning, and autonomous interaction in real-world environments. Nutrition assistance is a natural use case, but existing Large Language Model (LLM)-based systems are often limited to passive text interaction and static context, making them unreliable when food descriptions are ambiguous or nutritional evidence is missing. We propose Nutri-ATLAS, an Embodied Agent for Tabulated Lookup and Assistance for smarter nutrition in the real world. It integrates graph-grounded nutrition reasoning, hardware-aware LLM selection, and robot-based evidence acquisition. Nutri-ATLAS builds a unified Food-Nutrient knowledge graph from USDA FoodData Central and FoodKG and learns 64-dimensional GATv2 food and recipe embeddings. A shared hybrid graph-text scoring mechanism supports food nutrition extraction, nutritional gap filling, substitute retrieval, and recipe-level meal composition, while an LLM-guided skill interface navigates landmarks, updates dietary-context and food-accessibility memory, and grounds recommendations in observed food availability. We evaluate Nutri-ATLAS across nutrient estimation, substitution retrieval, recipe recommendation, patient-profile adherence, edge deployment, and real-world embodied execution. On HealthyFoodSubs, the hybrid retriever achieves 37.9% MAP, 80.7% RR@5, and 90.1% RR@10. On NutriBench v2, Dense+GAT retrieval grounds nutrient estimation across nine quantized Qwen3.5-9B configurations. On PFoodReQ, Nutri-ATLAS reaches 78.8% MAP, 83.0% MAR, and 77.5% F1. A patient-profile study shows adherence to allergy and healthy-target constraints for all selected cases.",
+          "authors": [
+            "Uttej Kallakuri",
+            "Boxun Hu",
+            "Ankur A. Butala",
+            "Najim Dehak",
+            "Tinoosh Mohsenin"
+          ],
+          "url": "http://arxiv.org/abs/2609.32803v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.32803v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-26T17:26:12Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.83361619295635,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "48b2a1a2e88b905e",
+          "title": "Learning When to Recur: Token-Adaptive Recursion for Imbalanced Ophthalmic Domain Incremental Learning",
+          "abstract": "Domain incremental learning is essential for adapting ophthalmic deep learning models to sequential clinical domains while preserving diagnostic expertise. Existing domain incremental learning methods predominantly address the domain shift induced by style variations. However, they often overlook the severe class imbalance inherent in real-world clinical scenarios, such as clinical referral systems. Institutions in these systems encounter drastic fluctuations in class priors, resulting in label distribution shift, a critical form of domain shift that triggers severe catastrophic forgetting. To address these challenges, we propose ToRe, a rehearsal-free and parameter-efficient framework that leverages frozen ophthalmic foundation models for robust incremental adaptation. ToRe employs a parameter isolation strategy to decouple domain-specific optimization paths, thereby helping mitigate catastrophic forgetting driven by both label distribution shift and style variations. Simultaneously, it introduces token-adaptive recursion that adaptively allocates additional computational depth across tokens, allowing simple tokens to exit the recursion loop early while subjecting complex tokens, such as those associated with lesions, to deeper recursive processing. This mechanism enhances the feature representations for minority classes, thereby supporting generalization throughout the domain incremental learning process. Extensive evaluations on nine heterogeneous datasets demonstrate that ToRe consistently outperforms state-of-the-art methods in overall performance across the three benchmarks, while maintaining near-zero forgetting. Together, these results support the applicability of ToRe to dynamic and imbalanced clinical environments. The code is available at https://github.com/Nancyolo/ToRe",
+          "authors": [
+            "Nanxi Yu",
+            "Kang Li",
+            "Ye Du",
+            "Xiaowei Hu",
+            "Weihua Yang",
+            "Shujun Wang"
+          ],
+          "url": "http://arxiv.org/abs/2609.32785v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.32785v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-26T17:01:35Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.832395128141535,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "e686499ae2368f3f",
+          "title": "Electro-Thermal Origins of Enhanced Performance and Scalability in Disc-Type Phase-Change Memory",
+          "abstract": "Disc-type phase-change memory is a promising device architecture for analog in-memory computing, enabled by the unique physical properties of ultra-thin phase-change materials and the device geometry. In this study, we develop a comparative analytical framework using compact electro-thermal models to examine the state dependent readout and programming behavior of these devices. The framework provides insight into the fundamental physical mechanisms responsible for their enhanced functionality and highlights promising directions for further device optimization and performance improvement.",
+          "authors": [
+            "Ghazi Sarwat Syed",
+            "Loris Coccia",
+            "Siddharth Gautam",
+            "Vara Prasad Jonnalagadda",
+            "Abu Sebastian"
+          ],
+          "url": "http://arxiv.org/abs/2609.32654v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.32654v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-26T14:14:43Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.82411801173942,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-28",
       "papers": [
         {
@@ -7708,80 +7817,6 @@
             "neurosim"
           ],
           "score": 27.86846784887566,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-25",
-      "papers": [
-        {
-          "id": "dad78fe34f377da0",
-          "title": "Deep Reinforcement Learning-Enhanced Event-Triggered Data-Driven Predictive Control for a 3D Cable-Driven Soft Robotic Arm",
-          "abstract": "Soft robots are challenging to control due to their nonlinear and time-varying dynamics. Data-enabled predictive control (DeePC) offers a model-free alternative by directly leveraging measured input-output trajectories to construct a predictive controller. However, its receding-horizon formulation requires solving a constrained optimization problem at every sampling instant, which can be computationally demanding for real-time deployment on resource-limited robotic platforms.To address this limitation, we propose an adaptive reinforcement-learning-based event-triggered DeePC (RL-ET-DeePC) framework for soft robotic control. A model-free RL policy is trained to determine when to invoke the DeePC optimizer based on the current system state representation, thereby reducing unnecessary optimization calls while preserving closed-loop performance.Simulation results show that RL-ET-DeePC reduces optimization frequency by up to 66% compared to periodic DeePC, while maintaining comparable tracking accuracy. Hardware experiments on a three-dimensional cable-driven soft robotic arm demonstrate zero-shot transfer, achieving a 34% reduction in optimization frequency with tracking accuracy comparable to periodic DeePC and more consistent performance than a static threshold-based event-triggered baseline.",
-          "authors": [
-            "Cheng Ouyang",
-            "Moeen Ul Islam",
-            "Kaixiang Zhang",
-            "Zhaojian Li",
-            "Xiaobo Tan",
-            "Dong Chen"
-          ],
-          "url": "http://arxiv.org/abs/2606.26048v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26048v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-24T17:26:18Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.911692635582014,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "e1ce9e2c55f6755a",
-          "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
-          "abstract": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models between welding processes with distinct physical mechanisms:for instance, from arc-dominated tungsten inert gas (TIG) welding to keyhole-based laser welding. To overcome this limitation, we propose an unsupervised domain adaptation (UDA) framework integrated with a gradual source domain expansion (GSDE) strategy. Evaluated on dedicated TIG and laser welding datasets, our approach achieves high accuracy in both same-process and cross-process transfer tasks. Specifically, it attains average accuracies of 90.65% on TIGFH and 90.72% on LSPS in same-process settings, surpassing a supervised baseline by 35.83% and 38.87%, respectively. More notably, in cross-process scenarios, it reaches 80.48% for TIG to Laser and 81.13% for Laser to TIG, improving upon the baseline by 43.39% and 43.40%. UMAP visualizations verify that the model learns domain-invariant features while maintaining discriminative class boundaries. This method considerably lowers the relabeling cost for new welding processes and enhances the versatility of intelligent monitoring across different welding systems.",
-          "authors": [
-            "Sen Li",
-            "Haichao Cui",
-            "Chendong Shao",
-            "Yaqi Wang",
-            "Xinhua Tang"
-          ],
-          "url": "http://arxiv.org/abs/2606.26078v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26078v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-24T17:52:57Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.913014560185186,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "b2490d6af3a7000f",
-          "title": "Agentic evolution of physically constrained foundation models",
-          "abstract": "Artificial intelligence increasingly drives automated scientific discovery, yet contemporary generalist agents lack physical grounding, frequently hallucinating hardware-incompatible designs. Here, we present a physically grounded, multi-agent discovery engine that autonomously architects hardware-compliant computing systems. Anchored by an Evolutionary Knowledge Graph structuring past scientific innovations, the framework extracts an \"algorithmic Chain-of-Thought\" to transform blind stochastic search into directed structural evolution. Applied to the extreme testbed of foundation model deployment, the engine evolved two hardware-aware compression methodologies surpassing human-engineered heuristics: Q-Enhance mitigates long-context accuracy loss in dense models, and MoE-Salient-AQ outperforms state-of-the-art manual sparse Mixture-of-Experts designs by 3.7% at sub-3-bit regimes. Utilizing a bandwidth-efficient Sensitivity Profile, we successfully deployed a massive 235-billion-parameter model onto a constrained dual-A100 server, reducing memory requirements by 75% with a marginal 0.64% accuracy degradation. By transforming unconstrained combinatorial search into knowledge-driven autonomy, this establishes a scalable hardware-software co-design paradigm for machine-driven discovery within strict physical boundaries.",
-          "authors": [
-            "Jiangwei Zhang",
-            "Wen Sun",
-            "Chong Wang",
-            "Shiyao Li",
-            "Cheng Che",
-            "Chunjing Han",
-            "Dan Meng",
-            "Jian Yang",
-            "Yu Wang",
-            "Rui Hou"
-          ],
-          "url": "http://arxiv.org/abs/2606.25532v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.25532v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-24T08:07:59Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.88399835648148,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
