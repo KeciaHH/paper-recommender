@@ -1,6 +1,79 @@
 {
   "recommendations": [
     {
+      "date": "2026-09-30",
+      "papers": [
+        {
+          "id": "0cd2444534a12ab3",
+          "title": "Latency and accuracy tradeoffs in Spiking Neural Networks",
+          "abstract": "Spiking neural networks are attractive for low-power speech command recognition, yet their latency has received far less attention than their energy efficiency, and their multi-timestep execution is widely assumed to make them slower than quantized neural networks. This paper challenges the assumption that more local timesteps necessarily imply higher network latency. By overlapping computation across adjacent layers at the timestep level, SNNs may complete execution in less time than comparable bit-serial QNNs. However, this overlap relies on spikes firing on incomplete inputs, and a spike once generated cannot be withdrawn, so its error persists and reduces accuracy. Waiting for more input before firing would seem to improve accuracy at the cost of reduced overlap. Yet we find and prove that this intuition fails at some layers, where even a small increase in waiting can change spike timing and downstream computation, making the network both slower and less accurate. We therefore propose a Pipeline Delay Search method which selects each layer's delay by balancing task-level accuracy gains against added network latency. We then adapt the selected configurations through spike-based quantization-aware training and bounded tuning of firing thresholds and initial membrane potentials. Together, these steps form Falcon, a framework for Fine-grained Analysis of Latency and Controlled firing which systematically analyzes and optimizes SNN latency under a spatial analog compute-in-memory mapping with shared digital engines. We evaluate Falcon on GSCV2 and SSC, achieving competitive accuracies of 96.31 and 83.02 at modeled network-core latencies of 119.64 and 124.00us, respectively. Together, our analysis and results show that SNNs can compute more yet finish faster, and wait longer yet predict worse, highlighting why Falcon matters for both latency and accuracy.",
+          "authors": [
+            "Zhanglu Yan",
+            "Zixuan Zhu",
+            "Kaiwen Tang",
+            "Yuyang Cai",
+            "Qianhui Liu",
+            "Weng-Fai Wong"
+          ],
+          "url": "http://arxiv.org/abs/2609.35260v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.35260v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-28T14:20:46Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 53.897335304232804,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "fbf1c34c291443ca",
+          "title": "Harness Learning Enables Generalizable Test-Time Adaptation",
+          "abstract": "A language-model agent is jointly defined by its model and its harness, the executable program that organizes model calls, tool use, and information flow. Because different tasks call for different ways of organizing these operations, the harness needs to be adapted using feedback from the task at hand. We introduce harness learning, which trains a proposer model to revise a solver's harness using execution feedback. We formulate this process as meta-learning over executable programs, with harness revisions playing the role of weight updates in gradient-based adaptation. We train the proposer with reinforcement learning, using the task performance of revised harnesses as the reward. At test time, the proposer uses feedback from successive executions on a new task to refine the harness, without performing any parameter-space update. Experiments on reasoning and multi-hop question answering show that harness learning improves revision quality and that the ability to adapt at test time transfers to unseen tasks. Policies trained on individual revisions can continue improving harnesses over multiple rounds, while the benefits of training on revision sequences vary across settings. These findings suggest a path towards continually learning agents that turn accumulated experience into generalizable improvements.",
+          "authors": [
+            "Alvin Zhang",
+            "Xuecheng Liu",
+            "Zixuan Wang",
+            "Fahim Tajwar",
+            "Daman Arora",
+            "Ruslan Salakhutdinov",
+            "Daniel Khashabi",
+            "Yuda Song",
+            "Andrea Zanette"
+          ],
+          "url": "http://arxiv.org/abs/2609.35738v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.35738v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-28T17:52:54Z",
+          "topics": [
+            "tta",
+            "rl"
+          ],
+          "score": 45.90785779100529,
+          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
+        },
+        {
+          "id": "182b494a13622fb3",
+          "title": "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
+          "abstract": "Analog in-memory computing (IMC) offers a promising path toward energy-efficient large language model (LLM) inference by executing matrix multiplications (MatMul) directly within memory arrays in the analog domain. Its efficiency, however, comes with an additional source of error: limited-precision analog-to-digital converters (ADCs) quantize accumulated analog partial sums, introducing output-side error distinct from conventional activation and weight quantization at the MatMul inputs. Clipping can mitigate both operand and ADC quantization errors, but the optimal clipping factors must jointly balance activation rounding and clipping, weight rounding and clipping, and ADC quantization. Existing clipping methods, designed for digital quantization, do not explicitly optimize these coupled sources of IMC error and often rely on costly search-based calibration. We introduce IMC-CLINIC (Coupled Loss-Informed Newton Iterations for Clipping), a clipping calibration framework based on an analytical surrogate for IMC MatMul output error. The surrogate jointly models operand quantization, accumulated clipping-induced bias, and ADC quantization, enabling efficient evaluation of its gradient and approximate curvature from a small calibration set. IMC-CLINIC jointly optimizes activation and weight clipping factors using a safeguarded Newton-type method. Across multiple models and datasets, it improves average zero-shot accuracy by 6.5-11.5 percentage points over the grid search baseline while reducing calibration time by factors of 10.0-12.1. Its analytical surrogate closely tracks empirical IMC output error, and its optimizer is certified within 1% of the global optimum under the loss objective across all projections on two representative models.",
+          "authors": [
+            "Yung-Chin Chen",
+            "Chia-Yu Chen",
+            "Naveen Verma"
+          ],
+          "url": "http://arxiv.org/abs/2609.35586v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.35586v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-28T16:38:47Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.90418136904762,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-29",
       "papers": [
         {
@@ -7692,131 +7765,6 @@
             "neurosim"
           ],
           "score": 27.79730601438492,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-26",
-      "papers": [
-        {
-          "id": "29dc06abf2e14eeb",
-          "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
-          "abstract": "Autonomous drone racing is a fundamentally challenging regime for autonomous aerial robots, requiring time-optimal control while operating under persistent actuation saturation. While reinforcement learning (RL) has achieved human-level performance in this domain, current methods fail to generalize; policies trained on specific environments often crash immediately in unseen configurations. This failure reflects the intrinsic difficulty of zero-shot generalization in agile flight, arising from high-dimensional task variation and the tight coupling between safety and performance at high speeds. Existing approaches that improve generalization impose a substantial cost on flight speed: control policies must significantly degrade performance to achieve even modest levels of generalization. In this work, we propose a framework for zero-shot generalization in agile flight for RL-based drone racing. By combining task-aware switching based on learning progress with a physically informed procedural track generator, the framework produces a fast and robust generalist policy without test-time adaptation. Our method achieves strong zero-shot performance across a wide range of unseen racetracks in the real world, demonstrating a 7.4x improvement in generalization over the state-of-the-art approaches, while maintaining competitive racing speeds. We validate our method's results in both simulation and real-world settings, including a challenging vision-based, end-to-end control setting that operates without explicit state estimation, where all prior approaches fail to generalize.",
-          "authors": [
-            "Jonathan Green",
-            "Jiaxu Xing",
-            "Nico Messikommer",
-            "Angel Romero",
-            "Davide Scaramuzza"
-          ],
-          "url": "http://arxiv.org/abs/2606.27348v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27348v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:54:36Z",
-          "topics": [
-            "tta",
-            "rl"
-          ],
-          "score": 45.91349678488757,
-          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
-        },
-        {
-          "id": "9e9429f1951d0dc5",
-          "title": "SpikeTimer: Exploring Active Copyright Protection in Spiking Neural Networks via Temporal Backdoor Regularization",
-          "abstract": "Spiking Neural Networks (SNN) have emerged as a revolutionary paradigm compared to traditional Deep Neural Networks (DNN) in energy-efficient computing, showcasing exceptional capabilities in processing event-driven sensory data for real-time applications like robotics and edge AI systems. However, unlike extensive studies on DNN copyright solutions, SNN copyright protection remains largely underexplored due to their inherent temporal coding complexities and spike-driven computation. In this study, we propose a novel active copyright protection framework named SpikeTimer for SNNs via temporal backdoor learning. SpikeTimer partitions neuromorphic data into designated timeslices and exclusively embeds authorized tokens within authorized slices. Furthermore, the inherent temporal segmentation characteristic intrinsically enables SpikeTimer to support multi-user authorization mechanisms and accommodates token embedding of arbitrary morphology. Based on this, SpikeTimer precisely responds to authorized data containing a token within the correct timeslice, while producing erroneous responses to unauthorized data. Our key innovation lies in establishing a time-dependent authorization mechanism that protects the SNN copyright by temporal token validity. Additionally, SpikeTimer retains its defensive efficacy even under adversarial attempts. Evaluations on multiple neuromorphic datasets manifest that SpikeTimer achieves around 10% accuracy on unauthorized data with merely around 1.5% degradation on authorized inputs. Moreover, SpikeTimer demonstrates robust resistance against model finetuning and pruning threats.",
-          "authors": [
-            "Xiao Yang",
-            "Gaolei Li",
-            "Jun Wu",
-            "Jianhua Li",
-            "Zhiquan Liu"
-          ],
-          "url": "http://arxiv.org/abs/2606.26841v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26841v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T10:26:46Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 43.891282829034395,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "366d79e2ed37f5c7",
-          "title": "3D Imaging of Complex Skyrmion and Hopf Topologies in an Extended Sample",
-          "abstract": "Spin textures are key for emergent magnetic phenomena such as topological protection and underpin novel spintronic device paradigms based on racetrack memory, logic gates, and neuromorphic computing. Using a coherent diffractive imaging technique called vector ptycho-tomography, in combination with algorithms that are robust to noise, we image the 3D magnetic texture of skyrmion and Hopf topologies with no prior assumptions about the sample. This directly reveals experimentally for the first time an extended 3D skyrmion lattice, including the domain wall shape, topological charge, helicity, and Hopf index. Our findings demonstrate experimentally that dipole stabilized skyrmions in Fe/Gd multilayers exhibit barrel-shaped skyrmion tubes with a twisted helicity, transitioning from N$é$el-type winding at the surfaces to both clockwise and counterclockwise Bloch-type winding in the bulk, that can also be described as fractional hopfions. We image a lattice of 24 skyrmions with topological charge 1, average depth-dependent domain wall width of 23 to 40 nm, depth-dependent twisted helicity from $\\pm$155$°$ to $\\pm$30$°$, and fractional Hopf index of $\\pm$0.3. Over 10 TB of data were analyzed to yield a fully-resolved 3D reconstruction over a >0.4 $μ$m$^3$ volume, with high fidelity down to the Nyquist limit of 8 nm. This method fills a key gap in the current landscape of magnetic imaging by enabling high-resolution, element-specific 3D reconstructions of full-field extended spin textures - offering a new route for exploring the topological complexity of magnetic materials in three dimensions.",
-          "authors": [
-            "I. Binnie",
-            "H. Fang",
-            "B. Shearer",
-            "A. Grafov",
-            "N. Jenkins",
-            "Y. Shao",
-            "C. O'Leary",
-            "Y. Liao",
-            "T. Feggeler",
-            "A. Oh",
-            "S. Yazdi",
-            "J. Zou",
-            "B. Wang",
-            "E-E. Cating",
-            "S. A. Montoya",
-            "D. Shapiro",
-            "J. Miao",
-            "H. C. Kapteyn",
-            "M. M. Murnane"
-          ],
-          "url": "http://arxiv.org/abs/2606.27365v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27365v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:59:08Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.913721652612434,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "8becebc64cffe8ad",
-          "title": "An Instruction Set Architecture for IMPLY-based Memristive Processing-in-Array",
-          "abstract": "The push towards expanded ultra-low-power edge computing necessitates hardware capable of operating under extremely strict energy constraints. Traditional Complementary Metal-Oxide-Semiconductor (CMOS) microcontrollers are fundamentally limited in this domain by the von Neumann bottleneck and by the static power leakage inherent to volatile memory. Memristive In-Memory Computing (IMC) offers a promising solution to these inefficiencies by unifying data storage and computation into a single non-volatile component. However, the State of the Art (SoA) predominantly focuses on accelerators designed to be a co-processor for data-intensive computation. This leaves the prospect of standalone, general-purpose IMC microcontroller architectures underexplored. This thesis proposes such an architecture tailored for ultra-low-power edge devices, alongside an instruction set closely derived from the RV32I standard. Using the IMPLY stateful logic paradigm, a complete implementation of the proposed instruction set is provided, and the novel addressing schema required to support computation in the memristive crossbar array is described as well. Then, the energy use and other circuit-level metrics of the proposed architecture are evaluated through simulation and compared against those of traditional microcontrollers. Finally, the functional viability of the design is demonstrated through an application case study, describing how the proposed design could be used in an intelligent environmental sensor node.",
-          "authors": [
-            "Liam Splittgerber",
-            "Fabian Seiler",
-            "Nima TaheriNejad"
-          ],
-          "url": "http://arxiv.org/abs/2606.27319v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27319v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:32:30Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.912400553902117,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "c5f19e9a77b13dda",
-          "title": "Compiler-Driven Approximation Tuning for Hyperdimensional Computing",
-          "abstract": "As Moore's law reaches its physical and economic limits, domain-specific approaches are increasingly employed to accelerate machine learning workloads. Hyperdimensional Computing (HDC) represents one such emerging paradigm, offering an alternative to conventional deep learning techniques. Rooted in cognitive models of computation, HDC is designed bottom-up with hardware efficiency as a first-class objective. HDC workloads map naturally to heterogeneous hardware platforms, including CPUs, GPUs, and FPGAs, as well as emerging in-memory computing technologies such as Resistive RAM (ReRAM) and Phase-Change Memory (PCM). HDC algorithms are intrinsically tolerant to noise and approximation, enabling substantial performance gains with minimal accuracy loss. In this work, we introduce ApproxHDC, a framework for automated identification and application of domain-specific approximations in HDC workloads. ApproxHDC extends the HPVM-HDC compiler infrastructure to enable retargetable compilation across diverse hardware backends, including CPUs, GPUs, and simulated ReRAM and PCM-based accelerators. The space of possible approximations is exponentially large; ApproxHDC employs efficient search and analysis to navigate it and identify high-impact configurations spanning both software and hardware levels.",
-          "authors": [
-            "Xavier Routh",
-            "Abdul Rafae Noor",
-            "Akash Kothari",
-            "Zheyu Li",
-            "Mahbod Afarin",
-            "Tajana Rosing",
-            "Vikram Adve"
-          ],
-          "url": "http://arxiv.org/abs/2606.26547v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26547v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T02:46:49Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.86846784887566,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
