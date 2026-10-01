@@ -1,6 +1,100 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-01",
+      "papers": [
+        {
+          "id": "f210eaa7ec57c0e3",
+          "title": "Unlocking the Critic: Reward-Free Policy Optimization for LLM Post-Training",
+          "abstract": "Recent approaches to reinforcement learning (RL) post-training for large language models increasingly remove the critic to reduce training instability and memory overhead. Even where a critic is trained, it is discarded once training ends, although it has learned to predict outcomes. We revisit this trend and show that a pretrained critic's ability to predict future outcomes can make it a valuable asset for efficient long-horizon reasoning. First, we find that instability in critic-based RL for long chain-of-thought reasoning is largely an optimization artifact: keeping policy updates small and low in variance restores stable convergence. Second, a well-pretrained critic estimates the posterior probability of eventual success from later trajectory states and unfinished prefixes. Its predictions provide outcome-derived, dense, per-prefix learning signals that, during policy optimization, require neither completed rollouts, step-level annotations, nor external reward labels. Building on this insight, we introduce Reward-Free Policy Optimization (RFPO), which repurposes a single calibrated, frozen critic as a rollout-level reward, a value baseline for generalized advantage estimation, and a success forecaster for unfinished prefixes. We further show that binarizing the debiased score stops the policy from exploiting the critic's length bias. Binarized, RFPO matches supervised PPO without a single label in the training loop, while cutting compute and memory overhead. This makes RFPO well suited to long-horizon reasoning tasks, where outcomes arrive late and generation dominates cost: because rollouts can be rewarded before they finish, training no longer has to pay for waiting on every trajectory to complete. Our findings challenge the prevailing critic-free paradigm and establish critic-based, reward-free optimization as a scalable and computationally efficient path for LLM post-training.",
+          "authors": [
+            "Hongyang Li",
+            "Xiao Li",
+            "Caesar Wu",
+            "Said Mammar",
+            "Grégoire Danoy",
+            "Pascal Bouvry"
+          ],
+          "url": "http://arxiv.org/abs/2609.37119v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.37119v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-29T09:28:57Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.88269407820767,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "f002a2211564d05c",
+          "title": "Rho: A Foundation for Efficiently Adaptable VLA Models",
+          "abstract": "General-purpose physical AI models must combine broad visual and linguistic capabilities with precise control across robot embodiments and efficient adaptation to downstream tasks. We introduce Rho, a family of open-weights VLA models for bimanual manipulation designed for data-light task adaptation on 3 embodiments representative of dual-arm robots across research labs and the industry -- YAM Box, UR AI Trainer, and FR3 Duo. We systematically ablate Rho's action-expert architecture and training recipe, and show in controlled simulation and physical-robot experiments that embodiment midtraining improves downstream adaptation. The resulting Rho variants for YAM Box, UR AI Trainer, and FR3 Duo match or outperform existing open-weights VLAs and achieve the strongest overall performance across the tasks, embodiments, and baselines evaluated in this report. We further demonstrate the Rho model family's built-in capacity for online adaptation: an internal latent policy learns from corrective feedback to select observation-conditioned noise inputs for the frozen flow-matching action expert. With as few as 15 corrected episodes, adapting this lightweight module enables Rho to handle task situations at the fringe of its offline finetuning distribution. Together, these results position Rho as both a strong general-purpose robotic manipulation model and a practical foundation for adaptation. We release the base Rho model and the embodiment-specific checkpoints to facilitate Rho's deployment in research experiments and practical industrial use cases.",
+          "authors": [
+            "Rho Team",
+            "Simran Bagaria",
+            "Daphne Chen",
+            "Dean Fortier",
+            "Jianlong Fu",
+            "Michael Harrison",
+            "Tess Hellebrekers",
+            "Neel Joshi",
+            "Andrey Kolobov",
+            "Dalton Moore",
+            "Galen Mullins",
+            "Michael Murray",
+            "Eduardo Salinas",
+            "Reuben Tan"
+          ],
+          "url": "http://arxiv.org/abs/2609.38164v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.38164v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-29T17:59:28Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.90801732638889,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "7376796eeb9d43ee",
+          "title": "Multiscale modelling of nanoscaled FETs based on 2D ferroelectric materials",
+          "abstract": "Ferroelectric materials are highly attractive for low-power, high-speed electronics and emerging neuromorphic computing architectures. However, the severe physical scaling limits of conventional bulk (3D) ferroelectrics at the nanoscale have shifted attention towards two-dimensional (2D) ferroelectric monolayers. Accurate device-level performance predictions are essential to accelerate the experimental testing and screening of these novel materials. In this work, we present a multiscale simulation framework that bridges first-principles density functional theory with Non-Equilibrium Green's Function (NEGF) transport calculations. Using a 2D Indium Phosphide monolayer as a case study, our approach leverages a continuously interpolated, polarization-dependent Hamiltonian embedded within a self-consistent Poisson-NEGF solver. The model captures the dynamic interplay between ion movement and electronic transport, naturally reproducing macroscopic hysteresis loops and memory windows without empirical parameters. This predictive pipeline provides a computationally efficient tool to evaluate and optimize next-generation 2D ferroelectric field-effect transistors.",
+          "authors": [
+            "Alejandro Toral-Lopez",
+            "Michele Virgilio",
+            "Gianluca Fiori",
+            "Damiano Marian"
+          ],
+          "url": "http://arxiv.org/abs/2609.37823v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.37823v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-29T15:31:06Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.90065786789021,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "06ecc75df92ea23d",
+          "title": "Physical Muon: Orthogonalization as an Equilibrium Computation",
+          "abstract": "Physical neural networks and analog in-memory computing could reduce the energy cost of neural network training. Realizing this potential, however, requires optimizers that combine effective learning with physical implementability. SGD fits local analog updates but struggles on transformers, while Adam family is unstable against analog bias. Muon offers strong training performance, but its Newton--Schulz orthogonalization relies on dense matrix-matrix products. To address this obstacle, we introduce Physical Muon, which computes the orthogonalization as the equilibrium of a continuous-time flow. Random probes approximate the flow using matrix-vector products, reciprocal reads, and local rank-1 writes. To test whether this replacement preserves training performance, we evaluate it on a 10.95M-parameter transformer. The dense flow's mean validation cross-entropy is 0.0085 above Newton--Schulz across nine seeds per method; the probe implementation is 0.0188 above the control across two seeds. Circuit simulations further reproduce the flow dynamics and yield comparable training behavior.",
+          "authors": [
+            "Yuren Hao"
+          ],
+          "url": "http://arxiv.org/abs/2609.37525v1",
+          "pdfUrl": "http://arxiv.org/pdf/2609.37525v1",
+          "source": "arXiv",
+          "publishedAt": "2026-09-29T13:13:55Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.893853139054233,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-09-30",
       "papers": [
         {
@@ -7640,131 +7734,6 @@
             "neurosim"
           ],
           "score": 27.72588205274471,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-06-27",
-      "papers": [
-        {
-          "id": "29dc06abf2e14eeb",
-          "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
-          "abstract": "Autonomous drone racing is a fundamentally challenging regime for autonomous aerial robots, requiring time-optimal control while operating under persistent actuation saturation. While reinforcement learning (RL) has achieved human-level performance in this domain, current methods fail to generalize; policies trained on specific environments often crash immediately in unseen configurations. This failure reflects the intrinsic difficulty of zero-shot generalization in agile flight, arising from high-dimensional task variation and the tight coupling between safety and performance at high speeds. Existing approaches that improve generalization impose a substantial cost on flight speed: control policies must significantly degrade performance to achieve even modest levels of generalization. In this work, we propose a framework for zero-shot generalization in agile flight for RL-based drone racing. By combining task-aware switching based on learning progress with a physically informed procedural track generator, the framework produces a fast and robust generalist policy without test-time adaptation. Our method achieves strong zero-shot performance across a wide range of unseen racetracks in the real world, demonstrating a 7.4x improvement in generalization over the state-of-the-art approaches, while maintaining competitive racing speeds. We validate our method's results in both simulation and real-world settings, including a challenging vision-based, end-to-end control setting that operates without explicit state estimation, where all prior approaches fail to generalize.",
-          "authors": [
-            "Jonathan Green",
-            "Jiaxu Xing",
-            "Nico Messikommer",
-            "Angel Romero",
-            "Davide Scaramuzza"
-          ],
-          "url": "http://arxiv.org/abs/2606.27348v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27348v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:54:36Z",
-          "topics": [
-            "tta",
-            "rl"
-          ],
-          "score": 45.8423349495701,
-          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
-        },
-        {
-          "id": "9e9429f1951d0dc5",
-          "title": "SpikeTimer: Exploring Active Copyright Protection in Spiking Neural Networks via Temporal Backdoor Regularization",
-          "abstract": "Spiking Neural Networks (SNN) have emerged as a revolutionary paradigm compared to traditional Deep Neural Networks (DNN) in energy-efficient computing, showcasing exceptional capabilities in processing event-driven sensory data for real-time applications like robotics and edge AI systems. However, unlike extensive studies on DNN copyright solutions, SNN copyright protection remains largely underexplored due to their inherent temporal coding complexities and spike-driven computation. In this study, we propose a novel active copyright protection framework named SpikeTimer for SNNs via temporal backdoor learning. SpikeTimer partitions neuromorphic data into designated timeslices and exclusively embeds authorized tokens within authorized slices. Furthermore, the inherent temporal segmentation characteristic intrinsically enables SpikeTimer to support multi-user authorization mechanisms and accommodates token embedding of arbitrary morphology. Based on this, SpikeTimer precisely responds to authorized data containing a token within the correct timeslice, while producing erroneous responses to unauthorized data. Our key innovation lies in establishing a time-dependent authorization mechanism that protects the SNN copyright by temporal token validity. Additionally, SpikeTimer retains its defensive efficacy even under adversarial attempts. Evaluations on multiple neuromorphic datasets manifest that SpikeTimer achieves around 10% accuracy on unauthorized data with merely around 1.5% degradation on authorized inputs. Moreover, SpikeTimer demonstrates robust resistance against model finetuning and pruning threats.",
-          "authors": [
-            "Xiao Yang",
-            "Gaolei Li",
-            "Jun Wu",
-            "Jianhua Li",
-            "Zhiquan Liu"
-          ],
-          "url": "http://arxiv.org/abs/2606.26841v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26841v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T10:26:46Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 43.82012099454365,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "366d79e2ed37f5c7",
-          "title": "3D Imaging of Complex Skyrmion and Hopf Topologies in an Extended Sample",
-          "abstract": "Spin textures are key for emergent magnetic phenomena such as topological protection and underpin novel spintronic device paradigms based on racetrack memory, logic gates, and neuromorphic computing. Using a coherent diffractive imaging technique called vector ptycho-tomography, in combination with algorithms that are robust to noise, we image the 3D magnetic texture of skyrmion and Hopf topologies with no prior assumptions about the sample. This directly reveals experimentally for the first time an extended 3D skyrmion lattice, including the domain wall shape, topological charge, helicity, and Hopf index. Our findings demonstrate experimentally that dipole stabilized skyrmions in Fe/Gd multilayers exhibit barrel-shaped skyrmion tubes with a twisted helicity, transitioning from N$é$el-type winding at the surfaces to both clockwise and counterclockwise Bloch-type winding in the bulk, that can also be described as fractional hopfions. We image a lattice of 24 skyrmions with topological charge 1, average depth-dependent domain wall width of 23 to 40 nm, depth-dependent twisted helicity from $\\pm$155$°$ to $\\pm$30$°$, and fractional Hopf index of $\\pm$0.3. Over 10 TB of data were analyzed to yield a fully-resolved 3D reconstruction over a >0.4 $μ$m$^3$ volume, with high fidelity down to the Nyquist limit of 8 nm. This method fills a key gap in the current landscape of magnetic imaging by enabling high-resolution, element-specific 3D reconstructions of full-field extended spin textures - offering a new route for exploring the topological complexity of magnetic materials in three dimensions.",
-          "authors": [
-            "I. Binnie",
-            "H. Fang",
-            "B. Shearer",
-            "A. Grafov",
-            "N. Jenkins",
-            "Y. Shao",
-            "C. O'Leary",
-            "Y. Liao",
-            "T. Feggeler",
-            "A. Oh",
-            "S. Yazdi",
-            "J. Zou",
-            "B. Wang",
-            "E-E. Cating",
-            "S. A. Montoya",
-            "D. Shapiro",
-            "J. Miao",
-            "H. C. Kapteyn",
-            "M. M. Murnane"
-          ],
-          "url": "http://arxiv.org/abs/2606.27365v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27365v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:59:08Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.842559817294973,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "8becebc64cffe8ad",
-          "title": "An Instruction Set Architecture for IMPLY-based Memristive Processing-in-Array",
-          "abstract": "The push towards expanded ultra-low-power edge computing necessitates hardware capable of operating under extremely strict energy constraints. Traditional Complementary Metal-Oxide-Semiconductor (CMOS) microcontrollers are fundamentally limited in this domain by the von Neumann bottleneck and by the static power leakage inherent to volatile memory. Memristive In-Memory Computing (IMC) offers a promising solution to these inefficiencies by unifying data storage and computation into a single non-volatile component. However, the State of the Art (SoA) predominantly focuses on accelerators designed to be a co-processor for data-intensive computation. This leaves the prospect of standalone, general-purpose IMC microcontroller architectures underexplored. This thesis proposes such an architecture tailored for ultra-low-power edge devices, alongside an instruction set closely derived from the RV32I standard. Using the IMPLY stateful logic paradigm, a complete implementation of the proposed instruction set is provided, and the novel addressing schema required to support computation in the memristive crossbar array is described as well. Then, the energy use and other circuit-level metrics of the proposed architecture are evaluated through simulation and compared against those of traditional microcontrollers. Finally, the functional viability of the design is demonstrated through an application case study, describing how the proposed design could be used in an intelligent environmental sensor node.",
-          "authors": [
-            "Liam Splittgerber",
-            "Fabian Seiler",
-            "Nima TaheriNejad"
-          ],
-          "url": "http://arxiv.org/abs/2606.27319v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.27319v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T17:32:30Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.841238719411376,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "c5f19e9a77b13dda",
-          "title": "Compiler-Driven Approximation Tuning for Hyperdimensional Computing",
-          "abstract": "As Moore's law reaches its physical and economic limits, domain-specific approaches are increasingly employed to accelerate machine learning workloads. Hyperdimensional Computing (HDC) represents one such emerging paradigm, offering an alternative to conventional deep learning techniques. Rooted in cognitive models of computation, HDC is designed bottom-up with hardware efficiency as a first-class objective. HDC workloads map naturally to heterogeneous hardware platforms, including CPUs, GPUs, and FPGAs, as well as emerging in-memory computing technologies such as Resistive RAM (ReRAM) and Phase-Change Memory (PCM). HDC algorithms are intrinsically tolerant to noise and approximation, enabling substantial performance gains with minimal accuracy loss. In this work, we introduce ApproxHDC, a framework for automated identification and application of domain-specific approximations in HDC workloads. ApproxHDC extends the HPVM-HDC compiler infrastructure to enable retargetable compilation across diverse hardware backends, including CPUs, GPUs, and simulated ReRAM and PCM-based accelerators. The space of possible approximations is exponentially large; ApproxHDC employs efficient search and analysis to navigate it and identify high-impact configurations spanning both software and hardware levels.",
-          "authors": [
-            "Xavier Routh",
-            "Abdul Rafae Noor",
-            "Akash Kothari",
-            "Zheyu Li",
-            "Mahbod Afarin",
-            "Tajana Rosing",
-            "Vikram Adve"
-          ],
-          "url": "http://arxiv.org/abs/2606.26547v1",
-          "pdfUrl": "http://arxiv.org/pdf/2606.26547v1",
-          "source": "arXiv",
-          "publishedAt": "2026-06-25T02:46:49Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.79730601438492,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
