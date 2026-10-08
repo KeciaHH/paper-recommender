@@ -1,6 +1,95 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-08",
+      "papers": [
+        {
+          "id": "1b4775205bc65544",
+          "title": "Deadline-Aware Multi-Agent Reinforcement Learning for TSN-Based Vehicular Edge Networks",
+          "abstract": "Vehicular edge computing (VEC) enables latency-sensitive applications by bringing computing and networking resources closer to vehicles. However, existing approaches often overlook network contention among co-located services with heterogeneous and dynamic latency requirements. While time-sensitive networking (TSN) provides bounded-latency communication, conventional and reinforcement learning-based schedulers struggle to adapt to highly dynamic vehicular environments and inter-queue dependencies. To address these limitations, we propose a multi-agent reinforcement learning (MARL) approach for queue-level scheduling in TSN-enabled VEC. Each TSN queue is assigned an autonomous agent that jointly learns the queue service order and time-slot duration to minimize deadline misses under speed-dependent latency requirements. We employ multi-agent proximal policy optimization (MAPPO) to enable coordinated yet autonomous scheduling decisions. Evaluation against single-agent, multi-agent, and non-learning-based baselines shows that MAPPO provides robust performance across different traffic profiles. Compared with centralized single-agent methods, it reduces service latency by up to 66.2% and improves reliability by up to 271.8%. Furthermore, unlike urgency-based heuristics, MAPPO ensures balanced scheduling while achieving lower inference times compared to other MARL methods.",
+          "authors": [
+            "Bernardo A. C. Pereira",
+            "Marcos Carvalho",
+            "Fatih Temiz",
+            "Shavbo Salehi",
+            "Melike Erol-Kantarci",
+            "Andreas Gavrielides",
+            "Johann M. Marquez-Barja",
+            "Daniel F. Macedo"
+          ],
+          "url": "http://arxiv.org/abs/2610.09870v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.09870v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-07T11:30:19Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.958597655423276,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "6efebecf40c04a9c",
+          "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+          "abstract": "Joint-embedding predictive architectures (JEPAs) predict masked or future observations in representation space, offering a natural source of predictive latents for vision-language-action (VLA) models. Yet making these latents useful across pretraining, policy learning, and deployment requires addressing three failures: mismatch with embodiment-specific control, interference with action learning, and teacher miscalibration under distribution shifts. We introduce Juno, a unified framework built around one action-conditioned JEPA that serves as a control-aligned representation backbone, a predictive teacher, and an adaptable dynamics model. During pretraining, we train it on embodiment-matched trajectories and use a dynamic CLS loss to transfer motion-weighted patch dynamics to a compact global state. During policy learning, we fuse current-frame JEPA patches into VLA perception and use a decoupled reasoning branch with separate transformation parameters to distill future latent states for action generation. During deployment, we adapt the world model on all observed transitions, including failed rollouts, freeze the adapted teacher, and re-align the policy on verified executions using LoRA adapters and a trainable action head, without expert corrections or task rewards. On SimplerEnv, Juno raises average success from $60.9\\%$ to $68.5\\%$ over Qwen3GR00T, the strongest baseline, and test-time adaptation further reaches $72.7\\%$; on a real robot, it retains $70\\%$--$75\\%$ success under background, height, and object shifts where the base policy collapses to $0\\%$.",
+          "authors": [
+            "Yuchen Zhu",
+            "Chenyi Xu",
+            "Yulin Zhang",
+            "Gang Xu",
+            "Wentao Zhu"
+          ],
+          "url": "http://arxiv.org/abs/2610.09940v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.09940v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-07T12:24:17Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.961274574239418,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "98d73ea46b3895db",
+          "title": "Bringing BNNs to Fast Event Processing",
+          "abstract": "Binary Neural Networks (BNNs) enable efficient deep learning deployment on resource constrained devices with weights and activations compressed to one bit, substantially reducing model size and inference cost. Event cameras offer complementary advantages, including low latency, high dynamic range, and low power consumption, by capturing asynchronous streams of events rather than dense image frames. Despite their shared emphasis on efficiency, the combination of these technologies remains largely unexplored. This work aims at adapting and evaluating modern deep BNN architectures on event data. We also show that cross-modal pretraining from RGB data can improve the classification accuracy of BNNs on neuromorphic datasets. We introduce the Polar-wise Binary Event Volume (PBEV), a binary representation that enables event-camera data to be processed directly by BNNs and represents a step toward fully binarized event-based vision systems. Best evaluated BNN on N-Caltech101 classification benchmarks shows 90.58% accuracy with 7.5x less operations than their full-precision counterparts.",
+          "authors": [
+            "Paul Longour",
+            "Julien Moreau",
+            "Franck Davoine"
+          ],
+          "url": "http://arxiv.org/abs/2610.09873v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.09873v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-07T11:33:25Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.958751425264552,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "24bc39f5e524ce1b",
+          "title": "Hardware-aware Calibrated Clustered Attention for Efficient Visual Geometric Transformers",
+          "abstract": "The Visual Geometry Grounded Transformer (VGGT) marks a significant leap forward in 3D scene reconstruction, as it is the first model that directly infers all key 3D attributes (camera poses, depths, and dense geometry) jointly in one pass. However, this joint inference mechanism requires global attention layers with extremely long sequences that causes a significant latency bottleneck. In this paper, we propose blockwise clustered attention (BC attention) to accelerate the global attention layers in VGGT. By limiting the clustering within HW-friendly neighborhood blocks, BC attention reduces the computation overhead of query clustering as well as the costly data movement between on- and off-chip memory. This enables BC attention to scale to long sequences and deliver practical latency improvements on GPUs. Moreover, we introduce a hashing hyperplane calibration method and a threshold-based error compensation method to reduce clustering errors efficiently, which is a bottleneck in the current clustered attention mechanism. Overall, our experiments on GPU demonstrate that calibrated BC attention accelerates the global attention layers by 2.10-2.63$\\times$ and the whole backbone by 1.77-2.35$\\times$ with negligible loss (1%) for large scenes. With a small performance loss (< 5%), calibrated BC attention further achieves a 2.26-2.87$\\times$ latency improvement on the global attention layers and a 1.90-2.55$\\times$ improvement on the backbone.",
+          "authors": [
+            "Weitian Wang",
+            "Shubham Rai",
+            "Cecilia De La Parra",
+            "Akash Kumar"
+          ],
+          "url": "http://arxiv.org/abs/2610.09274v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.09274v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-07T01:13:49Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.928017298280423,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-10-07",
       "papers": [
         {
@@ -7513,55 +7602,6 @@
             "tta"
           ],
           "score": 27.749782311507936,
-          "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-04",
-      "papers": [
-        {
-          "id": "2e920c9bd5a04fd9",
-          "title": "Learning Agile Intruder Interception using Differentiable Quadrotor Dynamics",
-          "abstract": "This paper presents a methodology for learning a control policy to intercept an intruder using the 3D direction unit vector to the intruder and the interceptor state. Prior deep reinforcement learning approaches assume either relative position or distance to the intruder is available, but this information is not readily accessible in real-world applications that employ passive, monocular camera sensors. Instead, we propose a solution that leverages an analytical policy gradient method using differentiable quadrotor dynamics to learn agile interception at speeds up to 10 m/s. The proposed approach outperforms baseline methods that utilize simplified point mass dynamics by an average of 30%.",
-          "authors": [
-            "Michael Anoruo",
-            "Xiaoyu Tian",
-            "Abhishek Rathod",
-            "Timothy Naudet",
-            "Thomas Canchola",
-            "Eric Sturzinger",
-            "Kshitij Goel",
-            "Wennie Tabib"
-          ],
-          "url": "http://arxiv.org/abs/2607.02472v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02472v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T17:40:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.842001783234124,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "9c59bc1f86bd6f2c",
-          "title": "InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories",
-          "abstract": "Multimodal large language models must adapt to evolving tasks and domains, yet continual improvement under bounded deployment footprint remains difficult because repeated parameter updates or growing replay stores can accumulate adaptation state over time. We study fixed-footprint continual adaptation: the deployed adaptation state is kept under a fixed memory budget, while the backbone model is left unchanged and task-specific updates are externalized. We propose InduceKV, a retrieval-based method that stores each selected training prefix as an attention-ready memory entry, consisting of a frozen retrieval key and compact layerwise key--value (KV) payloads that can be appended to the model's self-attention cache. Under a strict memory budget, InduceKV constructs a compact inducing set through bilevel selection: a lightweight calibration is fit for retrieval, while the selected memory balances current-task likelihood, anchor-based retention, and coverage in the frozen retrieval space. Across task-incremental instruction tuning, continual VQA, domain-incremental adaptation, and lifelong multimodal instruction tuning, InduceKV consistently improves over PEFT, MoE, replay, and prompt-retrieval baselines under matched memory budgets. We further report backbone-matched, stage-1 CoIN, compute-matched, and scalability diagnostics, showing that the gains are not due to a stronger backbone, replay alone, or an unbounded candidate pool.",
-          "authors": [
-            "Qianyu Chen",
-            "Ziteng Feng",
-            "Canran Xiao",
-            "Runxuan Tang"
-          ],
-          "url": "http://arxiv.org/abs/2607.02010v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02010v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T10:45:28Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.8214346536045,
           "reason": "Matches Test-Time Adaptation."
         }
       ]
