@@ -1,6 +1,50 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-09",
+      "papers": [
+        {
+          "id": "38e5d921149421ad",
+          "title": "Constrained Command-Conditioned Reinforcement Learning with Bandit Strategy Selection in Real-Time Strategy Games",
+          "abstract": "Deep reinforcement learning agents reach strong performance in real-time strategy games but can be brittle against opponents outside their training distribution. Separating strategic command selection from learned unit control allows different strategies to be selected for different opponents while reusing the same execution policy. This requires an executor that can follow different commands and measurable criteria for assessing whether it does so. We introduce a constrained command-conditioned Proximal Policy Optimization (PPO) policy, the executor, for MicroRTS, a real-time strategy environment. Discrete commands specify strategic objectives and behavioral requirements for economy, army composition, military posture, and worker policy over multiple environment steps; the executor determines the unit-level actions used to fulfill them. A Thompson-sampling bandit acts as the strategist, selecting command tuples from an estimate of the opponent's strategy built from in-game observations rather than opponent identity. In a controlled comparison with a flat PPO baseline trained with the same architecture, budget, curriculum and self-play league, the strategist-executor system wins significantly more often against three of the four strongest opponents on a training map, including the two strongest held-out ones (0.55 to 0.97 and 0.01 to 0.34), with no significant difference against the others.",
+          "authors": [
+            "Nick Leenders",
+            "Roy Lindelauf",
+            "Joost van Oijen",
+            "Boris Cule"
+          ],
+          "url": "http://arxiv.org/abs/2610.11663v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.11663v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-08T10:37:33Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 43.955619289021165,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "d36e105e9cf67454",
+          "title": "Phonologically Informed Tokenization for German Speech Recognition: A Cross-Domain Study",
+          "abstract": "German is a morphologically rich language whose syllable structure is exceptionally well-predicted by the Knuth--Liang hyphenation algorithm. We ask whether phonologically informed tokenization can serve as a competitive target for end-to-end speech recognition. We compare three tokenizer families on the Omnilingual ASR wav2vec 2.0 backbone fine-tuned with CTC: the pretrained multilingual character inventory, a data-driven Byte-Pair Encoding (BPE) over orthography, and phonologically informed units from Pyphen syllabification and grapheme-to-phoneme conversion. Across 40 fine-tunes, we evaluate on three German test sets spanning orthogonal shifts: in-domain read speech, dialectal spontaneous speech, and standard-German spontaneous speech. In-domain, all phonologically informed tokenizers match BPE and the multilingual character baseline on both WER and CER. Under domain shift the picture splits along vocabulary size rather than the linguistic axis of variation: at small vocabularies, syllable-aware tokenization improves on dialectal speech, where phonetic surface forms vary but syllable structure is preserved, and stays ahead on spontaneous speech, where new word-forms violate vocabulary closure. A phoneme-level confusion analysis further shows that all tokenizers commit the same canonical function-word errors, indicating that the acoustic encoder, not the tokenizer, dominates the error topology. Our findings suggest that tokenizer choice may depend on the vocabulary budget as much as on the distribution shift expected at deployment rather than reducing to a single universal optimum.",
+          "authors": [
+            "Christopher Witzl",
+            "Tobias Bocklet",
+            "Korbinian Riedhammer"
+          ],
+          "url": "http://arxiv.org/abs/2610.11646v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.11646v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-08T10:20:43Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.954784302248676,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-10-08",
       "papers": [
         {
@@ -7553,55 +7597,6 @@
             "tta"
           ],
           "score": 27.678053955026456,
-          "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-05",
-      "papers": [
-        {
-          "id": "2e920c9bd5a04fd9",
-          "title": "Learning Agile Intruder Interception using Differentiable Quadrotor Dynamics",
-          "abstract": "This paper presents a methodology for learning a control policy to intercept an intruder using the 3D direction unit vector to the intruder and the interceptor state. Prior deep reinforcement learning approaches assume either relative position or distance to the intruder is available, but this information is not readily accessible in real-world applications that employ passive, monocular camera sensors. Instead, we propose a solution that leverages an analytical policy gradient method using differentiable quadrotor dynamics to learn agile interception at speeds up to 10 m/s. The proposed approach outperforms baseline methods that utilize simplified point mass dynamics by an average of 30%.",
-          "authors": [
-            "Michael Anoruo",
-            "Xiaoyu Tian",
-            "Abhishek Rathod",
-            "Timothy Naudet",
-            "Thomas Canchola",
-            "Eric Sturzinger",
-            "Kshitij Goel",
-            "Wennie Tabib"
-          ],
-          "url": "http://arxiv.org/abs/2607.02472v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02472v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T17:40:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.77034944113757,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "9c59bc1f86bd6f2c",
-          "title": "InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories",
-          "abstract": "Multimodal large language models must adapt to evolving tasks and domains, yet continual improvement under bounded deployment footprint remains difficult because repeated parameter updates or growing replay stores can accumulate adaptation state over time. We study fixed-footprint continual adaptation: the deployed adaptation state is kept under a fixed memory budget, while the backbone model is left unchanged and task-specific updates are externalized. We propose InduceKV, a retrieval-based method that stores each selected training prefix as an attention-ready memory entry, consisting of a frozen retrieval key and compact layerwise key--value (KV) payloads that can be appended to the model's self-attention cache. Under a strict memory budget, InduceKV constructs a compact inducing set through bilevel selection: a lightweight calibration is fit for retrieval, while the selected memory balances current-task likelihood, anchor-based retention, and coverage in the frozen retrieval space. Across task-incremental instruction tuning, continual VQA, domain-incremental adaptation, and lifelong multimodal instruction tuning, InduceKV consistently improves over PEFT, MoE, replay, and prompt-retrieval baselines under matched memory budgets. We further report backbone-matched, stage-1 CoIN, compute-matched, and scalability diagnostics, showing that the gains are not due to a stronger backbone, replay alone, or an unbounded candidate pool.",
-          "authors": [
-            "Qianyu Chen",
-            "Ziteng Feng",
-            "Canran Xiao",
-            "Runxuan Tang"
-          ],
-          "url": "http://arxiv.org/abs/2607.02010v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02010v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T10:45:28Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.749782311507936,
           "reason": "Matches Test-Time Adaptation."
         }
       ]
