@@ -1,6 +1,62 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-10",
+      "papers": [
+        {
+          "id": "4b83956256862d3f",
+          "title": "Generative Neural Retargeting for Human-to-Robot Dexterous Manipulation",
+          "abstract": "Human demonstrations are a scalable data source for learning dexterous manipulation, but the embodiment gap prevents human motion from being executed directly on robots. Inverse kinematics (IK) retargets human motion to robots efficiently but ignores dynamics, often producing infeasible motions. Reinforcement learning (RL) and sampling-based model predictive control (MPC) are commonly employed to yield dynamically feasible motions, but both are sample-inefficient and sensitive to hyperparameters. RL suffers from costly and unstable training and tedious reward engineering; MPC avoids policy optimization, yet retargets each trajectory in isolation, and solving one does not make the next easier. Sampling cost grows rapidly with dataset size and task difficulty. We hypothesize that dynamically feasible trajectories concentrate near a low-dimensional manifold shared across demonstrations, so that retargeting can be reduced to sampling from that manifold, conditioned on human motion, rather than solving a fresh optimization problem for every demonstration. We propose \\textbf{Generative Neural Retargeting} (GNR), which uses a flow matching model to sample feasible trajectories. GNR outperforms MPC with only $8.5\\%$ of the samples required by MPC, achieving a success rate of $56.20\\%$ compared to $27.20\\%$ for MPC. GNR can be used for scalable and efficient retargeting of large-scale, long-horizon, and millimeter precision human demonstrations: by applying GNR within a real-to-sim data engine, we produce a dexterous manipulation dataset with dense contact-force labels, spanning $223$k demonstrations and $3.3$k object geometries.",
+          "authors": [
+            "Dechen Gao",
+            "Yue Yang",
+            "Ben Abbatematteo",
+            "Nathan Godwin",
+            "Pengcheng Wang",
+            "Roger Boldu",
+            "Steven Man",
+            "Zhiyang Dou",
+            "Chuan Qin",
+            "Sho Nakagome",
+            "Eric Whitmire"
+          ],
+          "url": "http://arxiv.org/abs/2610.12440v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.12440v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-08T17:57:58Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.90649064814815,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "85afbc3c92eb751f",
+          "title": "Multifunctional synaptic learning and neuromorphic computing using crystalline TiO$_x$/NiO$_x$ heterojunction-based memory devices",
+          "abstract": "An attempt is made here to mimic different properties of biological synapses using Ag/TiO$_x$/NiO$_x$/p$^{++}$-Si memristor structure by studying its different transport properties under dc and pulsed bias. The presence of crystalline NiO$_x$ with smaller gains is found to be helpful to get TiO$_x$ deposited on its top with crystalline properties and larger grains. The heterostructure offers stable bipolar forming free non-volatile resistive switching characteristics under reverse biased condition with gradual set and reset features. These devices are also able to successfully implement the classical Pavlov's learning, study artificial nociceptor and Morse code detection. While incorporating synaptic weights derived from the measured conductance programming pulse relationship, an artificial neural network achieves nearly 95\\% accuracy in MNIST digit recognition. In brief, NiO$_x$/TiO$_x$ heterojunction plays the pivotal role in getting such reproducible $I-V$ characteristics for mimicking different properties of biological synapses.",
+          "authors": [
+            "Dip Manna",
+            "Koushik Mondal",
+            "Subhajit Karmakar",
+            "Pawan Kumar Ojha",
+            "Sourav Roy",
+            "Biswarup Satpati",
+            "Prasanta Karmakar",
+            "Supratic Chakraborty"
+          ],
+          "url": "http://arxiv.org/abs/2610.11992v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.11992v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-08T14:01:04Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.894739655257936,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-10-09",
       "papers": [
         {
@@ -7548,55 +7604,6 @@
             "tta"
           ],
           "score": 27.910794070767196,
-          "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-06",
-      "papers": [
-        {
-          "id": "2e920c9bd5a04fd9",
-          "title": "Learning Agile Intruder Interception using Differentiable Quadrotor Dynamics",
-          "abstract": "This paper presents a methodology for learning a control policy to intercept an intruder using the 3D direction unit vector to the intruder and the interceptor state. Prior deep reinforcement learning approaches assume either relative position or distance to the intruder is available, but this information is not readily accessible in real-world applications that employ passive, monocular camera sensors. Instead, we propose a solution that leverages an analytical policy gradient method using differentiable quadrotor dynamics to learn agile interception at speeds up to 10 m/s. The proposed approach outperforms baseline methods that utilize simplified point mass dynamics by an average of 30%.",
-          "authors": [
-            "Michael Anoruo",
-            "Xiaoyu Tian",
-            "Abhishek Rathod",
-            "Timothy Naudet",
-            "Thomas Canchola",
-            "Eric Sturzinger",
-            "Kshitij Goel",
-            "Wennie Tabib"
-          ],
-          "url": "http://arxiv.org/abs/2607.02472v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02472v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T17:40:06Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.69862108465608,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "9c59bc1f86bd6f2c",
-          "title": "InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories",
-          "abstract": "Multimodal large language models must adapt to evolving tasks and domains, yet continual improvement under bounded deployment footprint remains difficult because repeated parameter updates or growing replay stores can accumulate adaptation state over time. We study fixed-footprint continual adaptation: the deployed adaptation state is kept under a fixed memory budget, while the backbone model is left unchanged and task-specific updates are externalized. We propose InduceKV, a retrieval-based method that stores each selected training prefix as an attention-ready memory entry, consisting of a frozen retrieval key and compact layerwise key--value (KV) payloads that can be appended to the model's self-attention cache. Under a strict memory budget, InduceKV constructs a compact inducing set through bilevel selection: a lightweight calibration is fit for retrieval, while the selected memory balances current-task likelihood, anchor-based retention, and coverage in the frozen retrieval space. Across task-incremental instruction tuning, continual VQA, domain-incremental adaptation, and lifelong multimodal instruction tuning, InduceKV consistently improves over PEFT, MoE, replay, and prompt-retrieval baselines under matched memory budgets. We further report backbone-matched, stage-1 CoIN, compute-matched, and scalability diagnostics, showing that the gains are not due to a stronger backbone, replay alone, or an unbounded candidate pool.",
-          "authors": [
-            "Qianyu Chen",
-            "Ziteng Feng",
-            "Canran Xiao",
-            "Runxuan Tang"
-          ],
-          "url": "http://arxiv.org/abs/2607.02010v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.02010v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-02T10:45:28Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.678053955026456,
           "reason": "Matches Test-Time Adaptation."
         }
       ]
