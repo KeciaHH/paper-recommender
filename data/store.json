@@ -1,6 +1,92 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-13",
+      "papers": [
+        {
+          "id": "dcb707971affb15f",
+          "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+          "abstract": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side scheduling and dropping decisions are inherently goal-oriented: transmission resources should be allocated to bundles most valuable to downstream mission objectives. Conventional schedulers, such as FIFO, do not explicitly optimize task utility and may provide unfair service across heterogeneous planetary sources. This paper presents a closed-loop modeling and learning framework for relay-side bundle and flow management in a contact-driven deep-space network, where lunar and Martian updates are forwarded through a shared-buffer relay to Earth. We quantify destination-side information freshness using excess age $Δ_i^e(t)=[Δ_i(t)-d_i(t)]^+$, where $Δ_i(t)$ denotes the Age of Information of source $i$ and $d_i(t)$ is a source-dependent delay baseline. Based on this metric, we define a goal-oriented loss that supports source-dependent nonlinear penalties, allowing prioritization according to mission relevance. We formulate relay control as a constrained semi-Markov decision process (CSMDP) and solve it using masked Lagrangian Proximal Policy Optimization (PPO). Feasibility-aware action masking restricts transmissions to bundles that can complete within the remaining contact window. DTNSim simulations indicate improved age-based utility and inter-flow fairness compared with baseline schedulers. The proposed framework jointly optimizes relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources.",
+          "authors": [
+            "Sajjad Baghaeea",
+            "Aimin Lib",
+            "Shanmugarajan Balasubramanian",
+            "Elif Uysal"
+          ],
+          "url": "http://arxiv.org/abs/2610.13923v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.13923v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-09T17:53:46Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.75933549272487,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "5c527833e41397c3",
+          "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
+          "abstract": "Clinical sleep medicine repeatedly documents profound divergences between objective sleep duration and subjective daytime impairment, notably exemplified by sleep state misperception in paradoxical insomnia and boundary instability in narcolepsy type 1. Here, we present DyssomniaNN: a multi-scale biophysical computational framework coupling Borbély's two-process regulation of sleep homeostasis and circadian drive with Saper's hypothalamic reciprocal flip-flop circuit and a recurrent corticothalamic leaky integrate-and-fire spiking neural network. We formalize five clinical cohorts across an identical 72-hour photoperiod: healthy control, circadian rhythm sleep-wake disorder (delayed-phase), chronic insomnia, paradoxical insomnia, and narcolepsy type 1. The synthetic local field potential converges closely with empirical human electroencephalography spectra from the PhysioNet Sleep-EDF database across all canonical frequency bands (spectral mean absolute error of 0.33--0.35). Furthermore, we introduce the Well-Rested Index to quantify restorative efficacy. Simulations reveal that sleep duration fails to predict restorative recovery: paradoxical insomnia achieves normal total sleep time (21.15 h) yet yields low restoration (37.6%) from unsuppressed cortical beta-band intrusion, whereas hypocretin deficiency in narcolepsy produces severe nocturnal fragmentation (781 min of wake after sleep onset) and 35 sleep-onset rapid eye movement periods. DyssomniaNN provides an in silico platform for mechanistic sleep research and virtual neuropharmacology.",
+          "authors": [
+            "Daniel Szelogowski"
+          ],
+          "url": "http://arxiv.org/abs/2610.13918v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.13918v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-09T17:52:23Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.759266875,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "43eb6daa1686aed5",
+          "title": "An Annealing-based Quantum Neural Network with Discrete Wavelet Transforms for Enhanced Air Pollution Nowcasting",
+          "abstract": "Air pollution poses a significant threat to public health, exacerbated by the rapid industrialization and urbanization of modern society. While traditional deep learning offers predictive capabilities, recent advancements in quantum machine learning (QML) present a compelling alternative. Here, we introduce a scalable hybrid framework that integrates variational quantum circuits with quantum annealing. Leveraging a neuromorphic quantum computing platform to transcend the qubit limitations of the NISQ era, we model particulate matter (PM$_{2.5}$) dynamics using high-density urban data from the UK. We demonstrate that our Quantum Neural Networks (QNNs) exhibit an intrinsic resilience to input volatility, significantly outperforming classical baselines (MLP and LSTM) on raw, high-entropy environmental data. Furthermore, we successfully scaled the model to 172 qubits, observing a synergistic enhancement when coupled with wavelet decomposition that achieves state-of-the-art predictive fidelity. These findings establish a critical benchmark for quantum utility, proving that scalable, neuromorphic quantum machine learning can now address complex, non-linear real-world problems.",
+          "authors": [
+            "Otto Menegasso Pires",
+            "André Saimon",
+            "Daniela Herrmann",
+            "Prashant Kumar",
+            "Marcelo Moret",
+            "Erick Giovani Sperandio Nascimento"
+          ],
+          "url": "http://arxiv.org/abs/2610.13882v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.13882v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-09T17:27:32Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.75803423611111,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "8bd8209325b48072",
+          "title": "Monarch-MoE: Structured Experts for Multimodal Continual Instruction Tuning",
+          "abstract": "Learning new tasks in multimodal continual instruction tuning can cause catastrophic forgetting of previously acquired knowledge. Although multi-expert LoRA distributes learning across experts, updates to a dense low-rank expert can still affect many output features. We introduce Monarch-MoE, which replaces the dense factors in LoRA experts with block-diagonal factors connected by a fixed permutation. This structure provides blockwise gradient isolation: individual block-pair updates affect only one output block, while connections between all input and output blocks are maintained. To make these compact experts practical on memory-limited hardware, we combine batched computation, fused forward operators, and an optimized backward pass. Across three continual-learning methods evaluated on MLLM-DCL and UCIT with LLaVA-1.5-7B, Monarch-MoE improves first-task retention while reducing adapter parameters by approximately 75% and 50%, respectively. In the main comparison, first-task forgetting is as low as 0.52 percentage points on MLLM-DCL and 0.10 on UCIT, with method-dependent trade-offs in final performance. Our implementation supports fine-tuning and inference on a single 24 GB RTX 4090, with lower measured memory use and competitive runtime in the evaluated settings. Together, these algorithmic and systems improvements make structured experts a practical option for continual adaptation on memory-limited hardware.",
+          "authors": [
+            "Xi Zhang",
+            "Boyu Diao",
+            "Zesen Chen",
+            "Ruiqi Liu",
+            "Hangda Liu",
+            "Yongjun Xu"
+          ],
+          "url": "http://arxiv.org/abs/2610.13215v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.13215v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-09T08:33:41Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.731553581349207,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-10-12",
       "papers": [
         {
@@ -7563,48 +7649,6 @@
           ],
           "score": 27.914200676256613,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-09",
-      "papers": [
-        {
-          "id": "66dc72d334d4b266",
-          "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
-          "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that substantially improve the feedback efficiency of diffusion RLHF while preserving generalization to unseen prompts. Our key observation is that reward information in diffusion trajectories is unevenly distributed: not all denoising timesteps or trajectories contribute equally to learning from a reward signal. By emphasizing informative timesteps and trajectories during optimization, we obtain more effective gradient updates. First, we introduce a per-timestep weighting scheme that reweights denoising steps during policy optimization. We theoretically connect this weighting to the optimal convergence properties of proximal policy optimization (PPO) and approximate the resulting weighting trend empirically. Second, we introduce a replay mechanism that prioritizes informative trajectories, enabling the model to reuse past samples instead of repeatedly querying new rewards. Together, these strategies significantly improve the feedback efficiency of diffusion RLHF. Under identical hyperparameter settings, our approach achieves up to a 6$\\times$ improvement in sample efficiency compared to widely used diffusion RLHF baselines.",
-          "authors": [
-            "Eric Zhu",
-            "Abhinav Shrivastava",
-            "Soumik Mukhopadhyay"
-          ],
-          "url": "http://arxiv.org/abs/2607.07693v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.07693v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-08T17:49:49Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.91312219494048,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "8649bec95622568d",
-          "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
-          "abstract": "Conditional computation can decouple language model quality from per-token inference cost, yet leading techniques act on a single axis in isolation: Mixture-of-Experts (MoE) sparsifies the FFN, Mixture-of-Depths (MoD) skips whole transformer blocks, and KV-cache quantization compresses attention memory. We argue these three decisions (attention resolution, expert selection, and cache bit-width) are strongly coupled and should be made jointly: a token rare enough to warrant full attention may also need high-precision caching regardless of which expert processes it. We introduce TriRoute, a single lightweight controller shared across all three axes that, for every token at every layer, emits a coordinated policy: (i) an attention mode (skip/local/full), (ii) a sparse set of FFN experts (with a null expert recovering MoD), and (iii) a KV-cache bit-width. The controller trains end-to-end via a heterogeneous relaxation (Gumbel-Softmax with straight-through estimation for categorical decisions and load-balanced top-k gating for experts) under a Lagrangian budget constraint that turns the average compute and memory cost into a controllable knob. We identify a cross-axis routing-collapse cascade in naive joint training, where collapse on one axis propagates to the others, and address it with per-axis normalization and a coupling-aware balancing loss. On decoder-only models from 160M to 1.3B parameters at compute-optimal token counts, TriRoute Pareto-dominates the best independent MoD+MoE+KV-quantization combination at matched inference FLOPs and memory, while better preserving tail-case robustness on rare entities, code, and arithmetic that pure perplexity optimization erodes. Post-hoc analysis reveals interpretable structure: the controller allocates full attention and high-precision cache to sentence-initial positions, rare subwords, and named entities, while cheaply routing function words.",
-          "authors": [
-            "Andrii Balashov",
-            "Olena Ponomarova"
-          ],
-          "url": "http://arxiv.org/abs/2607.06601v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.06601v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-07T00:12:46Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.789260587797617,
-          "reason": "Matches Network Early Exit."
         }
       ]
     }
