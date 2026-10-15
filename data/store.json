@@ -4,72 +4,66 @@
       "date": "2026-10-15",
       "papers": [
         {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "id": "e2db38e11b00e207",
+          "title": "Efficient Test-Time Adaptation For Robot Policies",
+          "abstract": "Reinforcement-learning policies for robot locomotion can fail at deployment when operating conditions shift (e.g., rough or slippery terrain, payload changes, sensing degradation), and retraining or manual recalibration is often infeasible under on-device latency and memory constraints. We study test-time adaptation (TTA) for robotic control: adapting a pretrained policy online and in a self-supervised manner during execution, without access to rewards. Our starting point is a lightweight baseline that updates only the actor using a frozen pretrained critic as a deployment-time performance surrogate. Building on this, we introduce TEMPO, a test-time entropy-regularized, memory-guided policy optimization method that stabilizes critic-driven updates under severe shift. TEMPO combines (i) an entropy-promoting regularizer on the critic's predictive distribution to mitigate overconfident extrapolation, and (ii) a score-based memory, inspired by prioritized replay, that prioritizes low-value (\"hard\") observations and applies importance sampling to focus limited computation on the most informative deployment conditions. Across Go1, Go2, and G1 in MuJoCo Playground under four representative shifts and multiple architectures, TEMPO yields consistent gains, reaching up to 80% improvement in a single-device setting. We further validate on a physical Unitree Go2 with an added calf payload, where fully on-device adaptation improves performance over the non-adapted baseline across real-world episodes.",
           "authors": [
-            "Seed Candidate"
+            "Motasem Alfarra",
+            "Pietro Mazzaglia",
+            "Markus Peschl",
+            "Daniel Dijkman",
+            "Christos Louizos"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-15T00:11:25.272Z",
+          "url": "http://arxiv.org/abs/2610.20318v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.20318v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-14T15:05:24Z",
           "topics": [
-            "neurosim",
-            "snn"
+            "tta",
+            "rl"
           ],
-          "score": 78,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+          "score": 45.90217494791666,
+          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
         },
         {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "id": "d75928b84acb4023",
+          "title": "Closed-Form Optimal Weight Splitting for Matrix-Vector Multiply on Noisy In-Memory Accelerators",
+          "abstract": "Analog in-memory computing performs the matrix-vector multiplications of neural networks directly inside the memory array, which saves time and energy. But each memory cell stores only a few levels and is noisy, so one cell cannot hold a weight precisely. The standard fix is to split each weight across several cells, like digits of a number. The base of this split decides the trade-off: a large base gives fine resolution but amplifies the noise, and a base near one averages the noise but wastes resolution. The best-known prior analysis considers only the noise, and so it always picks a base of one. We propose a principled method that also accounts for the limited number of levels per cell. It gives the optimal base in closed form, from a single measurement of the device noise. On a device-physics simulator, the optimal split is 3.3 dB more accurate than the common base-16 split, and it beats equal splitting in end-application accuracy.",
           "authors": [
-            "Seed Candidate"
+            "Mehmet Aktukmak",
+            "David A. Roberts"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-15T00:11:25.272Z",
+          "url": "http://arxiv.org/abs/2610.20359v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.20359v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-14T15:34:03Z",
           "topics": [
-            "snn",
-            "tta"
+            "neurosim"
           ],
-          "score": 70,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
+          "score": 27.903596078869047,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
         },
         {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
+          "id": "3ffd29bfea35771c",
+          "title": "CAFE: Conducting-Cell-Aware Adaptive Differential Encoding for Robust DNN Inference in FeFET-Based Compute-in-Memory",
+          "abstract": "Ferroelectric field-effect transistor (FeFET)-based compute-in-memory (CIM) promises energy-efficient deep neural network (DNN) inference, but device variation can severely degrade bit-sliced CIM accuracy. Prior works either rely on hardware modifications or treat such variation as generic noise, overlooking a key FeFET asymmetry: negligible off-state leakage makes errors dominated by conducting on-state cells. This asymmetry is amplified by two's-complement sign extension, which maps small negative values to high-significance bit slices and magnifies their errors during shift-and-add reconstruction. In this paper, we propose CAFE, a conducting-cell-aware adaptive differential encoding framework built upon this FeFET-specific asymmetry. CAFE introduces C$^2$AM, a bit-significance-weighted conducting-cell activity metric that predicts output deviation and inference accuracy degradation under FeFET device variation. Guided by C$^2$AM, CAFE applies differential weight and activation encoding to eliminate sign-extension-induced conducting-cell amplification. To balance robustness and cost, CAFE performs type-wise encoding enumeration, layer-wise NSGA-II search, and post-GA pruning to allocate robust encodings where the robustness-cost trade-off is favorable. Across representative vision and language workloads, CAFE reduces C$^2$AM by up to $28.6\\times$; in the main deployment study, it improves accuracy over two's-complement CIM by more than 87 percentage points and approaches full-differential robustness at $1.86$-$2.78\\times$ normalized cost, compared with $3.06\\times$ for uniform full-differential encoding.",
           "authors": [
-            "Seed Candidate"
+            "Wenshuai Yao",
+            "Wenyong Zhou",
+            "Hanyong Shao",
+            "Zhiyuan Ning",
+            "Ru Huang",
+            "Kechao Tang"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-15T00:11:25.272Z",
+          "url": "http://arxiv.org/abs/2610.19697v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.19697v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-14T07:20:14Z",
           "topics": [
-            "early_exit",
-            "dvfs"
+            "neurosim"
           ],
-          "score": 70,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-15T00:11:25.272Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 54,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+          "score": 27.879101204530425,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     },
