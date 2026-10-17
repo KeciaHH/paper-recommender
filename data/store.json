@@ -4,72 +4,106 @@
       "date": "2026-10-17",
       "papers": [
         {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
+          "id": "1ef5c981f9788fa6",
+          "title": "Sim-to-Real Reinforcement Learning for Path-Safe Target Reaching in Robotic Harvesting of Hydroponic Lettuce",
+          "abstract": "Robotic harvesting requires precise manipulation to ensure accurate positioning of the end-effector, especially in a constraint workspace. This study introduces the Path-Safe Approach Proximal Policy Optimization (PSA-PPO), a target-conditioned local reaching framework designed for robotic harvesting of nutrient film technique (NFT)-hydroponic lettuce in greenhouses. The proposed PSA-PPO preserves the standard clipped PPO objective while introducing a harvesting-oriented policy formulation that integrates target-conditioned observations, corridor-aware spatial constraints, trajectory-history-based safety encoding, and task-specific success criteria for constrained robotic manipulation. PSAPPO was trained entirely in Isaac Lab and successfully transferred to a physical UR10e robotic arm without any real-world policy fine-tuning. In a controlled physical benchmark against 150 scheduled targets, PSA-PPO achieved the highest reaching rate of 94.7%, outperforming Cartesian+TOTG (86.0%), RRTConnect (88.0%), and RRT* (80.0%), while reducing median RMS jerk by 39.8 to 73.0% relative to the classical planners during the final approach segment. A formulation ablation evaluated over 200 simulation targets demonstrates that path-safety and side-corridor shaping are the principal drivers of harvesting-compatible performance: removing either term substantially degrades strict success even when terminal endpoint accuracy is preserved or improved, confirming that optimization toward the endpoint alone is an insufficient objective for constrained crop-proximal manipulation. Finally, PSA-PPO was integrated with an RGB-D vision module and an end-effector and evaluated as a complete greenhouse harvesting system across 144 lettuce harvesting attempts, achieving 94.4% vision-guided target reaching and 86.1% complete harvesting success.",
           "authors": [
-            "Seed Candidate"
+            "Al Bashir",
+            "Partho Ghose",
+            "Yibin Wang",
+            "Robert G. Hardin",
+            "Joshua Peeples",
+            "Genhua Niu",
+            "Azlan Zahid"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-17T00:01:48.484Z",
+          "url": "http://arxiv.org/abs/2610.22337v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.22337v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-15T17:54:16Z",
           "topics": [
-            "neurosim",
+            "rl"
+          ],
+          "score": 35.84017383349868,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "30b5a69d413e3a2b",
+          "title": "PSA: A Pruning-Friendly Sparse-Aware Accelerator for Efficient Sparse Convolution in SNNs",
+          "abstract": "Spiking neural networks (SNNs) are promising for energy-efficient artificial intelligence due to their event-driven sparse computation, and neuron pruning can further reduce redundant operations. However, in practical hardware accelerators, spike sparsity and pruning-induced sparsity produce highly irregular sparse workloads that are difficult to execute efficiently. Existing approaches do not jointly support sparse-input execution, low-overhead sparse convolution lowering and pruning-friendly execution. This paper presents PSA, a Pruning-friendly Sparse-aware Accelerator for efficient sparse convolution in SNNs. PSA features a Sparse-Aware Merge-Accumulation (SAMA) dataflow that aligns sparse spike indices and converts irregular activations into continuous computation streams for efficient sparse convolution execution. It further introduces a Sparse Implicit Group-wise im2col (SIG-im2col) convolution lowering mechanism that converts sparse convolution into SpMM on-chip with low mapping cost and memory overhead. In addition, PSA integrates a lightweight pruning-friendly gating mechanism to directly support pruned SNNs. Results on ResNet-18/CIFAR-10 show that PSA achieves a 4.45x improvement in energy efficiency and an 18.52x reduction in energy-delay product (EDP) over the dense baseline.",
+          "authors": [
+            "Sanhe Fu",
+            "Kainan Wang",
+            "Bo Wang",
+            "Aili Wang"
+          ],
+          "url": "http://arxiv.org/abs/2610.21313v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.21313v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-15T06:02:06Z",
+          "topics": [
             "snn"
           ],
-          "score": 77.99999999917328,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
+          "score": 35.80484810598545,
+          "reason": "Matches SNN / Neuromorphic."
         },
         {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
+          "id": "c4007c87e9fb2060",
+          "title": "ABNAT: Attention-Based Noise-Aware Training for Robust Transformers on Analog Compute-in-Memory Systems",
+          "abstract": "Transformer-based models have become the backbone of a wide range of tasks, but their intensive computation and data movement incur substantial energy overhead. Analog compute-in-memory (CIM) offers an energy-efficient alternative, yet its inherent hardware non-idealities perturb stored weights and can significantly degrade model performance. Although existing noise-aware training (NAT) methods improve robustness by injecting noise during training, they largely overlook the critical role of attention mechanisms in Transformer inference.To bridge this gap, we analyze how CIM-induced noise reshapes attention in Transformers and identify two key observations: (1) the divergence between clean and noisy attention maps increases substantially in deeper layers, and (2) conventional NAT can remain overconfident even when its attention routes deviate markedly from the clean reference. Motivated by these findings, we propose ABNAT, an attention-based noise-aware training framework that teaches the noisy student to preserve the clean teacher's headwise attention routes rather than merely reproduce answers, without hardware changes or inference overhead; selective variants further reduce training cost.Extensive experiments across vision, language, and multimodal Transformers show that ABNAT consistently improves robustness over corresponding NAT baselines, improving noise-degraded accuracy by up to 11.28% and reducing attention deviation by up to 85.77%.",
           "authors": [
-            "Seed Candidate"
+            "Wenshuai Yao",
+            "Wenyong Zhou",
+            "Hanyong Shao",
+            "Zhiyuan Ning",
+            "Yizhe Chen",
+            "Yuannuo Feng",
+            "Kechao Tang",
+            "Ru Huang"
           ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-17T00:01:48.484Z",
+          "url": "http://arxiv.org/abs/2610.22065v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.22065v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-15T15:28:13Z",
           "topics": [
-            "snn",
+            "neurosim"
+          ],
+          "score": 27.832929289847883,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "5630d6e02d49a223",
+          "title": "Physical AI: A Survey of Models, Learning, Systems, and Open Challenges",
+          "abstract": "Physical AI aims to enable intelligent systems to perceive, reason, act, and learn through interaction with the physical world. Unlike purely digital intelligence, physical agents must operate under partial observability, uncertain dynamics, embodiment constraints, and real-time requirements, while their actions continuously reshape the environment and subsequent observations. Recent advances in foundation models and robot learning have expanded the capabilities of physical agents, yet achieving reliable autonomy requires more than improvements in individual models. This survey presents a comprehensive, system-level review of Physical AI, organized around the closed-loop process of physical interaction. We examine the foundations and recent developments in task representations and memory, predictive and action-generating models, data and learning methods, embodiment and control, computing systems, evaluation, and safety. Beyond reviewing individual advances, we investigate how these components interact and collectively shape the capabilities and limitations of Physical AI systems. Building on this integrated perspective, we identify fundamental challenges in generalization, resource-efficient learning and execution, reliable state tracking, safety, recovery, and continual adaptation. We argue that advancing Physical AI requires moving beyond isolated model performance toward integrated systems capable of robust, efficient, safe, and autonomous physical interaction under changing real-world conditions.",
+          "authors": [
+            "Bin Gao",
+            "Anuj Gautam",
+            "Aritra Bagchi",
+            "Yunkai Liang",
+            "Wentao Li",
+            "Ronghui Li",
+            "Zhi Zhou",
+            "Yancan Mao",
+            "Xiao Yan",
+            "Xin He",
+            "Qingyun Zou",
+            "Wenshuo Yue",
+            "Dan Chen",
+            "Zhanglu Yan",
+            "Fei Xu",
+            "Huize Li",
+            "Weijie Wang",
+            "Tao Ouyang",
+            "Tulika Mitra"
+          ],
+          "url": "http://arxiv.org/abs/2610.21171v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.21171v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-15T03:27:58Z",
+          "topics": [
             "tta"
           ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-17T00:01:48.484Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-10-17T00:01:48.484Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999917328,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
+          "score": 21.797202603339947,
+          "reason": "Matches Test-Time Adaptation."
         }
       ]
     },
