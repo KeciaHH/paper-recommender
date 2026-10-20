@@ -1,6 +1,79 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-20",
+      "papers": [
+        {
+          "id": "1c259f9142946afa",
+          "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
+          "abstract": "Every robot already carries high-resolution contact sensors: its own joints. Legged robots and humanoids exploit them to walk, run, and track whole-body motions without vision, but there the contacts are large and forceful. Is joint sensing also enough for precise, contact-rich assembly, where the robot must find a millimeter-scale opening, mesh gear teeth, or catch a thread through light contact? We study this question by training blind assembly policies that observe only a short history of joint positions, velocities, and their own actions, without visual, force, torque, or tactile sensing. The poses of both the fixture and the part are unknown to the policy, and the grasp is randomized substantially. The policy must therefore assemble the parts through contact, sensed exclusively through its own proprioception. Trained with reinforcement learning entirely in simulation over randomized parts, grasps, and contacts, such policies learn peg insertion, gear meshing, and nut threading. The peg insertion policy transfers zero-shot to the real world and inserts pegs of different shapes and sizes in 73% of trials. Controlled comparisons with matched visual policies in simulation show that blind policies generalize far better to unseen part shapes and sizes, though they can be slower. Training such policies needs thousands of different assemblies, each simulated with its clearance intact, so we also release an open-source generator that builds them procedurally from exact convex pieces for MuJoCo; it is more accurate and faster than convex decomposition or MuJoCo's signed-distance collision. Videos and interactive simulations are at https://younghyopark.me/blind-proprioceptive-assembly/.",
+          "authors": [
+            "Antonia Bronars",
+            "Younghyo Park",
+            "Kushal Kedia",
+            "Pulkit Agrawal"
+          ],
+          "url": "http://arxiv.org/abs/2610.23849v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.23849v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-16T17:58:48Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.765473353174603,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "170cccacac1fc764",
+          "title": "Learning Personalized Memory Gating from Delayed One-Sided Feedback",
+          "abstract": "Long-term memory enables language-model agents to personalize future interactions, but a finite memory bank cannot preserve every extracted fact. Existing memory gating policies are typically shared across users and therefore fail to account for user-specific patterns of future reuse. In this paper, we study memory gating at the fact level. We first propose a retrieval-based labeling strategy that labels each fact by whether it is later retrieved and incorporated into responses. We then formulate online memory gating as contextual apple tasting with delayed one-sided feedback, and propose Warm-Start UCB, which combines offline learning from existing data with online adaptation to the current user. Our theoretical analysis establishes a high-probability regret upper bound of $\\tilde{O}(Tε\\wedge d\\sqrt{T})$ when the delay window is at most $O(\\sqrt{T})$, where $T$ is the total number of rounds, $ε$ is the initialization error, $d$ is the dimension of the feature map, and $\\tilde{O}(\\cdot)$ hides constant and poly-logarithmic factors. The results of our experiment demonstrate that our method outperforms all baselines under different memory budgets and history lengths, establishing it as a promising personalized memory gating policy.",
+          "authors": [
+            "Kaixuan Ji",
+            "Zixiang Chen",
+            "Wenting Zhao",
+            "Cheng Qian",
+            "Heng Wang",
+            "Weizhi Zhang",
+            "Jielin Qiu",
+            "Liangwei Yang",
+            "Quanquan Gu",
+            "Silvio Savarese",
+            "Shelby Heinecke",
+            "Huan Wang"
+          ],
+          "url": "http://arxiv.org/abs/2610.23812v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.23812v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-16T17:34:45Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.7642803968254,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "40176b2548d84add",
+          "title": "PairSight: Characterizing and Predicting Operator-Level Interference in GPU Sharing for DNN Inference",
+          "abstract": "Serving DNN inference is costly, yet a single task seldom saturates both the compute units and the memory bandwidth of a GPU. GPU sharing raises utilization by co-locating several tasks on one GPU, at the cost of interference among them. Existing systems estimate this interference with binary compute-memory rules, standalone scaling curves, or model-level predictors. However, these estimates rest on a limited understanding of interference. They leave the software and hardware properties of co-located operators largely unexplored and give no slowdown prediction that is both interpretable and accurate. We conduct an operator-level study of interference under SM partitioning and use hardware counters to trace it to contention on the shared memory path, where the slowdown depends jointly on both co-located operators. Based on these findings, we propose PairSight, a hardware-aware interference predictor that learns how the hardware behaviors of co-located tasks interact and predicts the latency of each task before co-location. On six DNN models including LLMs, PairSight predicts latency under sharing with 4.3% mean error, against 19.0% for a compute-memory intensity rule, and adapts to unseen models and inputs with a few samples.",
+          "authors": [
+            "Xiao Liu",
+            "Yujia Fu",
+            "Yue Yu",
+            "Dan Huang"
+          ],
+          "url": "http://arxiv.org/abs/2610.23086v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.23086v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-16T07:56:36Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.735602321428573,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-10-18",
       "papers": [
         {
@@ -7656,52 +7729,6 @@
           ],
           "score": 27.90875693369709,
           "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-14",
-      "papers": [
-        {
-          "id": "28eab12d93b1717e",
-          "title": "Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
-          "abstract": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning. Instead of asking the MLLM to judge a generated image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass. We use the average image-conditioned prompt log-likelihood as the reward, directly reusing the MLLM's pretrained image-text alignment ability without preference labels, reward-model fine-tuning. We further introduce Self-SpectraReward, a special case for unified multimodal models where the policy's own understanding branch serves as the reward model for its generation branch, forming a closed-loop self-improving framework without external reward models or external knowledge. Extensive experiments validate SpectraReward through a broad image-generation RL study covering two diffusion models, three RL algorithms, nine reward MLLM backbones from four MLLM families spanning 4B to 235B parameters, and five out-of-distribution text-to-image benchmarks. Results show that both SpectraReward and Self-SpectraReward significantly and consistently improve generation performance and outperform prior MLLM-derived reward training methods. Further analysis reveals that larger reward MLLMs are not always better, while Self-SpectraReward can match or surpass much larger external reward models, suggesting that reward-policy alignment is a key factor for effective image-generation RL. Project Page: https://huangrh99.github.io/SpectraReward/",
-          "authors": [
-            "Runhui Huang",
-            "Qihui Zhang",
-            "Zhe Liu",
-            "Yu Gao",
-            "Jie Wu",
-            "Hengshuang Zhao"
-          ],
-          "url": "http://arxiv.org/abs/2607.11886v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.11886v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-13T17:59:58Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.914428392030423,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "74670edfaf0fb893",
-          "title": "ARMOR-IMC: Adaptive Resource Mapping for Operational Robustness via Secure In-Memory Computing",
-          "abstract": "The massive data-movement overhead in traditional architectures has led to the adoption of In-Memory Computing (IMC) for energy-efficient Deep Neural Network (DNN) processing. By leveraging emerging devices like Spin-Orbit Torque Magnetic Tunnel Junctions (SOT-MTJs), IMC bypasses the \"memory wall\" and reduces leakage power inherent in traditional CMOS. However, this shift introduces dual hardware threats: manufacturing Process Variation (PV) degrades reliability and increases vulnerability to fault injection, while power Side-Channel Attacks (SCAs) compromise security. Existing defenses address these threats in isolation. This work presents a posttraining framework that simultaneously hardens analog IMC accelerators against both threats without retraining the model. Implemented in the IMAC-Sim simulator, our approach uses the proposed Variation Impact Score (VIS) to guide the mapping of Fault Observation Windows (FOWs) and introduces the Leakage Per Inference (LPI) metric to quantify input-dependent power variability under stochastic injection and the resulting reduction in effective signal-to-noise ratio. Experiments show that PV-induced faults can degrade accuracy by over 50%, while our method restores near-baseline accuracy and mitigates the threat of correlation-based power analysis attacks.",
-          "authors": [
-            "Muhtasim Alam Chowdhury",
-            "Ramtin Zand",
-            "Soheil Salehi"
-          ],
-          "url": "http://arxiv.org/abs/2607.10938v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.10938v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-12T21:59:41Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.85489052744709,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
