@@ -1,6 +1,95 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-29",
+      "papers": [
+        {
+          "id": "19511e36aaeabec7",
+          "title": "SLICE-CiM: Selective Layer-wise Inference Control Engine with Confidence-Based Early Exit for SRAM based Digital Compute-in-Memory",
+          "abstract": "Digital SRAM compute-in-memory (CIM) macros enable energy-efficient CNN inference by eliminating off-chip weight transfers; however, peripheral control logic introduces three inefficiencies: bit- slice over-activation at reduced precision (L1), unnecessary accumula- tion depth (L2), and idle precision-transition stalls (L3). To address these, we present four synthesizable peripheral blocks: a Flush-Merge Enable (FME) controller, a Confidence-Based Early-Exit (EE) module, a Precision Register with Decoder (PR/PD), and a Bit-Serial Cycle Controller (CC), co-designed to minimize switching activity, wordline overhead, and leakage. Implemented in TSMC 65-nm CMOS at 335 MHz, the peripheral framework occupies 1769.760 μm2 post-synthesis and 1982.131 μm2 post-PnR. Gate-level VCD analysis reports 6.0706 μW leakage and 288.2902 μW (post-synthesis) / 322.8850 μW (post-PnR) dynamic power, totaling 328.9556 μW (0.2402% of system power). The EE module dominates dynamic power (58.2%), while WLG dominates area (58.1%). System evaluation on MobileNetV2 (CIFAR-100) shows efficiency scaling from 31.35 TOPS/W (8b/8b, 1.2 V) to 454.91 TOPS/W (2b/8b, 0.8 V), achieving 13.33x improvement without bitcell modification or retraining. The framework targets CNN workloads exploiting sparsity, with Transformer extension as future work.",
+          "authors": [
+            "Pratham Sharma",
+            "Mohd Faisal Khan",
+            "Santosh Kumar Vishvakarma"
+          ],
+          "url": "http://arxiv.org/abs/2610.37601v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.37601v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-27T17:32:32Z",
+          "topics": [
+            "neurosim",
+            "early_exit"
+          ],
+          "score": 45.90531810763889,
+          "reason": "Matches NeuroSim / Hardware-aware DNN, Network Early Exit."
+        },
+        {
+          "id": "d792b9950107ed53",
+          "title": "Back-End-Of-Line Integration of 2-Terminal Ferroelectric Hafnia Synaptic Weights on Commercial CMOS Process",
+          "abstract": "Functionalising the back-end-of-line (BEOL) of CMOS with emerging materials is a key route to neural network accelerators and neuromorphic systems. In this work, we demonstrate for the first time the integration of 2-terminal ferroelectric synaptic weights in the BEOL of as-delivered commercial 180 nm CMOS dies. A novel material stack is proposed, in which a WOx/[HfO2-ZrO2] bilayer is sandwiched between TiN and Mo electrodes. For devices annealed at 450 °C, programming below 1.8 V is achieved with a cycle-to-cycle variation below 3 %. Synaptic weights annealed at 500 °C exhibit more gradual weight updates, while the tested underlying NMOS transistors remain functional after the complete integration process. The trade-off between thermal budget and on-device training performance is illustrated using hardware-aware neural network simulations.",
+          "authors": [
+            "Alexander Flasby",
+            "Anwesha Panda",
+            "Nathan Savoia",
+            "Laura Bégon-Lours"
+          ],
+          "url": "http://arxiv.org/abs/2610.37530v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.37530v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-27T16:51:15Z",
+          "topics": [
+            "snn",
+            "neurosim"
+          ],
+          "score": 45.903270323247355,
+          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "f45eb9b6f63e60d4",
+          "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+          "abstract": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning from them faces a fundamental trade-off between scalable data and explicit action grounding. We introduce ThinkWorld, a VLA learning framework that grounds action reasoning in world dynamics and strengthens it through reinforcement learning with world imagination. ThinkWorld represents each action thought as a Chain-of-Dynamics (CoD), a sequence of discrete motion tokens that captures the intermediate dynamics connecting the current world to a future state and serves as a common action representation across embodiments. We first initialize CoD with action-labeled demonstrations, then predict the future induced by each CoD and reinforce those whose predictions better match the observed outcome. This enables videos without action annotations to provide direct supervision from observed state transitions, allowing human and robot experience to refine the same reasoning space. Experiments in simulation and on real robots demonstrate effective human-to-robot transfer and strong generalization to unseen tasks and environments.",
+          "authors": [
+            "Chaehyun Kim",
+            "Chi-Pin Huang",
+            "Jisoo Kim",
+            "Min-Hung Chen",
+            "Yu-Chiang Frank Wang",
+            "Seungryong Kim",
+            "Fu-En Yang"
+          ],
+          "url": "http://arxiv.org/abs/2610.37666v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.37666v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-27T17:59:52Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.90667392691799,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "4aaf3b755f1698ff",
+          "title": "When Should We Intervene at Test Time?",
+          "abstract": "Test-time adaptation helps a deployed model respond to changing inputs, but the same intervention can rescue one batch and damage the next. Updating normalization statistics, for example, can improve corrupted images yet fail when a batch contains mostly one class. Average accuracy hides these failures and cannot tell a model when to use an intervention. Target labels can guide this decision, but they are scarce and some choices are already clear. We introduce PORTAL, a controller that chooses when to deploy an intervention, which inputs to label, and when to stop querying. Each available prediction rule is a candidate, and its predictions are fixed before current feedback arrives. Every acquired label therefore evaluates all candidates on the same input. PORTAL combines these shared comparisons and directs queries toward candidates that can still overtake the current leader. It stops when the remaining labels cannot change the choice or when the possible accuracy gain no longer justifies another query. Our analysis links the required feedback to accuracy gaps and shared mistakes, explaining why some choices need much less evidence. Experiments show that this control turns an intervention that loses accuracy overall into a useful choice on selected batches. It prevents severe failures caused by changes in arrival order and preserves gains across complete corruption streams. When a fixed rule already works well, PORTAL uses little feedback to retain its performance. Periodic label checks reveal when past evidence needs refreshing and help the controller recover as conditions change. The acquired labels also train stronger candidates for future batches, and selection brings nearly all of their accuracy gains into deployment. The same feedback therefore improves both the choice made now and the predictions available to later batches.",
+          "authors": [
+            "Jiahao Zhang",
+            "Xinling Wen",
+            "Liangliang Li",
+            "Yu Chen"
+          ],
+          "url": "http://arxiv.org/abs/2610.37658v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.37658v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-27T17:58:53Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.90662515128968,
+          "reason": "Matches Test-Time Adaptation."
+        }
+      ]
+    },
+    {
       "date": "2026-10-28",
       "papers": [
         {
@@ -7430,57 +7519,6 @@
           ],
           "score": 27.910616792328042,
           "reason": "Matches Network Early Exit."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-22",
-      "papers": [
-        {
-          "id": "6155c3993e09965b",
-          "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
-          "abstract": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies with context length. By separating each prompt into task-relevant key evidence and irrelevant distractor context, we further show that the root cause is insufficient grounding: models copy from the prompt indiscriminately, and those that fail to focus on key evidence are far more likely to answer incorrectly. Motivated by this diagnosis, we propose GEAR (Grounding Evidence-Aware Reward), a reward shaping method that augments the accuracy signal with a grounding reward for overlap with key evidence and a distractor penalty for overlap with irrelevant context. To enable GEAR on natural-language data, we develop an automated pipeline that constructs evidence-annotated training data from arbitrary documents. We validate GEAR across multiple model scales and benchmarks, showing consistent improvements of up to +4.6 average points over standard RL with accuracy-based rewards, with larger gains at longer contexts, while also reducing repetitive copying and thinking length. Our findings suggest that, even as long-context evaluation shifts from simple retrieval toward complex reasoning, accurate grounding in relevant evidence remains an indispensable capability with substantial room for improvement.",
-          "authors": [
-            "Lizhe Fang",
-            "Weizhou Shen",
-            "Tianyi Tang",
-            "Yisen Wang"
-          ],
-          "url": "http://arxiv.org/abs/2607.19345v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.19345v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-21T17:59:21Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.914052133763228,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "6f53845c2a8c5226",
-          "title": "RRAM-DP: Device-Calibrated Differential Privacy for In-Memory Edge Learning",
-          "abstract": "Edge Artificial Intelligence of Things (AIoT) systems often collect sensitive data in situ, raising serious privacy concerns. Resistive-switching random-access memory (RRAM) is an attractive substrate for efficient AIoT thanks to its multi-bit storage and compute-in-memory (CiM) capabilities, while its inherently stochastic write behavior provides a natural source of randomness that can be leveraged for differential privacy (DP) protection. Yet how to transform this device-level randomness-typically viewed as detrimental to accuracy-into a principled randomized mechanism while preserving model utility remains underexplored. We propose RRAM-DP, a hardware-algorithm co-design that relaxes RRAM write-verify operations to inject calibrated noise for inherently (epsilon, delta)-DP with formal DP analysis; together with pretraining techniques, it renders a novel private, high-utility CiM training paradigm. On CIFAR-10/100, STS-B, and SST-2, RRAM-DP-SGD incurs at best only a 3.8% accuracy drop at (epsilon=2, delta=O(1/n))-DP relative to non-private SGD. At the same privacy level, RRAM-DP-SGD delivers up to 57x and 3.2x energy savings and 2.7x and 1.8x speedups over A100 and DiVa-GEMM, respectively. These results point toward efficient, privacy-preserving in-memory training on RRAM at the edge.",
-          "authors": [
-            "Kwunhang Wong",
-            "Jichang Yang",
-            "Karl M. H. Lai",
-            "Hegan Chen",
-            "Songqi Wang",
-            "Wei Xuan",
-            "Ning Lin",
-            "Han Wang",
-            "Xiaojuan Qi",
-            "Zhongrui Wang"
-          ],
-          "url": "http://arxiv.org/abs/2607.18169v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.18169v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-20T17:11:59Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.840274025297617,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
