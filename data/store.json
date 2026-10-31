@@ -1,6 +1,98 @@
 {
   "recommendations": [
     {
+      "date": "2026-10-31",
+      "papers": [
+        {
+          "id": "16310648328aee22",
+          "title": "Rethinking Neural Thickets Without Weight Perturbations",
+          "abstract": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions. This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+          "authors": [
+            "Nicolas Dufour",
+            "Elouan Gardès",
+            "Amil Dravid",
+            "Patrick Pérez",
+            "Loic Landrieu"
+          ],
+          "url": "http://arxiv.org/abs/2610.40649v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40649v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T17:59:29Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.907147859623016,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "355fe946ef987a56",
+          "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+          "abstract": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model's first few output tokens, and existing defenses inherit the weakness, supervising the surface form of the response without ever giving the model an explicit safety decision to learn. We take the opposite view of shallowness: if a short span determines the trajectory of an entire response, that span is the highest-leverage place to intervene, and the defender can occupy it first. We propose Assess $\\to$ Decide $\\to$ Respond, a framework in which the defender assesses the user's intent, commits to an explicit, parseable safety decision, and only then generates a reply conditioned on it, with the commitment trained by reinforcement learning at the payload turn. Because the decision is a token span, the reward can be a rule: a self-verified reward checks the committed label against the conversation's known nature, requiring no judge and no annotation, while the same format also supports an LLM-as-judge reward over a graded decision space with safe redirection. Across two model families and fourteen benchmarks spanning safety, utility, and helpfulness, our defenders achieve the strongest multi-turn safety in a controlled comparison, maintaining their lead in safety while preserving utility at a modest cost to helpfulness. A per-token KL analysis and interventional probes confirm why this works: training concentrates its effect on the brief deliberation that sets a response's trajectory, and the decision committed there is a causal control point. The very shallowness attackers exploit becomes the mechanism of defense.",
+          "authors": [
+            "Qiyao Ma",
+            "Xiaodong Liu",
+            "Weiwei Yang",
+            "Mingqian Feng",
+            "Chengquan Guo",
+            "Jialin Song",
+            "Carolyn Buractaon",
+            "Zhe Zhao",
+            "Junshan Zhang",
+            "Sandeep Atluri",
+            "Christopher White",
+            "Jianfeng Gao"
+          ],
+          "url": "http://arxiv.org/abs/2610.40627v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40627v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T17:56:53Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.90701889136905,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "0968d1471d41da5c",
+          "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+          "abstract": "Large language model serving is limited by facility power. Energy per token determines how many tokens a datacenter can serve, while a latency target bounds how quickly each user receives them. During decode, every weight is read from memory for every generated token. Batching amortizes this read across users but makes no individual user faster. Speculative decoding does: a drafter proposes several future tokens, and the target model verifies them in a single forward pass that reuses the same weight read. Because every drafted token must be verified whether or not it is accepted, the energy speculation saves depends on how many drafted tokens are accepted. This saving is hard to pin down. It varies across target models from different attention families and across drafting schemes, and it depends on the text being served. Every drafter we evaluate accepts fewer tokens on conversation than on code, and every trained drafter accepts fewer on Romansh, a low-resource language, than on English. We measure speculative decoding under production serving conditions (SGLang, CUDA graphs enabled) on H100 and H200 GPUs, at batch sizes up to 64 across 5 corpora. On dense models, verification, not drafting, dominates the energy cost. The saving shrinks as the batch grows, because batching has already shared the weight read that speculation would divide among the accepted tokens. At large batch sizes, block drafters push verification past the balance point between arithmetic and memory traffic into the compute-bound regime, where the saving becomes a loss, and a drafter with low acceptance raises energy per token. Meeting a tighter latency target with speculation then costs additional energy. Larger batches lower energy per token without speculation. Speculation adds to that saving only when acceptance is high, and on the model we tested it leaves little headroom for latency-preserving DVFS.",
+          "authors": [
+            "Bole Ma",
+            "Ayesha Afzal",
+            "Jan Eitzinger",
+            "Harald Koestler",
+            "Gerhard Wellein"
+          ],
+          "url": "http://arxiv.org/abs/2610.40287v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40287v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T15:37:45Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.900117436342594,
+          "reason": "Matches DVFS / Energy."
+        },
+        {
+          "id": "64420696a159c845",
+          "title": "Non-Volatile Memory Devices for Neuromorphic Computing",
+          "abstract": "This chapter explores the critical role of emerging non-volatile memory (eNVM) devices in advancing neuromorphic computing. Inspired by the human brain's remarkable ability to perform complex tasks like pattern recognition and adaptation, neuromorphic computing offers immense potential for implementing complex neural networks (NNs) in real hardware. Despite ongoing research into the brain's complexities, its fundamental operation relies on neurons (processing units communicating via electrochemical signals) and synapses (junctions between neurons). The modifiable strength of the synapse is key to learning and memory functionality, allowing the brain to adapt and rewire itself. For dense and low-power circuits in neuromorphic computing, these eNVM devices are ideal due to their synaptic-like behavior and non-volatile information storage. Properties such as conductance modulation of these devices emulate synaptic plasticity, which is crucial for learning, and their scalability makes them promising for large-scale neuromorphic architectures. This chapter will delve into the various types of eNVM devices such as resistive RAM (ReRAM), phase-change memory (PCM), spintronics-based memory devices, and their applications in neuromorphic computing, discussing their challenges and opportunities, and highlighting recent advances in their integration within neuromorphic systems.",
+          "authors": [
+            "Debasis Das"
+          ],
+          "url": "http://arxiv.org/abs/2610.39625v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.39625v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T08:51:57Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.879988468088623,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-10-30",
       "papers": [
         {
@@ -7351,131 +7443,6 @@
           ],
           "score": 53.99999999917328,
           "reason": "Matches Reinforcement Learning, DVFS / Energy."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-24",
-      "papers": [
-        {
-          "id": "c07aaf3c7b87cad5",
-          "title": "Self-organizing Architecture of Receptron Units: a Hardware-Aware Framework for Edge Intelligence",
-          "abstract": "The growing demand for intelligent processing at the edge of IoT networks is constrained by the severe computational and memory limitations of microcontroller units, which render impractical conventional deep learning approaches. We propose a neuromorphicinspired classifier based on the Receptron model, a single-unit architecture capable of implementing non-linearly separable decision boundaries, without resorting to multi-layer networks. The model is designed for direct deployment on mid-range MCUs, while supporting continuous on-device adaptation. Experimental evaluation on basic dataset benchmarks yields cross-validated accuracies compatible with standard machine learning method baselines. These results position the Receptron as a viable and interpretable alternative for resource-constrained neuromorphic edge systems operating in dynamic, non-stationary environments.",
-          "authors": [
-            "Stefano Radice",
-            "Ludovico Casaccia",
-            "Riccaro Emanuele Beccalli",
-            "Bruno Paroli",
-            "Paolo Milani"
-          ],
-          "url": "http://arxiv.org/abs/2607.20162v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.20162v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-22T13:57:41Z",
-          "topics": [
-            "snn",
-            "neurosim"
-          ],
-          "score": 45.830659403935186,
-          "reason": "Matches SNN / Neuromorphic, NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "fe8903406edf01b7",
-          "title": "Group boarding for airplanes: benchmarking static policies and optimizing dynamic assignment with deep reinforcement learning",
-          "abstract": "Improving boarding efficiency reduces airplane turnaround time and improves passenger experience. Airlines typically assign passengers to a few sequential boarding groups using static seat-based rules. Yet arrivals, seat choices, and luggage are sequential and random, and a static rule ignores the seats earlier passengers have already taken. We propose the first dynamic formulation of boarding group assignment. As each passenger checks in, we observe earlier passengers' seats and groups, the current passenger's seat, and optional luggage information, then assign a group while keeping companions together. We formulate dynamic group assignment as a Markov decision process and solve it with reinforcement learning (RL). The policy uses a convolutional neural network to encode the checked-in seat-assignment state and is trained by proximal policy optimization. The reward balances total boarding time and average individual boarding time. We benchmark the proposed RL policy against three companion-compatible static policies (back-to-front, modified Steffen, and alternating block) in an in-house simulator covering six single- and double-aisle layouts. Back-to-front with optimized group sizes achieves the shortest total boarding time and average individual boarding time among the static benchmarks across all layouts. The dynamic RL policy further outperforms it on both metrics in every layout. On a representative case, the RL policy outperforms the optimal back-to-front by up to 9.8\\% in total boarding time and 22.8\\% in average individual time. Sweeping the reward weight yields an approximate Pareto frontier for operator choice. Trained policies remain robust under out-of-distribution operating conditions, including varying load factors, companion sizes, and luggage loads.",
-          "authors": [
-            "Minyu Shen",
-            "Weihua Gu",
-            "Junqi Ma",
-            "Boqian Song",
-            "Li Zhen",
-            "Gang Kou"
-          ],
-          "url": "http://arxiv.org/abs/2607.21512v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.21512v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-23T16:57:16Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 43.91099587962963,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "07685de2e9d1a08d",
-          "title": "X$^3$-OPD: Distilling Reasoning into Large Audio-Language Models via On-Policy Alignment",
-          "abstract": "While large audio-language models have achieved remarkable progress in auditory perception, they still lag behind text-based large language models in deep logical reasoning, primarily due to the scarcity of high-quality audio reasoning data. To bridge this gap, we propose X$^3$-OPD, a cross-modal on-policy distillation framework that transfers reasoning capabilities from a powerful text teacher to an audio-language student. During training, the student generates reasoning trajectories conditioned on its own acoustic perception, while the teacher provides token-level guidance using matched textual inputs and verified answers. We further construct a three-tier symmetric corpus covering textual reasoning rendered into speech, audio-event reasoning grounded in complex acoustic scenes, and spoken-dialogue reasoning involving paralinguistic cues. This design extends cross-modal distillation beyond textually recoverable content to reasoning grounded in non-linguistic events, prosody, and conversational context. Experiments on MMSU, MMAU, BIG Bench Audio, and MMAR demonstrate that X$^3$-OPD substantially improves audio-grounded reasoning and chain-of-thought quality while largely preserving the model's existing capabilities under domain shift.",
-          "authors": [
-            "Dongjie Fu",
-            "Di Cao",
-            "Xize Cheng",
-            "Zihan Zhang",
-            "Wenxu Jia",
-            "Yifu Chen",
-            "Shengpeng Ji",
-            "Yu Zhang",
-            "Tao Jin"
-          ],
-          "url": "http://arxiv.org/abs/2607.21550v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.21550v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-23T17:35:20Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.912884106316138,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "105cf0264e37e3ec",
-          "title": "Magnetically memorable inductance in superconducting multilayer resonators",
-          "abstract": "Superconductor-ferromagnet hybrid structures with tunable kinetic inductance are promising elements for neuromorphic and quantum computing circuits. We report the fabrication and microwave characterization of split-ring resonators based on Nb/Co/Nb/Co/Nb/Al spin-trigger multilayers and demonstrate a non-volatile spin-valve effect on their resonant properties. Reversal of the relative magnetization orientation of the cobalt layers produces a reproducible shift of the resonant frequency up to 4 MHz at zero applied magnetic field, corresponding to a change in the kinetic inductance of the structure. The incorporation of a proximitized aluminum overlayer is shown to enhance the inductance contrast between the parallel and antiparallel magnetic states by a factor of approximately three relative to structures without this layer. The experimental results are in quantitative agreement with a microscopic model based on the Usadel equations. The demonstrated magnetic memory of the resonant frequency at zero field establishes spin-trigger multilayers as viable field-programmable inductive elements for superconducting digital and neuromorphic circuits.",
-          "authors": [
-            "R. Tyumenev",
-            "D. S. Kalashnikov",
-            "B. V. Fradkin",
-            "A. A. Neilo",
-            "A. G. Shishkin",
-            "N. V. Klenov",
-            "I. I. Soloviev",
-            "A. A. Golubov",
-            "M. Yu. Kupriyanov",
-            "I. A. Golovchanskiy",
-            "V. S. Stolyarov",
-            "A. S. Sidorenko",
-            "S. V. Bakurskiy"
-          ],
-          "url": "http://arxiv.org/abs/2607.21147v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.21147v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-23T10:28:35Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.891715951554232,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "518fb5e4548ecd92",
-          "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
-          "abstract": "Efficient multimodal inference is increasingly constrained not only by model quality or FLOP count, but also by the cost of preserving, moving, routing, caching, and quantizing multimodal representations under latency, memory, and energy constraints. This paper reviews recent advances in efficient vision-language and multimodal large language models, covering visual token compression, video token management, KV-cache optimization, Mixture-of-Experts (MoE) routing, low-bit quantization, edge deployment, and hardware-aware benchmarking. We argue that these techniques cannot be treated as independent optimizations. Visual token compression alters downstream feature distributions and MoE routing decisions, routing behavior affects expert utilization and quantization sensitivity, quantized router logits influence expert assignment, KV-cache policies determine retained multimodal evidence, and hardware constraints often transform computational savings into memory and communication bottlenecks. We organize the literature around these interactions and identify key design trade-offs, including accuracy versus token budget, static versus adaptive compression, sparse routing efficiency versus expert collapse, and low-bit inference versus modality-specific degradation. Finally, we introduce Temporal Routing Consistency as a diagnostic for video MoE models and highlight open research directions in routing-aware compression, cross-modal cache management, hardware-aware co-design, and unified benchmarking for multimodal edge intelligence.",
-          "authors": [
-            "Jay Gor",
-            "Karm Dave",
-            "Akshita Abrol",
-            "Rajesh Gupta",
-            "Sudeep Tanwar",
-            "Zhengkui Wang"
-          ],
-          "url": "http://arxiv.org/abs/2607.20981v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.20981v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-23T07:03:33Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.881545647321428,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
     }
