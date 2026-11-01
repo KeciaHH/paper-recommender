@@ -1,6 +1,98 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-01",
+      "papers": [
+        {
+          "id": "16310648328aee22",
+          "title": "Rethinking Neural Thickets Without Weight Perturbations",
+          "abstract": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions. This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+          "authors": [
+            "Nicolas Dufour",
+            "Elouan Gardès",
+            "Amil Dravid",
+            "Patrick Pérez",
+            "Loic Landrieu"
+          ],
+          "url": "http://arxiv.org/abs/2610.40649v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40649v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T17:59:29Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.83766162450397,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "355fe946ef987a56",
+          "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+          "abstract": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model's first few output tokens, and existing defenses inherit the weakness, supervising the surface form of the response without ever giving the model an explicit safety decision to learn. We take the opposite view of shallowness: if a short span determines the trajectory of an entire response, that span is the highest-leverage place to intervene, and the defender can occupy it first. We propose Assess $\\to$ Decide $\\to$ Respond, a framework in which the defender assesses the user's intent, commits to an explicit, parseable safety decision, and only then generates a reply conditioned on it, with the commitment trained by reinforcement learning at the payload turn. Because the decision is a token span, the reward can be a rule: a self-verified reward checks the committed label against the conversation's known nature, requiring no judge and no annotation, while the same format also supports an LLM-as-judge reward over a graded decision space with safe redirection. Across two model families and fourteen benchmarks spanning safety, utility, and helpfulness, our defenders achieve the strongest multi-turn safety in a controlled comparison, maintaining their lead in safety while preserving utility at a modest cost to helpfulness. A per-token KL analysis and interventional probes confirm why this works: training concentrates its effect on the brief deliberation that sets a response's trajectory, and the decision committed there is a causal control point. The very shallowness attackers exploit becomes the mechanism of defense.",
+          "authors": [
+            "Qiyao Ma",
+            "Xiaodong Liu",
+            "Weiwei Yang",
+            "Mingqian Feng",
+            "Chengquan Guo",
+            "Jialin Song",
+            "Carolyn Buractaon",
+            "Zhe Zhao",
+            "Junshan Zhang",
+            "Sandeep Atluri",
+            "Christopher White",
+            "Jianfeng Gao"
+          ],
+          "url": "http://arxiv.org/abs/2610.40627v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40627v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T17:56:53Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.83753265625,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "0968d1471d41da5c",
+          "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+          "abstract": "Large language model serving is limited by facility power. Energy per token determines how many tokens a datacenter can serve, while a latency target bounds how quickly each user receives them. During decode, every weight is read from memory for every generated token. Batching amortizes this read across users but makes no individual user faster. Speculative decoding does: a drafter proposes several future tokens, and the target model verifies them in a single forward pass that reuses the same weight read. Because every drafted token must be verified whether or not it is accepted, the energy speculation saves depends on how many drafted tokens are accepted. This saving is hard to pin down. It varies across target models from different attention families and across drafting schemes, and it depends on the text being served. Every drafter we evaluate accepts fewer tokens on conversation than on code, and every trained drafter accepts fewer on Romansh, a low-resource language, than on English. We measure speculative decoding under production serving conditions (SGLang, CUDA graphs enabled) on H100 and H200 GPUs, at batch sizes up to 64 across 5 corpora. On dense models, verification, not drafting, dominates the energy cost. The saving shrinks as the batch grows, because batching has already shared the weight read that speculation would divide among the accepted tokens. At large batch sizes, block drafters push verification past the balance point between arithmetic and memory traffic into the compute-bound regime, where the saving becomes a loss, and a drafter with low acceptance raises energy per token. Meeting a tighter latency target with speculation then costs additional energy. Larger batches lower energy per token without speculation. Speculation adds to that saving only when acceptance is high, and on the model we tested it leaves little headroom for latency-preserving DVFS.",
+          "authors": [
+            "Bole Ma",
+            "Ayesha Afzal",
+            "Jan Eitzinger",
+            "Harald Koestler",
+            "Gerhard Wellein"
+          ],
+          "url": "http://arxiv.org/abs/2610.40287v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.40287v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T15:37:45Z",
+          "topics": [
+            "dvfs"
+          ],
+          "score": 27.830631201223547,
+          "reason": "Matches DVFS / Energy."
+        },
+        {
+          "id": "64420696a159c845",
+          "title": "Non-Volatile Memory Devices for Neuromorphic Computing",
+          "abstract": "This chapter explores the critical role of emerging non-volatile memory (eNVM) devices in advancing neuromorphic computing. Inspired by the human brain's remarkable ability to perform complex tasks like pattern recognition and adaptation, neuromorphic computing offers immense potential for implementing complex neural networks (NNs) in real hardware. Despite ongoing research into the brain's complexities, its fundamental operation relies on neurons (processing units communicating via electrochemical signals) and synapses (junctions between neurons). The modifiable strength of the synapse is key to learning and memory functionality, allowing the brain to adapt and rewire itself. For dense and low-power circuits in neuromorphic computing, these eNVM devices are ideal due to their synaptic-like behavior and non-volatile information storage. Properties such as conductance modulation of these devices emulate synaptic plasticity, which is crucial for learning, and their scalability makes them promising for large-scale neuromorphic architectures. This chapter will delve into the various types of eNVM devices such as resistive RAM (ReRAM), phase-change memory (PCM), spintronics-based memory devices, and their applications in neuromorphic computing, discussing their challenges and opportunities, and highlighting recent advances in their integration within neuromorphic systems.",
+          "authors": [
+            "Debasis Das"
+          ],
+          "url": "http://arxiv.org/abs/2610.39625v1",
+          "pdfUrl": "http://arxiv.org/pdf/2610.39625v1",
+          "source": "arXiv",
+          "publishedAt": "2026-10-29T08:51:57Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.810502232969576,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-10-31",
       "papers": [
         {
@@ -7370,79 +7462,6 @@
           ],
           "score": 27.738850362929895,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-25",
-      "papers": [
-        {
-          "id": "a91b11877c8bdb74",
-          "title": "NeuroSimDNN Modeling for Compute-in-Memory Neural Accelerators",
-          "abstract": "A placeholder candidate for NeuroSimDNN, compute-in-memory, hardware-aware training, and neuromorphic accelerator evaluation.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-07-25T22:42:50.950Z",
-          "topics": [
-            "neurosim",
-            "snn"
-          ],
-          "score": 77.99999999917328,
-          "reason": "Matches NeuroSim / Hardware-aware DNN, SNN / Neuromorphic."
-        },
-        {
-          "id": "585033af01ae5ba1",
-          "title": "Test-Time Adaptation for Spiking Neural Networks under Domain Shift",
-          "abstract": "A placeholder candidate showing the target intersection of spiking neural networks, online adaptation, and robustness under changing deployment data.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-07-25T22:42:50.950Z",
-          "topics": [
-            "snn",
-            "tta"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches SNN / Neuromorphic, Test-Time Adaptation."
-        },
-        {
-          "id": "3e626f846991f87f",
-          "title": "Hardware-Aware Early Exit Networks for Adaptive Inference",
-          "abstract": "A placeholder candidate covering dynamic neural networks, conditional computation, latency control, and energy-aware deployment.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-07-25T22:42:50.950Z",
-          "topics": [
-            "early_exit",
-            "dvfs"
-          ],
-          "score": 69.99999999917328,
-          "reason": "Matches Network Early Exit, DVFS / Energy."
-        },
-        {
-          "id": "729df0c5b1b17049",
-          "title": "Reinforcement Learning based DVFS for Energy-Efficient Neural Inference",
-          "abstract": "A placeholder candidate for policy-driven dynamic voltage frequency scaling during neural network inference on edge systems.",
-          "authors": [
-            "Seed Candidate"
-          ],
-          "url": "https://arxiv.org",
-          "source": "Seed",
-          "publishedAt": "2026-07-25T22:42:50.950Z",
-          "topics": [
-            "rl",
-            "dvfs"
-          ],
-          "score": 53.99999999917328,
-          "reason": "Matches Reinforcement Learning, DVFS / Energy."
         }
       ]
     }
