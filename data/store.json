@@ -1,6 +1,75 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-06",
+      "papers": [
+        {
+          "id": "6579a7d509dfa674",
+          "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+          "abstract": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.",
+          "authors": [
+            "Michal Korniak",
+            "Marco Bagatella",
+            "Ralf Römer",
+            "Michal Nauman",
+            "Yarden As",
+            "Pranav Vignesh",
+            "Manan Agarwal",
+            "Leander Diaz-Bone",
+            "Piotr Zalewski",
+            "Mikołaj Czarnecki",
+            "Lenart Treven",
+            "Shashwat Saxena",
+            "Sreyas Venkataraman",
+            "Sarvesh Patil",
+            "Zhiyuan Zhou",
+            "Daniel Marta",
+            "Oier Mees",
+            "Nur Muhammad Mahi Shafiullah",
+            "Carmelo Sferrazza",
+            "Bhavya Sukhija",
+            "Angela P. Schoellig",
+            "Andreas Krause",
+            "Max Simchowitz",
+            "Andrew Wagenmaker"
+          ],
+          "url": "http://arxiv.org/abs/2611.06905v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.06905v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-04T18:52:28Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.907703563161377,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "5eefe5789ead7ec7",
+          "title": "Local information processing capacity: anatomy of computation in neuromorphic systems",
+          "abstract": "Many neuromorphic systems possess rich internal computational structures shaped by their physical dynamics. However, existing metrics characterize only global computation, leaving these local structures unresolved despite their importance for system interpretation, optimization and miniaturization. Here, we introduce local information processing capacity (L-IPC), which represents individual dynamical states as vectors in an infinite-dimensional Hilbert space and decomposes their computational properties through subspace projections onto nonlinearity orders and memory steps, with the residual quantifying computational irrelevance. Applied to three systems with comparable global capacities (an echo state network, an ion-gating reservoir and a spin-wave reservoir), L-IPC reveals markedly different distributions of computation, ranging from homogeneous to spatially, temporally and spectrally structured patterns. These local profiles further guide task-specific pruning, outperforming standard approaches at the same size in the structured systems. These results establish L-IPC as a general framework for anatomizing computation and guiding task-adaptive design in neuromorphic systems.",
+          "authors": [
+            "Jiaxuan Chen",
+            "Daiki Nishioka",
+            "Yicheng Song",
+            "Ryo Iguchi",
+            "Sota Hikasa",
+            "Hina Kitano",
+            "Akira Hirose",
+            "Takashi Tsuchiya"
+          ],
+          "url": "http://arxiv.org/abs/2611.05959v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.05959v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-04T04:52:03Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.86601622850529,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-11-05",
       "papers": [
         {
@@ -7165,70 +7234,6 @@
             "snn"
           ],
           "score": 27.88566138723545,
-          "reason": "Matches SNN / Neuromorphic."
-        }
-      ]
-    },
-    {
-      "date": "2026-07-30",
-      "papers": [
-        {
-          "id": "e28b5631bbd658fc",
-          "title": "Cooperative Multi-UAV Navigation in Complex Environments via Systematic Multi-Agent Deep Reinforcement Learning",
-          "abstract": "Cooperative navigation of multi-agent UAVs in complex environments faces key challenges including local optima traps, sparse rewards, learning imbalance among agents, and insufficient cross-scenario generalisation. This paper proposes a multi-agent deep reinforcement learning framework that addresses these issues through coordinated exploration, demonstration exploitation, safe curriculum scheduling, and structure-aware generalisation. First, a perception mechanism combining memory of visited states, directional novelty estimates, and penalty backpropagation enables agents to proactively detect and escape local optima. Second, a hierarchical collaborative demonstration buffer with tiered behaviour cloning manages trajectories by degree of team collaboration and applies differential supervision to the actor network, improving demonstration utilisation under sparse collaborative signals. Third, a safety-aware dual-condition curriculum scheduling mechanism reviews mastered scenarios through back-testing and experience pre-filling during training, suppressing catastrophic forgetting while ensuring both task performance and flight safety. For generalisation, local geometric features computed from sensor readings are abstracted into a domain parameter, through which a structure-aware gating network and mixture-of-experts mechanism condition the policy on local structural patterns rather than scenario-specific coordinates, enabling cross-scenario transfer without exposure to the target environment. The framework is further validated under mixed static-dynamic obstacle settings, showing robust adaptability to dynamic disturbances. Simulation results confirm strong performance in collaboration success rate, navigation robustness, zero-shot cross-scenario generalisation, and dynamic environment adaptability.",
-          "authors": [
-            "Yu Su",
-            "Nabil Aouf"
-          ],
-          "url": "http://arxiv.org/abs/2607.25754v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.25754v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-28T14:16:11Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.83139505787037,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "06d8c4914887a0c0",
-          "title": "Inverse Learning of Latent Risk-Neutral Densities from Irregular Option Quotes",
-          "abstract": "Accurate option prices do not imply accurate recovery of the latent risk-neutral density. We study this distinction with two complementary benchmarks. A controlled benchmark exposes simulator-truth densities for latent evaluation, while a chronological NIFTY benchmark tests only held-out market prices. A two-component lognormal mixture has the lowest aggregate price, $L^1$, Wasserstein, and fixed-tail errors on the synthetic benchmark. Learned operators retain narrower strengths: DeepONet reduces 1% quantile and variance error by 39.0% and 34.6% relative to the mixture, and a quote transformer reduces $L^1$ by 16.4% on the structurally misspecified Merton family. A numerical conditioning analysis explains why these rankings can differ: after enforcing mass and forward constraints, 95 of 126 pricing directions are numerically null, and two densities separated by $L^1 = 0.061$ produce identical prices on the covered strikes. On 524 held-out NIFTY calls, validation-selected test-time adaptation reduces DeepONet RMSE by 28.3%, but per-expiry mixture and SVI fits remain much more accurate. The evidence supports target-dependent inductive bias, not a universal winner.",
-          "authors": [
-            "Lennon J. Shikhman",
-            "Michael Galarnyk",
-            "Aadi Dash",
-            "Nicholas A. Welsh"
-          ],
-          "url": "http://arxiv.org/abs/2607.27188v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.27188v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-29T17:56:20Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.913743769014552,
-          "reason": "Matches Test-Time Adaptation."
-        },
-        {
-          "id": "7f39cb89774ac8db",
-          "title": "End-to-End Modeling of a Volatile TiO2 Memristor for Neuromorphic Circuit Simulation",
-          "abstract": "Memristors are promising devices for applications such as non-volatile memory, neuromorphic computing, logic circuits, and analog signal processing. The development of such systems requires accurate simulations based on models that reproduce the electrical behavior of real devices under both continuous and pulsed excitation. This work presents the development of a simulation environment for a volatile TiO2-based memristor. Experimental measurement data are analyzed to verify the memristive behavior of the device and to identify a suitable model. The model parameters are then optimized to match the measured characteristics. The resulting model is implemented in SPICE and validated by comparing simulation results with measurement data. The comparison shows a good agreement between simulation and experiment, demonstrating that the developed model is suitable for reproducing the electrical behavior of the investigated memristor and can be applied in circuit-level simulations, as demonstrated by a leaky integrate-and-fire neuron.",
-          "authors": [
-            "Lukas Endres",
-            "Hannes Töpfer",
-            "Michaela Blum",
-            "Hauke Honig",
-            "Peter Schaaf"
-          ],
-          "url": "http://arxiv.org/abs/2607.26815v1",
-          "pdfUrl": "http://arxiv.org/pdf/2607.26815v1",
-          "source": "arXiv",
-          "publishedAt": "2026-07-29T12:05:08Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.896323133267195,
           "reason": "Matches SNN / Neuromorphic."
         }
       ]
