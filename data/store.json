@@ -1,6 +1,95 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-13",
+      "papers": [
+        {
+          "id": "26d81c21338738ff",
+          "title": "LLM-Enhanced Deep Reinforcement Learning with Human-in-the-Loop Calibration for Real-Time Optimal Power Flow",
+          "abstract": "Real-time optimal power flow (RT-OPF) requires fast and reliable decision-making under time-varying operating conditions. However, many practical operating preferences and safety related requirements are difficult to encode using conventional numerical rewards alone, which limits the effectiveness and controllability of deep reinforcement learning (DRL) for RT-OPF. To address this issue, this paper proposes an LLM-enhanced DRL framework with human-in-the-loop (HITL) for RT-OPF. The proposed method augments the physics-based reward with sparse language evaluative feedback during offline training, so that semantic operational requirements can be incorporated into policy learning. To improve reliability in RT-OPF, a selective HITL calibration mechanism is further introduced to inspect and correct questionable LLM judgments before they continuously shape the learning process. Case studies on the IEEE 30-bus and IEEE 118-bus systems show that LLM feedback improves policy safety over vanilla TD3, while further HITL calibration achieves the best overall performance and more stable training behavior. These results demonstrate the effectiveness of combining language guidance and expert calibration for RT-OPF.",
+          "authors": [
+            "Jiayang Tu",
+            "Bozhen Jiang",
+            "Bojun Du",
+            "Yunxiao Ling",
+            "Ershun Du",
+            "Qin Wang"
+          ],
+          "url": "http://arxiv.org/abs/2611.15003v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.15003v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-11T04:01:40Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.86247123263889,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "01dfd3b14e5c0647",
+          "title": "Poison-then-Hide: Finetuning-Activated Backdoor Attack on Pretrained Vision Encoders",
+          "abstract": "Backdoor attacks threaten the integrity of machine learning models by allowing attackers to control model behavior through triggers. Models can be compromised during finetuning by backdoor attacks through either poisoned data or adversarial training objectives. Because existing finetuning-activated attacks assume limited domain shift or frozen encoder layers, they often fail under full-model finetuning. We target a stealthy finetuning-activated attack where a dormant backdoor is implanted in a pretrained encoder, and later activated by finetuning on clean downstream data. We propose Poison-then-Hide, a novel attack that remains effective when the entire model is finetuned in a domain transfer. Our approach consists of three components: trigger optimization, base encoder poisoning, and targeted unlearning to conceal the backdoor. We evaluate our method on six datasets and three model architectures, and achieve state-of-the-art (up to 97%) attack success rates. We find that jointly learning the benign target task alongside the poisoning is critical to the attack's success. We demonstrate standard detection and mitigation defenses cannot fully remove the backdoor, which can reappear after benign finetuning.",
+          "authors": [
+            "Qixuan Jin",
+            "Abinitha Gourabathina",
+            "Vinith Menon Suriyakumar",
+            "Walter Gerych",
+            "Marzyeh Ghassemi"
+          ],
+          "url": "http://arxiv.org/abs/2611.14970v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.14970v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-11T03:30:37Z",
+          "topics": [
+            "tta"
+          ],
+          "score": 27.86093105406746,
+          "reason": "Matches Test-Time Adaptation."
+        },
+        {
+          "id": "072720b68c38a581",
+          "title": "Edge-Native Multimodal RAG: Hardware-Aware Quantization and Architectural Optimization for Consumer GPUs",
+          "abstract": "Deployment of retrieval-augmented generation (RAG) for Edge-AI is constrained by memory and bandwidth limitations. A standard 7B parameter model consumes 14 GB Video Random Access Memory (VRAM) in half-precision (FP16), precluding co-location of vector indices and Key-Value (KV) caches. This paper presents an engineering integration and empirical evaluation of a multimodal RAG framework optimized for consumer-grade Turing hardware (e.g., NVIDIA Tesla T4). Our system-level analysis identifies a critical trade-off: while generative pre-trained transformer quantization (GPTQ) offers superior throughput (51.6 tok/s), it exhibits significant context instability at 2048+ tokens on Turing architectures. Conversely, NormalFloat 4-bit (NF4) maintains robust long-context performance with viable latency (81 ms/tok). By coupling NF4 with a decoupled Florence-2 vision integration, we achieve visual reasoning with only 430 MB VRAM overhead. Furthermore, empirical observations of prompt-induced search space pruning show that structured prompting reduces latency by 47% without altering computational intensity (1.88 GFLOPs/token). The integrated architecture maintains an 8.37 GB footprint, establishing a viable RAG pipeline for 12-16 GB GPUs. Finally, structured few-shot prompting effectively compensates for quantization-induced reasoning loss, restoring mathematical accuracy from 35.0% to 92.0% across 200 trials.",
+          "authors": [
+            "Zahraa Selim",
+            "Menna Hamed",
+            "Wesam Ahmed",
+            "Sohyla Said",
+            "Sara Basheer",
+            "Rami Zewail"
+          ],
+          "url": "http://arxiv.org/abs/2611.14924v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.14924v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-11T02:26:07Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.857731649305556,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "e6536112867bdd99",
+          "title": "A Unified Interactive Framework for Real-Time Three-Dimensional Cellular Automata Simulation in XR",
+          "abstract": "Integrating three-dimensional cellular automata (3D CA) into extended reality (XR) requires coordinated simulation, volumetric data management, rendering, and interaction under variable hardware constraints. This paper presents a hybrid study combining a critical review of existing approaches with a unified architecture for real-time 3D CA in XR. The proposed five-layer architecture integrates voxel and rule management, parallel computation, interoperability middleware, visualization, and XR interaction. Its key principles include hardware-aware execution, asynchronous simulation-rendering, adaptive fidelity, and cross-engine interoperability. An analytical evaluation framework is defined to assess performance, latency, scalability, memory efficiency, simulation correctness, and interaction quality. The proposed framework provides a foundation for developing portable and interactive 3D CA systems across desktop and mobile XR platforms.",
+          "authors": [
+            "Ashkan Rezaei",
+            "Azam Bastanfard",
+            "Mohammad Erfan Safabakhsh"
+          ],
+          "url": "http://arxiv.org/abs/2611.13296v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.13296v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-09T22:03:03Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.77325413607804,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-11-12",
       "papers": [
         {
@@ -7219,77 +7308,6 @@
             "snn"
           ],
           "score": 27.75904438905423,
-          "reason": "Matches SNN / Neuromorphic."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-07",
-      "papers": [
-        {
-          "id": "3208859fce95d835",
-          "title": "MCHA: A Memory-Centric Hierarchical Architecture for Parallel-Sequential Computing",
-          "abstract": "Emerging workloads, such as Multi-Agent Reinforcement Learning (MARL), large-scale neuromorphic computing, and probabilistic graphical models, intrinsically exhibit parallel-sequential computing patterns. While these tasks demand massive parallelism to achieve high throughput, they are severely bottlenecked by irregular data access patterns centralized to main memory. Consequently, conventional architectures face fundamental limitations when executing these workloads, primarily manifesting as global buffer saturation and memory-bound bottlenecks. To address these challenges, we propose the Memory-Centric Hierarchical Architecture (MCHA), a reconfigurable hardware solution tailored for parallel-sequential execution. MCHA leverages a hierarchical communication strategy that facilitates distributed, inter-core data routing, thereby significantly reducing the bandwidth burden on the global memory. Complementing the hardware, MCHA introduces a novel parallel-sequential programming model that utilizes event-driven conditional triggers to effectively hide data transmission latency within the execution pipeline. We benchmark MCHA against a diverse suite of parallel-sequential tasks, including MARL, motor variable control, and Markov random fields. Validated through our open-source, cycle-accurate simulator, MCHA demonstrates performance speedups ranging from 153.06$\\times$ to 2456.96$\\times$ over NVIDIA A100 GPUs on MARL workloads, while maintaining robust programming flexibility across other application domains. Furthermore, the architecture successfully reduces main memory access from 96% to 5.44%. When synthesized in a 28 nm process, the MCHA implementation occupies an area footprint of 2.92mm$^2$ and consumes 115.36 mW of power at 200 MHz. MCHA is open-sourced at https://github.com/carabdis/MCHA.",
-          "authors": [
-            "Daijing Shi",
-            "Hongxiao Zhao",
-            "Yihan Fu",
-            "Zhan Chen",
-            "Jiayi Li",
-            "Yihang Zhu",
-            "Anjunyi Fan",
-            "Yaoyu Tao",
-            "Yuchao Yang",
-            "Bonan Yan"
-          ],
-          "url": "http://arxiv.org/abs/2608.04443v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.04443v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-05T04:41:06Z",
-          "topics": [
-            "snn",
-            "rl"
-          ],
-          "score": 45.80443161210317,
-          "reason": "Matches SNN / Neuromorphic, Reinforcement Learning."
-        },
-        {
-          "id": "3091ae3e02e90725",
-          "title": "Beyond Electrons: Radiative Thermal Computing and Neural Networks at the Near-Field Limit",
-          "abstract": "We propose and analyze a programmable near-field radiative thermal network that emulates convolutional and recurrent operations through heat exchange. By integrating radiative thermal diodes and transistors composed of phase-change materials such as VO2 and GST, we construct two fundamental architectures: the Thermal Convolutional Neural Network (T-CNN) and the Thermal Recurrent Neural Network (T-RNN). The T-CNN executes spatial pattern recognition via temperature-dependent emissivity modulation, where each gate acts as a tunable radiative filter that amplifies or suppresses localized heat flux. The system is externally programmable via gate temperature distributions in VO2/GST, enabling weighted summation and nonlinear activation; hysteretic transitions provide state dependent responses that can be harnessed for memory. The T-RNN extends this functionality temporally, embedding radiative feedback and hysteretic phase transitions to realize memory and sequential inference. Together, these systems exhibit tri-state logic behavior, radiative gain, and non-volatile thermal storage, key attributes of physical learning. Each logical node operates without charge carriers or electrical circuits, relying solely on near-field photon tunneling between nanoscale surfaces. The resulting framework enables direct implementation of convolution, memory retention, and feedback learning within a contactless, energy-conserving platform. This study establishes the first radiative realization of thermal deep learning, revealing a new computing paradigm where temperature fields function as carriers of intelligence, uniting heat transfer, memory, and adaptive inference in a single non-electronic system.",
-          "authors": [
-            "Hexiang Zhang",
-            "Mauro Antezza",
-            "Yi Zheng"
-          ],
-          "url": "http://arxiv.org/abs/2608.06203v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.06203v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-06T15:58:33Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.909463854166667,
-          "reason": "Matches Network Early Exit."
-        },
-        {
-          "id": "a25a028ab00f013a",
-          "title": "Memristive Behavior and Mechanism in Solid-State Nanopores",
-          "abstract": "Nanofluidic memristors whose conductance evolves through history-dependent ionic transport and dynamic interfacial processes are promising building blocks for ionic neuromorphic applications. However, most existing designs rely on biological nanopores, polymers, and two-dimensional materials, which limit scalable fabrication and poses challenges to integration of ionic computing circuits and systems. Here, we report memristive behaviors of silicon-based solid-state nanopores (SSNPs) fabricated based on wafer-scale semiconductor processes. The SSNPs exhibit hysteretic current-voltage characteristics with a dependence on voltage sweeping frequency, electrolyte concentration, and nanopore geometry. To investigate the physical origin of their memory feature, the measured current of the SSNPs is decomposed into resistive, capacitive, and memristive components. An ion adsorption-desorption kinetics is developed to explain and predict the memristive behavior. A dynamical system analysis further reveals that the memristive behavior arises from delayed relaxation, thereby linking the measured hysteresis to the observed adaptive ionic response. Together, these findings establish native SSNPs as scalable ionic memristive elements and provide a generalized electrokinetic mechanism for memristive behavior under nanoconfinement. The resulting analytical framework connects device characterization with the underlying dynamics, deepens mechanism understanding, and guides the design of ionic neuromorphic devices.",
-          "authors": [
-            "Zhiwei Li",
-            "Ngan Hoang Pham",
-            "Shi-Li Zhang",
-            "Chenyu Wen"
-          ],
-          "url": "http://arxiv.org/abs/2608.04815v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.04815v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-05T13:18:53Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.830115309193122,
           "reason": "Matches SNN / Neuromorphic."
         }
       ]
