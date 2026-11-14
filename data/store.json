@@ -1,6 +1,51 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-14",
+      "papers": [
+        {
+          "id": "676a65d081d7dd89",
+          "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+          "abstract": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gradient (PLPG) offer constraint-satisfying reinforcement learning (RL) via differentiable symbolic supervision but assume a finite, discrete action space. We present a PLPG-inspired continuous allocation method that estimates the probability that the policy's own executed action satisfies the investment mandate, using reparameterized Monte Carlo sampling, and adds it to the training objective. No post-hoc enforcement mechanism intercepts actions at inference time and compliance is learned by the agent. Audited directly on deterministic mean actions with no correction, the policy reduces violations of a six-rule regime-conditional mandate from 96-98% for unconstrained RL and 33.4% for a reward-penalty baseline to 4.8%, showing that a continuous-action neurosymbolic policy can substantially internalize a symbolic mandate.",
+          "authors": [
+            "Zeynep Yıldız",
+            "Satchit Chatterji",
+            "Ercan Atam",
+            "Erman Acar"
+          ],
+          "url": "http://arxiv.org/abs/2611.17329v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.17329v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-12T18:59:37Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 35.908026633597885,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "ce9d90b9d31a1049",
+          "title": "Noise-Adaptive Analog-Digital Preconditioning",
+          "abstract": "Analog in-memory computing offers the potential to accelerate approximate inverse preconditioning, but hardware errors can degrade preconditioners designed in digital arithmetic. We develop an analog-digital preconditioner for symmetric positive-definite linear systems that combines analog block Jacobi with a small digital low-rank residual correction. The correction space is constructed by probing the same programmed analog arrays used in the solve, targeting errors from both the coupling omitted by block Jacobi and persistent hardware perturbations. Under a random linear-operator model, we separate the programmed-mean error from fresh read fluctuations, distinguish the effects of copy averaging and repeated reads, and quantify the sampling accuracy of columnwise probing. Under a centered additive write-noise model, we also derive a computable regularization threshold and identify the approximation error introduced by the regularization shift. Experiments with an analog hardware simulator show that programming errors can change the directions that block Jacobi reduces poorly. In the tested comparisons with significant programming errors, learning the correction space from the programmed copies reduces FGMRES iteration counts relative to construction from digital block Jacobi.",
+          "authors": [
+            "Shikhar Shah",
+            "Rui Peng Li",
+            "Vassilis Kalantzis",
+            "Yuanzhe Xi"
+          ],
+          "url": "http://arxiv.org/abs/2611.17251v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.17251v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-12T18:37:54Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.906949417989416,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-11-13",
       "papers": [
         {
@@ -7237,77 +7282,6 @@
             "snn"
           ],
           "score": 27.687546045800264,
-          "reason": "Matches SNN / Neuromorphic."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-08",
-      "papers": [
-        {
-          "id": "3208859fce95d835",
-          "title": "MCHA: A Memory-Centric Hierarchical Architecture for Parallel-Sequential Computing",
-          "abstract": "Emerging workloads, such as Multi-Agent Reinforcement Learning (MARL), large-scale neuromorphic computing, and probabilistic graphical models, intrinsically exhibit parallel-sequential computing patterns. While these tasks demand massive parallelism to achieve high throughput, they are severely bottlenecked by irregular data access patterns centralized to main memory. Consequently, conventional architectures face fundamental limitations when executing these workloads, primarily manifesting as global buffer saturation and memory-bound bottlenecks. To address these challenges, we propose the Memory-Centric Hierarchical Architecture (MCHA), a reconfigurable hardware solution tailored for parallel-sequential execution. MCHA leverages a hierarchical communication strategy that facilitates distributed, inter-core data routing, thereby significantly reducing the bandwidth burden on the global memory. Complementing the hardware, MCHA introduces a novel parallel-sequential programming model that utilizes event-driven conditional triggers to effectively hide data transmission latency within the execution pipeline. We benchmark MCHA against a diverse suite of parallel-sequential tasks, including MARL, motor variable control, and Markov random fields. Validated through our open-source, cycle-accurate simulator, MCHA demonstrates performance speedups ranging from 153.06$\\times$ to 2456.96$\\times$ over NVIDIA A100 GPUs on MARL workloads, while maintaining robust programming flexibility across other application domains. Furthermore, the architecture successfully reduces main memory access from 96% to 5.44%. When synthesized in a 28 nm process, the MCHA implementation occupies an area footprint of 2.92mm$^2$ and consumes 115.36 mW of power at 200 MHz. MCHA is open-sourced at https://github.com/carabdis/MCHA.",
-          "authors": [
-            "Daijing Shi",
-            "Hongxiao Zhao",
-            "Yihan Fu",
-            "Zhan Chen",
-            "Jiayi Li",
-            "Yihang Zhu",
-            "Anjunyi Fan",
-            "Yaoyu Tao",
-            "Yuchao Yang",
-            "Bonan Yan"
-          ],
-          "url": "http://arxiv.org/abs/2608.04443v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.04443v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-05T04:41:06Z",
-          "topics": [
-            "snn",
-            "rl"
-          ],
-          "score": 45.733360691964286,
-          "reason": "Matches SNN / Neuromorphic, Reinforcement Learning."
-        },
-        {
-          "id": "3091ae3e02e90725",
-          "title": "Beyond Electrons: Radiative Thermal Computing and Neural Networks at the Near-Field Limit",
-          "abstract": "We propose and analyze a programmable near-field radiative thermal network that emulates convolutional and recurrent operations through heat exchange. By integrating radiative thermal diodes and transistors composed of phase-change materials such as VO2 and GST, we construct two fundamental architectures: the Thermal Convolutional Neural Network (T-CNN) and the Thermal Recurrent Neural Network (T-RNN). The T-CNN executes spatial pattern recognition via temperature-dependent emissivity modulation, where each gate acts as a tunable radiative filter that amplifies or suppresses localized heat flux. The system is externally programmable via gate temperature distributions in VO2/GST, enabling weighted summation and nonlinear activation; hysteretic transitions provide state dependent responses that can be harnessed for memory. The T-RNN extends this functionality temporally, embedding radiative feedback and hysteretic phase transitions to realize memory and sequential inference. Together, these systems exhibit tri-state logic behavior, radiative gain, and non-volatile thermal storage, key attributes of physical learning. Each logical node operates without charge carriers or electrical circuits, relying solely on near-field photon tunneling between nanoscale surfaces. The resulting framework enables direct implementation of convolution, memory retention, and feedback learning within a contactless, energy-conserving platform. This study establishes the first radiative realization of thermal deep learning, revealing a new computing paradigm where temperature fields function as carriers of intelligence, uniting heat transfer, memory, and adaptive inference in a single non-electronic system.",
-          "authors": [
-            "Hexiang Zhang",
-            "Mauro Antezza",
-            "Yi Zheng"
-          ],
-          "url": "http://arxiv.org/abs/2608.06203v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.06203v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-06T15:58:33Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.838392934027777,
-          "reason": "Matches Network Early Exit."
-        },
-        {
-          "id": "a25a028ab00f013a",
-          "title": "Memristive Behavior and Mechanism in Solid-State Nanopores",
-          "abstract": "Nanofluidic memristors whose conductance evolves through history-dependent ionic transport and dynamic interfacial processes are promising building blocks for ionic neuromorphic applications. However, most existing designs rely on biological nanopores, polymers, and two-dimensional materials, which limit scalable fabrication and poses challenges to integration of ionic computing circuits and systems. Here, we report memristive behaviors of silicon-based solid-state nanopores (SSNPs) fabricated based on wafer-scale semiconductor processes. The SSNPs exhibit hysteretic current-voltage characteristics with a dependence on voltage sweeping frequency, electrolyte concentration, and nanopore geometry. To investigate the physical origin of their memory feature, the measured current of the SSNPs is decomposed into resistive, capacitive, and memristive components. An ion adsorption-desorption kinetics is developed to explain and predict the memristive behavior. A dynamical system analysis further reveals that the memristive behavior arises from delayed relaxation, thereby linking the measured hysteresis to the observed adaptive ionic response. Together, these findings establish native SSNPs as scalable ionic memristive elements and provide a generalized electrokinetic mechanism for memristive behavior under nanoconfinement. The resulting analytical framework connects device characterization with the underlying dynamics, deepens mechanism understanding, and guides the design of ionic neuromorphic devices.",
-          "authors": [
-            "Zhiwei Li",
-            "Ngan Hoang Pham",
-            "Shi-Li Zhang",
-            "Chenyu Wen"
-          ],
-          "url": "http://arxiv.org/abs/2608.04815v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.04815v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-05T13:18:53Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.75904438905423,
           "reason": "Matches SNN / Neuromorphic."
         }
       ]
