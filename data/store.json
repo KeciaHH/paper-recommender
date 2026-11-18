@@ -1,6 +1,122 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-18",
+      "papers": [
+        {
+          "id": "0ba193f52baf0ecc",
+          "title": "EM-SDTrack: Efficient Multi-Scale Spike-driven Tracking for Event Cameras",
+          "abstract": "Event-driven spiking neural networks (SNNs) match the sparse spatiotemporal output of event cameras, making spike-driven trackers highly attractive for neuromorphic edge deployment. However, events reveal a target only through their spatial distribution, whose extent varies more than tenfold within one sequence. Event tracking therefore demands multi-scale representation, which existing spike-driven trackers lack. Transferring multi-scale schemes from artificial neural networks either breaks spike-driven inference with floating-point multiplication or repeats backbone computation across input scales. To address this, we propose Spike-driven Multi-Scale Interaction (SDMI), which performs cross-scale interaction in a single spiking forward pass. Its core, Dyadic Spike Sampling (DSS), restricts sampling coordinates to dyadic fractions and thus requires only shifts and additions. The resulting M-SDTrack is fully spike-driven at inference. For tighter edge budgets, we further propose Polarity-Privileged Distillation (PPD), which distils M-SDTrack into EM-SDTrack. PPD treats the event counts cancelled by the voxel representation as privileged information. Its core constraint, Polarity-Guided Curvature Distillation (PGCD), aligns the curvature of the template-search relation under polarity-guided perturbations. On FE108, FELT and VisEvent, M-SDTrack achieves state-of-the-art accuracy with an AUC of 65.1, 41.7 and 42.0. EM-SDTrack retains 99% of the accuracy of its teacher M-SDTrack-Tiny with 27% of its energy and 18% of its parameters. On the Lynxi KA200 neuromorphic chip, it runs losslessly in real time at 116 FPS and 0.12 W.",
+          "authors": [
+            "Yimeng Shan",
+            "Haodi Wu",
+            "Wei Zheng",
+            "Xiaowei Ye",
+            "Shuai Wang",
+            "Yu Liang",
+            "Wei Hua",
+            "Chenxiao Dou",
+            "Malu Zhang"
+          ],
+          "url": "http://arxiv.org/abs/2611.22700v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.22700v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-17T12:46:10Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 43.95703421378968,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "ec1e1aabc6af9bec",
+          "title": "Hierarchical Control of Antiphase Synchronization in Biomorphic Spiking Neural Architectures for Locomotor Control",
+          "abstract": "Central pattern generators (CPGs) provide a biologically inspired foundation for adaptive locomotor control, yet systematically characterizing their dynamic regimes in spiking neural networks remains challenging. This study introduces a framework for identifying and stabilizing antiphase synchronization in a biomorphic spiking CPG model embedded in a closed neuromuscular loop. A composite synchronization metric is developed, integrating phase coherence, amplitude balance, and temporal stability. Its performance is evaluated across systematically varied stimulation waveforms and synaptic configurations. Statistical analysis reveals that stimulation type dominates regime determination, with tonic drive yielding the most robust antiphase synchronization. Periodic inputs induce nonlinear saturation and context-dependent network routing. Although synaptic weights alone show limited discriminative power, they significantly modulate robustness within a given stimulation context, with reciprocal Ia interneuron connections emerging as key stabilizers. The proposed composite metric achieves robust antiphase detection, outperforming traditional phase-only measures while preserving biophysical interpretability. These findings establish a statistically validated, hierarchical modeling approach in which external drive defines the operating regime and targeted synaptic configurations fine-tune dynamic stability, providing actionable guidelines for closed-loop neuromechanical controllers and adaptive neuroprosthetic interfaces.",
+          "authors": [
+            "Artem Guba",
+            "Nikolay Kovalev",
+            "Alexey Zharinov",
+            "Vacheslav Demin",
+            "Viktor B. Kazantsev"
+          ],
+          "url": "http://arxiv.org/abs/2611.22639v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.22639v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-17T11:55:19Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 35.95451189236111,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "11ca19b7fa01ef3d",
+          "title": "TRAIL-IRL: Crossed Reward-Temperature Mixtures for Unlabeled Trajectory Clustering",
+          "abstract": "Different paths need not imply different preferences, trajectories also differ in how randomly actions are chosen. Many multi-reward inverse reinforcement learning (IRL) methods assume common action randomness and can confound it with preference heterogeneity. We introduce TRAIL-IRL, which clusters unlabeled trajectories using rewards for preferences and temperatures for action randomness. Its crossed mixture pairs each reward with a shared set of temperature levels, allowing action regularity to vary within preference groups. With centered and normalized rewards in a known finite-state environment, we establish the identifiability conditions under which the distribution of sufficiently long trajectories determines rewards, temperatures, mixing weights, and class counts up to relabeling. Under the same conditions and reward constraints, common-temperature reward mixtures with the same component count cannot reproduce a crossed mixture with multiple temperatures. We develop a generalized expectation-maximization algorithm and select class counts using the Bayesian information criterion (BIC). Simulations show improved predictive fit, reward recovery, and trajectory classification over common-temperature mixtures with the same component count. For 140 bird-year trajectories from 79 white storks, BIC favors four reward classes and three temperature levels over common-temperature candidates. Younger birds have higher posterior membership probabilities for a southwestward migration class, whereas older birds have higher probabilities for a northern retention class. Within reward classes, higher temperatures are associated with more variable movement directions and positions farther ahead along the migration route, consistent with social information use and collective sensing.",
+          "authors": [
+            "Yichen Zhu",
+            "Guanhua Fang",
+            "Ming Zheng"
+          ],
+          "url": "http://arxiv.org/abs/2611.22715v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.22715v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-17T12:53:35Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.95740210400132,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "9e5315fc4eb2f053",
+          "title": "SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding",
+          "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference, but its optimal configuration depends jointly on workload characteristics, GPU hardware, and available memory. For example, on the RTX~5090, the state-of-the-art speculative drafter DFlash achieves $3.50\\times$ the throughput of autoregressive (AR) decoding at low concurrency, but only $0.76\\times$ at high concurrency with short outputs. We present SpecSearch, a hardware-aware search engine that jointly optimizes decoding strategy, draft length, and precision across workload--GPU pairs. Its analytical cost model captures memory and compute constraints to identify feasible configurations and narrow the search space for throughput optimization. Guided by this model, calibration measurements are collected from multiple GPUs. Using the measurements, a Jev-based predictor learns to select high-throughput decoding configurations on held-out GPUs without requiring deployment-GPU calibration. The predictor is parameter-efficiently trained on calibration data, while adapting a frozen Qwen3-4B using LoRA adapters and a linear correction layer. Across NVIDIA RTX~5090, H100, L40 and AMD MI300X GPUs, SpecSearch with full calibration achieves an average of $2.01\\times$ the throughput of AR and $1.36\\times$ the throughput of SD, both served by vLLM. The proposed Jev-based predictor closely matches this search performance with $1.30\\times$ throughput improvement over SD with vLLM, while eliminating the need for held-out GPU calibration. Additionally, it retains $97.36\\%$ of the throughput achieved by SpecSearch that utilizes full calibration.",
+          "authors": [
+            "Selin Yildirim",
+            "Ali Zeyrek",
+            "Deming Chen"
+          ],
+          "url": "http://arxiv.org/abs/2611.22296v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.22296v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-17T06:53:30Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.939540827546296,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "f22fa4640faa1333",
+          "title": "Multilevel AlScN Ferroelectric Diode Crossbar Arrays with Sub-200 nm Cells for Selector-Free Nonvolatile Memory",
+          "abstract": "Passive crossbar arrays are a leading route to high-density nonvolatile memory and in-memory computing, but without a selector the memory element itself must supply the nonlinearity that suppresses sneak-path currents. Here we scale aluminum scandium nitride (AlScN) ferroelectric diodes (FeDs) in both dimensions that matter - the ferroelectric is thinned to 10 nm and the junction diameter is reduced to 100 nm. We further integrate 200 nm cells into a 2-kilobyte (128 * 128) passive crossbar. At a junction area of 0.0314 um2 this is a ~625 reduction in cell area, at equal array capacity, relative to kilobyte-scale AlScN FeD crossbars built on 5 μm cells. The 10 nm Al0.64Sc0.36N layer reverses its polarization under pulses of 50 ns full width at half maximum at a pulse-energy density of ~16 pJ μm-2, corresponding to ~0.5 pJ per 200 nm cell. Pulsed programming at 17.5 V and 1 kHz yields an ON/OFF ratio of 4.2 * 103 in a 200 nm cell, while DC characterization of 283 randomly addressed cells of the 2-kB array gives ON/OFF and rectification ratios at 5 V of 43 33 and 61 74, from which we derive the sub-array size that selector-free reading currently supports. Eight conductance levels (three bits) written into a 200 nm array cell remain resolvable for 103 s, and the two extreme states are stable beyond 5 * 104 s. Mapping the measured, nonuniformly spaced levels onto a ResNet-20 network recovers 91.7 +- 0.1 % CIFAR-10 accuracy after quantization-aware training, against a 92.2 +- 0.1 % full-precision baseline. AlScN FeDs thus combine nanosecond switching, three-bit storage and sub-0.05 μm2 cells in a BEOL-compatible, selector-free crossbar.",
+          "authors": [
+            "Kwan-Ho Kim",
+            "Zekun Hu",
+            "Krishna Karthikeya Chemudupati",
+            "Taarana Jammula",
+            "Yinuo Zhang",
+            "Rajeev Kumar Rai",
+            "Dhiren K. Pradhan",
+            "Zirun Han",
+            "Eric A. Stach",
+            "Roy H. Olsson",
+            "Deep Jariwala"
+          ],
+          "url": "http://arxiv.org/abs/2611.21381v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.21381v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-16T16:41:58Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.89730207093254,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-11-17",
       "papers": [
         {
@@ -7194,30 +7310,6 @@
           ],
           "score": 27.913105138062168,
           "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-12",
-      "papers": [
-        {
-          "id": "e7672a0553ad865a",
-          "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
-          "abstract": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although recent methods attempt to adapt models via test-time reinforcement learning, they cannot reflect upon failed exploration. To overcome this, we propose a Test-Time Self-Evolving framework that enables models to improve after deployment without human-annotated ground truth. It constructs a closed-loop of Exploration, Evaluation, Reflection, and Internalization. Specifically, the agent first explores unseen interfaces by predicting grounding coordinates for given instructions. To evaluate these explorations, we introduce an MLLM-based Reflector to assess the generated results and provide the corresponding reasoning reflections. To internalize reflection knowledge into the model weights, we propose Reflection-Guided On-Policy Self-Distillation, which translates high-level reasoning into dense token-level supervision via a conditioned self-teacher. Furthermore, we design a Contrastive Calibration method to prevent incorrect auto-regressive prefixes from corrupting the supervisory signals during failed explorations. Extensive experiments across six benchmarks demonstrate our framework's effectiveness, achieving an average accuracy improvement of 7.4% over the base model. To the best of our knowledge, this is the first work to successfully exploit on-policy self-distillation for test-time adaptation in GUI visual grounding. By filling the gap in post-deployment adaptation, our framework completes the self-evolving capability of GUI agents. The code will be released.",
-          "authors": [
-            "Shiyu Xuan",
-            "Zechao Li"
-          ],
-          "url": "http://arxiv.org/abs/2608.11191v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.11191v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-11T17:50:25Z",
-          "topics": [
-            "tta",
-            "rl"
-          ],
-          "score": 45.914751317791,
-          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
         }
       ]
     }
