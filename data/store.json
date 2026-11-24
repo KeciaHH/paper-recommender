@@ -1,6 +1,73 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-24",
+      "papers": [
+        {
+          "id": "d158ab0f4db7d56e",
+          "title": "When Does Reasoning Help Entity Disambiguation? Small LLMs In-Domain and Under Shift",
+          "abstract": "Entity disambiguation (mapping ambiguous mentions in text to entities in a knowledge base) is a foundational step in tasks such as knowledge graph construction, question answering, and information extraction. Recent work has applied LLMs to this problem, achieving stateof-the-art performance. Notably, reasoning LLMs have been shown to perform entity disambiguation in a true zero-shot fashion, generalizing across knowledge bases and domains. However, it is unclear whether this capability survives, or remains competitive, with smaller LLMs, where entity disambiguation has typically relied on reranking rather than reasoning. We ask when reasoning is worth its cost at small scale. We compare pointwise, listwise, and reasoning-based candidate-selection components within a classical coarse-to-fine entity disambiguation pipeline, across the classical, few-shot and true zero-shot settings. The reasoning paradigm is trained with distillation and reinforcement learning recipes. The benefit of reasoning grows with domain shift: negligible in-domain, decisive in the true zero-shot setting. We show that two distinct factors are at work: the reranker's uncertainty over the candidates locates where the paradigms disagree, while shift governs which is right when they do.",
+          "authors": [
+            "Samy Haffoudhi",
+            "Fabian M Suchanek",
+            "Nils Holzenberger"
+          ],
+          "url": "http://arxiv.org/abs/2611.30334v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.30334v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-23T09:11:54Z",
+          "topics": [
+            "tta",
+            "rl"
+          ],
+          "score": 45.938831045800264,
+          "reason": "Matches Test-Time Adaptation, Reinforcement Learning."
+        },
+        {
+          "id": "7166c2847074dfb9",
+          "title": "A New Perspective on ANN-to-SNN Conversion: Hardware-Aligned Multi-Threshold Neuron Dynamics for Neuromorphic Inference",
+          "abstract": "By accumulating spikes over multiple timesteps, rate coding approximates the real-valued activations of an ANN, a principle that underpins numerous ANN-to-SNN conversion methods. However, the converted SNNs typically incur loss in accuracy compared to the original ANN. Existing methods either increase a number of timesteps or introduce more complex neuronal dynamics to reduce this accuracy gap. Yet, both approaches ultimately lead to the same outcome: redundancy either in information or in computation, thereby suffering from efficiency degradation. To address this issue, we propose \\textbf{PRIME} (\\underline{P}otential-\\underline{R}esidual \\underline{I}ntegration for \\underline{M}ulti-threshold \\underline{E}ncoding), a multi-threshold concurrent spiking neuron framework redesigned from a hardware data representation perspective:a) We introduce the Residual Membrane Potential Amplification (RMPA) mechanism, which replaces rate coding with Integration Coding by actively amplifying the residual membrane potential. RMPA enables the binary representation of spikes to carry substantially more information, achieving near-lossless conversion with as few as two timesteps.b) Complementarily, we implement concurrent spike firing in multi-threshold neurons, where spikes are decoded directly from the binary representation of floating-point data, eliminating membrane potential--threshold comparisons and replacing multiplications with lightweight bit-shift and accumulation operations that align with hardware computation primitives. At $T=2$ and $D=3$, we achieve competitive performance across both vision and language benchmarks with only 40.6\\% of the FP32 bit-transmission cost and 13.4\\% of the FP32 multiplication energy consumption. The PRIME framework establishes a new design principle for efficient ANN-to-SNN conversion, bridging the gap between algorithmic efficiency and hardware constraints.",
+          "authors": [
+            "Shaohong Gu",
+            "Jiyuan Zhang",
+            "Yimeng Shan",
+            "Chenxiao Dou",
+            "Wei Hua",
+            "Malu Zhang",
+            "Honglin Cao",
+            "Choonghyun Lee",
+            "Jingwei Chen"
+          ],
+          "url": "http://arxiv.org/abs/2611.30277v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.30277v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-23T08:34:22Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.93696927331349,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "5b812cb5dd5cfc84",
+          "title": "STEdgeFormer: MCU and NPU Deployable Transformer Architecture",
+          "abstract": "Transformer-based sequence models have achieved strong performance in language and time-series modeling, but self-attention remains computationally and memory intensive for deployment on resource-constrained edge accelerators. We propose STEdgeFormer, a lightweight, hardware-aware sequence architecture designed for efficient execution on embedded neural accelerators. STEdgeFormer combines polynomial mixture layers and DyT normalization with an accelerator-aware causal memory block, replacing pairwise self-attention with compact causal aggregation. On TinyStories, the fully NPU-supported STEdgeFormer (MW) achieves a perplexity of 7.39 with 4.12M parameters and 6.51 MB RAM, with an end-to-end latency of 40 ms. In comparison, the standard 4.12M-parameter configuration achieves a lower perplexity of 6.79 but requires CPU fallback for unsupported operators, resulting in 1450 ms latency. Vanilla Transformer, on the other hand, achieves a perplexity score of 5.71 using a 4.40M-parameter model, but it cannot be deployed on the hardware. On downstream tasks, STEdgeFormer achieves 94% accuracy on ECG5000 and 93% accuracy on Speech Commands with 1.39M parameters. These results demonstrate that hardware-aware architectural choices and operator compatibility can have a substantial impact on practical inference latency, beyond model size and task accuracy alone. Rather than targeting state-of-the-art accuracy on individual benchmarks, STEdgeFormer is designed to provide a deployable sequence modeling architecture under the memory, computational, and operator constraints of embedded neural accelerators.",
+          "authors": [
+            "Sudhakar Sah"
+          ],
+          "url": "http://arxiv.org/abs/2611.28935v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.28935v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-21T17:09:05Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.81964371114418,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-11-23",
       "papers": [
         {
@@ -6951,94 +7018,6 @@
           ],
           "score": 27.911610942460317,
           "reason": "Matches Test-Time Adaptation."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-18",
-      "papers": [
-        {
-          "id": "7cd49e9ff7857a24",
-          "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
-          "abstract": "Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental challenges. In this work, we present a unified black-box RL framework for stable and scalable optimization of general agents through complex harnesses. Concretely, we first build a sandbox-based execution infrastructure that isolates task environments and harnesses within temporary sandboxes for large-scale concurrent rollouts. We then decouple policy optimization from opaque harness execution and place a serving proxy at the model boundary to capture model calls. To reconstruct multi-turn trajectories and improve training efficiency, we organize the captured calls into prefix trees and further adapt both critic-based PPO and critic-free GRPO to optimize over the recovered tree structure. Meanwhile, we maintain training-inference consistency throughout the optimization process. Finally, we introduce mix-harness training, allowing a single model to be jointly optimized by heterogeneous harnesses. With Qwen3-30A3B, black-box RL improves Pass@1 on ClawGym-Bench by 9.98 and 14.81 points through OpenClaw and Claude Code, respectively, while remaining stable over 200-400 optimization steps. Moreover, the framework yields consistent gains on more challenging tasks such as JobBench and OfficeQA. Overall, our framework enables effective, stable, and scalable optimization of general agents through black-box harnesses, supporting unified training across heterogeneous execution systems.",
-          "authors": [
-            "Huatong Song",
-            "Fei Bai",
-            "Ming Yang",
-            "Renyuan Li",
-            "Jia Deng",
-            "Jujie He",
-            "Zhange Zhang",
-            "Daixuan Cheng",
-            "Yan Xing",
-            "Qi Yun",
-            "Xuxing Chen",
-            "Danyang Li",
-            "Feng Chang",
-            "Chuan Hao",
-            "Ran Tao",
-            "Jian Yang",
-            "Bryan Dai",
-            "Wayne Xin Zhao",
-            "Mingjie Tang",
-            "Ji-Rong Wen"
-          ],
-          "url": "http://arxiv.org/abs/2608.16798v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.16798v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-17T16:53:03Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.912797066798944,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "526d4bf03caac3b7",
-          "title": "Parallel Spatial Photonic Programming of Optoelectronic IGZO RRAM with a compact $μ$LED Array",
-          "abstract": "Optoelectronic resistive random-access memory elements (ORRAM) are critical emerging devices that leverage photonic technologies to bring the advantages of optical programming to traditionally electronic memristive platforms for neuromorphic computing and artificial intelligence. In this work, a free-space optic micro-LED ($μ$LED) array is combined with a 2-terminal oxide semiconductor ORRAM (based on IGZO\\textsubscript{Rich}/IGZO active layers), to realise parallel spatial programming of form-free memristive arrays. We report the optical and electrical programming of resistive states with potentiation/depression analysis of various stimuli parameters (pulse frequency, pulse width, pulse amplitude). Further, we demonstrate the simultaneous photonic-electronic programming of the ORRAM with optical SET (blue 450\\,nm) and electrical RESET functionality. Persistent photocurrent is also observed and exploited as a pathway to fading memory or synaptic plasticity for temporal bit encoding. Finally, parallel optical $μ$LED to ORRAM channels are demonstrated to achieve the simultaneous photonic programming of multiple devices and the writing of spatial patterns across a chip of memristive IGZO devices. This work highlights the light-enabled scalability of the optoelectronic platform and the feasibility of ORRAM to interface with spatially-multiplexed optical sources to bring neuromorphic technologies directly into applications that process and sense in the optical domain.",
-          "authors": [
-            "Andrew Adair",
-            "Joshua Robertson",
-            "Andreas Tsiamis",
-            "Mohamed Awadein",
-            "Spyros Stathopoulos",
-            "Johannes Herrnsdorf",
-            "Martin D. Dawson",
-            "Themis Prodromakis",
-            "Antonio Hurtado"
-          ],
-          "url": "http://arxiv.org/abs/2608.16807v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.16807v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-17T17:02:08Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.913247628968254,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "0bf6094848cd3058",
-          "title": "AdaSprite: Resource-efficient Online Co-Adaptation for V2I Systems Under Large-scale Data Drifts",
-          "abstract": "The rise of vehicle-infrastructure (V2I) collaboration enables safer and broader perception. To process large-scale V2I video streams, vision-language models (VLMs) are promising as they unify multi-view vision into end-to-end task grounding, reducing handcrafted design. We use Vision Mixture-of-Experts (V-MoE) as the distributed visual backbone of VLMs, leveraging sparse expert routing to enable conditional computation across diverse viewpoints under resource constraints. Yet, V-MoEs face a critical challenge: large-scale data shifts over minutes to hours in V2I systems, amplified by agnostic participants and biased features propagating through experts. To maintain accuracy efficiently, we find it beneficial to co-adapt multiple V-MoEs on edge servers, avoiding the latency and privacy risks of cloud offloading and the accuracy sacrifices of on-device methods. However, the resource-constrained edge poses challenges for efficient co-adaptation: i) DRAM fragmentation and imbalance limit expert parallelism, ii) memory-I/O bottlenecks restrict computation reuse, and iii) asynchronous adaptation increases task-switch overhead. Also, prior work rarely explores the upper bound of concurrent tasks under limited edge resources, a critical factor for practical V2I deployment. To address these, we present AdaSprite. By combining cooperative elastic scaling with multi-level multiplexing, AdaSprite optimizes expert lifespans to reduce DRAM fragmentation, exploits predictable activation patterns for efficient I/O reuse, and employs twin-buffer scheduling to leverage sparsity. On a weak edge, AdaSprite supports up to 17 concurrent V2I tasks (vs. up to 6 for baselines), improving SLO attainment by 1.6x and throughput by 2.1x. Also, it allows users to trade accuracy and concurrency for second-level adaptation.",
-          "authors": [
-            "Lehao Wang",
-            "Zhiwen Yu",
-            "Sicong Liu",
-            "Kefan Chen",
-            "Fengmin Wu",
-            "Bin Guo"
-          ],
-          "url": "http://arxiv.org/abs/2608.16188v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.16188v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-17T07:09:47Z",
-          "topics": [
-            "early_exit"
-          ],
-          "score": 27.883865188492063,
-          "reason": "Matches Network Early Exit."
         }
       ]
     }
