@@ -1,6 +1,113 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-25",
+      "papers": [
+        {
+          "id": "32b376bba71c356e",
+          "title": "Beyond Expected Value: PPO with Distributional Critics for Systematic Conservation Planning",
+          "abstract": "Systematic conservation planning must allocate limited protection budgets sequentially under ecological and climatic uncertainty. Static tools cannot adapt as conditions change, and policies optimised only for expected outcomes can fail on the worst-case trajectories climate change makes increasingly likely. CAPTAIN was the first framework to cast this as sequential reinforcement learning, but its gradient-free Evolution Strategies (ES) optimiser lacks per-timestep credit assignment. We replace ES with Proximal Policy Optimisation (PPO) via a Plackett-Luce solution to CAPTAIN's non-differentiable action space, and replace its scalar critic with an Implicit Quantile Network (IQN) modelling the full return distribution. A matched-granularity comparison shows decision granularity, not the optimiser, drives most of the ecological gain, so the real contribution is training efficiency and extensibility to risk-sensitive objectives. On a New Zealand marine dataset, it matches or exceeds ES's outcomes at a fraction of the training cost, offering a template for future work ES's black-box design could not support",
+          "authors": [
+            "Ana Maria Quintero Ossa",
+            "Daniele Silvestro",
+            "James Rudd-Jones",
+            "Maria Perez-Ortiz"
+          ],
+          "url": "http://arxiv.org/abs/2611.32948v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.32948v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-24T16:52:05Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.964880695271162,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "db3731ad8c36e2bf",
+          "title": "Beyond Autoregression: Diffusion Language Model is All Analog In-Memory Computing Need",
+          "abstract": "Analog in-memory computing (AIMC) enables energy-efficient language-model inference, but hardware non-idealities perturb matrix--vector multiplications and degrade generation quality. Autoregressive (AR) models are especially vulnerable: each token is committed to the causal context at birth, so perturbation-induced errors cascade. We study diffusion language models (DLMs), which iteratively refine a masked sequence, as an alternative paradigm. Across scale-matched model pairs and open checkpoints, DLMs degrade more gracefully than AR counterparts under persistent weight perturbations. Controlled analyses rule out cross-round noise averaging and support delayed token commitment and progressive context resolution as the mechanism. A larger denoising-step budget further shrinks the clean--noisy gap, a DLM-specific latency--robustness knob. We perform large-scale simulation tests across diverse datasets and models using a noise model calibrated from real silicon measurements. Furthermore, on a 16-chip 28nm eFlash AIMC cluster, hybrid on-board measurements show DLMs tolerate $1.4$--$3\\times$ larger weight noise, making diffusion-based generation a promising paradigm for noise-resilient AIMC inference.",
+          "authors": [
+            "Yuanuo Feng",
+            "Yubing Ye",
+            "Yizhe Chen",
+            "Wenshuai Yao",
+            "Ngai Wong",
+            "Wenyong Zhou",
+            "Wang Kang"
+          ],
+          "url": "http://arxiv.org/abs/2611.32223v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.32223v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-24T09:07:34Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.94183919394841,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        },
+        {
+          "id": "cb1924adc6a6649c",
+          "title": "Cheap Memory Costs Future Compute: Co-Designing Persistent KV and GPU Execution for Efficient Streaming Video Diffusion",
+          "abstract": "Block-causal video diffusion generates long videos block by block, conditioned on a persistent key-value (KV) cache. After each block is denoised, an extra noise-free ($t=0$) forward pass writes its clean KV into the cache; once distillation and speculative early exit make denoising cheap, this clean KV update dominates the runtime. Reusing stale KV shortens the update, but stale memory corrupts the conditioning of later blocks and inflates their denoising steps, so the saved compute reappears downstream. We present SAMR (Step-Aware Memory Reconstruction), a training-free method for frozen causal video DiTs that refreshes only part of the cache and reconstructs the rest without DiT forwards. Our key observation is that, once rotary position phases are removed, motion-aligned historical KV and the in-flight KV a token holds at its exit step are complementary estimates of its clean KV. SAMR debiases in-flight KV with offline-calibrated per-head affine maps in Pre-RoPE space, fuses the two estimates, and reserves true $t=0$ refreshes for tokens flagged by an attention-readout error proxy, all executed by tile-aligned, synchronization-free Triton kernels. On 48-second LongLive-1.3B videos, SAMR reduces DiT latency by 20.9% and principal FLOPs by 30.7% relative to dense KV updates, lowers downstream denoising steps, and improves final-quarter PSNR over token reuse by 1.61 dB (1.14 dB on held-out VidProM-16). The reconstruction also transfers to frozen Self-Forcing-DMD-1.3B: zero-shot, it reduces reuse-induced step inflation ($2.47 \\to 2.30$ steps/token) and improves late PSNR by $+0.33$ dB, and a one-time training-free calibration recovers the diagnostic score that zero-shot transfer lowers ($89.62 \\to 91.10$).",
+          "authors": [
+            "Jian Yang",
+            "Zhizhuo Kou",
+            "Qiyuan Zhu",
+            "Han Chen",
+            "Sirui Han",
+            "Yike Guo"
+          ],
+          "url": "http://arxiv.org/abs/2611.31892v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.31892v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-24T03:49:36Z",
+          "topics": [
+            "early_exit"
+          ],
+          "score": 27.926067037863756,
+          "reason": "Matches Network Early Exit."
+        },
+        {
+          "id": "6cee10ca9e7b50fa",
+          "title": "Interface and film engineering for improved spin-charge interconversion in sputtered GeTe nanodevices",
+          "abstract": "Spin-logic devices promise non-volatile logic-in-memory computing with ultra-low power consumption, offering a route to circumvent the von Neumann bottleneck. Magnetoelectric and ferroelectric spin-orbit (MESO/FESO) devices, however, require spin-charge interconversion materials that combine a large output signal with properties that survive nanoscale integration. Tellurides are particularly fragile in this respect, as processing readily introduces defects that degrade their spin-charge interconversion properties. Here we demonstrate room-temperature spin-charge interconversion in patterned FESO nanoscale devices based on sputtered GeTe, with feature sizes down to 100 nm. By introducing a Ti interfacial layer between the CoFe electrode and GeTe, and by using GeTe films of improved crystalline quality, we increase the interconversion output signal from 3 mΩ to 24 mΩ, exceeding values reported for platinum at comparable device size. These results establish large-scale-deposited GeTe as a viable material platform for spin-logic devices and identify interface quality and film crystallinity as key levers for optimizing their performance.",
+          "authors": [
+            "S. Teresi",
+            "T. Frottier",
+            "M. Culot",
+            "W. Savero-Torres",
+            "P. Sgarro",
+            "M. Wissmann",
+            "A. Kandazoglou",
+            "F. Osana",
+            "J. Lagrave",
+            "D. Térébénec",
+            "J. Paterson",
+            "A. Oysel Mestre",
+            "O. J. Mouawad",
+            "E. Chevilley",
+            "N. Bernier",
+            "P. Noé",
+            "M. Bibes",
+            "F. Hippert",
+            "J. -P. Attané",
+            "L. Vila",
+            "M. Cosset-Chéneau"
+          ],
+          "url": "http://arxiv.org/abs/2611.31816v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.31816v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-24T02:10:56Z",
+          "topics": [
+            "neurosim"
+          ],
+          "score": 27.921172857969577,
+          "reason": "Matches NeuroSim / Hardware-aware DNN."
+        }
+      ]
+    },
+    {
       "date": "2026-11-24",
       "papers": [
         {
@@ -6933,91 +7040,6 @@
           ],
           "score": 27.870334274966932,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "papers": [
-        {
-          "id": "812afd53262b96e7",
-          "title": "CLOPS: Benchmarking System Speed at Utility Scale",
-          "abstract": "As quantum processors scale to hundreds of qubits, execution speed is a critical performance dimension alongside scale and quality. While substantial progress has been made in benchmarking circuit fidelity, existing speed metrics often fail to reflect the sustained, end-to-end throughput experienced by users running utility-scale workloads. This shortfall is especially pronounced for layered, parameterized circuits executed repeatedly within classical-quantum workflows, such as variational algorithms and error-mitigated simulations. In this work, we formalize CLOPS_h (Circuit Layer Operations Per Second) as a holistic speed benchmark defined over layered, hardware-aware circuits. CLOPS_h measures the sustained rate at which the system executes physical layers, parallel slices of qubit-disjoint two-qubit gates separated by synchronization barriers. Because each such layer is one time slice of an N-qubit circuit, this rate maps directly to the execution rate of layered $N$-qubit circuits, connecting CLOPS_h to published device capability claims, and to the device-level throughput ceiling we formalize as Max Circuits Per Second (MCPS). CLOPS_h is obtained under layer-fidelity operating conditions, binding the speed measurement to an independently verified quality envelope, and it shares its layer decomposition with scalable layer-fidelity (LF) quality benchmarks, enabling coherent interpretation of speed and quality without conflating the two.",
-          "authors": [
-            "Andrew Wack"
-          ],
-          "url": "http://arxiv.org/abs/2608.18044v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.18044v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-18T17:39:10Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.914985611772487,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        },
-        {
-          "id": "d0e4a9dfc1d6c3df",
-          "title": "Energy-efficient, Reconfigurable Optoelectronic Artificial Synapses Based on MoWS$_2$ Alloy for Pattern Recognition and Color Image Filtering Applications",
-          "abstract": "Two-dimensional transition-metal dichalcogenide alloys are potential candidates for advanced optoelectronic and neuromorphic applications due to their strong light-matter interactions and controllable defect properties. However, large-area growth of such alloys remains challenging, while the correlation between their physical and neuromorphic properties remains largely unclear. In this work, we present an innovative microcavity chemical vapor deposition (CVD) reactor pathway to grow uniform, and large-area MoWS$_2$ mono- and few-layer alloy films for demonstrating optoelectronic synaptic functionalities. Driven by growth-induced intrinsic sulfur vacancies, as confirmed by XPS, KPFM, and STEM measurements, our optoelectronic synaptic device (OSD) successfully emulates essential biological synaptic features, such as excitatory postsynaptic currents (EPSC), paired-pulse facilitation (PPF~170%), and stimulus-dependent short- and long-term plasticities (STP & LTP). With picojoule-order energy consumption per synaptic event and nanoampere-order dark current, the device enables low-power neuromorphic learning, including emulation of Pavlovian associative learning. Furthermore, the experimentally measured conductance weight-update characteristics enabled an artificial neural network (ANN) simulation to achieve 92.43% recognition accuracy on the MNIST handwritten digit dataset. Finally, we demonstrate advanced neuromorphic visual processing by executing color image filtering based on the device's wavelength-selective photoresponse characteristics. This simple, yet multifunctional device architecture provides a promising path toward energy-efficient, spectral-selective neuromorphic vision applications.",
-          "authors": [
-            "Deepak Kumar Sahu",
-            "Santu Kumar Ghosh",
-            "Sagarneel Ghoshal",
-            "Saranya Das",
-            "Samit K. Ray"
-          ],
-          "url": "http://arxiv.org/abs/2608.18013v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.18013v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-18T17:02:10Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 27.91315029431217,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "280e864202ffb9f4",
-          "title": "Policy-Invariant Reward Shaping from LLM Feedback: A Framework for Hybrid RL Agents",
-          "abstract": "Combining large language models with reinforcement learning is increasingly explored, yet the theoretical status of LLM-derived reward signals is often left implicit. We formalize the hybrid LLM-planner and RL-controller architecture as a Goal-Augmented Markov Decision Process and show that when the LLM per-state progress score is used as a bounded potential function, the resulting shaping term preserves the optimal policy set even when the LLM scores are inaccurate. This guarantee is stronger than what general LLM-as-reward approaches provide. We verify the result numerically on a small MDP under four potential configurations, including an adversarial one scaled to twenty times the base reward magnitude.",
-          "authors": [
-            "Christophe D. Hounwanou",
-            "John Emeka Eze",
-            "Yaé U. Gaba"
-          ],
-          "url": "http://arxiv.org/abs/2608.18008v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.18008v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-18T16:55:46Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 27.91283283399471,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "844d3ae3305edcca",
-          "title": "Dual Co-Train: Cross-Dataset Ultrasound Tongue Segmentation Under Extreme Data Scarcity",
-          "abstract": "Ultrasound tongue contour segmentation remains challenging under cross-dataset domain shift, where limited annotations, probe variability, and acquisition noise often degrade model generalization. We present a source-free domain adaptation framework for robust ultrasound tongue segmentation built on a lightweight UltraUNet backbone. Starting from a checkpoint pretrained on only five labeled source images, simulating an underfitted constrained source model, the proposed method adapts to a fully-unlabeled target domain by iteratively refining pseudo-labels, filtering unreliable masks with a contour-based quality-control module, and generating target-style synthetic image-mask pairs through a segmentation-guided conditional GAN. The student model is then trained on a mixture of clean pseudo-labeled target images, noisy pseudo-labels with consistency regularization, and synthetic samples, enabling closed-loop adaptation without access to source data. We evaluate the method on 12 source-target transfer pairs across eight ultrasound tongue imaging datasets, and conduct source-size scaling experiments and ablation studies. Across all comparisons, the proposed framework improves segmentation overlap and contour accuracy over the baselines, including supervised ones. These results suggest that task-specific pseudo-label refinement and synthetic target-style augmentation can substantially improve source-free adaptation for ultrasound tongue imaging.",
-          "authors": [
-            "Alisher Myrgyyassov",
-            "Zhen Song",
-            "Bruce Xiao Wang",
-            "Yu Sun",
-            "Min Ney Wong",
-            "Yihao Zhou",
-            "Yongping Zheng"
-          ],
-          "url": "http://arxiv.org/abs/2608.17983v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.17983v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-18T16:31:08Z",
-          "topics": [
-            "tta"
-          ],
-          "score": 27.911610942460317,
-          "reason": "Matches Test-Time Adaptation."
         }
       ]
     }
