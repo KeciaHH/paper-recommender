@@ -1,6 +1,81 @@
 {
   "recommendations": [
     {
+      "date": "2026-11-26",
+      "papers": [
+        {
+          "id": "bc248974587009b0",
+          "title": "WebVibe: Multimodal Interactive Website Generation via Reverse Synthesis and Visual Self-Distillation",
+          "abstract": "Although multimodal large language models translate single screenshots into static HTML, generating interactive functional websites from design specifications still struggles with multi-page routing and stateful widget transitions. Examining existing training pipelines reveals two bottlenecks: (1) in forward data synthesis (X -> Y), writing the specification X before code execution leaves unimplemented or altered requirements in X as supervision noise; and (2) in reinforcement learning, scalar rewards discard the rich state transitions observed during replay. Based on these findings, we introduce WebVibe and Interactive-SDPO to train InteractiveCoder. WebVibe reverses synthesis into Y -> X by verifying cross-page and in-page interactions in the browser before deriving multimodal inputs from replay-confirmed states to build the 31,542-site WebVibe-32K corpus with reusable execution contracts. Interactive-SDPO then conditions a weight-sharing self-teacher on the replay trace and a 2x2 state-transition montage to provide token-level supervision at zero inference-time overhead. On the public Vision2Web L2, one-shot InteractiveCoder-9B nearly 3x its base model's functional score (20.2 to 55.2 FS) and matches a 1T-parameter coding agent in a single pass with 111x fewer total parameters and 78x fewer tokens. On our WebVibeBench, InteractiveCoder-4B and 9B further outperform all evaluated baselines by over 23 points.",
+          "authors": [
+            "Tianxiang Jiang",
+            "Sheng Xia",
+            "Yilin Long",
+            "Kanghui Tian",
+            "Linquan Wu",
+            "Yongheng Zhang",
+            "Daixian Liu",
+            "Di Yin",
+            "Yi Wang",
+            "Yu Qiao",
+            "Qinglong Zhang"
+          ],
+          "url": "http://arxiv.org/abs/2611.34292v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.34292v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-25T12:46:28Z",
+          "topics": [
+            "rl"
+          ],
+          "score": 27.955183148148148,
+          "reason": "Matches Reinforcement Learning."
+        },
+        {
+          "id": "f6846a7509c0d7ab",
+          "title": "Ferroionic CuCrP2S6 Integrated Silicon Photonics for Neuromorphic Computing",
+          "abstract": "Neuromorphic photonic computing calls for optical states that combine stimulus accumulation, spontaneous relaxation, and nonvolatile state retention without continuous power dissipation. Here, we demonstrate a ferroionic photonic platform by integrating layered van der Waals CuCrP2S6 onto silicon microring resonators using a back-end integration process. Electrical pulsing produces unidirectional blue shifts in the optical resonance, consistent with field-driven redistribution of mobile Cu ions and giving rise to a history-dependent optical response. The resulting optical state is strongly pulse dependent, exhibiting both volatile and nonvolatile components. A short 20-pulse excitation produces an initial 70 pm resonance shift that relaxes toward baseline within approximately 60 s, with a volatile relaxation time constant of 27-29 s. In contrast, after 1000 pulses, an initial 0.27 nm resonance shift relaxes to a persistent 0.13 nm nonvolatile state that is retained for at least 24 h. Repeated 6 V electrical pulses produce a progressive resonance shift over 1000 cycles, demonstrating cumulative optical integration. A fixed-wavelength readout converts the accumulated resonance shift into a thresholded optical response, with the normalized transmission remaining above the selected threshold through 600 pulses and falling below it at the 800-pulse state. These dynamics realize the basis for a leaky integrate-and-fire photonic neuron, where the pulse-dependent ionic response provides integration, spontaneous relaxation supplies a passive leak, persistent states provide nonvolatile memory, and fixed-wavelength readout provides an optical threshold response.",
+          "authors": [
+            "Ghada Dushaq",
+            "Srinivasa R. Tamalampudi",
+            "Mahmoud Rasras"
+          ],
+          "url": "http://arxiv.org/abs/2611.33954v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.33954v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-25T08:14:34Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.941696044973543,
+          "reason": "Matches SNN / Neuromorphic."
+        },
+        {
+          "id": "6854176c0c2d5b5c",
+          "title": "Low-barrier-height Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ ferroelectric tunnel junctions with large ON-state currents",
+          "abstract": "Ferroelectric tunnel junctions (FTJs) hold great promise for nonvolatile memory, neuromorphic computing, and other applications. Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ (HZO) has become a leading candidate for the tunnel barrier due primarily to its compatibility with CMOS technology. Recent advances on HZO based FTJs have highlighted the importance of understanding the electrical transport through a ferroelectric tunnel barrier for fulfilling the technological promises of FTJs. In this paper we report investigation of HZO FTJs featuring a barrier of ultrathin HZO ($\\leq$5nm) measured down to a temperature of 2 K. Direct quantum tunneling was found to dominate at low temperatures, along with contributions from trap-assisted tunneling. As the temperature increases, conduction by thermal activation takes over. We developed a minimal model that accounts for all experimental observations, revealing a barrier height significantly lower than that of the band alignment picture, an unexpected finding attributable to the emergence of a shallow trap band. This finding reveals a previously unexplored pathway toward simultaneously achieving large ON-state currents, high tunnel electroresistance and improved temperature stability for the high-speed memory applications of FTJs.",
+          "authors": [
+            "Shaoqing Ding",
+            "Jinyuan Yao",
+            "Eknath Sarkar",
+            "Emmanuel Quezada",
+            "Thomas N. Jackson",
+            "Susan Trolier-McKinstry",
+            "Suman Datta",
+            "Ying Liu"
+          ],
+          "url": "http://arxiv.org/abs/2611.33495v1",
+          "pdfUrl": "http://arxiv.org/pdf/2611.33495v1",
+          "source": "arXiv",
+          "publishedAt": "2026-11-24T22:17:52Z",
+          "topics": [
+            "snn"
+          ],
+          "score": 27.91209783068783,
+          "reason": "Matches SNN / Neuromorphic."
+        }
+      ]
+    },
+    {
       "date": "2026-11-25",
       "papers": [
         {
@@ -6965,80 +7040,6 @@
             "neurosim"
           ],
           "score": 27.87847806382275,
-          "reason": "Matches NeuroSim / Hardware-aware DNN."
-        }
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "papers": [
-        {
-          "id": "8156f694dab8b1f8",
-          "title": "Quantum circuit optimization using deep reinforcement learning: Applications across multiple gate sets",
-          "abstract": "The practical implementation of quantum algorithms on noisy intermediate-scale quantum devices encounters operational limitations due to decoherence and other sources of noise inherent in real hardware. To mitigate these errors while preserving the original functionality of the algorithm, shorter quantum circuits are therefore preferred. This motivates the development of effective quantum circuit optimization algorithms. Learning-based approaches have emerged as a leading candidate, yet existing autonomous agents remain inefficient, spending most of their training capacity rediscovering elementary reductions that deterministic rule-based methods already handle reliably. To address this challenge, we propose a reinforcement learning framework that embeds a deterministic Commutation-and-Reduction (CR) algorithm directly into the training environment. After every agent action, the CR algorithm automatically resolves elementary commutations and cancellations, enabling the agent to focus its learning capacity on the non-trivial optimizations where reinforcement learning adds real value. Empirical evaluation across two gate sets, the universal Clifford+T basis and the CNOT+Pauli basis, shows that RL+CR produces shorter circuits than a standard RL agent at all tested scales. We demonstrate that RL trained on smaller quantum circuits can be applied to larger quantum circuits. On 20-qubit Clifford+T circuits, five times larger than the training circuits, RL+CR removes twice as many gates as standard RL. This work provides a robust approach that could accelerate the compilation and optimization processes for future fault-tolerant and utility-scale quantum systems.",
-          "authors": [
-            "Khoa Dang Tao",
-            "Sumin Jin",
-            "Muhammad Raza",
-            "Changhyoup Lee"
-          ],
-          "url": "http://arxiv.org/abs/2608.19103v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.19103v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-19T16:54:17Z",
-          "topics": [
-            "rl"
-          ],
-          "score": 35.91266149140212,
-          "reason": "Matches Reinforcement Learning."
-        },
-        {
-          "id": "d9c99ba516d9be25",
-          "title": "APEX: A Dual-Sparsity Accelerator for Precise and Efficient SNN Inference",
-          "abstract": "Spiking Neural Networks (SNNs) have emerged as an energy-efficient alternative to Artificial Neural Networks (ANNs), leveraging sparse accumulate operations in the place of power-hungry multiply-and-accumulate operations. ANN-SNN conversion is a widely adopted approach to realize deep SNNs with accuracy comparable to that of ANNs. The Quantization-Clip-Floor-Shift (QCFS) activation minimizes conversion error, yet requires a large number of inference timesteps to match the source ANN accuracy on real-world vision datasets. PASCAL addresses this by proposing the Precise ANN-SNN Conversion Integrate-and-Fire (PASC-IF) neuron, which guarantees mathematical equivalence between the converted SNN and the source ANN, thereby achieving ANN-equivalent accuracy at significantly reduced timesteps. Despite this algorithmic advancement, the hardware implications of deploying the PASC-IF neuron remain unexplored. In this work, we present APEX, a dual-sparsity SNN inference accelerator that integrates the PASC-IF neuron into the LoAS hardware framework. The three-stage PASC-IF datapath is realized as a fully combinational circuit with no additional latency cost. APEX exploits dual sparsity in both input spikes and weights through a fully temporal-parallel dataflow, enabling efficient sparse computation and reduced memory traffic. Across all evaluated models, the PASC-IF neuron on average achieves up to 3% higher accuracy than the standard IF neuron, with a power overhead of only 1.3%-5.4%, an area overhead of 2.1%-2.7%, and 40% energy reduction for best accuracy configurations.",
-          "authors": [
-            "Devgokul Bawa Venkatesh",
-            "Sreeram Radhakrishnan",
-            "Rajshekhar Rakshit",
-            "Gopalakrishnan Srinivasan"
-          ],
-          "url": "http://arxiv.org/abs/2608.19046v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.19046v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-19T15:38:16Z",
-          "topics": [
-            "snn"
-          ],
-          "score": 35.908890822585974,
-          "reason": "Matches SNN / Neuromorphic."
-        },
-        {
-          "id": "34e60548346cf0d2",
-          "title": "Room-temperature ferroelectrically switchable quantum geometry in few-layer WTe2 for complementary in-memory computing",
-          "abstract": "Quantum geometry, describing the inherent geometric structure of electron wavefunctions in momentum space, transcends the traditional charge degree of freedom and provides a novel physical basis for information encoding and processing. The key to such new computing paradigms is the non-volatile electrical programming of quantum geometric states at room temperature, which, however, has not been established. Here, we demonstrate ferroelectrically switchable quantum geometry in few-layer WTe2, which uniquely enables complementary convolutional processing. By employing the intrinsic coupling between ferroelectric polarization and quantum geometry in few-layer WTe2, we show that the second- and third-order nonlinear anomalous Hall effects (NLAHE) can be deterministically and electrically switched in a nonvolatile and correlated manner. The switching is robust at room temperature for ~104 cycles and retention of ~105 s. Furthermore, leveraging the opposite switching behaviors of second- and third-order NLAHE at room temperature, we demonstrate complementary in-memory computing and implement a hardware-level complementary convolution kernel. This kernel overcomes the inherent directional specificity of conventional convolutional networks and achieves a texture recognition accuracy of 98%, thereby illustrating a viable pathway towards physics-native computing through exploiting exotic physics in quantum materials.",
-          "authors": [
-            "Ruihan Wang",
-            "Pengfei Wang",
-            "Haoyun Chen",
-            "Yunze Peng",
-            "Bingyan Liu",
-            "Junlin Xiong",
-            "Xueyuan Zhang",
-            "Chen Pan",
-            "Xin Chen",
-            "Shengyuan A. Yang",
-            "Shi-Jun Liang",
-            "Feng Miao",
-            "Peng Song"
-          ],
-          "url": "http://arxiv.org/abs/2608.18467v1",
-          "pdfUrl": "http://arxiv.org/pdf/2608.18467v1",
-          "source": "arXiv",
-          "publishedAt": "2026-08-19T02:40:58Z",
-          "topics": [
-            "neurosim"
-          ],
-          "score": 27.870334274966932,
           "reason": "Matches NeuroSim / Hardware-aware DNN."
         }
       ]
